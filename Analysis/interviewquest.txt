@@ -1,0 +1,36 @@
+What is the current system?
+write order on pad, take top copy to the kitchen, keep 2nd copy to urself for outside.
+
+why keep 2nd copy?
+the copy will be then the invoice for the customers.
+transfer the 2nd copy to the invoice book
+
+
+What are the problems with the current way of doing things?
+Doing it manually is very time consuming.
+Invoices take up a lot of space.
+doing for years but if there is a simpler way such as keying the information into a computer that will be simpler and can print many copy as many times as you want.
+
+what would you need to print?
+customers receipt
+
+What data or information is recorded in the current system?
+food,drink,total price of order
+
+Which new features would be the most important to you?
+the whole system computerized for example, typing a number will bring up a dish from the menu and you could add it to the order.
+Being able to search up a dish by typing a number and to easily check what 
+
+What are the benefits of the current system?
+when there is a power cut or the computer brakes down, i can do it manually which is an advantage.
+
+How are exceptions and errors handled in the current system?
+got many backups of the order
+
+What should the new system be able to do?
+typing in a key and the dish will come up
+being able to see what each table has ordered so far and have the ability to add any more until they have finished
+store all the invoices on the computer
+
+You mentioned storing invoices, would you like it so its password restricted to access this feature?
+

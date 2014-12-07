@@ -37,13 +37,13 @@ def Reservation():
     create_table(db_name,"Reservation",sql)
 
 def OrderID():
-    sql = """create table Order
+    sql = """create table Orders
              (OrderID integer,
              TotalDrinkPrice real,
              TotalDishPrice real,
              TotalPrice real,
              primary key(OrderID))"""
-    create_table(db_name,"Order",sql)
+    create_table(db_name,"Orders",sql)
     
 def MenuID():
     sql = """create table Menu
@@ -56,15 +56,15 @@ def MenuID():
     create_table(db_name,"Menu",sql)             
 
 def OrderItemID():
-    sql = """create table OrderItem
+    sql = """create table Ordered_Items
              (OrderItemID integer,
-             OrderID integer
+             OrderID integer,
              MenuID integer,
              Quantity integer,
-             primary key(OrderItemID)
-             foreign key(OrderID) references Order(OrderID)
+             primary key(OrderItemID),
+             foreign key(OrderID) references Orders(OrderID),
              foreign key(MenuID) references Menu(MenuID))"""
-    create_table(db_name,"OrderedItem",sql)
+    create_table(db_name,"Ordered_Items",sql)
 
 def CustomerID():
     sql = """create table Customer
@@ -74,10 +74,10 @@ def CustomerID():
              NumberOfPeople integer,
              Date text,
              Time text,
-             TableNumber integer
-             primary key(CustomerID)
-             foreign key(ReservationID) references Reservation(ReservationID)
-             foreign key(OrderID) references Order(OrderID))"""
+             TableNumber integer,
+             primary key(CustomerID),
+             foreign key(ReservationID) references Reservation(ReservationID),
+             foreign key(OrderID) references Orders(OrderID))"""
     create_table(db_name,"Customer",sql)
              
     

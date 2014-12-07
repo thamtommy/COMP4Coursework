@@ -1,12 +1,12 @@
 import sqlite3
 
-def delete_product(data):
+def query(sql,data):
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
-        sql = "delete from Menu where MenuItem=?"
+        cursor.execute("PRAGMA foreign_keys = ON")
         cursor.execute(sql,data)
         db.commit()
 
 if __name__ == "__main__":
-    data = ("Latte",)
-    delete_product(data)
+    sql = "delete from ProductType where Description = 'Tea'"
+    query(sql,())

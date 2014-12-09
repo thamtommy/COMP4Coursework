@@ -22,8 +22,7 @@ def create_table(db_name,table_name,sql):
 
 def Type():
     sql = """create table ItemType
-            (ItemTypeID,
-             Description text,
+            (ItemTypeID integer,
              primary key(ItemTypeID))"""
     create_table(db_name,"ItemType",sql)
 
@@ -50,9 +49,11 @@ def MenuID():
              (MenuID integer,
              MenuItem text,
              ItemPrice real,
-             ItemTypeID ineger,
+             ItemType text,
              primary key(MenuID)
-             foreign key(ItemTypeID) references ItemType(ItemTypeID))"""
+             foreign key(ItemType) references ItemType(ItemType)
+             on update cascade on delete cascade)"""
+    
     create_table(db_name,"Menu",sql)             
 
 def OrderItemID():

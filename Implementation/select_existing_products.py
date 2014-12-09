@@ -14,8 +14,25 @@ def select_product(id):
         menu_item = cursor.fetchone()
         return menu_item
 
+def get_product():
+    menuid = int(input("Enter a menuid: "))
+    return menuid
+
+def Options():
+    print("Would you like to: ")
+    print('')
+    print("1. Look at all the menu items")
+    print("2. Search for a particular menu item")
+    print('')
+    option = int(input(''))
+    return option
+
 if __name__ == "__main__":
-    menu_items = select_all_products()
-    print(menu_items)
-    menu_item = select_product(3)
-    print(menu_item)
+    option = Options()
+    if option == 1:
+        menu_items = select_all_products()
+        print(menu_items)
+    elif option == 2:
+        menuid = get_product()
+        menu_item = select_product(menuid)
+        print(menu_item)

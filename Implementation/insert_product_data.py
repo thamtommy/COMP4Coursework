@@ -7,6 +7,13 @@ def insert_data(values):
         cursor.execute(sql,values)
         db.commit()
 
+def insert_type(values):
+    with sqlite3.connect("restaurant.db") as db:
+        cursor = db.cursor()
+        sql = "insert into ItemType (ItemType) values (?)"
+        cursor.execute(sql,values)
+        db.commit()
+
 def get_menu_item():
     name = input("Enter name of item: ")
     price = float(input("Enter price of item: "))

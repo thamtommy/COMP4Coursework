@@ -14,6 +14,13 @@ def select_product(id):
         menu_item = cursor.fetchone()
         return menu_item
 
+def select_all_bookings():
+    with sqlite3.connect("restaurant.db") as db:
+        cursor = db.cursor()
+        cursor.execute("select * from Reservation")
+        bookings = cursor.fetchall()
+        return bookings
+
 def get_product():
     menuid = int(input("Enter a menuid: "))
     return menuid
@@ -23,6 +30,7 @@ def Options():
     print('')
     print("1. Look at all the menu items")
     print("2. Search for a particular menu item")
+    print("3. Look at all bookings")
     print('')
     option = int(input(''))
     return option
@@ -36,3 +44,6 @@ if __name__ == "__main__":
         menuid = get_product()
         menu_item = select_product(menuid)
         print(menu_item)
+    elif option == 3:
+        bookings = select_all_bookings()
+        print(bookings)

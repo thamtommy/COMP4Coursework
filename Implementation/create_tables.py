@@ -32,6 +32,8 @@ def Reservation():
              FirstName text,
              LastName text,
              TelephoneNo text,
+             BookingTime text,
+             BookingDate text,
              primary key(ReservationID))"""
     create_table(db_name,"Reservation",sql)
 

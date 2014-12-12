@@ -14,18 +14,7 @@ def get_ordered_items():
     quantity = int(input("How many of {0} has been ordered: ".format(menu_item)))
     insert_data(orderID,item,quantity)
 
-def insert_orderID():
-    with sqlite3.connect("restaurant.db") as db:
-        cursor = db.cursor()
-        sql = "insert into Orders(TotalDrinkPrice,TotalDishPrice,TotalPrice) values (?,?,?)"
-        cursor.execute(sql,values)
-        db.commit()
 
-def initial_orderID_data():
-    TotalDrinkPrice = 0
-    TotalDishPrice = 0
-    TotalPrice = TotalDrinkPrice + TotalDishPrice
-    insert_orderID(TotalDrinkPrice,TotalDishPrice,TotalPrice)
 
 def select_product(id):
     with sqlite3.connect("restaurant.db") as db:

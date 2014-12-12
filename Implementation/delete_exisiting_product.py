@@ -29,11 +29,6 @@ def delete_itemtype(data):
         cursor.execute(sql,data)
         db.commit()
 
-def get_menu_item():
-    item = input("Product to delete: ")
-    item = (item,)
-    delete_menu_item(item)
-
 def get_menu_itemID():
     itemID = int(input("Menu item ID to delete: "))
     itemID = (itemID,)
@@ -49,13 +44,9 @@ def Options():
     return option
 
 if __name__ == "__main__":
-<<<<<<< HEAD
-    get_menu_item()
-=======
+    delete_itemtype((6,))
     option = Options()
     if option == 1:
         get_menu_item()
     elif option == 2:
         get_menu_itemID()
-
->>>>>>> branch 'master' of https://github.com/thamtommy/COMP4Coursework.git

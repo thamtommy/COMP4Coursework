@@ -1,4 +1,5 @@
 import sqlite3
+
 def create_table(db_name,table_name,sql):
     with sqlite3.connect(db_name) as db:
         cursor = db.cursor()
@@ -22,15 +23,11 @@ def create_table(db_name,table_name,sql):
 
 def Type():
     sql = """create table ItemType
-<<<<<<< HEAD
-            (ItemType text,
-             primary key(ItemType))"""
-=======
              (ItemTypeID integer,
              Type text,
-             primary key(ItemTypeID))"""
->>>>>>> branch 'master' of https://github.com/thamtommy/COMP4Coursework.git
+             primary key(ItemTypeID))"""            
     create_table(db_name,"ItemType",sql)
+
 
 def Reservation():
     sql = """create table Reservation
@@ -57,19 +54,10 @@ def MenuID():
              (MenuID integer,
              MenuItem text,
              ItemPrice real,
-<<<<<<< HEAD
-             ItemType text,
-=======
              ItemTypeID integer,
->>>>>>> branch 'master' of https://github.com/thamtommy/COMP4Coursework.git
-             primary key(MenuID)
-<<<<<<< HEAD
-             foreign key(ItemType) references ItemType(ItemType)
-=======
+             primary key(MenuID),
              foreign key(ItemTypeID) references ItemType(ItemTypeID)
->>>>>>> branch 'master' of https://github.com/thamtommy/COMP4Coursework.git
-             on update cascade on delete cascade)"""
-    
+             on update cascade on delete cascade)"""  
     create_table(db_name,"Menu",sql)             
 
 def OrderItemID():

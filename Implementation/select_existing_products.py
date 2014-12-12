@@ -32,7 +32,7 @@ def Options():
     print("2. Search for a particular menu item")
     print("3. Look at all bookings")
     print('')
-    option = int(input(''))
+    option = int(input('Enter choice: '))
     return option
 
 if __name__ == "__main__":

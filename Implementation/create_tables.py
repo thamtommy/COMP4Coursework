@@ -22,9 +22,8 @@ def create_table(db_name,table_name,sql):
 
 def Type():
     sql = """create table ItemType
-            (ItemTypeID,
-             Description text,
-             primary key(ItemTypeID))"""
+            (ItemType text,
+             primary key(ItemType))"""
     create_table(db_name,"ItemType",sql)
 
 def Reservation():
@@ -33,6 +32,8 @@ def Reservation():
              FirstName text,
              LastName text,
              TelephoneNo text,
+             BookingTime text,
+             BookingDate text,
              primary key(ReservationID))"""
     create_table(db_name,"Reservation",sql)
 
@@ -50,9 +51,11 @@ def MenuID():
              (MenuID integer,
              MenuItem text,
              ItemPrice real,
-             ItemTypeID ineger,
+             ItemType text,
              primary key(MenuID)
-             foreign key(ItemTypeID) references ItemType(ItemTypeID))"""
+             foreign key(ItemType) references ItemType(ItemType)
+             on update cascade on delete cascade)"""
+    
     create_table(db_name,"Menu",sql)             
 
 def OrderItemID():
@@ -91,4 +94,3 @@ if __name__ == "__main__":
     CustomerID()
     
         
-    

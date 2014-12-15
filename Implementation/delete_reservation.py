@@ -1,7 +1,6 @@
 import sqlite3
 
 #improvements
-#add a verification ( "are you sure you want to delete {0}? "
 
 def display_all_reservations():
     with sqlite3.connect("restaurant.db") as db:

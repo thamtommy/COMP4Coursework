@@ -22,6 +22,7 @@ def insert_orderID():
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
         sql = "insert into Orders(TotalDrinkPrice,TotalDishPrice,TotalPrice) values (?,?,?)"
+        cursor.execute("PRAGMA foreign_keys = ON")
         cursor.execute(sql,values)
         db.commit()
 

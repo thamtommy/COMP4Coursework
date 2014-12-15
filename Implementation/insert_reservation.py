@@ -4,6 +4,7 @@ def insert_data(values):
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
         sql = "insert into Reservation (FirstName,LastName,TelephoneNo,ReservationTime,ReservationDate) values (?,?,?,?,?)"
+        cursor.execute("PRAGMA foreign_keys = ON")
         cursor.execute(sql,values)
         db.commit()
 

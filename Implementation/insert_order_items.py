@@ -13,7 +13,8 @@ def get_ordered_items():
     item = int(input("Enter menu item ID: "))
     menu_item = select_product(item)
     quantity = int(input("How many of {0} has been ordered: ".format(menu_item)))
-    insert_data(orderID,item,quantity)
+    values = (orderID,item,quantity)
+    insert_data(values)
 
 
 
@@ -21,8 +22,7 @@ def select_product(id):
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
         cursor.execute("select MenuItem from Menu where MenuID=?",(id,))
-        cursor.execute("PRAGMA foreign_keys = ON")
-        menu_item = cursor.fetchone()
+        menu_item = cursor.fetchone() 
         return menu_item
 
 

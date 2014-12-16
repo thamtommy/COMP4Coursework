@@ -17,8 +17,9 @@ def get_customer_details():
     TableNumber = int(input("Table Number: "))
     customer = (NumberOfPeople,Date,Time,TableNumber)
     insert_data(customer)
+    initial_orderID_data()
 
-def insert_orderID():
+def insert_orderID(values):
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
         sql = "insert into Orders(TotalDrinkPrice,TotalDishPrice,TotalPrice) values (?,?,?)"
@@ -30,7 +31,8 @@ def initial_orderID_data():
     TotalDrinkPrice = 0
     TotalDishPrice = 0
     TotalPrice = TotalDrinkPrice + TotalDishPrice
-    insert_orderID(TotalDrinkPrice,TotalDishPrice,TotalPrice)
+    values = (TotalDrinkPrice,TotalDishPrice,TotalPrice)
+    insert_orderID(values)
 
 if __name__ == "__main__":
     get_customer_details()

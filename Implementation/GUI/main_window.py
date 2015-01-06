@@ -1,4 +1,5 @@
 #http://zetcode.com/gui/pyqt4/layoutmanagement/
+#http://pyqt.sourceforge.net/Docs/PyQt4/qsqltablemodel.html#details <- display database
 
 import sys
 from PyQt4.QtCore import *
@@ -15,6 +16,23 @@ class RestaurantWindow(QMainWindow):
         self.create_view_restaurant_layout()
 
     def create_view_restaurant_layout(self):
+        #create toolbar
+        self.example_tool_bar = QToolBar()
+        self.test_tool_bar = QToolBar()
+
+        self.example_label_bar = QPushButton("Example")
+        self.example_label_bar.setToolTip("Hello this is an example")
+        self.test_tool_label = QPushButton("Test")
+        self.test_tool_label.setToolTip("This is a test")
+
+        self.example_tool_bar.addWidget(self.example_label_bar)
+        self.test_tool_bar.addWidget(self.test_tool_label)
+
+        self.addToolBar(self.example_tool_bar)
+        self.addToolBar(self.test_tool_bar)
+        
+        
+        
         #create buttons
         #table buttons
         self.table_button = QPushButton("Table 1")
@@ -73,9 +91,9 @@ class RestaurantWindow(QMainWindow):
 
         #add layouts to main layout
         self.main_layout.addLayout(self.table_layout,0,0)
-        #self.main_layout.addWidget(self.test_label,0,1)
+        #self.main_layout.addWidget(self.test_label,0,1) temporary
         self.main_layout.addLayout(self.booking_layout,1,0)
-        self.main_layout.addWidget(self.other_label,1,1)
+        #self.main_layout.addWidget(self.other_label,1,1)
 
         #create a widget to display main layout
         self.view_table_widget = QWidget()

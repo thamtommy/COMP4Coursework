@@ -25,6 +25,8 @@ class OrderWindow(QMainWindow):
         #create labels
         self.drinks_label = QLabel("Drinks")
         self.dishes_label = QLabel("Dishes")
+        self.table_number_label = QLabel("Table : ")
+        self.
         
 
         #create layouts

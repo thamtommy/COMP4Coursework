@@ -11,6 +11,7 @@ def insert_type(values):
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
         sql = "insert into ItemType (Type) values (?)"
+        cursor.execute("PRAGMA foreign_keys = ON")
         cursor.execute(sql,values)
         db.commit()
 

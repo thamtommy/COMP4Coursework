@@ -39,6 +39,8 @@ class RestaurantWindow(QMainWindow):
         #create buttons
         #table buttons
         self.table_button = QPushButton("Table 1")
+        self.table_button.setGeometry(4,8,5,9)
+        
         self.table2_button = QPushButton("Table 2")
         self.table3_button = QPushButton("Table 3")
         self.table4_button = QPushButton("Table 4")
@@ -54,6 +56,9 @@ class RestaurantWindow(QMainWindow):
         self.table14_button = QPushButton("Table 14")
         self.table15_button = QPushButton("Table 15")
         self.table16_button = QPushButton("Table 16")
+
+        self.table_button.setMaximumSize(100,60)
+        self.table2_button.setMaximumSize(100,60)
 
         self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
         

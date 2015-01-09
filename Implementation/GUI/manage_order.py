@@ -1,3 +1,5 @@
+#http://pyqt.sourceforge.net/Docs/PyQt4/qdate.html#currentDate
+
 import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -22,11 +24,14 @@ class OrderWindow(QMainWindow):
         #connections
         self.add_button.clicked.connect(self.DrinkorDish)
 
+        #date widget
+        self.current_date = QDate.currentDate()
+
         #create labels
         self.drinks_label = QLabel("Drinks")
         self.dishes_label = QLabel("Dishes")
         self.table_number_label = QLabel("Table : ")
-        self.date_label = QLabel("Date : ")
+        self.date_label = QLabel("Date : {0} ".format(self.current_date))
         self.time_label = QLabel("Time : ")
         self.number_people_label = QLabel("Number of people : ")
         

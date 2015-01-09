@@ -1,6 +1,12 @@
 import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from manage_booking import *
+from manage_order import *
+
+#layout index
+## 0 - main screen
+## 1 - manage booking
 
 from radio_button_widget_class import *
 
@@ -11,17 +17,36 @@ class RestaurantWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Restaurant Simulation")
         self.create_view_restaurant_layout()
+        
+        self.stacked_layout = QStackedLayout()
+        self.stacked_layout.addWidget(self.main_widget_layout)
 
-    def create_view_restaurant_layout(self):
+        self.central_widget = QWidget()
+        self.central_widget.setLayout(self.stacked_layout)
+        self.setCentralWidget(self.central_widget)
+
+        self.setFixedSize(1280,800)
+
+    def manage_booking(self):
+        self.manage_booking = BookingWindow()
+        self.stacked_layout.addWidget(self.manage_booking)
+        self.stacked_layout.setCurrentIndex(1)
+        
+
+    def create_tool_bar(self):
         #create toolbar
         self.main_screen_tool_bar = QToolBar()
-        self.orders_tool_bar = QToolBar()
+        self.orders_tool_bar = QToolBar()        
         self.bookings_tool_bar = QToolBar()
+
 
         self.main_screen_label_bar = QPushButton("Main Screen")
         self.main_screen_label_bar.setToolTip("This will direct you to main screen")
+
+        
         self.orders_label_bar = QPushButton("Orders")
         self.orders_label_bar.setToolTip("All orders will be displayed")
+
         self.bookings_label_bar = QPushButton("Bookings")
         self.bookings_label_bar.setToolTip("All bookings will be displayed")
 
@@ -33,8 +58,20 @@ class RestaurantWindow(QMainWindow):
         self.addToolBar(self.main_screen_tool_bar)
         self.addToolBar(self.orders_tool_bar)
         self.addToolBar(self.bookings_tool_bar)
+
+    def create_menu_bar(self):
+        self.menu = QMenuBar()
+        self.menu_bar = self.menu.addMenu("Menu")
+        self.setMenuBar(self.menu)
+
         
         
+    
+
+    def create_view_restaurant_layout(self):
+        #methods
+        self.create_tool_bar()      
+        self.create_menu_bar()
         
         #create buttons
         #table buttons
@@ -59,8 +96,25 @@ class RestaurantWindow(QMainWindow):
 
         self.table_button.setMaximumSize(100,60)
         self.table2_button.setMaximumSize(100,60)
+        self.table3_button.setMaximumSize(100,60)
+        self.table4_button.setMaximumSize(100,60)
+        self.table5_button.setMaximumSize(100,60)
+        self.table6_button.setMaximumSize(100,60)
+        self.table7_button.setMaximumSize(100,60)
+        self.table8_button.setMaximumSize(100,60)
+        self.table9_button.setMaximumSize(100,60)
+        self.table10_button.setMaximumSize(100,60)
+        self.table11_button.setMaximumSize(100,60)
+        self.table12_button.setMaximumSize(100,60)
+        self.table13_button.setMaximumSize(100,60)
+        self.table14_button.setMaximumSize(100,60)
+        self.table15_button.setMaximumSize(100,60)
+        self.table16_button.setMaximumSize(100,60)
+
+        
 
         self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
+        self.manage_bookings.clicked.connect(self.manage_booking)
         
         
 
@@ -104,9 +158,11 @@ class RestaurantWindow(QMainWindow):
         #self.main_layout.addWidget(self.other_label,1,1)
 
         #create a widget to display main layout
-        self.view_table_widget = QWidget()
-        self.view_table_widget.setLayout(self.main_layout)
-        self.setCentralWidget(self.view_table_widget)
+        self.main_widget_layout = QWidget()
+        self.main_widget_layout.setLayout(self.main_layout)
+
+
+
 
 def main():
     restaurant_simulation = QApplication(sys.argv) # create new application

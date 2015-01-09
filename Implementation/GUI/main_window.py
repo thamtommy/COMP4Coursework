@@ -62,7 +62,10 @@ class RestaurantWindow(QMainWindow):
     def create_menu_bar(self):
         self.menu = QMenuBar()
         self.menu_bar = self.menu.addMenu("Menu")
+        self.options_bar = self.menu.addMenu("Options")
         self.setMenuBar(self.menu)
+
+
 
         
         

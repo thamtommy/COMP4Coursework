@@ -1,4 +1,5 @@
 import sys
+import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
@@ -37,7 +38,6 @@ class AddBookingWindow(QMainWindow):
 
     def create_add_booking_layout(self):
         #methods
-        self.create_tool_bar()
 
         #create layouts
         self.main_layout = QVBoxLayout()
@@ -49,20 +49,29 @@ class AddBookingWindow(QMainWindow):
         self.add_complete = QPushButton("Add Booking")
         
         #labels
-        self.name_label = QLabel("Name:")#Sometimes only first/last is given
+        self.first_name_label = QLabel("First Name:")#Sometimes only first/last is given
+        self.last_name_label = QLabel("Last Name:")
         self.date_label = QLabel("Date:")
         self.time_label = QLabel("Time:")
-        self.number_of_people = QLabel("Number of people:")
+        self.number_of_people = QLabel("Number Of People:")
+        self.telephone_number = QLabel("Telephone Number:")
 
         #line edit
-        self.input_name = QLineEdit()
-        self.input_name.setMaximumSize(300,30)
+        self.input_first_name = QLineEdit()
+        self.input_first_name.setMaximumSize(300,30)
+
+        self.input_last_name = QLineEdit()
+        self.input_last_name.setMaximumSize(300,30)
         
         self.input_time = QLineEdit()
         self.input_time.setMaximumSize(300,30)
         
         self.input_number_of_people = QLineEdit()
         self.input_number_of_people.setMaximumSize(300,30)
+
+        self.input_telephone_number = QLineEdit()
+        self.input_telephone_number.setMaximumSize(300,30)
+
 
         #dates and times
         self.date_edit = QDateEdit()
@@ -71,20 +80,25 @@ class AddBookingWindow(QMainWindow):
         
         
         #place holder text
-        self.input_name.setPlaceholderText("Name of booker")        
+        self.input_first_name.setPlaceholderText("Name of booker")        
         self.input_number_of_people.setPlaceholderText("Expected number")
+        self.input_telephone_number.setPlaceholderText("Telephone number given")
 
         #add labels to layout
-        self.add_booking_layout.addWidget(self.name_label,0,0)
-        self.add_booking_layout.addWidget(self.date_label,1,0)
-        self.add_booking_layout.addWidget(self.time_label,2,0)
-        self.add_booking_layout.addWidget(self.number_of_people,3,0)
+        self.add_booking_layout.addWidget(self.first_name_label,0,0)
+        self.add_booking_layout.addWidget(self.last_name_label,1,0)
+        self.add_booking_layout.addWidget(self.date_label,2,0)
+        self.add_booking_layout.addWidget(self.time_label,3,0)
+        self.add_booking_layout.addWidget(self.number_of_people,4,0)
+        self.add_booking_layout.addWidget(self.telephone_number,5,0)
 
         #add line edit to layout
-        self.add_booking_layout.addWidget(self.input_name,0,1)
-        self.add_booking_layout.addWidget(self.date_edit,1,1)
-        self.add_booking_layout.addWidget(self.time_edit,2,1)
-        self.add_booking_layout.addWidget(self.input_number_of_people,3,1)
+        self.add_booking_layout.addWidget(self.input_first_name,0,1)
+        self.add_booking_layout.addWidget(self.input_last_name,1,1)
+        self.add_booking_layout.addWidget(self.date_edit,2,1)
+        self.add_booking_layout.addWidget(self.time_edit,3,1)
+        self.add_booking_layout.addWidget(self.input_number_of_people,4,1)
+        self.add_booking_layout.addWidget(self.input_telephone_number,5,1)
 
         #add button to layout
         self.add_complete_layout.addWidget(self.add_complete)
@@ -98,6 +112,20 @@ class AddBookingWindow(QMainWindow):
         self.add_booking_widget = QWidget()
         self.add_booking_widget.setLayout(self.main_layout)
         self.setCentralWidget(self.add_booking_widget)
+
+        #connections
+        self.add_complete.clicked.connect(self.add_booking)
+
+    def add_booking(self):
+        FirstName = self.input_first_name
+        LastName = self.input_last_name
+        BookingDate = self.date_edit
+        BookingTime = self.time_edit
+        booking = ()
+        with sqlite3.connect("restaurant.db") as db:
+            cursor = db.cursor()
+            sql = "insert into Booking(FirstName,LastName,TelephoneNo,BookingTime,BookingDate) values (?,?,?,?,?)"
+                             
 
 def main():
     restaurant_simulation = QApplication(sys.argv) # create new application

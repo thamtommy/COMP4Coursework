@@ -62,10 +62,7 @@ class AddBookingWindow(QMainWindow):
 
         self.input_last_name = QLineEdit()
         self.input_last_name.setMaximumSize(300,30)
-        
-        self.input_time = QLineEdit()
-        self.input_time.setMaximumSize(300,30)
-        
+               
         self.input_number_of_people = QLineEdit()
         self.input_number_of_people.setMaximumSize(300,30)
 
@@ -80,7 +77,8 @@ class AddBookingWindow(QMainWindow):
         
         
         #place holder text
-        self.input_first_name.setPlaceholderText("Name of booker")        
+        self.input_first_name.setPlaceholderText("First name given")
+        self.input_last_name.setPlaceholderText("Last name given")
         self.input_number_of_people.setPlaceholderText("Expected number")
         self.input_telephone_number.setPlaceholderText("Telephone number given")
 
@@ -117,14 +115,19 @@ class AddBookingWindow(QMainWindow):
         self.add_complete.clicked.connect(self.add_booking)
 
     def add_booking(self):
-        FirstName = self.input_first_name
-        LastName = self.input_last_name
-        BookingDate = self.date_edit
-        BookingTime = self.time_edit
-        booking = ()
+        FirstName = self.input_first_name.text()
+        LastName = self.input_last_name.text()
+        BookingDate = self.date_edit.text()
+        BookingTime = self.time_edit.text()
+        TeleNumber = self.input_telephone_number.text()
+        booking = (FirstName,LastName,TeleNumber,BookingTime,BookingDate)
+        print(booking)
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             sql = "insert into Booking(FirstName,LastName,TelephoneNo,BookingTime,BookingDate) values (?,?,?,?,?)"
+            cursor.execute(sql,booking)
+            db.commit()
+            
                              
 
 def main():

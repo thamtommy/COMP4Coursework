@@ -3,10 +3,8 @@ import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from radio_button_widget_class import *
-
 class AddBookingWindow(QMainWindow):
-    """this class creates a main window to observe the restaurant"""
+    """this class creates a window to add bookings"""
 
     def __init__(self):
         super().__init__()

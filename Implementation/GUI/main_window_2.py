@@ -46,25 +46,20 @@ class RestaurantWindow(QMainWindow):
         self.bookings_tool_bar = QToolBar()
 
 
-        self.main_screen_label_bar = QAction("Main Screen",self)
+        self.main_screen_label_bar = QPushButton("Main Screen")
         self.main_screen_label_bar.setToolTip("This will direct you to main screen")
-<<<<<<< HEAD
         self.main_screen_label_bar.clicked.connect(self.main_screen)
-=======
-        self.main_screen_tool_bar.addAction(self.main_screen_label_bar)
->>>>>>> branch 'master' of https://github.com/thamtommy/COMP4Coursework.git
 
         
-        self.orders_label_bar = QAction("Orders",self)
+        self.orders_label_bar = QPushButton("Orders")
         self.orders_label_bar.setToolTip("All orders will be displayed")
-        self.orders_tool_bar.addAction(self.orders_label_bar)
 
-        self.bookings_label_bar = QAction("Bookings",self)
+        self.bookings_label_bar = QPushButton("Bookings")
         self.bookings_label_bar.setToolTip("All bookings will be displayed")
-        self.bookings_tool_bar.addAction(self.bookings_label_bar)
 
-        
-
+        self.main_screen_tool_bar.addWidget(self.main_screen_label_bar)
+        self.orders_tool_bar.addWidget(self.orders_label_bar)
+        self.bookings_tool_bar.addWidget(self.bookings_label_bar)
         
 
         self.addToolBar(self.main_screen_tool_bar)

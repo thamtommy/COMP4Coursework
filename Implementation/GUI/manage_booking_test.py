@@ -7,12 +7,11 @@ from PyQt4.QtGui import *
 from add_booking import*
 from radio_button_widget_class import *
 
-class BookingWindow(QMainWindow):
+class BookingWindow(QWidget):
     """this class creates a window to observe the bookings"""
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Manage Booking")
         self.create_manage_booking_layout()
 
         self.booking_stacked_layout = QStackedLayout()
@@ -60,13 +59,5 @@ class BookingWindow(QMainWindow):
         self.booking_stacked_layout.setCurrentIndex(1) #change layout to add booking layout
 
 
-def main():
-    booking_manage = QApplication(sys.argv) # create new application
-    booking_window = BookingWindow() #create new instance of main window
-    booking_window.show() #make instance visible
-    booking_window.raise_() #raise instance to top of window stack
-    booking_manage.exec_() #monitor application for events
 
-if __name__ == "__main__":
-    main()
 

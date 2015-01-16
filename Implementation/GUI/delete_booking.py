@@ -34,6 +34,9 @@ class DeleteBookingWindow(QMainWindow):
         self.addToolBar(self.orders_tool_bar)
         self.addToolBar(self.bookings_tool_bar)
 
+    def display_booking_database(self):
+
+
     def create_delete_booking_layout(self):
         #methods
 
@@ -50,7 +53,6 @@ class DeleteBookingWindow(QMainWindow):
         self.setCentralWidget(self.delete_booking_widget)
 
         #connections
-        self.add_complete.clicked.connect(self.add_booking)
 
     def delete_booking(self):
         with sqlite3.connect("restaurant.db") as db:
@@ -63,7 +65,7 @@ class DeleteBookingWindow(QMainWindow):
 
 def main():
     restaurant_simulation = QApplication(sys.argv) # create new application
-    restaurant_window = AddBookingWindow() #create new instance of main window
+    restaurant_window = DeleteBookingWindow() #create new instance of main window
     restaurant_window.show() #make instance visible
     restaurant_window.raise_() #raise instance to top of window stack
     restaurant_simulation.exec_() #monitor application for events

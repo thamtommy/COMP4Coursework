@@ -3,7 +3,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from manage_booking import *
 from manage_order import *
-from manage_booking_test import *
+
+
 #layout index
 ## 0 - main screen
 ## 1 - manage booking
@@ -30,13 +31,12 @@ class RestaurantWindow(QMainWindow):
         self.setFixedSize(1280,800)
 
         #layouts
-        self.manage_booking = BookingWindow()
-        self.stacked_layout.addWidget(self.manage_booking)
-
     def main_screen(self):
         self.stacked_layout.setCurrentIndex(0)
     def manage_booking(self):
-        self.stacked_layout.setCurrentIndex(1)
+        self.manage_bookings = BookingWindow()
+        self.setCentralWidget(self.manage_bookings)
+        
         
 
     def create_tool_bar(self):
@@ -48,11 +48,8 @@ class RestaurantWindow(QMainWindow):
 
         self.main_screen_label_bar = QAction("Main Screen",self)
         self.main_screen_label_bar.setToolTip("This will direct you to main screen")
-<<<<<<< HEAD
-        self.main_screen_label_bar.clicked.connect(self.main_screen)
-=======
         self.main_screen_tool_bar.addAction(self.main_screen_label_bar)
->>>>>>> branch 'master' of https://github.com/thamtommy/COMP4Coursework.git
+        self.main_screen_label_bar.triggered.connect(self.main_screen)
 
         
         self.orders_label_bar = QAction("Orders",self)

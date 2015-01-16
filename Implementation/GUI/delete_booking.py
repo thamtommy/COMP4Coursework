@@ -9,8 +9,36 @@ class DeleteBookingWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Delete Booking")
-        self.create_delete_booking_layout()
         self.setFixedSize(800,600)
+        #create layouts
+        self.main_layout = QVBoxLayout()
+        self.input_layout = QHBoxLayout()
+
+        self.main_layout.addLayout(self.input_layout)
+        
+        #create label
+        self.bookingIDlabel = QLabel("Booking ID")
+        self.bookingIDlabel.setMaximumSize(133,20)
+
+        #line edit
+        self.input_bookingID = QLineEdit()
+        self.input_bookingID.setMaximumSize(self.input_bookingID.sizeHint())
+        
+        #create buttons
+        self.delete_bookingID = QPushButton("Delete BookingID")
+        self.delete_bookingID.setMaximumSize(133,20)
+        self.delete_bookingID.clicked.connect(self.delete_booking)
+
+        #add to input layout
+        self.input_layout.addWidget(self.bookingIDlabel)
+        self.input_layout.addWidget(self.input_bookingID)
+        self.input_layout.addWidget(self.delete_bookingID)
+
+
+        #create a widget to display main layout
+        self.delete_booking_widget = QWidget()
+        self.delete_booking_widget.setLayout(self.main_layout)
+        self.setCentralWidget(self.delete_booking_widget)
 
     def create_tool_bar(self):
         #create toolbar
@@ -34,27 +62,8 @@ class DeleteBookingWindow(QMainWindow):
         self.addToolBar(self.orders_tool_bar)
         self.addToolBar(self.bookings_tool_bar)
 
-    def display_booking_database(self):
-
-
-    def create_delete_booking_layout(self):
-        #methods
-
-        #create layouts
-        self.main_layout = QVBoxLayout()        
-        
-        #create buttons
-        self.add_complete = QPushButton("Delete Booking")
-
-
-        #create a widget to display main layout
-        self.delete_booking_widget = QWidget()
-        self.delete_booking_widget.setLayout(self.main_layout)
-        self.setCentralWidget(self.delete_booking_widget)
-
-        #connections
-
     def delete_booking(self):
+        booking = self.input_bookingID.text()
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             sql = "delete from Booking where BookingID=?"

@@ -12,31 +12,30 @@ class BookingWindow(QWidget):
 
     def __init__(self):
         super().__init__()
-        self.create_manage_booking_layout()
 
-        self.booking_stacked_layout = QStackedLayout()
-        self.booking_stacked_layout.addWidget(self.view_booking_widget)
+        #create layouts
+        self.booking_layout = QVBoxLayout()
+        self.view_bookings = QGridLayout()
+        self.manage_booking = QHBoxLayout()
 
-        self.central_widget = QWidget()
-        self.central_widget.setLayout(self.booking_stacked_layout)
-        self.setCentralWidget(self.central_widget)
+
+        self.stacked_layout = QStackedLayout()
+        self.stacked_layout.addWidget(self.view_booking_widget)
+
+        self.central_booking_widget = QWidget()
+        self.central_booking_widget.setLayout(self.booking_stacked_layout)
+        self.stacked_layout.setCurrentIndex(0)
 
         #layouts
         self.add_booking = AddBookingWindow()#import from addbooking.py
-        self.booking_stacked_layout.addWidget(self.add_booking)#got layout from main program of addbooking.py
+        self.stacked_layout.addWidget(self.add_booking)#got layout from main program of addbooking.py
         
-        
-    def create_manage_booking_layout(self):
         #create buttons
         self.back_button = QPushButton("Back") # Will be an arrow
         self.add_button = QPushButton("Add Booking")
         self.delete_button = QPushButton("Delete Booking")
 
         
-        #create layouts
-        self.booking_layout = QVBoxLayout()
-        self.view_bookings = QGridLayout()
-        self.manage_booking = QHBoxLayout()
 
         #add buttons to layouts
         self.manage_booking.addWidget(self.add_button)
@@ -56,7 +55,7 @@ class BookingWindow(QWidget):
 
     def add_booking(self):
 
-        self.booking_stacked_layout.setCurrentIndex(1) #change layout to add booking layout
+        self.stacked_layout.setCurrentIndex(1) #change layout to add booking layout
 
 
 

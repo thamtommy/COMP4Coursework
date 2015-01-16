@@ -66,10 +66,13 @@ class AddBookingWindow(QMainWindow):
 
         self.input_telephone_number = QLineEdit()
         self.input_telephone_number.setMaximumSize(300,30)
+        self.input_telephone_number.setMaxLength(12)
 
 
         #dates and times
         self.date_edit = QDateEdit()
+        self.maximumdate = QDate(2050,1,30)
+        self.date_edit.setMaximumDate(self.maximumdate)
         self.time_edit = QTimeEdit()
         
         

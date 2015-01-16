@@ -3,7 +3,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from manage_booking import *
 from manage_order import *
-
+from manage_booking_test import *
 #layout index
 ## 0 - main screen
 ## 1 - manage booking
@@ -17,6 +17,7 @@ class RestaurantWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Restaurant Simulation")
         self.create_view_restaurant_layout()
+          
         
         self.stacked_layout = QStackedLayout()
         self.stacked_layout.addWidget(self.main_widget_layout)
@@ -24,12 +25,17 @@ class RestaurantWindow(QMainWindow):
         self.central_widget = QWidget()
         self.central_widget.setLayout(self.stacked_layout)
         self.setCentralWidget(self.central_widget)
+        self.create_tool_bar() 
 
         self.setFixedSize(1280,800)
 
-    def manage_booking(self):
+        #layouts
         self.manage_booking = BookingWindow()
         self.stacked_layout.addWidget(self.manage_booking)
+
+    def main_screen(self):
+        self.stacked_layout.setCurrentIndex(0)
+    def manage_booking(self):
         self.stacked_layout.setCurrentIndex(1)
         
 
@@ -40,21 +46,20 @@ class RestaurantWindow(QMainWindow):
         self.bookings_tool_bar = QToolBar()
 
 
-        self.main_screen_label_bar = QAction("Main Screen",self)
+        self.main_screen_label_bar = QPushButton("Main Screen")
         self.main_screen_label_bar.setToolTip("This will direct you to main screen")
-        self.main_screen_tool_bar.addAction(self.main_screen_label_bar)
+        self.main_screen_label_bar.clicked.connect(self.main_screen)
 
         
-        self.orders_label_bar = QAction("Orders",self)
+        self.orders_label_bar = QPushButton("Orders")
         self.orders_label_bar.setToolTip("All orders will be displayed")
-        self.orders_tool_bar.addAction(self.orders_label_bar)
 
-        self.bookings_label_bar = QAction("Bookings",self)
+        self.bookings_label_bar = QPushButton("Bookings")
         self.bookings_label_bar.setToolTip("All bookings will be displayed")
-        self.bookings_tool_bar.addAction(self.bookings_label_bar)
 
-        
-
+        self.main_screen_tool_bar.addWidget(self.main_screen_label_bar)
+        self.orders_tool_bar.addWidget(self.orders_label_bar)
+        self.bookings_tool_bar.addWidget(self.bookings_label_bar)
         
 
         self.addToolBar(self.main_screen_tool_bar)
@@ -75,7 +80,7 @@ class RestaurantWindow(QMainWindow):
 
     def create_view_restaurant_layout(self):
         #methods
-        self.create_tool_bar()      
+           
         self.create_menu_bar()
         
         #create buttons
@@ -117,7 +122,7 @@ class RestaurantWindow(QMainWindow):
         self.table16_button.setMaximumSize(100,60)
 
         
-
+        #connections
         self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
         self.manage_bookings.clicked.connect(self.manage_booking)
         

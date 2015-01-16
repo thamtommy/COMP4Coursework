@@ -2,7 +2,7 @@ import sqlite3
 
 def update_reservation_time():
     display_all_reservations()
-    ResID = int(input("Which Reservation ID would you like to update: "))
+    ResID = int(input("Which Booking ID would you like to update: "))
     display_reservation_time(ResID)
 
     newTime = input("Enter new time: ")
@@ -10,14 +10,14 @@ def update_reservation_time():
     
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
-        sql = "update Reservation set ReservationTime=? where ReservationID=?"
+        sql = "update Booking set BookingTime=? where BookingID=?"
         cursor.execute("PRAGMA foreign_keys = ON") 
         cursor.execute(sql,data)
         db.commit()
 
 def update_reservation_date():
     display_all_reservations()
-    ResID = int(input("Which Reservation ID would you like to update: "))
+    ResID = int(input("Which Booking ID would you like to update: "))
     display_reservation_date(ResID)
 
     newDate = input("Enter new date: ")
@@ -25,7 +25,7 @@ def update_reservation_date():
     
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
-        sql = "update Reservation set ReservationDate=? where ReservationID=?"
+        sql = "update Booking set BookingDate=? where BookingID=?"
         cursor.execute("PRAGMA foreign_keys = ON") 
         cursor.execute(sql,data)
         db.commit()
@@ -33,21 +33,21 @@ def update_reservation_date():
 def display_all_reservations():
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
-        cursor.execute("select * from Reservation")
+        cursor.execute("select * from Booking")
         reservations = cursor.fetchall()
         print(reservations)
 
 def display_reservation_time(id):
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
-        cursor.execute("select ReservationTime from Reservation where ReservationID=?",(id,))
+        cursor.execute("select BookingTime from Booking where BookingID=?",(id,))
         RTime = cursor.fetchone()
-        print("The current reservation time is {0} for reservation ID {1}.".format(RTime,ResID))
+        print("The current reservation time is {0} for Booking ID {1}.".format(RTime,ResID))
 
 def display_reservation_date(id):
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
-        cursor.execute("select ReservationDate from Reservation where ReservationID=?",(id,))
+        cursor.execute("select BookingDate from Booking where BookingID=?",(id,))
         RDate = cursor.fetchone()
         print("The current reservation date is {0} for reservation ID {1}.".format(RDate,ResID))    
 

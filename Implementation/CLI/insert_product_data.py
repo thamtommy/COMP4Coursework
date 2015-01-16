@@ -27,6 +27,7 @@ def get_menu_item():
     insert_data(menu_item)
 
 if __name__ == "__main__":
+    ItemType()
     get_menu_item()
     
 

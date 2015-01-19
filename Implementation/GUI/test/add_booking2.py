@@ -83,8 +83,7 @@ class AddBookingWindow(QWidget):
 
         #create a widget to display main layout
         self.add_booking_widget = QWidget()
-        self.add_booking_widget.setLayout(self.main_layout)
-        self.setCentralWidget(self.add_booking_widget)
+        self.setLayout(self.main_layout)
 
         #connections
         self.add_complete.clicked.connect(self.add_booking)
@@ -103,5 +102,11 @@ class AddBookingWindow(QWidget):
             cursor.execute(sql,booking)
             db.commit()
             
+if __name__ == "__main__":
+    application = QApplication(sys.argv)
+    window = AddBookingWindow()
+    window.show()
+    window.raise_()
+    application.exec()
                              
 

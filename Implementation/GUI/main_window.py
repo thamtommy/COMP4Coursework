@@ -74,6 +74,12 @@ class RestaurantWindow(QMainWindow):
         self.options_bar = self.menu.addMenu("Options")
         self.setMenuBar(self.menu)
 
+        self.menu_box = QComboBox(self)
+        self.menu_box.addItem("Add Item")
+        self.menu_box.addItem("Delete Item")
+
+        self.menu_box_grid = QGridLayout()
+        self.menu_box_grid.addWidget(self.menu_box,0,0)
 
 
         

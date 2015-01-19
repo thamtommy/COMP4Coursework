@@ -19,11 +19,12 @@ class RestaurantWindow(QMainWindow):
         
         self.stacked_layout = QStackedLayout()
         self.stacked_layout.addWidget(self.main_widget_layout)
-
+ 
         self.central_widget = QWidget()
         self.central_widget.setLayout(self.stacked_layout)
         self.setCentralWidget(self.central_widget)
-        self.create_tool_bar() 
+        self.create_tool_bar()
+        
 
         self.setFixedSize(1280,800)
 
@@ -33,6 +34,7 @@ class RestaurantWindow(QMainWindow):
 
     def main_screen(self):
         self.stacked_layout.setCurrentIndex(0)
+        
     def manage_booking(self):
         self.stacked_layout.setCurrentIndex(1)
         

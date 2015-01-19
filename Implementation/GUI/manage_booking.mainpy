@@ -54,7 +54,7 @@ class BookingWindow(QMainWindow):
         self.view_booking_widget.setLayout(self.booking_layout)
 
         #connections
-        #self.add_button.clicked.connect(self.add_booking)
+        self.add_button.clicked.connect(self.add_booking)
 
     def add_booking(self):
 

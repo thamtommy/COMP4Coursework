@@ -5,40 +5,24 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from add_booking import*
-from radio_button_widget_class import *
+from delete_booking import*
 
-class BookingWindow(QMainWindow):
+class BookingWindow(QWidget):
     """this class creates a window to observe the bookings"""
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Manage Booking")
-        self.create_manage_booking_layout()
 
-        self.booking_stacked_layout = QStackedLayout()
-        self.booking_stacked_layout.addWidget(self.view_booking_widget)
-
-        self.central_widget = QWidget()
-        self.central_widget.setLayout(self.booking_stacked_layout)
-        self.setCentralWidget(self.central_widget)
-        self.booking_stacked_layout.setCurrentIndex(0)
-
-        #layouts
-        self.add_booking = AddBookingWindow()#import from addbooking.py
-        self.booking_stacked_layout.addWidget(self.add_booking)#got layout from main program of addbooking.py
-        
-        
-    def create_manage_booking_layout(self):
-        #create buttons
-        self.back_button = QPushButton("Back") # Will be an arrow
-        self.add_button = QPushButton("Add Booking")
-        self.delete_button = QPushButton("Delete Booking")
-
-        
         #create layouts
         self.booking_layout = QVBoxLayout()
         self.view_bookings = QGridLayout()
         self.manage_booking = QHBoxLayout()
+        self.stacked_layout = QStackedLayout()
+
+        #create buttons
+        self.back_button = QPushButton("Back") # Will be an arrow
+        self.add_button = QPushButton("Add Booking")
+        self.delete_button = QPushButton("Delete Booking")
 
         #add buttons to layouts
         self.manage_booking.addWidget(self.add_button)
@@ -49,25 +33,39 @@ class BookingWindow(QMainWindow):
         self.booking_layout.addLayout(self.view_bookings)
         self.booking_layout.addLayout(self.manage_booking)
 
-        #create widget to display main order layout
+        #create widget to display main booking layout
         self.view_booking_widget = QWidget()
         self.view_booking_widget.setLayout(self.booking_layout)
 
+        #add main layout to stack
+        self.stacked_layout.addWidget(self.view_booking_widget)
+
+        #set layout to stacked layout
+        self.setLayout(self.stacked_layout)
+        self.stacked_layout.setCurrentIndex(0)
+
+        #stacked layout
+        self.add_booking_widget = AddBookingWindow()#import from addbooking.py
+        self.stacked_layout.addWidget(self.add_booking_widget)#got layout from main program of addbooking.py
+
+        self.delete_booking_widget = DeleteBookingWindow()
+        self.stacked_layout.addWidget(self.delete_booking_widget)
+        
         #connections
-        #self.add_button.clicked.connect(self.add_booking)
+        self.add_button.clicked.connect(self.add_booking_connection)
+        self.delete_button.clicked.connect(self.delete_booking_connection)
 
-    def add_booking(self):
+    def add_booking_connection(self):       
+        self.stacked_layout.setCurrentIndex(1)
 
-        self.booking_stacked_layout.setCurrentIndex(1) #change layout to add booking layout
+    def delete_booking_connection(self):
+        self.stacked_layout.setCurrentIndex(2)
 
 
-def main():
-    booking_manage = QApplication(sys.argv) # create new application
-    booking_window = BookingWindow() #create new instance of main window
-    booking_window.show() #make instance visible
-    booking_window.raise_() #raise instance to top of window stack
-    booking_manage.exec_() #monitor application for events
 
 if __name__ == "__main__":
-    main()
-
+    application = QApplication(sys.argv)
+    window = BookingWindow()
+    window.show()
+    window.raise_()
+    application.exec()

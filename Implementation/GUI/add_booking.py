@@ -3,38 +3,12 @@ import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-class AddBookingWindow(QMainWindow):
+class AddBookingWindow(QWidget):
     """this class creates a window to add bookings"""
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Add Booking")
-        self.create_add_booking_layout()
-        self.setFixedSize(800,600)
 
-    def create_tool_bar(self):
-        #create toolbar
-        self.main_screen_tool_bar = QToolBar()
-        self.orders_tool_bar = QToolBar()
-        self.bookings_tool_bar = QToolBar()
-
-        self.main_screen_label_bar = QPushButton("Main Screen")
-        self.main_screen_label_bar.setToolTip("This will direct you to main screen")
-        self.orders_label_bar = QPushButton("Orders")
-        self.orders_label_bar.setToolTip("All orders will be displayed")
-        self.bookings_label_bar = QPushButton("Bookings")
-        self.bookings_label_bar.setToolTip("All bookings will be displayed")
-
-        self.main_screen_tool_bar.addWidget(self.main_screen_label_bar)
-        self.orders_tool_bar.addWidget(self.orders_label_bar)
-        self.bookings_tool_bar.addWidget(self.bookings_label_bar)
-        
-
-        self.addToolBar(self.main_screen_tool_bar)
-        self.addToolBar(self.orders_tool_bar)
-        self.addToolBar(self.bookings_tool_bar)
-
-    def create_add_booking_layout(self):
         #methods
 
         #create layouts
@@ -109,8 +83,7 @@ class AddBookingWindow(QMainWindow):
 
         #create a widget to display main layout
         self.add_booking_widget = QWidget()
-        self.add_booking_widget.setLayout(self.main_layout)
-        self.setCentralWidget(self.add_booking_widget)
+        self.setLayout(self.main_layout)
 
         #connections
         self.add_complete.clicked.connect(self.add_booking)
@@ -129,15 +102,11 @@ class AddBookingWindow(QMainWindow):
             cursor.execute(sql,booking)
             db.commit()
             
-                             
-
-def main():
-    restaurant_simulation = QApplication(sys.argv) # create new application
-    restaurant_window = AddBookingWindow() #create new instance of main window
-    restaurant_window.show() #make instance visible
-    restaurant_window.raise_() #raise instance to top of window stack
-    restaurant_simulation.exec_() #monitor application for events
-
 if __name__ == "__main__":
-    main()
+    application = QApplication(sys.argv)
+    window = AddBookingWindow()
+    window.show()
+    window.raise_()
+    application.exec()
+                             
 

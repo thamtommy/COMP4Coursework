@@ -17,78 +17,6 @@ class RestaurantWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Restaurant Simulation")
-        self.create_view_restaurant_layout()
-          
-        
-        self.stacked_layout = QStackedLayout()
-        self.stacked_layout.addWidget(self.main_widget_layout)
-
-        self.central_widget = QWidget()
-        self.central_widget.setLayout(self.stacked_layout)
-        self.setCentralWidget(self.central_widget)
-        self.create_tool_bar() 
-
-        self.setFixedSize(1280,800)
-
-        #layouts
-    def main_screen(self):
-        self.stacked_layout.setCurrentIndex(0)
-    def manage_booking(self):
-        self.manage_bookings = BookingWindow()
-        self.setCentralWidget(self.manage_bookings)
-        
-        
-
-    def create_tool_bar(self):
-        #create toolbar
-        self.main_screen_tool_bar = QToolBar()
-        self.orders_tool_bar = QToolBar()        
-        self.bookings_tool_bar = QToolBar()
-
-
-        self.main_screen_label_bar = QAction("Main Screen",self)
-        self.main_screen_label_bar.setToolTip("This will direct you to main screen")
-        self.main_screen_tool_bar.addAction(self.main_screen_label_bar)
-        self.main_screen_label_bar.triggered.connect(self.main_screen)
-
-        
-        self.orders_label_bar = QAction("Orders",self)
-        self.orders_label_bar.setToolTip("All orders will be displayed")
-        self.orders_tool_bar.addAction(self.orders_label_bar)
-
-        self.bookings_label_bar = QAction("Bookings",self)
-        self.bookings_label_bar.setToolTip("All bookings will be displayed")
-        self.bookings_tool_bar.addAction(self.bookings_label_bar)
-
-        
-
-        
-
-        self.addToolBar(self.main_screen_tool_bar)
-        self.addToolBar(self.orders_tool_bar)
-        self.addToolBar(self.bookings_tool_bar)
-
-    def create_menu_bar(self):
-        self.menu = QMenuBar()
-        self.menu_bar = self.menu.addMenu("Menu")
-        self.options_bar = self.menu.addMenu("Options")
-        self.setMenuBar(self.menu)
-
-        self.menu_box = QComboBox(self)
-        self.menu_box.addItem("Add Item")
-        self.menu_box.addItem("Delete Item")
-
-        self.menu_box_grid = QGridLayout()
-        self.menu_box_grid.addWidget(self.menu_box,0,0)
-
-
-        
-        
-    
-
-    def create_view_restaurant_layout(self):
-        #methods
-           
         self.create_menu_bar()
         
         #create buttons
@@ -178,6 +106,76 @@ class RestaurantWindow(QMainWindow):
         #create a widget to display main layout
         self.main_widget_layout = QWidget()
         self.main_widget_layout.setLayout(self.main_layout)
+          
+        
+        self.stacked_layout = QStackedLayout()
+        self.stacked_layout.addWidget(self.main_widget_layout)
+
+        self.central_widget = QWidget()
+        self.central_widget.setLayout(self.stacked_layout)
+        self.setCentralWidget(self.central_widget)
+        self.create_tool_bar()
+
+        
+
+        self.setFixedSize(1280,800)
+
+        #layouts
+    def main_screen(self):
+        self.stacked_layout.setCurrentIndex(0)
+    def manage_booking(self):
+        self.manage_bookings = BookingWindow()
+        self.setCentralWidget(self.manage_bookings)
+        
+        
+
+    def create_tool_bar(self):
+        #create toolbar
+        self.main_screen_tool_bar = QToolBar()
+        self.orders_tool_bar = QToolBar()        
+        self.bookings_tool_bar = QToolBar()
+
+
+        self.main_screen_label_bar = QAction("Main Screen",self)
+        self.main_screen_label_bar.setToolTip("This will direct you to main screen")
+        self.main_screen_tool_bar.addAction(self.main_screen_label_bar)
+        self.main_screen_label_bar.triggered.connect(self.main_screen)
+
+        
+        self.orders_label_bar = QAction("Orders",self)
+        self.orders_label_bar.setToolTip("All orders will be displayed")
+        self.orders_tool_bar.addAction(self.orders_label_bar)
+
+        self.bookings_label_bar = QAction("Bookings",self)
+        self.bookings_label_bar.setToolTip("All bookings will be displayed")
+        self.bookings_tool_bar.addAction(self.bookings_label_bar)
+
+        
+
+        
+
+        self.addToolBar(self.main_screen_tool_bar)
+        self.addToolBar(self.orders_tool_bar)
+        self.addToolBar(self.bookings_tool_bar)
+
+    def create_menu_bar(self):
+        self.menu = QMenuBar()
+        self.menu_bar = self.menu.addMenu("Menu")
+        self.options_bar = self.menu.addMenu("Options")
+        self.setMenuBar(self.menu)
+
+        self.menu_box = QComboBox(self)
+        self.menu_box.addItem("Add Item")
+        self.menu_box.addItem("Delete Item")
+
+        self.menu_box_grid = QGridLayout()
+        self.menu_box_grid.addWidget(self.menu_box,0,0)
+
+
+        
+    
+           
+
 
 
 

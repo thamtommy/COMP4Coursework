@@ -4,8 +4,8 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from add_booking2 import*
-from radio_button_widget_class import *
+from add_booking2 import *
+from delete_booking2 import *
 
 class BookingWindow(QWidget):
     """this class creates a window to observe the bookings"""
@@ -17,6 +17,7 @@ class BookingWindow(QWidget):
         self.booking_layout = QVBoxLayout()
         self.view_bookings = QGridLayout()
         self.manage_booking = QHBoxLayout()
+        self.stacked_layout = QStackedLayout()
 
         #create buttons
         self.back_button = QPushButton("Back") # Will be an arrow
@@ -32,27 +33,33 @@ class BookingWindow(QWidget):
         self.booking_layout.addLayout(self.view_bookings)
         self.booking_layout.addLayout(self.manage_booking)
 
-        #create widget to display main order layout
+        #create widget to display main booking layout
         self.view_booking_widget = QWidget()
         self.view_booking_widget.setLayout(self.booking_layout)
 
-        self.stacked_layout = QStackedLayout()
+        #add main layout to stack
         self.stacked_layout.addWidget(self.view_booking_widget)
 
-        self.central_booking_widget = QWidget()
-        self.central_booking_widget.setLayout(self.stacked_layout)
+        #set layout to stacked layout
         self.setLayout(self.stacked_layout)
         self.stacked_layout.setCurrentIndex(0)
 
-        #layouts
+        #stacked layout
         self.add_booking_widget = AddBookingWindow()#import from addbooking.py
         self.stacked_layout.addWidget(self.add_booking_widget)#got layout from main program of addbooking.py
 
+        self.delete_booking_widget = DeleteBookingWindow()
+        self.stacked_layout.addWidget(self.delete_booking_widget)
+        
         #connections
-        self.add_button.clicked.connect(self.add_booking)
+        self.add_button.clicked.connect(self.add_booking_connection)
+        self.delete_button.clicked.connect(self.delete_booking_connection)
 
-        def add_booking():
-            self.stacked_layout.setCurrentIndex(1)
+    def add_booking_connection(self):       
+        self.stacked_layout.setCurrentIndex(1)
+
+    def delete_booking_connection(self):
+        self.stacked_layout.setCurrentIndex(2)
 
 
 

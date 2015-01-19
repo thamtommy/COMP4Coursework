@@ -1,8 +1,6 @@
 import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-from manage_booking import *
-from manage_order import *
 from manage_booking_test import *
 #layout index
 ## 0 - main screen

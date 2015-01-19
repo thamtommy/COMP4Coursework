@@ -21,6 +21,7 @@ class BookingWindow(QMainWindow):
         self.central_widget = QWidget()
         self.central_widget.setLayout(self.booking_stacked_layout)
         self.setCentralWidget(self.central_widget)
+        self.booking_stacked_layout.setCurrentIndex(0)
 
         #layouts
         self.add_booking = AddBookingWindow()#import from addbooking.py

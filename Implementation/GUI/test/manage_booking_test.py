@@ -4,7 +4,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from add_booking import*
+from add_booking2 import*
 from radio_button_widget_class import *
 
 class BookingWindow(QWidget):
@@ -46,6 +46,16 @@ class BookingWindow(QWidget):
         #layouts
         self.add_booking = AddBookingWindow()#import from addbooking.py
         self.stacked_layout.addWidget(self.add_booking)#got layout from main program of addbooking.py
+        
+
+
+        
+
+
+
+
+
+
 
         #connections
         self.add_button.clicked.connect(self.add_booking)

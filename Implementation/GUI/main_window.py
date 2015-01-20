@@ -3,6 +3,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from manage_booking import *
 from manage_order import *
+from add_item_to_menu import *
+from delete_item_off_menu import *
 
 
 #layout index
@@ -19,7 +21,6 @@ class RestaurantWindow(QMainWindow):
         self.setWindowTitle("Restaurant Simulation")
         self.create_menu_bar()
         
-        #create buttons
         #table buttons
         self.table_button = QPushButton("Table 1")
         self.table_button.setGeometry(4,8,5,9)
@@ -159,22 +160,29 @@ class RestaurantWindow(QMainWindow):
         self.addToolBar(self.bookings_tool_bar)
 
     def create_menu_bar(self):
+        #actions
+        self.add_item_box = QAction("Add Item",self)
+        self.delete_item_box = QAction("Delete Item",self)
+        
         self.menu = QMenuBar()
         self.menu_bar = self.menu.addMenu("Menu")
         self.options_bar = self.menu.addMenu("Options")
         self.setMenuBar(self.menu)
 
-        self.menu_box = QComboBox(self)
-        self.menu_box.addItem("Add Item")
-        self.menu_box.addItem("Delete Item")
-
-        self.menu_box_grid = QGridLayout()
-        self.menu_box_grid.addWidget(self.menu_box,0,0)
-
-
+        self.menu_bar.addAction(self.add_item_box)
+        self.menu_bar.addAction(self.delete_item_box)      
         
+        #connections
+        self.add_item_box.triggered.connect(self.add_item_menu_connection)
+        self.delete_item_box.triggered.connect(self.delete_item_menu_connection)
     
-           
+    def add_item_menu_connection(self):
+        add_menu_item = AddItemToMenu()
+        add_menu_item.exec_()
+
+    def delete_item_menu_connection(self):
+        delete_menu_item = DeleteItemOffMenu()
+        delete_menu_item.exec_()
 
 
 

@@ -2,18 +2,22 @@ import sys
 import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from table_display import *
 
 class DeleteBookingWindow(QWidget):
     """this class creates a main window to delete bookings"""
 
     def __init__(self):
         super().__init__()
+        self.display_table = DisplayTable()
+        self.bookingtable = self.display_table.show_table("Menu")
         self.setWindowTitle("Delete Booking")
         self.setFixedSize(800,600)
         #create layouts
         self.main_layout = QVBoxLayout()
         self.input_layout = QHBoxLayout()
 
+        self.main_layout.addWidget(self.bookingtable)
         self.main_layout.addLayout(self.input_layout)
         
         #create label
@@ -38,6 +42,7 @@ class DeleteBookingWindow(QWidget):
         #create a widget to display main layout
         self.delete_booking_widget = QWidget()
         self.setLayout(self.main_layout)
+
 
     def delete_booking(self):
         booking = self.input_bookingID.text()

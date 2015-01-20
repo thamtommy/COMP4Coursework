@@ -6,15 +6,13 @@ from PyQt4.QtGui import *
 
 from radio_button_widget_class import *
 
-class OrderWindow(QMainWindow):
+class OrderWindow(QWidget):
     """this class creates a main window to observe the restaurant"""
 
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Manage Order")
-        self.create_manage_order_layout()
         
-    def create_manage_order_layout(self):
         #create buttons
         self.back_button = QPushButton("Back") # Will be an arrow
         self.add_button = QPushButton("Add")
@@ -40,8 +38,10 @@ class OrderWindow(QMainWindow):
 
         #create layouts
         self.order_layout = QVBoxLayout()
-        self.order_information = QGridLayout()
+        self.order_information = QHBoxLayout()
         self.items_ordered = QGridLayout()
+        self.dishes_ordered = QVBoxLayout()
+        self.drinks_ordered = QVBoxLayout()
         self.manage_order = QHBoxLayout()
 
         #add buttons to layouts
@@ -50,25 +50,28 @@ class OrderWindow(QMainWindow):
         self.manage_order.addWidget(self.delete_button)
         self.manage_order.addWidget(self.finish_button)
 
-        #labels to item ordered layout
-        self.items_ordered.addWidget(self.dishes_label,0,0)
-        self.items_ordered.addWidget(self.drinks_label,0,1)
+        #labels
+        ##labels to drink/dish
+        self.dishes_ordered.addWidget(self.dishes_label)
+        self.drinks_ordered.addWidget(self.drinks_label)
+        ##labels to order information
+        self.order_information.addWidget(self.table_number_label)
+        self.order_information.addWidget(self.date_label)
+        self.order_information.addWidget(self.time_label)
+        self.order_information.addWidget(self.number_people_label)
 
-            #labels to order information
-        self.order_information.addWidget(self.table_number_label,0,1)
-        self.order_information.addWidget(self.date_label,2,0)
-        self.order_information.addWidget(self.time_label,2,1)
-        self.order_information.addWidget(self.number_people_label,2,2)
-
-        #add layouts to main order layout
+        #layouts
+        ##add layouts to items ordered layout
+        self.items_ordered.addLayout(self.dishes_ordered,0,0)
+        self.items_ordered.addLayout(self.drinks_ordered,0,1)
+        ##add layouts to main order layout
         self.order_layout.addLayout(self.order_information)
         self.order_layout.addLayout(self.items_ordered)
         self.order_layout.addLayout(self.manage_order)
 
         #create widget to display main order layout
-        self.view_order_widget = QWidget()
-        self.view_order_widget.setLayout(self.order_layout)
-        self.setCentralWidget(self.view_order_widget)
+
+        self.setLayout(self.order_layout)
 
     def DrinkorDish(self): 
         self.hello_radio_button = RadioButtonWidget("Item type","Please select an item type",("Drink","Dish"))
@@ -84,13 +87,11 @@ class OrderWindow(QMainWindow):
         self.setCentralWidget(self.select_widget)
         
 
-def main():
-    order_manage = QApplication(sys.argv) # create new application
-    order_window = OrderWindow() #create new instance of main window
-    order_window.show() #make instance visible
-    order_window.raise_() #raise instance to top of window stack
-    order_manage.exec_() #monitor application for events
-
 if __name__ == "__main__":
-    main()
+    application = QApplication(sys.argv)
+    window = OrderWindow()
+    window.show()
+    window.raise_()
+    application.exec()
+
 

@@ -57,6 +57,7 @@ class DeleteItemOffMenu(QDialog):
 
     def delete_item_off_menu(self):
         item_name = self.input_item_name.text()
+        item_name = (item_name,)
         print(item_name)
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()

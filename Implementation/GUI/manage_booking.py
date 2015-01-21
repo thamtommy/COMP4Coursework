@@ -15,7 +15,6 @@ class BookingWindow(QWidget):
 
         #create layouts
         self.booking_layout = QVBoxLayout()
-        self.view_bookings = QGridLayout()
         self.manage_booking = QHBoxLayout()
         self.stacked_layout = QStackedLayout()
 
@@ -30,7 +29,6 @@ class BookingWindow(QWidget):
 
 
         #add layouts to main booking layout
-        self.booking_layout.addLayout(self.view_bookings)
         self.booking_layout.addLayout(self.manage_booking)
 
         #create widget to display main booking layout

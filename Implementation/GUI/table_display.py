@@ -13,7 +13,6 @@ class DisplayTable(QWidget):
         self.db = None
         self.model = None
         self.open_database()
-        self.show_table("Menu")
 
 
     def display_results_layout(self):

@@ -72,7 +72,7 @@ class InitialiseCustomer(QDialog):
         #connections
         self.create_complete.clicked.connect(self.add_customer)
 
-    def add_customer(self):
+    def create_orderID(self):
         #create orderID for customer
         TotalDrinkPrice = 0
         TotalDishPrice = 0
@@ -84,7 +84,17 @@ class InitialiseCustomer(QDialog):
             cursor = db.cursor()
             sql = "insert into Orders(TotalDrinkPrice,TotalDishPrice,TotalPrice) values (?,?,?)"
             cursor.execute(sql,Order)
-            db.commit()        
+            db.commit()
+
+    def add_customer(self):
+        self.create_orderID()
+
+
+        with sqlite3.connect("restaurant.db") as db:
+            cursor = db.cursor()
+            cursor.execute("select OrderID from Orders where values (?,?,?)")
+            orderID = cursor.fetchone()
+            return menu_item 
         
         NumberOfPeople = self.input_number_of_people.text()
         date = self.systemdate

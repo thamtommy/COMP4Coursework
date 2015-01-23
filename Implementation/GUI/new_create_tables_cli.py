@@ -31,24 +31,23 @@ def Type():
 def Items():
     sql = """create table Items
              (ItemID integer,
-             ItemDescription text,
+             ItemName text,
              ItemPrice real,
              ItemTypeID integer,
              primary key(ItemID),
-             foreign key(ItemTypeID) references ItemType(ItemTypeID)
-             on update cascade on delete cascade)"""  
+             foreign key(ItemTypeID) references ItemType(ItemTypeID))"""  
     create_table(db_name,"Items",sql)
 
 def BookingItem():
-    sql = """create table BookingItems
+    sql = """create table Booking_Items
              (BookingItemID integer,
-             BookingID integer
+             BookingID integer,
              ItemID integer,
              Quantity integer,
              primary key(BookingItemID),
              foreign key(BookingID) references Booking(BookingID),
-             foreign key(MenuID) references Menu(MenuID))"""
-    create_table(db_name,"Ordered_Items",sql)
+             foreign key(ItemID) references Items(ItemID))"""
+    create_table(db_name,"Booking_Items",sql)
              
 
 def Booking():
@@ -60,14 +59,15 @@ def Booking():
              Date text,
              Time text,
              primary key(BookingID),
-             foreign key(CustomerID) references Customers(CustomerID)"""
+             foreign key(CustomerID) references Customers(CustomerID),
+             foreign key(TableNumber) references Table_Numbers(TableNumber))"""
     create_table(db_name,"Bookings",sql)
 
 def Table():
-    sql = """create Table Number,
-          (TableNumber integer)
-          primary key (TableNumber))"""
-    create_table(db_name,"Table Number",sql)
+    sql = """create table Table_Numbers
+          (TableNumber integer,
+          primary key(TableNumber))"""
+    create_table(db_name,"Table_Numbers",sql)
 
 #create a customer id for a walk in
 def Customer():
@@ -77,16 +77,17 @@ def Customer():
              LastName text,
              TelephoneNo integer,
              primary key(CustomerID))"""
-    create_table(db_name,"Customer",sql)         
+    create_table(db_name,"Customers",sql)         
 
     
 if __name__ == "__main__":
     db_name = "restaurant.db"
     Type()
-    Booking()
-    Menu()
+    Items()
     BookingItem()
-    Customer()
+    Booking()
     Table()
+    Customer()
+
     
         

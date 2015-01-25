@@ -74,7 +74,7 @@ class AddItemToMenu(QDialog):
         print(MenuItem)
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            sql = "insert into Menu(MenuItem,ItemPrice,ItemTypeID) values (?,?,?)"
+            sql = "insert into Items(ItemName,ItemPrice,ItemTypeID) values (?,?,?)"
             cursor.execute(sql,MenuItem)
             db.commit()
             

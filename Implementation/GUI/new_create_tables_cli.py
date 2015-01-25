@@ -66,6 +66,7 @@ def Booking():
 def Table():
     sql = """create table Table_Numbers
           (TableNumber integer,
+          MaxNumberOfPeople integer,
           primary key(TableNumber))"""
     create_table(db_name,"Table_Numbers",sql)
 

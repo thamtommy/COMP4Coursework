@@ -61,17 +61,17 @@ class DeleteItemOffMenu(QDialog):
         print(item_name)
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            sql = "delete from Menu where MenuItem = ?"
+            sql = "delete from Items where ItemName = ?"
             cursor.execute(sql,item_name)
             db.commit()
 
     def delete_itemID_off_menu(self):
         itemID = self.input_itemID.text()
-        print(item_name)
+        print(itemID)
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            sql = "delete from Menu where MenuID = ?"
-            cursor.execute(sql,item_name)
+            sql = "delete from Items where ItemID = ?"
+            cursor.execute(sql,itemID)
             db.commit()
             
 if __name__ == "__main__":

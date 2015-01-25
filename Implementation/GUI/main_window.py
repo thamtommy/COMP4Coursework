@@ -194,7 +194,7 @@ class RestaurantWindow(QMainWindow):
     def add_item_menu_connection(self):
         self.add_menu_item = AddItemToMenu()
         self.display_widget = DisplayTable()
-        self.display_widget.show_table("Menu")
+        self.display_widget.show_table("Items")
 
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.display_widget)
@@ -207,7 +207,7 @@ class RestaurantWindow(QMainWindow):
     def delete_item_menu_connection(self):
         self.delete_menu_item = DeleteItemOffMenu()
         self.display_widget = DisplayTable()
-        self.display_widget.show_table("Menu")
+        self.display_widget.show_table("Items")
 
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.display_widget)

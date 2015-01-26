@@ -48,7 +48,7 @@ class DeleteBookingWindow(QWidget):
         booking = self.input_bookingID.text()
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            sql = "delete from Booking where BookingID=?"
+            sql = "delete from Bookings where BookingID=?"
             cursor.execute(sql,booking)
             db.commit()
             

@@ -128,7 +128,7 @@ class RestaurantWindow(QMainWindow):
     def manage_booking(self):
         self.manage_bookings = BookingWindow()
         self.display_widget = DisplayTable()
-        self.display_widget.show_table("Booking")
+        self.display_widget.show_table("Bookings")
 
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.display_widget)
@@ -159,6 +159,7 @@ class RestaurantWindow(QMainWindow):
         self.bookings_label_bar = QAction("Bookings",self)
         self.bookings_label_bar.setToolTip("All bookings will be displayed")
         self.bookings_tool_bar.addAction(self.bookings_label_bar)
+        self.bookings_label_bar.triggered.connect(self.bookings_tool_bar_connection)
 
         self.view_customers_label = QAction("View Customer",self)
         self.view_customers_label.setToolTip("All customers will be displayed")
@@ -184,7 +185,9 @@ class RestaurantWindow(QMainWindow):
         self.setMenuBar(self.menu)
 
         self.menu_bar.addAction(self.add_item_box)
-        self.menu_bar.addAction(self.delete_item_box)      
+        self.menu_bar.addAction(self.delete_item_box)
+
+        
         
         #connections
         self.add_item_box.triggered.connect(self.add_item_menu_connection)
@@ -218,13 +221,24 @@ class RestaurantWindow(QMainWindow):
 
     def view_customers_connection(self):
         self.display_widget = DisplayTable()
-        self.display_widget.show_table("Customer")
+        self.display_widget.show_table("Customers")
 
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.display_widget)
         self.main_widget = QWidget()
         self.main_widget.setLayout(self.layout)
         self.setCentralWidget(self.main_widget)
+
+    def bookings_tool_bar_connection(self):
+        self.display_widget = DisplayTable()
+        self.display_widget.show_table("Bookings")
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.display_widget)
+        self.main_widget = QWidget()
+        self.main_widget.setLayout(self.layout)
+        self.setCentralWidget(self.main_widget)
+
+    
         
 
 

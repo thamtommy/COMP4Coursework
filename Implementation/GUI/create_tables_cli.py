@@ -1,5 +1,13 @@
 import sqlite3
 
+MaxPeople=[1,6,8,3,1,8,5,2,9,10,4,6,1,5,8,4]
+with sqlite3.connect("restaurant.db") as db:
+    cursor = db.cursor()
+    sql = "insert into Table_Numbers (MaxNumberOfPeople) values (?)"
+    cursor.execute("PRAGMA foreign_keys = ON")
+    cursor.execute(sql,(MaxPeople,))
+    db.commit()
+
 def create_table(db_name,table_name,sql):
     with sqlite3.connect(db_name) as db:
         cursor = db.cursor()
@@ -20,6 +28,11 @@ def create_table(db_name,table_name,sql):
         if not keep_table:  
             cursor.execute(sql)
             db.commit()
+
+
+
+
+
 
 def Type():
     sql = """create table ItemType

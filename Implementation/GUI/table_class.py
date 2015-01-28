@@ -36,10 +36,6 @@ class Table:
                 self._item_list.append(item)
         self._quantity_list.append(1)
 
-    def delete_item_off_order(self):
-        pass
-
-    
     def display_order_list(self):
         print(self._order_list[0])
         print(self._order_list[1])
@@ -50,6 +46,10 @@ class Table:
         print("Time Of Arrival : {0}".format(self._time))
         print("Number Of People : {0}".format(self._number_of_people))
         print(self._order_list)
+
+
+
+    
 def main():
     Table_1 = Table(1,"19/01/2015","12:05",6)
     Table_1.add_item_to_order()

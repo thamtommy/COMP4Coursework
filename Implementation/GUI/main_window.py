@@ -6,11 +6,16 @@ from manage_order import *
 from add_item_to_menu import *
 from delete_item_off_menu import *
 from table_display import *
+from table_class import *
 
 
-#layout index
+#stacked layout index
 ## 0 - main screen
-## 1 - manage booking
+## 1 - add item (menu bar)
+## 2 - delete item (menu bar)
+## 3 - view customers (tool bar)
+## 4 - view bookings (tool bar)
+## 5 - manage bookings (QPushButton)
 
 from radio_button_widget_class import *
 
@@ -57,11 +62,12 @@ class RestaurantWindow(QMainWindow):
         self.table15_button.setMaximumSize(100,60)
         self.table16_button.setMaximumSize(100,60)
 
+        self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
         
         #connections
         
-        self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
-        self.manage_bookings.clicked.connect(self.manage_booking)
+        #self.table_button.clicked.connect()
+        self.manage_bookings.clicked.connect(self.manage_booking_connect)
         
         
 
@@ -108,9 +114,16 @@ class RestaurantWindow(QMainWindow):
         self.main_widget_layout = QWidget()
         self.main_widget_layout.setLayout(self.main_layout)
           
-        
+        #stacked layouts
         self.stacked_layout = QStackedLayout()
         self.stacked_layout.addWidget(self.main_widget_layout)
+        self.add_item_stack_layout()
+        self.delete_item_stack_layout()
+        self.view_customers_stack_layout()
+        self.view_bookings_stack_layout()
+        self.manage_booking_stack_layout()
+
+        
 
         self.central_widget = QWidget()
         self.central_widget.setLayout(self.stacked_layout)
@@ -120,23 +133,6 @@ class RestaurantWindow(QMainWindow):
         
 
         self.setFixedSize(1280,800)
-
-        #layouts
-    def main_screen(self):
-        self.stacked_layout.setCurrentIndex(0)
-        
-    def manage_booking(self):
-        self.manage_bookings = BookingWindow()
-        self.display_widget = DisplayTable()
-        self.display_widget.show_table("Bookings")
-
-        self.layout = QVBoxLayout()
-        self.layout.addWidget(self.display_widget)
-        self.layout.addWidget(self.manage_bookings)
-        self.main_widget = QWidget()
-        self.main_widget.setLayout(self.layout)
-        self.setCentralWidget(self.main_widget)
-        
         
 
     def create_tool_bar(self):
@@ -159,12 +155,12 @@ class RestaurantWindow(QMainWindow):
         self.bookings_label_bar = QAction("Bookings",self)
         self.bookings_label_bar.setToolTip("All bookings will be displayed")
         self.bookings_tool_bar.addAction(self.bookings_label_bar)
-        self.bookings_label_bar.triggered.connect(self.bookings_tool_bar_connection)
+        self.bookings_label_bar.triggered.connect(self.view_bookings_connect)
 
         self.view_customers_label = QAction("View Customer",self)
         self.view_customers_label.setToolTip("All customers will be displayed")
         self.view_customers.addAction(self.view_customers_label)
-        self.view_customers_label.triggered.connect(self.view_customers_connection)
+        self.view_customers_label.triggered.connect(self.view_customers_connect)
         
 
         
@@ -185,29 +181,29 @@ class RestaurantWindow(QMainWindow):
         self.setMenuBar(self.menu)
 
         self.menu_bar.addAction(self.add_item_box)
-        self.menu_bar.addAction(self.delete_item_box)
-
-        
+        self.menu_bar.addAction(self.delete_item_box)      
         
         #connections
-        self.add_item_box.triggered.connect(self.add_item_menu_connection)
-        
-        self.delete_item_box.triggered.connect(self.delete_item_menu_connection)
+        self.add_item_box.triggered.connect(self.add_item_menu_connect)
+        self.delete_item_box.triggered.connect(self.delete_item_menu_connect)
     
-    def add_item_menu_connection(self):
+    def add_item_stack_layout(self):
         self.add_menu_item = AddItemToMenu()
         self.display_widget = DisplayTable()
         self.display_widget.show_table("Items")
 
-        self.layout = QVBoxLayout()
-        self.layout.addWidget(self.display_widget)
-        self.layout.addWidget(self.add_menu_item)
-        self.main_widget = QWidget()
-        self.main_widget.setLayout(self.layout)
-        self.setCentralWidget(self.main_widget)
+        self.add_item_layout = QVBoxLayout()
+        self.add_item_layout.addWidget(self.display_widget)
+        self.add_item_layout.addWidget(self.add_menu_item)
+        self.add_item_widget = QWidget()
+        self.add_item_widget.setLayout(self.add_item_layout)
+        self.stacked_layout.addWidget(self.add_item_widget)
+        
 
+    def add_item_menu_connect(self):
+        self.stacked_layout.setCurrentIndex(1)
 
-    def delete_item_menu_connection(self):
+    def delete_item_stack_layout(self):
         self.delete_menu_item = DeleteItemOffMenu()
         self.display_widget = DisplayTable()
         self.display_widget.show_table("Items")
@@ -217,9 +213,12 @@ class RestaurantWindow(QMainWindow):
         self.layout.addWidget(self.delete_menu_item)
         self.main_widget = QWidget()
         self.main_widget.setLayout(self.layout)
-        self.setCentralWidget(self.main_widget)
+        self.stacked_layout.addWidget(self.main_widget)
 
-    def view_customers_connection(self):
+    def delete_item_menu_connect(self):
+        self.stacked_layout.setCurrentIndex(2)
+
+    def view_customers_stack_layout(self):
         self.display_widget = DisplayTable()
         self.display_widget.show_table("Customers")
 
@@ -227,19 +226,42 @@ class RestaurantWindow(QMainWindow):
         self.layout.addWidget(self.display_widget)
         self.main_widget = QWidget()
         self.main_widget.setLayout(self.layout)
-        self.setCentralWidget(self.main_widget)
+        self.stacked_layout.addWidget(self.main_widget)
 
-    def bookings_tool_bar_connection(self):
+    def view_customers_connect(self):
+        self.stacked_layout.setCurrentIndex(3)
+
+    def view_bookings_stack_layout(self):
         self.display_widget = DisplayTable()
         self.display_widget.show_table("Bookings")
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.display_widget)
         self.main_widget = QWidget()
         self.main_widget.setLayout(self.layout)
-        self.setCentralWidget(self.main_widget)
+        self.stacked_layout.addWidget(self.main_widget) 
 
-    
+    def view_bookings_connect(self):
+        self.stacked_layout.setCurrentIndex(4)
+
+    def main_screen(self):
+        self.stacked_layout.setCurrentIndex(0)
         
+    def manage_booking_stack_layout(self):
+        self.manage_bookings = BookingWindow()
+        self.display_widget = DisplayTable()
+        self.display_widget.show_table("Bookings")
+
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.display_widget)
+        self.layout.addWidget(self.manage_bookings)
+        self.main_widget = QWidget()
+        self.main_widget.setLayout(self.layout)
+        self.stacked_layout.addWidget(self.main_widget)
+
+    def manage_booking_connect(self):
+        self.stacked_layout.setCurrentIndex(5)
+    
+            
 
 
 

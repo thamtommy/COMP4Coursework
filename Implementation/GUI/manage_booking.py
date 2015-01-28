@@ -40,7 +40,7 @@ class BookingWindow(QWidget):
 
         #set layout to stacked layout
         self.setLayout(self.stacked_layout)
-        self.stacked_layout.setCurrentIndex(0)
+        
 
         #stacked layout
         self.add_booking_widget = AddBookingWindow()#import from addbooking.py

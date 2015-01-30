@@ -26,7 +26,9 @@ class RestaurantWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Restaurant Simulation")
-        self.create_menu_bar()
+        
+        self.tableOccupied = False
+        #self.create_menu_bar()
         
         #table buttons
         self.table_button = QPushButton("Table 1")
@@ -66,6 +68,7 @@ class RestaurantWindow(QMainWindow):
         self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
         
         #connections
+        self.table_button.clicked.connect(self.table_one)
         
         #self.table_button.clicked.connect()
         self.manage_bookings.clicked.connect(self.manage_booking_connect)
@@ -135,6 +138,28 @@ class RestaurantWindow(QMainWindow):
         
 
         self.setFixedSize(1280,800)
+
+    def table_one(self):
+        TableNumber = 1
+        if tableOccupied == False:
+            pass
+        
+        with sqlite3.connect("restaurant.db") as db:
+            cursor = db.cursor()
+            cursor.execute("select * from Bookings where TableNumber = 1")
+            bookings = cursor.fetchall()
+            print(bookings)
+            
+        #TableOne = Table(
+
+    def table_two(self):
+
+        with sqlite3.connect("restaurant.db") as db:
+            cursor = db.cursor()
+            cursor.execute("select * from Bookings where TableNumber = 2")
+            bookings = cursor.fetchall()
+            print(bookings)
+    
         
 
     def create_tool_bar(self):
@@ -203,6 +228,12 @@ class RestaurantWindow(QMainWindow):
         self.add_item_widget = QWidget()
         self.add_item_widget.setLayout(self.add_item_layout)
         self.stacked_layout.addWidget(self.add_item_widget)
+        self.add_menu_item.itemAdded.connect(self.refresh_database)
+
+    def refresh_database(self):
+        print("refresh")
+        self.display_widget.refresh()
+        
         
 
     def add_item_menu_connect(self):

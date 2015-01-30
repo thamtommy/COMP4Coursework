@@ -4,6 +4,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 class AddItemToMenu(QDialog):
+    itemAdded = pyqtSignal()
     """this class creates a window to add bookings"""
 
     def __init__(self):
@@ -76,6 +77,8 @@ class AddItemToMenu(QDialog):
             sql = "insert into Items(ItemName,ItemPrice,ItemTypeID) values (?,?,?)"
             cursor.execute(sql,MenuItem)
             db.commit()
+
+        self.itemAdded.emit()
             
 if __name__ == "__main__":
     application = QApplication(sys.argv)

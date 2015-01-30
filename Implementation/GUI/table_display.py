@@ -41,9 +41,14 @@ class DisplayTable(QWidget):
         self.results_table.show()
 
     def refresh(self):
+        
+        #print("here")
+        #self.results_table.setModel(self.model)
+        #self.results_table.show()
+        #print(self.model.lastError().text())
         self.model.select()
-        self.results_table.setModel(self.model)
-
+        #self.model.layoutChanged.emit()
+        
 if __name__ == "__main__":
     application = QApplication(sys.argv)
     window = DisplayTable()

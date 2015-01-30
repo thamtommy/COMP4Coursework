@@ -56,7 +56,6 @@ class AddItemToMenu(QDialog):
 
 
         #create a widget to display main layout
-        self.add_booking_widget = QWidget()
         self.setLayout(self.main_layout)
 
         #connections

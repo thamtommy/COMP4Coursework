@@ -7,6 +7,7 @@ from add_item_to_menu import *
 from delete_item_off_menu import *
 from table_display import *
 from table_class import *
+from update_item_price import *
 
 
 #stacked layout index
@@ -122,6 +123,7 @@ class RestaurantWindow(QMainWindow):
         self.view_customers_stack_layout()
         self.view_bookings_stack_layout()
         self.manage_booking_stack_layout()
+        self.update_item_stack_layout()
 
         
 
@@ -174,6 +176,7 @@ class RestaurantWindow(QMainWindow):
         #actions
         self.add_item_box = QAction("Add Item",self)
         self.delete_item_box = QAction("Delete Item",self)
+        self.update_item_box = QAction("Update Item Price",self)
         
         self.menu = QMenuBar()
         self.menu_bar = self.menu.addMenu("Menu")
@@ -181,11 +184,13 @@ class RestaurantWindow(QMainWindow):
         self.setMenuBar(self.menu)
 
         self.menu_bar.addAction(self.add_item_box)
-        self.menu_bar.addAction(self.delete_item_box)      
+        self.menu_bar.addAction(self.delete_item_box)
+        self.menu_bar.addAction(self.update_item_box)
         
         #connections
         self.add_item_box.triggered.connect(self.add_item_menu_connect)
         self.delete_item_box.triggered.connect(self.delete_item_menu_connect)
+        self.update_item_box.triggered.connect(self.update_item_connect)
     
     def add_item_stack_layout(self):
         self.add_menu_item = AddItemToMenu()
@@ -214,6 +219,7 @@ class RestaurantWindow(QMainWindow):
         self.main_widget = QWidget()
         self.main_widget.setLayout(self.layout)
         self.stacked_layout.addWidget(self.main_widget)
+    
 
     def delete_item_menu_connect(self):
         self.stacked_layout.setCurrentIndex(2)
@@ -261,7 +267,21 @@ class RestaurantWindow(QMainWindow):
     def manage_booking_connect(self):
         self.stacked_layout.setCurrentIndex(5)
     
-            
+    def update_item_stack_layout(self):
+        self.update_item = UpdateItemPrice()
+        self.display_widget = DisplayTable()
+        self.display_widget.show_table("Items")
+
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.display_widget)
+        self.layout.addWidget(self.update_item)
+        self.main_widget = QWidget()
+        self.main_widget.setLayout(self.layout)
+        self.stacked_layout.addWidget(self.main_widget)
+        
+
+    def update_item_connect(self):
+        self.stacked_layout.setCurrentIndex(6)
 
 
 

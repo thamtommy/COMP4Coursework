@@ -14,7 +14,6 @@ class BookingWindow(QWidget):
         super().__init__()
 
         #create layouts
-        self.booking_layout = QVBoxLayout()
         self.manage_booking = QHBoxLayout()
         self.stacked_layout = QStackedLayout()
 
@@ -27,13 +26,9 @@ class BookingWindow(QWidget):
         self.manage_booking.addWidget(self.add_button)
         self.manage_booking.addWidget(self.delete_button)
 
-
-        #add layouts to main booking layout
-        self.booking_layout.addLayout(self.manage_booking)
-
         #create widget to display main booking layout
         self.view_booking_widget = QWidget()
-        self.view_booking_widget.setLayout(self.booking_layout)
+        self.view_booking_widget.setLayout(self.manage_booking)
 
         #add main layout to stack
         self.stacked_layout.addWidget(self.view_booking_widget)

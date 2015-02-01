@@ -4,8 +4,6 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from radio_button_widget_class import *
-
 class OrderWindow(QWidget):
     """this class creates a main window to observe the restaurant"""
 

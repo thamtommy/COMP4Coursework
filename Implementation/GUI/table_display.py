@@ -31,6 +31,14 @@ class DisplayTable(QWidget):
         opened_ok = self.db.open()
         return opened_ok
 
+    def show_results(self,query):
+        self.display_results_layout()
+        if not self.model or not isinstance(self.model,QSqlQueryModel):
+            self.model = QSqlQueryModel()
+        self.model.setQuery(query)
+        self.results_table.setModel(self.model)
+        self.results_table.show()
+
     def show_table(self,tableName):
         self.display_results_layout()
         if not self.model or not isinstance(self.model,QSqlTableModel):
@@ -42,12 +50,12 @@ class DisplayTable(QWidget):
 
     def refresh(self):
         
-        #print("here")
-        #self.results_table.setModel(self.model)
-        #self.results_table.show()
+        print("here")
+        self.results_table.setModel(self.model)
+        self.results_table.show()
         #print(self.model.lastError().text())
         self.model.select()
-        #self.model.layoutChanged.emit()
+        #self.model.emit()
         
 if __name__ == "__main__":
     application = QApplication(sys.argv)

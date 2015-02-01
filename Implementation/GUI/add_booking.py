@@ -4,6 +4,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 class AddBookingWindow(QWidget):
+    bookingAdded = pyqtSignal()
     """this class creates a window to add bookings"""
 
     def __init__(self):
@@ -128,7 +129,9 @@ class AddBookingWindow(QWidget):
             cursor = db.cursor()
             sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
             cursor.execute(sql,booking)
-            db.commit()              
+            db.commit()
+
+        self.bookingAdded.emit()
             
 if __name__ == "__main__":
     application = QApplication(sys.argv)

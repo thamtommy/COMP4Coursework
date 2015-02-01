@@ -6,6 +6,7 @@ from PyQt4.QtGui import *
 
 from add_booking import*
 from delete_booking import*
+from table_display import *
 
 class BookingWindow(QWidget):
     """this class creates a window to observe the bookings"""
@@ -15,7 +16,7 @@ class BookingWindow(QWidget):
 
         #create layouts
         self.manage_booking = QHBoxLayout()
-        self.stacked_layout = QStackedLayout()
+
 
         #create buttons
         self.back_button = QPushButton("Back") # Will be an arrow
@@ -27,32 +28,21 @@ class BookingWindow(QWidget):
         self.manage_booking.addWidget(self.delete_button)
 
         #create widget to display main booking layout
-        self.view_booking_widget = QWidget()
-        self.view_booking_widget.setLayout(self.manage_booking)
 
-        #add main layout to stack
-        self.stacked_layout.addWidget(self.view_booking_widget)
+        self.setLayout(self.manage_booking)
 
         #set layout to stacked layout
-        self.setLayout(self.stacked_layout)
+
         
 
-        #stacked layout
-        self.add_booking_widget = AddBookingWindow()#import from addbooking.py
-        self.stacked_layout.addWidget(self.add_booking_widget)#got layout from main program of addbooking.py
 
-        self.delete_booking_widget = DeleteBookingWindow()
-        self.stacked_layout.addWidget(self.delete_booking_widget)
+
+    def refresh_database(self):
+        self.display_widget = DisplayTable()
+        print("refresh")
+        self.display_widget.refresh()
         
-        #connections
-        self.add_button.clicked.connect(self.add_booking_connection)
-        self.delete_button.clicked.connect(self.delete_booking_connection)
 
-    def add_booking_connection(self):       
-        self.stacked_layout.setCurrentIndex(1)
-
-    def delete_booking_connection(self):
-        self.stacked_layout.setCurrentIndex(2)
 
 
 

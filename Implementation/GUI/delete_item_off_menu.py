@@ -3,7 +3,7 @@ import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-class DeleteItemOffMenu(QDialog):
+class DeleteItemOffMenu(QWidget):
     """this class creates a window to add bookings"""
 
     def __init__(self):
@@ -70,8 +70,8 @@ class DeleteItemOffMenu(QDialog):
         print(itemID)
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            sql = "delete from Items where ItemID = ?"
-            cursor.execute(sql,itemID)
+            sql = ("delete from Items where ItemID = {0}".format(itemID))
+            cursor.execute(sql)
             db.commit()
             
 if __name__ == "__main__":

@@ -3,13 +3,13 @@ import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-class AddItemToMenu(QDialog):
+class AddItemToMenu(QWidget):
     itemAdded = pyqtSignal()
     """this class creates a window to add bookings"""
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Add Item To Menu")
+        #self.setWindowTitle("Add Item To Menu")
 
         #create layouts
         self.main_layout = QVBoxLayout()

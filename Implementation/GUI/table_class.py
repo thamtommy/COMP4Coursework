@@ -3,13 +3,14 @@ class Table:
     """A table class"""
 
     #constructor
-    def __init__(self,bookingID,customerID,table_number,number_of_people,date, time):
-        self._bookingID = bookingID
-        self._customerID = customerID
-        self._table_number = table_number
-        self._number_of_people = number_of_people
-        self._date = date
-        self._time = time
+    def __init__(self):
+    
+        self._bookingID = None
+        self._customerID = None
+        self._table_number = None
+        self._number_of_people = None
+        self._date = None
+        self._time = None
 
         #self._item_list = []
         #self._quantity_list = []
@@ -20,14 +21,14 @@ class Table:
     def get_table_number(self,table_number):
         self._table_number = table_number
 
-    def get_date(self,date):
-        self._date = date
+    #def get_date(self,date):
+        #self._date = date
 
-    def get_time(self,time):
-        self._time = time
+    #def get_time(self,time):
+        #self._time = time
 
-    def get_number_of_people(self,number_of_people):
-        self._number_of_people = number_of_people
+    #def get_number_of_people(self,number_of_people):
+        #self._number_of_people = number_of_people
 
     #def add_item_to_order(self):
         #valid_item = False 
@@ -48,7 +49,7 @@ class Table:
         print("Date Of Arrival : {0}".format(self._date))
         print("Time Of Arrival : {0}".format(self._time))
         print("Number Of People : {0}".format(self._number_of_people))
-        print(self._order_list)
+       # print(self._order_list)
 
 
 

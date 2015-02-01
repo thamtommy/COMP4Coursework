@@ -9,15 +9,11 @@ class DeleteBookingWindow(QWidget):
 
     def __init__(self):
         super().__init__()
-        self.display_table = DisplayTable()
-        self.bookingtable = self.display_table.show_table("Menu")
         self.setWindowTitle("Delete Booking")
-        self.setFixedSize(800,600)
         #create layouts
         self.main_layout = QVBoxLayout()
         self.input_layout = QHBoxLayout()
 
-        self.main_layout.addWidget(self.bookingtable)
         self.main_layout.addLayout(self.input_layout)
         
         #create label
@@ -40,7 +36,7 @@ class DeleteBookingWindow(QWidget):
 
 
         #create a widget to display main layout
-        self.delete_booking_widget = QWidget()
+        #self.delete_booking_widget = QWidget()
         self.setLayout(self.main_layout)
 
 
@@ -48,8 +44,8 @@ class DeleteBookingWindow(QWidget):
         booking = self.input_bookingID.text()
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            sql = "delete from Bookings where BookingID=?"
-            cursor.execute(sql,booking)
+            sql = ("delete from Bookings where BookingID = {0}".format(booking))
+            cursor.execute(sql)
             db.commit()
             
                              

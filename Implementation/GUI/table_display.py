@@ -52,7 +52,6 @@ class DisplayTable(QWidget):
         
         print("here")
         self.results_table.setModel(self.model)
-        self.results_table.show()
         #print(self.model.lastError().text())
         self.model.select()
         #self.model.emit()

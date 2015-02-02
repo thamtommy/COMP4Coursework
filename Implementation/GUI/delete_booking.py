@@ -5,6 +5,7 @@ from PyQt4.QtGui import *
 from table_display import *
 
 class DeleteBookingWindow(QWidget):
+    bookingDeleted = pyqtSignal()
     """this class creates a main window to delete bookings"""
 
     def __init__(self):
@@ -47,6 +48,8 @@ class DeleteBookingWindow(QWidget):
             sql = ("delete from Bookings where BookingID = {0}".format(booking))
             cursor.execute(sql)
             db.commit()
+
+        self.bookingDeleted.emit()
             
                              
 

@@ -4,6 +4,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 class DeleteItemOffMenu(QWidget):
+    itemDeleted = pyqtSignal()
     """this class creates a window to add bookings"""
 
     def __init__(self):
@@ -64,6 +65,8 @@ class DeleteItemOffMenu(QWidget):
             sql = "delete from Items where ItemName = ?"
             cursor.execute(sql,item_name)
             db.commit()
+            
+        self.itemDeleted.emit()
 
     def delete_itemID_off_menu(self):
         itemID = self.input_itemID.text()
@@ -73,6 +76,8 @@ class DeleteItemOffMenu(QWidget):
             sql = ("delete from Items where ItemID = {0}".format(itemID))
             cursor.execute(sql)
             db.commit()
+
+        self.itemDeleted.emit()
             
 if __name__ == "__main__":
     application = QApplication(sys.argv)

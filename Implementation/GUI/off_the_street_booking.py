@@ -3,6 +3,7 @@ import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 import time
+import pdb
 
 
 class InitialiseCustomer(QWidget):
@@ -79,12 +80,13 @@ class InitialiseCustomer(QWidget):
         self.create_complete.clicked.connect(self.create_booking)
     
     def create_booking(self,TableNumber):
+        pdb.set_trace()
         #create bookingID for customer
         CustomerID = 1
         NumberOfPeople = self.input_number_of_people.text()
         Date = self.systemdate
         Time = self.systemtime
-    
+        print("hello")
        
 
         Booking = (CustomerID,TableNumber,NumberOfPeople,Date,Time)

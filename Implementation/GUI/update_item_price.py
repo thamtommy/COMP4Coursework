@@ -4,6 +4,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 class UpdateItemPrice(QDialog):
+    itemPriceUpdated = pyqtSignal()
     """this class creates a window to add bookings"""
 
     def __init__(self):
@@ -67,6 +68,8 @@ class UpdateItemPrice(QDialog):
             sql = "update Items set ItemPrice=? where ItemID=?"
             cursor.execute(sql,UpdateItem)
             db.commit()
+
+        self.itemPriceUpdated.emit()
             
 if __name__ == "__main__":
     application = QApplication(sys.argv)

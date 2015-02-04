@@ -22,7 +22,11 @@ from table_display import *
 from table_class import *
 
 from update_item_price import *
+
+
 from off_the_street_booking import *
+#from assign_table_customer import *
+
 
 
 #stacked layout index
@@ -63,7 +67,7 @@ class RestaurantWindow(QMainWindow):
         self.create_tool_bar()
         
         self.main_stack_layout()
-        #stacked layouts (PROBLEM WITH WINDOW POPPING UP IS HERE)
+        #stacked layouts 
         self.stacked_layout = QStackedLayout()
         self.central_widget = QWidget()
         self.central_widget.setLayout(self.stacked_layout)
@@ -78,7 +82,7 @@ class RestaurantWindow(QMainWindow):
         self.add_booking_stack_layout()
         self.delete_booking_stack_layout()
         self.street_customer_stack_layout()
-        #self.view_dishes_stack_layout()
+        self.view_dishes_stack_layout()
         self.view_drinks_stack_layout()
 
         
@@ -252,15 +256,15 @@ class RestaurantWindow(QMainWindow):
         self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
         TodaysDate = time.strftime("%d/%m/%Y")
         print(TodaysDate)
-        self.main_screen_bookings = DisplayTable()
-        self.main_screen_bookings.show_table("Bookings")
         
-##        query = QSqlQuery()
-##        query.prepare("select * from Bookings where Date = {0}".format(TodaysDate))
-##        query.exec_()
-##        if not hasattr(self,"display_widget"):
-##            self.display_widget = DisplayTable()
-##        self.display_widget.show_results(query)
+        filter_query = "Date like '%{0}%'".format(TodaysDate)
+        #if not hasattr(self,"display_widget"):
+        self.display_bookings = DisplayTable()
+        self.display_bookings.show_table("Bookings")
+        self.display_bookings.model.setFilter(filter_query)
+        
+
+
         
         #connections
         self.table_button.clicked.connect(self.table_one)
@@ -293,7 +297,7 @@ class RestaurantWindow(QMainWindow):
         self.todays_bookings_label.setFixedWidth(400)
         
         self.booking_layout.addWidget(self.todays_bookings_label)
-        self.booking_layout.addWidget(self.main_screen_bookings)
+        self.booking_layout.addWidget(self.display_bookings)
         self.booking_layout.addWidget(self.manage_bookings)
         
         
@@ -312,8 +316,8 @@ class RestaurantWindow(QMainWindow):
     def add_item_stack_layout(self):
         self.add_menu_item = AddItemToMenu()
 
-        #if not hasattr(self,"display_widget"):
-        self.add_item_menu_bar = DisplayTable()
+        if not hasattr(self,"add_item_menu_bar"):
+            self.add_item_menu_bar = DisplayTable()
         self.add_item_menu_bar.show_table("Items")
 
         self.add_item_layout = QVBoxLayout()
@@ -400,15 +404,16 @@ class RestaurantWindow(QMainWindow):
         self.update_item = UpdateItemPrice()
 
         #if not hasattr(self,"display_widget"):
-        self.display_widget3 = DisplayTable()
-        self.display_widget3.show_table("Items")
+        self.update_price_menu = DisplayTable()
+        self.update_price_menu.show_table("Items")
 
         self.update_item_layout = QVBoxLayout()
-        self.update_item_layout.addWidget(self.display_widget3)
+        self.update_item_layout.addWidget(self.update_price_menu)
         self.update_item_layout.addWidget(self.update_item)
         self.update_item_widget = QWidget()
         self.update_item_widget.setLayout(self.update_item_layout)
         self.stacked_layout.addWidget(self.update_item_widget)
+        self.update_item.itemPriceUpdated.connect(self.update_price_menu.refresh)
         
 
     def update_item_connect(self):
@@ -450,44 +455,40 @@ class RestaurantWindow(QMainWindow):
         self.stacked_layout.setCurrentIndex(8)
 
     def view_dishes_stack_layout(self):
-        query = QSqlQuery()
-        query.prepare("select * from Items where ItemTypeID = 1")
-        query.exec_()
+        filter_query = "ItemTypeID like '%1%'"
 
-        if not hasattr(self,"view_dishes_tool_bar"):
-            self.view_dishes_tool_bar = DisplayTable()
-        self.view_dishes_tool_bar.show_results(query)
-        self.dish_layout = QVBoxLayout()
-        self.dish_layout.addWidget(self.view_dishes_tool_bar)
-        self.view_dish_widget = QWidget()
-        self.view_dish_widget.setLayout(self.dish_layout)
-        self.stacked_layout.addWidget(self.view_dish_widget)         
+        #if not hasattr(self,"display_widget"):
+        self.view_dishes_tool = DisplayTable()
+        self.view_dishes_tool.show_table("Items")
+        self.view_dishes_tool.model.setFilter(filter_query)
+        
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.view_dishes_tool)
+        self.main_widget = QWidget()
+        self.main_widget.setLayout(self.layout)
+        self.stacked_layout.addWidget(self.main_widget) 
+      
 
     def view_dishes_connect(self):
         self.stacked_layout.setCurrentIndex(10)
 
     def view_drinks_stack_layout(self):
-        query = QSqlQuery()
-        query.prepare("select * from Items where ItemTypeID = 2")
-        query.exec_()
+        filter_query = "ItemTypeID like '%2%'"
 
-        if not hasattr(self,"display_widget"):
-            self.display_widget = DisplayTable()
-        self.display_widget.show_results(query)
-        self.drink_layout = QVBoxLayout()
-        self.drink_layout.addWidget(self.display_widget)
-        self.view_drink_widget = QWidget()
-        self.view_drink_widget.setLayout(self.drink_layout)
-        self.stacked_layout.addWidget(self.view_drink_widget)         
+        #if not hasattr(self,"display_widget"):
+        self.view_drinks_tool = DisplayTable()
+        self.view_drinks_tool.show_table("Items")
+        self.view_drinks_tool.model.setFilter(filter_query)
+        
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.view_drinks_tool)
+        self.main_widget = QWidget()
+        self.main_widget.setLayout(self.layout)
+        self.stacked_layout.addWidget(self.main_widget) 
+     
 
     def view_drinks_connect(self):
         self.stacked_layout.setCurrentIndex(11)
-
-    
-    
-
-
-
 
 
 def main():

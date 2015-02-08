@@ -1,3 +1,4 @@
+
 # plan #
 #get customers that booked to (table number), get booking details, get booking id so that I can use table BookingItems
 #to manage order - display booking items table to track what customer ordered
@@ -49,6 +50,7 @@ class RestaurantWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Restaurant Simulation")
+        self.TableNumber = None
 
         self.TableOneOccupied = False
         self.TableTwoOccupied = False
@@ -93,16 +95,21 @@ class RestaurantWindow(QMainWindow):
 
 
     def table_one(self):
+        # the method street_customer_stack_layout is adding the widget holding the variable self.TableNumber which i assigned to None
+        #which is why  TableNumber is always None
+        
+        self.TableNumber = 1
 
-        TableNumber = 1
         
-        
+  
         if self.TableOneOccupied == False:
            #self.TableOne = Table()
             #self.TableOne.get_table_number(1)
             #TableNumber = self.TableOne._table_number
-            self.street_customer = InitialiseCustomer()
-            self.street_customer.create_booking(TableNumber)
+            self.street_customer = InitialiseCustomer(self.TableNumber)
+
+            #self.street_customer.create_booking(TableNumber)
+
             self.street_customer_connect()
             
             self.TableOneOccupied = True
@@ -118,7 +125,8 @@ class RestaurantWindow(QMainWindow):
             #print(bookings)
 
     def street_customer_stack_layout(self):
-        self.street_customer = InitialiseCustomer()
+        self.TableNumber = 789
+        self.street_customer = InitialiseCustomer(self.TableNumber)
         self.stacked_layout.addWidget(self.street_customer)
 
     def street_customer_connect(self):

@@ -21,13 +21,13 @@ class OrderWindow(QWidget):
         self.add_button.clicked.connect(self.DrinkorDish)
 
         #date widget
-        self.current_date = QDate.currentDate()
+
 
         #create labels
         self.drinks_label = QLabel("Drinks")
         self.dishes_label = QLabel("Dishes")
         self.table_number_label = QLabel("Table : ")
-        self.date_label = QLabel("Date : {0} ".format(self.current_date))
+        self.date_label = QLabel("Date : ")
         self.time_label = QLabel("Time : ")
         self.number_people_label = QLabel("Number of people : ")
         

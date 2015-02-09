@@ -44,6 +44,7 @@ class AddBookingWindow(QWidget):
         self.input_number_of_people.setMaximumSize(300,30)
         self.input_number_of_people.setMaxLength(2)
 
+
         self.input_telephone_number = QLineEdit()
         self.input_telephone_number.setValidator(validator)
         self.input_telephone_number.setMaximumSize(300,30)

@@ -23,6 +23,7 @@ from table_display import *
 from table_class import *
 
 from update_item_price import *
+from radio_button_widget_class import *
 
 
 from off_the_street_booking import *
@@ -86,6 +87,7 @@ class RestaurantWindow(QMainWindow):
         self.street_customer_stack_layout()
         self.view_dishes_stack_layout()
         self.view_drinks_stack_layout()
+        
 
         
 
@@ -93,6 +95,26 @@ class RestaurantWindow(QMainWindow):
         
         self.setFixedSize(1280,860)
 
+
+    def table_radio_button(self):
+        tableList = []
+        for each in range(1,17):
+            tableList.append(each)
+        print(tableList)
+        
+        self.table_buttons = RadioButtonWidget("Table Numbers", "Please select a Table" , "{0}".format(tableList))
+        self.select_table_button = QPushButton("Select Table")
+
+        self.table_radio_layout = QVBoxLayout()
+        self.table_radio_layout.addWidget(self.table_buttons)
+        self.table_radio_layout.addWidget(self.select_table_button)
+
+        
+        
+
+    
+
+                                            
 
     def table_one(self):
         # the method street_customer_stack_layout is adding the widget holding the variable self.TableNumber which i assigned to None
@@ -120,7 +142,6 @@ class RestaurantWindow(QMainWindow):
             cursor.execute("select * from Bookings where TableNumber = 1")
             bookings = cursor.fetchall()
             
-            #print(bookings)
 
     def street_customer_stack_layout(self):
         self.TableNumber = 789
@@ -213,48 +234,34 @@ class RestaurantWindow(QMainWindow):
         self.delete_item_box.triggered.connect(self.delete_item_menu_connect)
         self.update_item_box.triggered.connect(self.update_item_connect)
 
+    def radio_button_connect(self):
+        TableNumber = self.table_buttons.selected_button()
+        print(TableNumber)
+        if TableNumber == 1:
+            self.
+
     def main_stack_layout(self):
 
         #create layouts
         self.main_layout = QVBoxLayout()
-        self.table_layout = QGridLayout() #box 0,0
         self.booking_layout = QVBoxLayout() #box 1,0
-        self.table_layout.setColumnStretch(0,5)
-        
-        #table buttons
-        self.table_button = QPushButton("Table 1")
-        self.table2_button = QPushButton("Table 2")
-        self.table3_button = QPushButton("Table 3")
-        self.table4_button = QPushButton("Table 4")
-        self.table5_button = QPushButton("Table 5")
-        self.table6_button = QPushButton("Table 6")
-        self.table7_button = QPushButton("Table 7")
-        self.table8_button = QPushButton("Table 8")
-        self.table9_button = QPushButton("Table 9")
-        self.table10_button = QPushButton("Table 10")
-        self.table11_button = QPushButton("Table 11")
-        self.table12_button = QPushButton("Table 12")
-        self.table13_button = QPushButton("Table 13")
-        self.table14_button = QPushButton("Table 14")
-        self.table15_button = QPushButton("Table 15")
-        self.table16_button = QPushButton("Table 16")
+        self.table_radio_layout = QVBoxLayout()
 
-        self.table_button.setMaximumSize(250,60)
-        self.table2_button.setMaximumSize(200,60)
-        self.table3_button.setMaximumSize(200,60)
-        self.table4_button.setMaximumSize(200,60)
-        self.table5_button.setMaximumSize(200,60)
-        self.table6_button.setMaximumSize(100,60)
-        self.table7_button.setMaximumSize(100,60)
-        self.table8_button.setMaximumSize(100,60)
-        self.table9_button.setMaximumSize(100,60)
-        self.table10_button.setMaximumSize(100,60)
-        self.table11_button.setMaximumSize(100,60)
-        self.table12_button.setMaximumSize(100,60)
-        self.table13_button.setMaximumSize(100,60)
-        self.table14_button.setMaximumSize(100,60)
-        self.table15_button.setMaximumSize(100,60)
-        self.table16_button.setMaximumSize(100,60)
+
+        #radio button
+        
+        tableList = []
+        for each in range(1,17):
+            tableList.append("Table {0}".format(each))
+            
+        self.table_buttons = RadioButtonWidget("Table Numbers", "Please select a Table" , tableList)
+        self.select_table_button = QPushButton("Select Table")
+        self.select_table_button.clicked.connect(self.radio_button_connect)
+        
+        
+        self.table_radio_layout.addWidget(self.table_buttons)
+        self.table_radio_layout.addWidget(self.select_table_button)
+        
 
 
         #booking section
@@ -273,28 +280,8 @@ class RestaurantWindow(QMainWindow):
 
         
         #connections
-        self.table_button.clicked.connect(self.table_one)
-        self.table2_button.clicked.connect(self.table_two)
 
         self.manage_bookings.clicked.connect(self.manage_booking_connect)
-
-        #add table buttons to table layout
-        self.table_layout.addWidget(self.table_button,0,0)
-        self.table_layout.addWidget(self.table2_button,0,1)
-        self.table_layout.addWidget(self.table3_button,1,0)
-        self.table_layout.addWidget(self.table4_button,1,1)
-        self.table_layout.addWidget(self.table5_button,2,0)
-        self.table_layout.addWidget(self.table6_button,2,1)
-        self.table_layout.addWidget(self.table7_button,3,0)
-        self.table_layout.addWidget(self.table8_button,3,1)
-        self.table_layout.addWidget(self.table9_button,4,0)
-        self.table_layout.addWidget(self.table10_button,4,1)
-        self.table_layout.addWidget(self.table11_button,5,0)
-        self.table_layout.addWidget(self.table12_button,5,1)
-        self.table_layout.addWidget(self.table13_button,6,0)
-        self.table_layout.addWidget(self.table14_button,6,1)
-        self.table_layout.addWidget(self.table15_button,7,0)
-        self.table_layout.addWidget(self.table16_button,7,1)
 
 
         #add widgets to booking layout
@@ -309,7 +296,7 @@ class RestaurantWindow(QMainWindow):
         
 
         #add layouts to main layout
-        self.main_layout.addLayout(self.table_layout)
+        self.main_layout.addLayout(self.table_radio_layout)
         self.main_layout.addLayout(self.booking_layout)
 
 

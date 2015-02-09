@@ -32,7 +32,10 @@ class AddItemToMenu(QWidget):
         self.item_type_label = QLabel("Item Type : ")
 
         #line edit
+        regexpp = QRegExp("[a-z | A-Z]{1,10}")
+        validatorr = QRegExpValidator(regexpp)
         self.input_item_name = QLineEdit()
+        self.input_item_name.setValidator(validatorr)
         self.input_item_name.setMaximumSize(300,30)
 
         regexp = QRegExp("^\\d\\d?$")

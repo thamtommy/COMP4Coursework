@@ -36,17 +36,17 @@ class BookingWindow(QWidget):
     def select_connect(self):
         customerCurrentIndex = self.customer_combo_box.currentIndex()
         print("Customer : {0}".format(customerCurrentIndex))
-        self.CustomerList[customerCurrentIndex]
-        print("Customer ID: {0}".format(self.CustomerList[customerCurrentIndex]))
+        CustomerID = self.CustomerList[customerCurrentIndex]
+        print("Customer ID: {0}".format(CustomerID))
         
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            cursor.execute("select * from Bookings where CustomerID = {0}".format(customerCurrentIndex))
+            cursor.execute("select * from Bookings where CustomerID = {0}".format(CustomerID))
             bookingDetails = cursor.fetchone()         
             print(bookingDetails)        
 
     def create_combo_box(self):
-        CustomerList = []
+        self.CustomerList = []
         CustomerLastName = []
 
         ## get all customer IDs that are on table _
@@ -55,11 +55,11 @@ class BookingWindow(QWidget):
             cursor.execute("select CustomerID from Bookings where TableNumber = 1")#.format(self.TableNumber))
             customers = cursor.fetchall()
             for each in customers:
-                CustomerList.append(each[0])          
-            print(CustomerList)
+                self.CustomerList.append(each[0])          
+            print(self.CustomerList)
 
         ## get all last names from previouse fetchall 
-        for customer in CustomerList:
+        for customer in self.CustomerList:
             with sqlite3.connect("restaurant.db") as db:
                 cursor = db.cursor()
                 cursor.execute("select LastName from Customers where CustomerID = {0}".format(customer))
@@ -73,7 +73,7 @@ class BookingWindow(QWidget):
         for each in CustomerLastName:
             self.customer_combo_box.addItem(each)
 
-        self.CustomerList = CustomerList
+        
 
 
 

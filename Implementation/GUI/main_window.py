@@ -100,8 +100,6 @@ class RestaurantWindow(QMainWindow):
         
         self.TableNumber = 1
 
-        
-  
         if self.TableOneOccupied == False:
            #self.TableOne = Table()
             #self.TableOne.get_table_number(1)

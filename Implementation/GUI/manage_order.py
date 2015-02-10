@@ -3,6 +3,7 @@
 import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from table_display import *
 
 class OrderWindow(QWidget):
     """this class creates a main window to observe the restaurant"""
@@ -31,13 +32,28 @@ class OrderWindow(QWidget):
         self.time_label = QLabel("Time : ")
         self.number_people_label = QLabel("Number of people : ")
         
-        
-        
+        #tables
+        drinkQuery = """SELECT
+                        Booking_Items.Quantity,
+                        Items.ItemName,
+                        Items.ItemPrice,
+                        FROM Items INNER JOIN Booking_Items
+                        ON Booking_Items.ItemID = Items.ItemID,
+                        where BookingID = {0},
+                        ItemTypeID = 2
+                        """.format(BookingID)
+        self.drinks_ordered_table = DisplayTable()
+        self.drinks_ordered_table.show_results(drinkQuery)
 
+        
+        dishQuery = "ItemTypeID like '%1%' "
+        self.dishes_ordered_table = DisplayTable()
+        self.dishes_ordered_table.show_table(dishQuery)
+        
         #create layouts
         self.order_layout = QVBoxLayout()
         self.order_information = QHBoxLayout()
-        self.items_ordered = QGridLayout()
+        self.items_ordered = QHBoxLayout()
         self.dishes_ordered = QVBoxLayout()
         self.drinks_ordered = QVBoxLayout()
         self.manage_order = QHBoxLayout()
@@ -48,7 +64,7 @@ class OrderWindow(QWidget):
         self.manage_order.addWidget(self.delete_button)
         self.manage_order.addWidget(self.finish_button)
 
-        #labels
+        #widgets
         ##labels to drink/dish
         self.dishes_ordered.addWidget(self.dishes_label)
         self.drinks_ordered.addWidget(self.drinks_label)
@@ -57,11 +73,16 @@ class OrderWindow(QWidget):
         self.order_information.addWidget(self.date_label)
         self.order_information.addWidget(self.time_label)
         self.order_information.addWidget(self.number_people_label)
+        ##table to drinks/dish
+        self.drinks_ordered.addWidget(self.drinks_ordered_table)
+        self.dishes_ordered.addWidget(self.dishes_ordered_table)
+
+
 
         #layouts
         ##add layouts to items ordered layout
-        self.items_ordered.addLayout(self.dishes_ordered,0,0)
-        self.items_ordered.addLayout(self.drinks_ordered,0,1)
+        self.items_ordered.addLayout(self.dishes_ordered)
+        self.items_ordered.addLayout(self.drinks_ordered)
         ##add layouts to main order layout
         self.order_layout.addLayout(self.order_information)
         self.order_layout.addLayout(self.items_ordered)
@@ -71,18 +92,8 @@ class OrderWindow(QWidget):
 
         self.setLayout(self.order_layout)
 
-    def DrinkorDish(self): 
-        self.hello_radio_button = RadioButtonWidget("Item type","Please select an item type",("Drink","Dish"))
-        self.instantiate_button = QPushButton("Add")
+    def AddItem(self):
         
-        self.initial_layout = QGridLayout()
-        self.initial_layout.addWidget(self.hello_radio_button)
-        self.initial_layout.addWidget(self.instantiate_button)
-
-        self.select_widget = QWidget()
-        self.select_widget.setLayout(self.initial_layout)
-
-        self.setCentralWidget(self.select_widget)
         
 
 if __name__ == "__main__":

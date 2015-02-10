@@ -6,11 +6,13 @@ import time
 import pdb
 
 
-class InitialiseCustomer(QWidget):
+class RandomCustomer(QDialog):
     """this class creates a window to add bookings"""
+    bookingCreated = pyqtSignal()
 
     def __init__(self,TableNumber):
         super().__init__()
+        self.setMaximumSize(1000,1000)
         #methods
 
         #create layouts
@@ -29,17 +31,24 @@ class InitialiseCustomer(QWidget):
         self.date_arrived_label = QLabel("Date Of Arrival : ")
 
         self.systemtime = time.strftime("%H:%M:%S")
-        self.system_time_label = QLabel(self.systemtime)
+        self.system_time_label = QLineEdit(self.systemtime)
+        self.system_time_label.setReadOnly(True)
+        sizehint = self.system_time_label.sizeHint()
+        self.system_time_label.setMaximumSize(sizehint)
 
         self.systemdate = time.strftime("%d/%m/%Y")
-        self.system_date_label = QLabel(self.systemdate)
+        self.system_date_label = QLineEdit(self.systemdate)
+        self.system_date_label.setReadOnly(True)
+        self.system_date_label.setMaximumSize(sizehint)
 
-        self.display_table_number = QLabel("{0}".format(TableNumber))
+        self.display_table_number = QLineEdit("{0}".format(TableNumber))
+        self.display_table_number.setReadOnly(True)
+        self.display_table_number.setMaximumSize(sizehint)
 
 
         #line edit
         self.input_number_of_people = QLineEdit()
-        self.input_number_of_people.setMaximumSize(300,30)
+        self.input_number_of_people.setMaximumSize(sizehint)
 
 
         #dates and times
@@ -78,8 +87,12 @@ class InitialiseCustomer(QWidget):
 
         #connections
         self.create_complete.clicked.connect(self.create_booking)
+        #self.exec_()
+
+        
     
-    def create_booking(self,TableNumber):
+    def create_booking(self):
+        TableNumber = self.display_table_number.text()
         print("Table Number is : {0}".format(TableNumber))
         #pdb.set_trace()
         #create bookingID for customer
@@ -96,11 +109,13 @@ class InitialiseCustomer(QWidget):
             cursor = db.cursor()
             sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
             cursor.execute(sql,Booking)
-            db.commit()  
+            db.commit()
+
+        self.bookingCreated.emit()
 
 if __name__ == "__main__":
     application = QApplication(sys.argv)
-    window = InitialiseCustomer(TableNumber)
+    window = RandomCustomer(TableNumber)
     window.show()
     window.raise_()
     application.exec()

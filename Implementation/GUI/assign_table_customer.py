@@ -3,17 +3,25 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from off_the_street_booking import *
 
 
-class BookingWindow(QWidget):
+class AssignCustomer(QDialog):
+    bookingRetrieved = pyqtSignal()
     """this class creates a window to observe the bookings"""
 
-    def __init__(self):
+    def __init__(self,TableNumber):
         super().__init__()
+
+        
+
+        self.random_customer = RandomCustomer(TableNumber)
+        self.random_customer_layout = self.random_customer.main_layout
+        
 
         self.main_assign_layout = QVBoxLayout()
         self.choose_customer = QHBoxLayout()
-        self.create_combo_box()
+        self.create_combo_box(TableNumber)
         
         #add buttons to layouts
         self.choose_customer.addWidget(self.customer_combo_box)
@@ -21,15 +29,24 @@ class BookingWindow(QWidget):
         self.select_customer = QPushButton("Select")
         self.choose_customer.addWidget(self.select_customer)
         self.select_customer.clicked.connect(self.select_connect)
+        
 
         self.street_customer = QPushButton("Random Street Customer")
-        #self.street_customer.clicked.connect(self.select_random_connect)
+        self.street_customer.clicked.connect(self.select_random_connect)
 
         self.main_assign_layout.addLayout(self.choose_customer)
         self.main_assign_layout.addWidget(self.street_customer)
                                         
 
         self.setLayout(self.main_assign_layout)
+
+        
+        
+        self.exec_()
+
+    def select_random_connect(self):
+        print("CONNECT")
+        self.setLayout(self.random_customer_layout)
 
 
 
@@ -42,17 +59,30 @@ class BookingWindow(QWidget):
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             cursor.execute("select * from Bookings where CustomerID = {0}".format(CustomerID))
-            bookingDetails = cursor.fetchone()         
-            print(bookingDetails)        
+            self.bookingDetails = cursor.fetchone()         
+            print(self.bookingDetails)
 
-    def create_combo_box(self):
+        self.bookingRetrieved.emit()
+        
+        
+        
+
+        
+##        bookingID = bookingDetails[0]
+##        customerID = bookingDetails[1]
+##        tableNumber = bookingDetails[2]
+##        numberPeople = bookingDetails[3]
+##        Date = bookingDetails[4]
+##        Time = bookingDetails[5]
+
+    def create_combo_box(self,TableNumber):
         self.CustomerList = []
         CustomerLastName = []
 
         ## get all customer IDs that are on table _
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            cursor.execute("select CustomerID from Bookings where TableNumber = 1")#.format(self.TableNumber))
+            cursor.execute("select CustomerID from Bookings where TableNumber = {0}".format(TableNumber))
             customers = cursor.fetchall()
             for each in customers:
                 self.CustomerList.append(each[0])          
@@ -73,15 +103,24 @@ class BookingWindow(QWidget):
         for each in CustomerLastName:
             self.customer_combo_box.addItem(each)
 
+
+
+    def return_values(self):
+        print("Booking has been returned")
+        return self.bookingDetails
+        
+        
+
+        
         
 
 
 
 
-
 if __name__ == "__main__":
+    TableNumber = 1
     application = QApplication(sys.argv)
-    window = BookingWindow()
+    window = AssignCustomer(TableNumber)
     window.show()
     window.raise_()
     application.exec()

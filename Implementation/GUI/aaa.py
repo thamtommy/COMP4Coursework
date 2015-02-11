@@ -1,3 +1,4 @@
+
 # plan #
 #get customers that booked to (table number), get booking details, get booking id so that I can use table BookingItems
 #to manage order - display booking items table to track what customer ordered
@@ -22,11 +23,10 @@ from table_display import *
 from table_class import *
 
 from update_item_price import *
-from radio_button_widget_class import *
 
 
 from off_the_street_booking import *
-from assign_table_customer import *
+#from assign_table_customer import *
 
 
 
@@ -50,6 +50,7 @@ class RestaurantWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Restaurant Simulation")
+        self.TableNumber = None
 
         self.TableOneOccupied = False
         self.TableTwoOccupied = False
@@ -82,17 +83,17 @@ class RestaurantWindow(QMainWindow):
         self.update_item_stack_layout()
         self.add_booking_stack_layout()
         self.delete_booking_stack_layout()
-        #self.street_customer_stack_layout()
+        self.street_customer_stack_layout()
         self.view_dishes_stack_layout()
         self.view_drinks_stack_layout()
-        
 
         
 
 
         
         self.setFixedSize(1280,860)
-                                               
+
+
     def table_one(self):
         # the method street_customer_stack_layout is adding the widget holding the variable self.TableNumber which i assigned to None
         #which is why  TableNumber is always None
@@ -119,9 +120,10 @@ class RestaurantWindow(QMainWindow):
             cursor.execute("select * from Bookings where TableNumber = 1")
             bookings = cursor.fetchall()
             
+            #print(bookings)
 
     def street_customer_stack_layout(self):
-        
+        self.TableNumber = 789
         self.street_customer = InitialiseCustomer(self.TableNumber)
         self.stacked_layout.addWidget(self.street_customer)
 
@@ -196,78 +198,64 @@ class RestaurantWindow(QMainWindow):
         self.add_item_box = QAction("Add Item",self)
         self.delete_item_box = QAction("Delete Item",self)
         self.update_item_box = QAction("Update Item Price",self)
-
-        self.add_booking_box = QAction("Add Booking",self)
-        self.delete_booking_box = QAction("Delete Booking",self)
         
         self.menu = QMenuBar()
         self.menu_bar = self.menu.addMenu("Item Menu")
-        self.bookings_bar = self.menu.addMenu("Bookings")
         self.options_bar = self.menu.addMenu("Options")
-        
         self.setMenuBar(self.menu)
 
         self.menu_bar.addAction(self.add_item_box)
         self.menu_bar.addAction(self.delete_item_box)
         self.menu_bar.addAction(self.update_item_box)
-
-        self.bookings_bar.addAction(self.add_booking_box)
-        self.bookings_bar.addAction(self.delete_booking_box)
-        
         
         #connections
         self.add_item_box.triggered.connect(self.add_item_menu_connect)
         self.delete_item_box.triggered.connect(self.delete_item_menu_connect)
         self.update_item_box.triggered.connect(self.update_item_connect)
 
-        self.add_booking_box.triggered.connect(self.add_booking_connect)
-        self.delete_booking_box.triggered.connect(self.delete_booking_connect)
-
-    def radio_button_connect(self):
-        TableNumber = self.table_buttons.selected_button()
-        print(TableNumber)
-        if TableNumber == 1:
-            if self.TableOneOccupied == False:
-                self.table1 = AssignCustomer(TableNumber)
-                #self.bookingDetails = self.table1.bookingRetrieved.connect(self.table1.return_values)
-                self.bookingDetails = self.table1.return_values
-                print("This is {0}".format(self.bookingDetails))
-                
-                                
-##                self.table1 = InitialiseCustomer(TableNumber)
-##                self.table1.bookingCreated.connect(self.table1.close)
-##                
-                
-        elif TableNumber == 2:
-            if self.TableTwoOccupied == False:
-                self.table2 = AssignCustomer(TableNumber)
-
-        elif TableNumber == 3:
-            if self.TableThreeOccupied == False:
-                self.table3 = AssignCustomer(TableNumber)
-
     def main_stack_layout(self):
 
         #create layouts
         self.main_layout = QVBoxLayout()
+        self.table_layout = QGridLayout() #box 0,0
         self.booking_layout = QVBoxLayout() #box 1,0
-        self.table_radio_layout = QVBoxLayout()
+        self.table_layout.setColumnStretch(0,5)
+        
+        #table buttons
+        self.table_button = QPushButton("Table 1")
+        self.table2_button = QPushButton("Table 2")
+        self.table3_button = QPushButton("Table 3")
+        self.table4_button = QPushButton("Table 4")
+        self.table5_button = QPushButton("Table 5")
+        self.table6_button = QPushButton("Table 6")
+        self.table7_button = QPushButton("Table 7")
+        self.table8_button = QPushButton("Table 8")
+        self.table9_button = QPushButton("Table 9")
+        self.table10_button = QPushButton("Table 10")
+        self.table11_button = QPushButton("Table 11")
+        self.table12_button = QPushButton("Table 12")
+        self.table13_button = QPushButton("Table 13")
+        self.table14_button = QPushButton("Table 14")
+        self.table15_button = QPushButton("Table 15")
+        self.table16_button = QPushButton("Table 16")
 
+        self.table_button.setMaximumSize(250,60)
+        self.table2_button.setMaximumSize(200,60)
+        self.table3_button.setMaximumSize(200,60)
+        self.table4_button.setMaximumSize(200,60)
+        self.table5_button.setMaximumSize(200,60)
+        self.table6_button.setMaximumSize(100,60)
+        self.table7_button.setMaximumSize(100,60)
+        self.table8_button.setMaximumSize(100,60)
+        self.table9_button.setMaximumSize(100,60)
+        self.table10_button.setMaximumSize(100,60)
+        self.table11_button.setMaximumSize(100,60)
+        self.table12_button.setMaximumSize(100,60)
+        self.table13_button.setMaximumSize(100,60)
+        self.table14_button.setMaximumSize(100,60)
+        self.table15_button.setMaximumSize(100,60)
+        self.table16_button.setMaximumSize(100,60)
 
-        #radio button
-        
-        tableList = []
-        for each in range(1,17):
-            tableList.append("Table {0}".format(each))
-            
-        self.table_buttons = RadioButtonWidget("Table Numbers", "Please select a Table" , tableList)
-        self.select_table_button = QPushButton("Select Table")
-        self.select_table_button.clicked.connect(self.radio_button_connect)
-        
-        
-        self.table_radio_layout.addWidget(self.table_buttons)
-        self.table_radio_layout.addWidget(self.select_table_button)
-        
 
         #booking section
 
@@ -276,13 +264,37 @@ class RestaurantWindow(QMainWindow):
         print(TodaysDate)
         
         filter_query = "Date like '%{0}%'".format(TodaysDate)
+        #if not hasattr(self,"display_widget"):
         self.display_bookings = DisplayTable()
         self.display_bookings.show_table("Bookings")
         self.display_bookings.model.setFilter(filter_query)
         
+
+
+        
         #connections
+        self.table_button.clicked.connect(self.table_one)
+        self.table2_button.clicked.connect(self.table_two)
 
         self.manage_bookings.clicked.connect(self.manage_booking_connect)
+
+        #add table buttons to table layout
+        self.table_layout.addWidget(self.table_button,0,0)
+        self.table_layout.addWidget(self.table2_button,0,1)
+        self.table_layout.addWidget(self.table3_button,1,0)
+        self.table_layout.addWidget(self.table4_button,1,1)
+        self.table_layout.addWidget(self.table5_button,2,0)
+        self.table_layout.addWidget(self.table6_button,2,1)
+        self.table_layout.addWidget(self.table7_button,3,0)
+        self.table_layout.addWidget(self.table8_button,3,1)
+        self.table_layout.addWidget(self.table9_button,4,0)
+        self.table_layout.addWidget(self.table10_button,4,1)
+        self.table_layout.addWidget(self.table11_button,5,0)
+        self.table_layout.addWidget(self.table12_button,5,1)
+        self.table_layout.addWidget(self.table13_button,6,0)
+        self.table_layout.addWidget(self.table14_button,6,1)
+        self.table_layout.addWidget(self.table15_button,7,0)
+        self.table_layout.addWidget(self.table16_button,7,1)
 
 
         #add widgets to booking layout
@@ -297,7 +309,7 @@ class RestaurantWindow(QMainWindow):
         
 
         #add layouts to main layout
-        self.main_layout.addLayout(self.table_radio_layout)
+        self.main_layout.addLayout(self.table_layout)
         self.main_layout.addLayout(self.booking_layout)
 
 
@@ -380,6 +392,7 @@ class RestaurantWindow(QMainWindow):
         self.manage_bookings.add_button.clicked.connect(self.add_booking_connect) #connection
         self.manage_bookings.delete_button.clicked.connect(self.delete_booking_connect) #connection
 
+        #if not hasattr(self,"display_widget"):
         self.display_booking_table = DisplayTable()
         self.display_booking_table.show_table("Bookings")
 
@@ -396,6 +409,7 @@ class RestaurantWindow(QMainWindow):
     def update_item_stack_layout(self):
         self.update_item = UpdateItemPrice()
 
+        #if not hasattr(self,"display_widget"):
         self.update_price_menu = DisplayTable()
         self.update_price_menu.show_table("Items")
 
@@ -449,6 +463,7 @@ class RestaurantWindow(QMainWindow):
     def view_dishes_stack_layout(self):
         filter_query = "ItemTypeID like '%1%'"
 
+        #if not hasattr(self,"display_widget"):
         self.view_dishes_tool = DisplayTable()
         self.view_dishes_tool.show_table("Items")
         self.view_dishes_tool.model.setFilter(filter_query)
@@ -466,6 +481,7 @@ class RestaurantWindow(QMainWindow):
     def view_drinks_stack_layout(self):
         filter_query = "ItemTypeID like '%2%'"
 
+        #if not hasattr(self,"display_widget"):
         self.view_drinks_tool = DisplayTable()
         self.view_drinks_tool.show_table("Items")
         self.view_drinks_tool.model.setFilter(filter_query)
@@ -490,3 +506,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

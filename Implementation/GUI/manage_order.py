@@ -4,6 +4,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from table_display import *
+from add_item_to_order import *
 
 ##        bookingID = bookingDetails[0]
 ##        customerID = bookingDetails[1]
@@ -26,6 +27,7 @@ class OrderWindow(QDialog):
         self.finish_button = QPushButton("Finish")
 
         #connections
+        self.add_button.clicked.connect(self.AddItem)
 
 
         #date widget
@@ -99,8 +101,13 @@ class OrderWindow(QDialog):
 
         self.setLayout(self.order_layout)
 
-    #def AddItem(self):
         self.exec_()
+
+    def AddItem(self,bookingDetails):
+        self.AddOrderItem = AddItemToMenu(bookingDetails)
+        self.AddOrderItem.exec_()
+        
+        
         
         
 

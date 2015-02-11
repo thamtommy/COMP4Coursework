@@ -62,7 +62,10 @@ class AssignCustomer(QDialog):
             self.bookingDetails = cursor.fetchone()         
             print(self.bookingDetails)
 
+
+        self.bookingRetrieved.emit()
         return self.bookingDetails
+        
         
 
     def create_combo_box(self,TableNumber):
@@ -92,20 +95,6 @@ class AssignCustomer(QDialog):
         self.customer_combo_box = QComboBox(self)
         for each in CustomerLastName:
             self.customer_combo_box.addItem(each)
-
-
-
-    def return_values(self):
-        print("Booking has been returned")
-        return self.bookingDetails
-        
-        
-
-        
-        
-
-
-
 
 if __name__ == "__main__":
     TableNumber = 1

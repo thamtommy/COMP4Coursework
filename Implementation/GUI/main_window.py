@@ -229,14 +229,14 @@ class RestaurantWindow(QMainWindow):
         if TableNumber == 1:
             if self.TableOneOccupied == False:
                 self.table1 = AssignCustomer(TableNumber)
+                self.table1.bookingRetrieved.connect(self.table1.close)
                 bookingDetails = self.table1.bookingDetails
-                #self.bookingDetails = self.table1.bookingRetrieved.connect(self.table1.return_values)
                 TableOneOrder = OrderWindow(bookingDetails)
-                
-                                
-##                self.table1 = InitialiseCustomer(TableNumber)
-##                self.table1.bookingCreated.connect(self.table1.close)
-##                
+                self.TableOneOccupied = True
+            elif self.TableOneOccupied == True:
+                bookingDetails = self.table1.bookingDetails
+                TableOneOrder = OrderWindow(bookingDetails)
+                             
                 
         elif TableNumber == 2:
             if self.TableTwoOccupied == False:

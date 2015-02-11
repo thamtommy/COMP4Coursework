@@ -229,9 +229,9 @@ class RestaurantWindow(QMainWindow):
         if TableNumber == 1:
             if self.TableOneOccupied == False:
                 self.table1 = AssignCustomer(TableNumber)
+                bookingDetails = self.table1.bookingDetails
                 #self.bookingDetails = self.table1.bookingRetrieved.connect(self.table1.return_values)
-                self.bookingDetails = self.table1.return_values
-                print("This is {0}".format(self.bookingDetails))
+                TableOneOrder = OrderWindow(bookingDetails)
                 
                                 
 ##                self.table1 = InitialiseCustomer(TableNumber)
@@ -359,7 +359,6 @@ class RestaurantWindow(QMainWindow):
         self.stacked_layout.setCurrentIndex(3)
 
     def view_bookings_stack_layout(self):
-        #if not hasattr(self,"display_widget"):
         self.tool_bar_bookings = DisplayTable()
         self.tool_bar_bookings.show_table("Bookings")
 
@@ -461,7 +460,7 @@ class RestaurantWindow(QMainWindow):
       
 
     def view_dishes_connect(self):
-        self.stacked_layout.setCurrentIndex(10)
+        self.stacked_layout.setCurrentIndex(9)
 
     def view_drinks_stack_layout(self):
         filter_query = "ItemTypeID like '%2%'"
@@ -478,7 +477,7 @@ class RestaurantWindow(QMainWindow):
      
 
     def view_drinks_connect(self):
-        self.stacked_layout.setCurrentIndex(11)
+        self.stacked_layout.setCurrentIndex(10)
 
 
 def main():

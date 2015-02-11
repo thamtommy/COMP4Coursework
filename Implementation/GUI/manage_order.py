@@ -5,7 +5,14 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from table_display import *
 
-class OrderWindow(QWidget):
+##        bookingID = bookingDetails[0]
+##        customerID = bookingDetails[1]
+##        tableNumber = bookingDetails[2]
+##        numberPeople = bookingDetails[3]
+##        Date = bookingDetails[4]
+##        Time = bookingDetails[5]
+
+class OrderWindow(QDialog):
     """this class creates a main window to observe the restaurant"""
 
     def __init__(self,bookingDetails):
@@ -27,10 +34,10 @@ class OrderWindow(QWidget):
         #create labels
         self.drinks_label = QLabel("Drinks")
         self.dishes_label = QLabel("Dishes")
-        self.table_number_label = QLabel("Table : ")
-        self.date_label = QLabel("Date : ")
-        self.time_label = QLabel("Time : ")
-        self.number_people_label = QLabel("Number of people : ")
+        self.table_number_label = QLabel("Table : {0} ".format(bookingDetails[3]))
+        self.date_label = QLabel("Date : {0} ".format(bookingDetails[4]))
+        self.time_label = QLabel("Time : {0} ".format(bookingDetails[5]))
+        self.number_people_label = QLabel("Number of people : {0} ".format(bookingDetails[3]))
         
         #tables
         drinkQuery = """SELECT
@@ -41,7 +48,7 @@ class OrderWindow(QWidget):
                         ON Booking_Items.ItemID = Items.ItemID,
                         where BookingID = {0},
                         ItemTypeID = 2
-                        """.format(BookingID)
+                        """.format(bookingDetails[0])
         self.drinks_ordered_table = DisplayTable()
         self.drinks_ordered_table.show_results(drinkQuery)
 
@@ -93,6 +100,7 @@ class OrderWindow(QWidget):
         self.setLayout(self.order_layout)
 
     #def AddItem(self):
+        self.exec_()
         
         
 

@@ -62,18 +62,8 @@ class AssignCustomer(QDialog):
             self.bookingDetails = cursor.fetchone()         
             print(self.bookingDetails)
 
-        self.bookingRetrieved.emit()
+        return self.bookingDetails
         
-        
-        
-
-        
-##        bookingID = bookingDetails[0]
-##        customerID = bookingDetails[1]
-##        tableNumber = bookingDetails[2]
-##        numberPeople = bookingDetails[3]
-##        Date = bookingDetails[4]
-##        Time = bookingDetails[5]
 
     def create_combo_box(self,TableNumber):
         self.CustomerList = []

@@ -31,11 +31,12 @@ class AssignCustomer(QDialog):
         self.select_customer.clicked.connect(self.select_connect)
         
 
-        self.street_customer = QPushButton("Random Street Customer")
-        self.street_customer.clicked.connect(self.select_random_connect)
+        #self.street_customer = QPushButton("Random Street Customer")
+        #self.street_customer.clicked.connect(self.select_random_connect)
 
         self.main_assign_layout.addLayout(self.choose_customer)
-        self.main_assign_layout.addWidget(self.street_customer)
+        #self.main_assign_layout.addWidget(self.street_customer)
+        self.main_assign_layout.addWidget(self.random_customer)
                                         
 
         self.setLayout(self.main_assign_layout)

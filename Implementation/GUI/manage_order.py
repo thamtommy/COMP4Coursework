@@ -18,8 +18,11 @@ class OrderWindow(QDialog):
 
     def __init__(self,bookingDetails):
         super().__init__()
+        self.setFixedSize(1000,500)
         self.setWindowTitle("Manage Order")
-        
+        self.bookingDetails = bookingDetails
+        print("booking ID : {0}".format(bookingDetails[0]))
+        print(self.bookingDetails)
         #create buttons
         self.back_button = QPushButton("Back") # Will be an arrow
         self.add_button = QPushButton("Add")
@@ -36,7 +39,7 @@ class OrderWindow(QDialog):
         #create labels
         self.drinks_label = QLabel("Drinks")
         self.dishes_label = QLabel("Dishes")
-        self.table_number_label = QLabel("Table : {0} ".format(bookingDetails[3]))
+        self.table_number_label = QLabel("Table : {0} ".format(bookingDetails[2]))
         self.date_label = QLabel("Date : {0} ".format(bookingDetails[4]))
         self.time_label = QLabel("Time : {0} ".format(bookingDetails[5]))
         self.number_people_label = QLabel("Number of people : {0} ".format(bookingDetails[3]))
@@ -45,19 +48,30 @@ class OrderWindow(QDialog):
         drinkQuery = """SELECT
                         Booking_Items.Quantity,
                         Items.ItemName,
-                        Items.ItemPrice,
-                        FROM Items INNER JOIN Booking_Items
-                        ON Booking_Items.ItemID = Items.ItemID,
-                        where BookingID = {0},
-                        ItemTypeID = 2
+                        Items.ItemPrice
+                        FROM Items
+                        INNER JOIN Booking_Items
+                        ON Booking_Items.ItemID = Items.ItemID
+                        WHERE Booking_Items.BookingID = {0}
+                        AND Items.ItemTypeID = 2
                         """.format(bookingDetails[0])
         self.drinks_ordered_table = DisplayTable()
         self.drinks_ordered_table.show_results(drinkQuery)
 
         
-        dishQuery = "ItemTypeID like '%1%' "
+        dishQuery = """SELECT
+                        Booking_Items.Quantity,
+                        Items.ItemName,
+                        Items.ItemPrice
+                        FROM Items
+                        INNER JOIN Booking_Items
+                        ON Booking_Items.ItemID = Items.ItemID
+                        WHERE Booking_Items.BookingID = {0}
+                        AND Items.ItemTypeID = 1
+                        """.format(bookingDetails[0])
         self.dishes_ordered_table = DisplayTable()
-        self.dishes_ordered_table.show_table(dishQuery)
+        self.dishes_ordered_table.show_results(dishQuery)
+        
         
         #create layouts
         self.order_layout = QVBoxLayout()
@@ -101,10 +115,12 @@ class OrderWindow(QDialog):
 
         self.setLayout(self.order_layout)
 
+        self.adjustSize
         self.exec_()
 
-    def AddItem(self,bookingDetails):
-        self.AddOrderItem = AddItemToMenu(bookingDetails)
+    def AddItem(self):
+        print(self.bookingDetails[3])
+        self.AddOrderItem = AddItemToMenu(self.bookingDetails)
         self.AddOrderItem.exec_()
         
         

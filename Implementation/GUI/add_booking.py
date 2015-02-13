@@ -98,6 +98,7 @@ class AddBookingWindow(QWidget):
         #create a widget to display main layout
         self.add_booking_widget = QWidget()
         self.setLayout(self.main_layout)
+        
 
         #connections
         self.add_complete.clicked.connect(self.add_booking)

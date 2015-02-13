@@ -6,7 +6,7 @@ import time
 import pdb
 
 
-class RandomCustomer(QDialog):
+class RandomCustomer(QWidget):
     """this class creates a window to add bookings"""
     bookingCreated = pyqtSignal()
 
@@ -93,23 +93,35 @@ class RandomCustomer(QDialog):
     
     def create_booking(self):
         TableNumber = self.display_table_number.text()
-        print("Table Number is : {0}".format(TableNumber))
-        #pdb.set_trace()
+
         #create bookingID for customer
         CustomerID = 1
         NumberOfPeople = self.input_number_of_people.text()
         Date = self.systemdate
         Time = self.systemtime
-        print("hello")
        
 
         Booking = (CustomerID,TableNumber,NumberOfPeople,Date,Time)
+        print(Booking)
 
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
             cursor.execute(sql,Booking)
             db.commit()
+
+        #get booking id and select * from bookings where bookingid = ?
+
+        Time = ("{0}".format(Time))
+
+        with sqlite3.connect("restaurant.db") as db:
+            cursor = db.cursor()
+            cursor.execute("select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = {3} and Time = {4} ".format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
+            bookingDetails = cursor.fetchone()
+            print("Street booking : ".format(bookingDetails))
+            return bookingDetails
+
+        
 
         self.bookingCreated.emit()
 

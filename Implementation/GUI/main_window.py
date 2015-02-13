@@ -40,9 +40,8 @@ from assign_table_customer import *
 ## 6 - update item (menu bar)
 ## 7 - add booking (manage booking)
 ## 8 - delete booking (manage booking)
-## 9 - street customer (tables)
+## 9 - view dishes(tool bar)
 ## 10 - view dishes(tool bar)
-## 11 - view dishes(tool bar)
 
 class RestaurantWindow(QMainWindow):
     """this class creates a main window to observe the restaurant"""
@@ -82,7 +81,6 @@ class RestaurantWindow(QMainWindow):
         self.update_item_stack_layout()
         self.add_booking_stack_layout()
         self.delete_booking_stack_layout()
-        #self.street_customer_stack_layout()
         self.view_dishes_stack_layout()
         self.view_drinks_stack_layout()
         
@@ -91,59 +89,7 @@ class RestaurantWindow(QMainWindow):
 
 
         
-        self.setFixedSize(1280,860)
-                                               
-    def table_one(self):
-        # the method street_customer_stack_layout is adding the widget holding the variable self.TableNumber which i assigned to None
-        #which is why  TableNumber is always None
-        
-        self.TableNumber = 1
-
-        if self.TableOneOccupied == False:
-           #self.TableOne = Table()
-            #self.TableOne.get_table_number(1)
-            #TableNumber = self.TableOne._table_number
-            self.street_customer = InitialiseCustomer(self.TableNumber)
-
-            #self.street_customer.create_booking(TableNumber)
-
-            self.street_customer_connect()
-            
-            self.TableOneOccupied = True
-            print("Now occupied")
-        else:
-            print("Already occupied")
-        
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            cursor.execute("select * from Bookings where TableNumber = 1")
-            bookings = cursor.fetchall()
-            
-
-    def street_customer_stack_layout(self):
-        
-        self.street_customer = InitialiseCustomer(self.TableNumber)
-        self.stacked_layout.addWidget(self.street_customer)
-
-    def street_customer_connect(self):
-        self.stacked_layout.setCurrentIndex(9)
-    
-
-    def table_two(self):
-        if self.tableOccupied == False:
-            self.tableOccupied = True
-            print("Table 2 is now occupied")
-
-        else:
-            print("Table 2 is already occupied")
-
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            cursor.execute("select * from Bookings where TableNumber = 2")
-            bookings = cursor.fetchall()
-            print(bookings)
-    
-        
+        self.setFixedSize(1280,860)          
 
     def create_tool_bar(self):
         #create toolbar
@@ -241,10 +187,27 @@ class RestaurantWindow(QMainWindow):
         elif TableNumber == 2:
             if self.TableTwoOccupied == False:
                 self.table2 = AssignCustomer(TableNumber)
+                self.table2.bookingRetrieved.connect(self.table2.close)
+                bookingDetails = self.table2.bookingDetails
+                TableTwoOrder = OrderWindow(bookingDetails)
+                self.TableTwoOccupied = True
+            elif self.TableTwoOccupied == True:
+                bookingDetails = self.table2.bookingDetails
+                TableTwoOrder = OrderWindow(bookingDetails)
+                             
+
 
         elif TableNumber == 3:
             if self.TableThreeOccupied == False:
                 self.table3 = AssignCustomer(TableNumber)
+                self.table3.bookingRetrieved.connect(self.table3.close)
+                bookingDetails = self.table3.bookingDetails
+                TableThreeOrder = OrderWindow(bookingDetails)
+                self.TableThreeOccupied = True
+            elif self.TableThreeOccupied == True:
+                bookingDetails = self.table3.bookingDetails
+                TableThreeOrder = OrderWindow(bookingDetails)
+                
 
     def main_stack_layout(self):
 
@@ -274,11 +237,23 @@ class RestaurantWindow(QMainWindow):
         self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
         TodaysDate = time.strftime("%d/%m/%Y")
         print(TodaysDate)
+
+        bookingQuery = """SELECT
+                        Customers.FirstName,
+                        Customers.LastName,
+                        Bookings.NumberOfPeople,
+                        Bookings.TableNumber,
+                        Bookings.Time
+                        FROM Customers
+                        INNER JOIN Bookings
+                        ON Customers.CustomerID = Bookings.CustomerID
+                        WHERE Bookings.Date = {0}
+                        """.format(TodaysDate,)
         
-        filter_query = "Date like '%{0}%'".format(TodaysDate)
+        #filter_query = "Date like '%{0}%'".format(TodaysDate)
         self.display_bookings = DisplayTable()
-        self.display_bookings.show_table("Bookings")
-        self.display_bookings.model.setFilter(filter_query)
+        self.display_bookings.show_results(bookingQuery)
+        #self.display_bookings.model.setFilter(filter_query)
         
         #connections
 

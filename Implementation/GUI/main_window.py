@@ -247,7 +247,7 @@ class RestaurantWindow(QMainWindow):
                         FROM Customers
                         INNER JOIN Bookings
                         ON Customers.CustomerID = Bookings.CustomerID
-                        WHERE Bookings.Date = {0}
+                        WHERE Bookings.Date = '{0}'
                         """.format(TodaysDate,)
         
         #filter_query = "Date like '%{0}%'".format(TodaysDate)
@@ -288,6 +288,7 @@ class RestaurantWindow(QMainWindow):
         if not hasattr(self,"add_item_menu_bar"):
             self.add_item_menu_bar = DisplayTable()
         self.add_item_menu_bar.show_table("Items")
+        self.add_item_menu_bar.refresh
 
         self.add_item_layout = QVBoxLayout()
         self.add_item_layout.addWidget(self.add_item_menu_bar)
@@ -305,16 +306,16 @@ class RestaurantWindow(QMainWindow):
     def delete_item_stack_layout(self):
         self.delete_menu_item = DeleteItemOffMenu()
         if not hasattr(self,"display_widget2"):
-            self.display_widget2 = DisplayTable()
-        self.display_widget2.show_table("Items")
-
+            self.delete_item_menu_bar = DisplayTable()
+        self.delete_item_menu_bar.show_table("Items")
+        self.delete_item_menu_bar.refresh
         self.delete_item_layout = QVBoxLayout()
-        self.delete_item_layout.addWidget(self.display_widget2)
+        self.delete_item_layout.addWidget(self.delete_item_menu_bar )
         self.delete_item_layout.addWidget(self.delete_menu_item)
         self.delete_item_widget = QWidget()
         self.delete_item_widget.setLayout(self.delete_item_layout)
         self.stacked_layout.addWidget(self.delete_item_widget)
-        self.delete_menu_item.itemDeleted.connect(self.display_widget2.refresh) 
+        self.delete_menu_item.itemDeleted.connect(self.delete_item_menu_bar.refresh) 
     
 
     def delete_item_menu_connect(self):

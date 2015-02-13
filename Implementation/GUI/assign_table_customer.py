@@ -72,11 +72,13 @@ class AssignCustomer(QDialog):
     def create_combo_box(self,TableNumber):
         self.CustomerList = []
         CustomerLastName = []
+        TodaysDate = time.strftime("%d/%m/%Y")
+        print(TodaysDate)
 
         ## get all customer IDs that are on table _
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            cursor.execute("select CustomerID from Bookings where TableNumber = {0}".format(TableNumber))
+            cursor.execute("select CustomerID from Bookings where TableNumber = {0} and Date = '{1}'".format(TableNumber,(TodaysDate)))
             customers = cursor.fetchall()
             for each in customers:
                 self.CustomerList.append(each[0])          

@@ -116,9 +116,9 @@ class RandomCustomer(QWidget):
 
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            cursor.execute("select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = {3} and Time = {4} ".format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
+            cursor.execute("select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' ".format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
             bookingDetails = cursor.fetchone()
-            print("Street booking : ".format(bookingDetails))
+            print("Street booking : {0} ".format(bookingDetails))
             return bookingDetails
 
         

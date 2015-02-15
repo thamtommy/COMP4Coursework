@@ -122,6 +122,7 @@ class OrderWindow(QDialog):
     def Finish(self):
         print("Finished")
         self.Finished = True
+        self.close()
         return self.Finished
 
     def Invoice(self):

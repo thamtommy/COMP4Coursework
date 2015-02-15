@@ -1,5 +1,6 @@
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+import sys
 
 class PrintInvoice(QDialog):
     """This class provides a dialog box for getting email information"""
@@ -9,6 +10,8 @@ class PrintInvoice(QDialog):
         self.print_preview()
 
     def create_html(self):
+        quantity = [1,2,3,4,5]
+        items = ["Milk","Beef","Rice","Egg rice","Poo"]
         html = ""
         html += """<html>
 <head>
@@ -17,7 +20,7 @@ class PrintInvoice(QDialog):
 		{
 			border: 1px solid black;
 			border-collapse: collapse;
-			width: 70%;
+			width: 100%;
 		}
 	th, td
 		{
@@ -28,21 +31,25 @@ class PrintInvoice(QDialog):
 </head>
 <body>"""
 
-        html += """<h1>Invoice to: {0}</h1>""".format("John Smith")
+        html += """<h1>Linhs Retaurant</h1>"""
 
         html += """<h2>Test</h2>
   <p></p>
    <table>
    <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Price</th>
-   </tr>
-   <tr>
-    <td>John</td>
-    <td>Smith</td>
+    <th>Quantity</th>
+    <th>Item</th>
+    <th>Price (£)</th>
+   </tr>"""
+   
+        for each in quantity:   
+            html += """<tr>
+                       <td>{0}</td>
+                       </tr>""".format(each)
+
+        html += """<tr><td>Smith</td>
     <td>£30</td>
-   </tr>
+    </tr>
    <tr>
     <td>Edwin</td>
     <td>Jacobs</td>
@@ -63,3 +70,10 @@ class PrintInvoice(QDialog):
         PrintPreview.paintRequested.connect(document.print_)
         PrintPreview.resize(1600,1000)
         PrintPreview.exec()
+
+if __name__ == "__main__":
+    application = QApplication(sys.argv)
+    window = PrintInvoice()
+    window.show()
+    window.raise_()
+    application.exec()

@@ -88,7 +88,7 @@ class RestaurantWindow(QMainWindow):
 
 
         
-        self.setFixedSize(1280,860)          
+        self.setFixedSize(1000,500)          
 
     def create_tool_bar(self):
         #create toolbar

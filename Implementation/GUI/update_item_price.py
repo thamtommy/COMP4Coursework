@@ -28,10 +28,17 @@ class UpdateItemPrice(QDialog):
 
 
         #line edit
+        regexp = QRegExp("^\\d\\d\\d?$")
+        validator = QRegExpValidator(regexp)
         self.input_itemID = QLineEdit()
+        self.input_itemID.setValidator(validator)
         self.input_itemID.setMaximumSize(300,30)
 
+
+        regexp2 = QRegExp("^\\d\\d?$")
+        validator2 = QRegExpValidator(regexp2)
         self.input_item_price = QLineEdit()
+        self.input_item_price.setValidator(validator2)
         self.input_item_price.setMaximumSize(300,30)
 
         #add labels to layout

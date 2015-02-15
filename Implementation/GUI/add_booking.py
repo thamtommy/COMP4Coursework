@@ -2,6 +2,7 @@ import sys
 import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+import time
 
 class AddBookingWindow(QWidget):
     bookingAdded = pyqtSignal()
@@ -38,20 +39,29 @@ class AddBookingWindow(QWidget):
         self.input_last_name.setMaximumSize(300,30)
                
         self.input_number_of_people = QLineEdit()
+        regexp = QRegExp("^[0-9]*$")
+        validator = QRegExpValidator(regexp)
+        self.input_number_of_people.setValidator(validator)
         self.input_number_of_people.setMaximumSize(300,30)
+        self.input_number_of_people.setMaxLength(2)
+
 
         self.input_telephone_number = QLineEdit()
+        self.input_telephone_number.setValidator(validator)
         self.input_telephone_number.setMaximumSize(300,30)
-        self.input_telephone_number.setMaxLength(12)
+        self.input_telephone_number.setMaxLength(11)
 
-        self.input_table_number = QLineEdit()       # drop down box
-        self.input_table_number.setMaximumSize(300,30)
+        self.select_table_number = QComboBox(self)
+        for each in range(1,17):
+            self.select_table_number.addItem(str(each))
 
 
         #dates and times
         self.date_edit = QDateEdit()
         self.maximumdate = QDate(2050,1,30)
+        self.minimumdate = QDate.currentDate()
         self.date_edit.setMaximumDate(self.maximumdate)
+        self.date_edit.setMinimumDate(self.minimumdate)
         self.time_edit = QTimeEdit()
         
         
@@ -78,7 +88,7 @@ class AddBookingWindow(QWidget):
         self.add_booking_layout.addWidget(self.time_edit,3,1)
         self.add_booking_layout.addWidget(self.input_number_of_people,4,1)
         self.add_booking_layout.addWidget(self.input_telephone_number,5,1)
-        self.add_booking_layout.addWidget(self.input_table_number,6,1)
+        self.add_booking_layout.addWidget(self.select_table_number,6,1)
 
         #add button to layout
         self.add_complete_layout.addWidget(self.add_complete)
@@ -91,6 +101,7 @@ class AddBookingWindow(QWidget):
         #create a widget to display main layout
         self.add_booking_widget = QWidget()
         self.setLayout(self.main_layout)
+        
 
         #connections
         self.add_complete.clicked.connect(self.add_booking)
@@ -99,9 +110,8 @@ class AddBookingWindow(QWidget):
         FirstName = self.input_first_name.text()
         LastName = self.input_last_name.text()
         TeleNumber = self.input_telephone_number.text()
-        TableNumber = self.input_table_number.text()
         NumberOfPeople = self.input_number_of_people.text()
-        TableNumber = int(TableNumber)
+        TableNumber = self.select_table_number.currentIndex() + 1
         NumberOfPeople = int(NumberOfPeople)
 
         

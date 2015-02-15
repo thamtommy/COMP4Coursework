@@ -19,13 +19,13 @@ from delete_item_off_menu import *
 from delete_booking import*
 
 from table_display import *
-from table_class import *
 
 from update_item_price import *
+from radio_button_widget_class import *
 
 
 from off_the_street_booking import *
-#from assign_table_customer import *
+from assign_table_customer import *
 
 
 
@@ -39,9 +39,8 @@ from off_the_street_booking import *
 ## 6 - update item (menu bar)
 ## 7 - add booking (manage booking)
 ## 8 - delete booking (manage booking)
-## 9 - street customer (tables)
+## 9 - view dishes(tool bar)
 ## 10 - view dishes(tool bar)
-## 11 - view dishes(tool bar)
 
 class RestaurantWindow(QMainWindow):
     """this class creates a main window to observe the restaurant"""
@@ -81,65 +80,15 @@ class RestaurantWindow(QMainWindow):
         self.update_item_stack_layout()
         self.add_booking_stack_layout()
         self.delete_booking_stack_layout()
-        self.street_customer_stack_layout()
         self.view_dishes_stack_layout()
         self.view_drinks_stack_layout()
+        
 
         
 
 
         
-        self.setFixedSize(1280,860)
-
-
-    def table_one(self):
-
-        TableNumber = 1
-        
-        
-        if self.TableOneOccupied == False:
-           #self.TableOne = Table()
-            #self.TableOne.get_table_number(1)
-            #TableNumber = self.TableOne._table_number
-            self.street_customer = InitialiseCustomer()
-            self.street_customer.create_booking(TableNumber)
-            self.street_customer_connect()
-            
-            self.TableOneOccupied = True
-            print("Now occupied")
-        else:
-            print("Already occupied")
-        
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            cursor.execute("select * from Bookings where TableNumber = 1")
-            bookings = cursor.fetchall()
-            
-            #print(bookings)
-
-    def street_customer_stack_layout(self):
-        self.street_customer = InitialiseCustomer()
-        self.stacked_layout.addWidget(self.street_customer)
-
-    def street_customer_connect(self):
-        self.stacked_layout.setCurrentIndex(9)
-    
-
-    def table_two(self):
-        if self.tableOccupied == False:
-            self.tableOccupied = True
-            print("Table 2 is now occupied")
-
-        else:
-            print("Table 2 is already occupied")
-
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            cursor.execute("select * from Bookings where TableNumber = 2")
-            bookings = cursor.fetchall()
-            print(bookings)
-    
-        
+        self.setFixedSize(1280,860)          
 
     def create_tool_bar(self):
         #create toolbar
@@ -192,103 +141,125 @@ class RestaurantWindow(QMainWindow):
         self.add_item_box = QAction("Add Item",self)
         self.delete_item_box = QAction("Delete Item",self)
         self.update_item_box = QAction("Update Item Price",self)
+
+        self.add_booking_box = QAction("Add Booking",self)
+        self.delete_booking_box = QAction("Delete Booking",self)
         
         self.menu = QMenuBar()
         self.menu_bar = self.menu.addMenu("Item Menu")
+        self.bookings_bar = self.menu.addMenu("Bookings")
         self.options_bar = self.menu.addMenu("Options")
+        
         self.setMenuBar(self.menu)
 
         self.menu_bar.addAction(self.add_item_box)
         self.menu_bar.addAction(self.delete_item_box)
         self.menu_bar.addAction(self.update_item_box)
+
+        self.bookings_bar.addAction(self.add_booking_box)
+        self.bookings_bar.addAction(self.delete_booking_box)
+        
         
         #connections
         self.add_item_box.triggered.connect(self.add_item_menu_connect)
         self.delete_item_box.triggered.connect(self.delete_item_menu_connect)
         self.update_item_box.triggered.connect(self.update_item_connect)
 
+        self.add_booking_box.triggered.connect(self.add_booking_connect)
+        self.delete_booking_box.triggered.connect(self.delete_booking_connect)
+
+    def radio_button_connect(self):
+        TableNumber = self.table_buttons.selected_button()
+        print(TableNumber)
+        if TableNumber == 1:
+            if self.TableOneOccupied == False:
+                self.table1 = AssignCustomer(TableNumber)
+                bookingDetails = self.table1.bookingDetails
+                self.TableOneOrder = OrderWindow(bookingDetails)
+                self.TableOneOccupied = True
+                if self.TableOneOrder.Finished == True:
+                    self.TableOneOccupied = False
+            elif self.TableOneOccupied == True:
+                bookingDetails = self.table1.bookingDetails
+                self.TableOneOrder = OrderWindow(bookingDetails)
+                
+
+                             
+                
+        elif TableNumber == 2:
+            if self.TableTwoOccupied == False:
+                self.table2 = AssignCustomer(TableNumber)
+                self.table2.bookingRetrieved.connect(self.table2.close)
+                bookingDetails = self.table2.bookingDetails
+                self.TableTwoOrder = OrderWindow(bookingDetails)
+                self.TableTwoOccupied = True
+            elif self.TableTwoOccupied == True:
+                bookingDetails = self.table2.bookingDetails
+                self.TableTwoOrder = OrderWindow(bookingDetails)
+                             
+
+
+        elif TableNumber == 3:
+            if self.TableThreeOccupied == False:
+                self.table3 = AssignCustomer(TableNumber)
+                self.table3.bookingRetrieved.connect(self.table3.close)
+                bookingDetails = self.table3.bookingDetails
+                self.TableThreeOrder = OrderWindow(bookingDetails)
+                self.TableThreeOccupied = True
+            elif self.TableThreeOccupied == True:
+                bookingDetails = self.table3.bookingDetails
+                self.TableThreeOrder = OrderWindow(bookingDetails)
+                
+
     def main_stack_layout(self):
 
         #create layouts
         self.main_layout = QVBoxLayout()
-        self.table_layout = QGridLayout() #box 0,0
         self.booking_layout = QVBoxLayout() #box 1,0
-        self.table_layout.setColumnStretch(0,5)
+        self.table_radio_layout = QVBoxLayout()
+
+
+        #radio button
         
-        #table buttons
-        self.table_button = QPushButton("Table 1")
-        self.table2_button = QPushButton("Table 2")
-        self.table3_button = QPushButton("Table 3")
-        self.table4_button = QPushButton("Table 4")
-        self.table5_button = QPushButton("Table 5")
-        self.table6_button = QPushButton("Table 6")
-        self.table7_button = QPushButton("Table 7")
-        self.table8_button = QPushButton("Table 8")
-        self.table9_button = QPushButton("Table 9")
-        self.table10_button = QPushButton("Table 10")
-        self.table11_button = QPushButton("Table 11")
-        self.table12_button = QPushButton("Table 12")
-        self.table13_button = QPushButton("Table 13")
-        self.table14_button = QPushButton("Table 14")
-        self.table15_button = QPushButton("Table 15")
-        self.table16_button = QPushButton("Table 16")
-
-        self.table_button.setMaximumSize(250,60)
-        self.table2_button.setMaximumSize(200,60)
-        self.table3_button.setMaximumSize(200,60)
-        self.table4_button.setMaximumSize(200,60)
-        self.table5_button.setMaximumSize(200,60)
-        self.table6_button.setMaximumSize(100,60)
-        self.table7_button.setMaximumSize(100,60)
-        self.table8_button.setMaximumSize(100,60)
-        self.table9_button.setMaximumSize(100,60)
-        self.table10_button.setMaximumSize(100,60)
-        self.table11_button.setMaximumSize(100,60)
-        self.table12_button.setMaximumSize(100,60)
-        self.table13_button.setMaximumSize(100,60)
-        self.table14_button.setMaximumSize(100,60)
-        self.table15_button.setMaximumSize(100,60)
-        self.table16_button.setMaximumSize(100,60)
-
+        tableList = []
+        for each in range(1,17):
+            tableList.append("Table {0}".format(each))
+            
+        self.table_buttons = RadioButtonWidget("Table Numbers", "Please select a Table" , tableList)
+        self.select_table_button = QPushButton("Select Table")
+        self.select_table_button.clicked.connect(self.radio_button_connect)
+        
+        
+        self.table_radio_layout.addWidget(self.table_buttons)
+        self.table_radio_layout.addWidget(self.select_table_button)
+        
 
         #booking section
 
         self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
         TodaysDate = time.strftime("%d/%m/%Y")
         print(TodaysDate)
+
+        bookingQuery = """SELECT
+                        Customers.FirstName,
+                        Customers.LastName,
+                        Bookings.NumberOfPeople,
+                        Bookings.TableNumber,
+                        Bookings.Time
+                        FROM Customers
+                        INNER JOIN Bookings
+                        ON Customers.CustomerID = Bookings.CustomerID
+                        WHERE Bookings.Date = '{0}'
+                        """.format(TodaysDate)
         
-        filter_query = "Date like '%{0}%'".format(TodaysDate)
-        #if not hasattr(self,"display_widget"):
+        #filter_query = "Date like '%{0}%'".format(TodaysDate)
         self.display_bookings = DisplayTable()
-        self.display_bookings.show_table("Bookings")
-        self.display_bookings.model.setFilter(filter_query)
-        
-
-
+        self.display_bookings.show_results(bookingQuery)
+        #self.display_bookings.model.setFilter(filter_query)
         
         #connections
-        self.table_button.clicked.connect(self.table_one)
-        self.table2_button.clicked.connect(self.table_two)
 
         self.manage_bookings.clicked.connect(self.manage_booking_connect)
-
-        #add table buttons to table layout
-        self.table_layout.addWidget(self.table_button,0,0)
-        self.table_layout.addWidget(self.table2_button,0,1)
-        self.table_layout.addWidget(self.table3_button,1,0)
-        self.table_layout.addWidget(self.table4_button,1,1)
-        self.table_layout.addWidget(self.table5_button,2,0)
-        self.table_layout.addWidget(self.table6_button,2,1)
-        self.table_layout.addWidget(self.table7_button,3,0)
-        self.table_layout.addWidget(self.table8_button,3,1)
-        self.table_layout.addWidget(self.table9_button,4,0)
-        self.table_layout.addWidget(self.table10_button,4,1)
-        self.table_layout.addWidget(self.table11_button,5,0)
-        self.table_layout.addWidget(self.table12_button,5,1)
-        self.table_layout.addWidget(self.table13_button,6,0)
-        self.table_layout.addWidget(self.table14_button,6,1)
-        self.table_layout.addWidget(self.table15_button,7,0)
-        self.table_layout.addWidget(self.table16_button,7,1)
 
 
         #add widgets to booking layout
@@ -303,7 +274,7 @@ class RestaurantWindow(QMainWindow):
         
 
         #add layouts to main layout
-        self.main_layout.addLayout(self.table_layout)
+        self.main_layout.addLayout(self.table_radio_layout)
         self.main_layout.addLayout(self.booking_layout)
 
 
@@ -319,6 +290,7 @@ class RestaurantWindow(QMainWindow):
         if not hasattr(self,"add_item_menu_bar"):
             self.add_item_menu_bar = DisplayTable()
         self.add_item_menu_bar.show_table("Items")
+        self.add_item_menu_bar.refresh
 
         self.add_item_layout = QVBoxLayout()
         self.add_item_layout.addWidget(self.add_item_menu_bar)
@@ -336,16 +308,16 @@ class RestaurantWindow(QMainWindow):
     def delete_item_stack_layout(self):
         self.delete_menu_item = DeleteItemOffMenu()
         if not hasattr(self,"display_widget2"):
-            self.display_widget2 = DisplayTable()
-        self.display_widget2.show_table("Items")
-
+            self.delete_item_menu_bar = DisplayTable()
+        self.delete_item_menu_bar.show_table("Items")
+        self.delete_item_menu_bar.refresh
         self.delete_item_layout = QVBoxLayout()
-        self.delete_item_layout.addWidget(self.display_widget2)
+        self.delete_item_layout.addWidget(self.delete_item_menu_bar )
         self.delete_item_layout.addWidget(self.delete_menu_item)
         self.delete_item_widget = QWidget()
         self.delete_item_widget.setLayout(self.delete_item_layout)
         self.stacked_layout.addWidget(self.delete_item_widget)
-        self.delete_menu_item.itemDeleted.connect(self.display_widget2.refresh) 
+        self.delete_menu_item.itemDeleted.connect(self.delete_item_menu_bar.refresh) 
     
 
     def delete_item_menu_connect(self):
@@ -365,7 +337,6 @@ class RestaurantWindow(QMainWindow):
         self.stacked_layout.setCurrentIndex(3)
 
     def view_bookings_stack_layout(self):
-        #if not hasattr(self,"display_widget"):
         self.tool_bar_bookings = DisplayTable()
         self.tool_bar_bookings.show_table("Bookings")
 
@@ -386,7 +357,6 @@ class RestaurantWindow(QMainWindow):
         self.manage_bookings.add_button.clicked.connect(self.add_booking_connect) #connection
         self.manage_bookings.delete_button.clicked.connect(self.delete_booking_connect) #connection
 
-        #if not hasattr(self,"display_widget"):
         self.display_booking_table = DisplayTable()
         self.display_booking_table.show_table("Bookings")
 
@@ -403,7 +373,6 @@ class RestaurantWindow(QMainWindow):
     def update_item_stack_layout(self):
         self.update_item = UpdateItemPrice()
 
-        #if not hasattr(self,"display_widget"):
         self.update_price_menu = DisplayTable()
         self.update_price_menu.show_table("Items")
 
@@ -457,7 +426,6 @@ class RestaurantWindow(QMainWindow):
     def view_dishes_stack_layout(self):
         filter_query = "ItemTypeID like '%1%'"
 
-        #if not hasattr(self,"display_widget"):
         self.view_dishes_tool = DisplayTable()
         self.view_dishes_tool.show_table("Items")
         self.view_dishes_tool.model.setFilter(filter_query)
@@ -470,12 +438,11 @@ class RestaurantWindow(QMainWindow):
       
 
     def view_dishes_connect(self):
-        self.stacked_layout.setCurrentIndex(10)
+        self.stacked_layout.setCurrentIndex(9)
 
     def view_drinks_stack_layout(self):
         filter_query = "ItemTypeID like '%2%'"
 
-        #if not hasattr(self,"display_widget"):
         self.view_drinks_tool = DisplayTable()
         self.view_drinks_tool.show_table("Items")
         self.view_drinks_tool.model.setFilter(filter_query)
@@ -488,7 +455,7 @@ class RestaurantWindow(QMainWindow):
      
 
     def view_drinks_connect(self):
-        self.stacked_layout.setCurrentIndex(11)
+        self.stacked_layout.setCurrentIndex(10)
 
 
 def main():
@@ -500,4 +467,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

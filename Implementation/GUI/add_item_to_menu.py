@@ -24,7 +24,7 @@ class AddItemToMenu(QWidget):
         self.select_item_type = QComboBox(self)
         self.select_item_type.addItem("Dish")
         self.select_item_type.addItem("Drink")
-        
+         
         
         #labels
         self.item_name_label = QLabel("Item Name : ")
@@ -32,10 +32,16 @@ class AddItemToMenu(QWidget):
         self.item_type_label = QLabel("Item Type : ")
 
         #line edit
+        regexpp = QRegExp("[a-z | A-Z]{1,10}")
+        validatorr = QRegExpValidator(regexpp)
         self.input_item_name = QLineEdit()
+        self.input_item_name.setValidator(validatorr)
         self.input_item_name.setMaximumSize(300,30)
 
+        regexp = QRegExp("^\\d\\d?$")
+        validator = QRegExpValidator(regexp)
         self.input_item_price = QLineEdit()
+        self.input_item_price.setValidator(validator)
         self.input_item_price.setMaximumSize(300,30)
 
         #add labels to layout

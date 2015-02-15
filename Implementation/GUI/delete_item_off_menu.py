@@ -31,7 +31,10 @@ class DeleteItemOffMenu(QWidget):
         self.input_item_name = QLineEdit()
         self.input_item_name.setMaximumSize(300,30)
 
+        regexp = QRegExp("^\\d\\d\\d?$")
+        validator = QRegExpValidator(regexp)
         self.input_itemID = QLineEdit()
+        self.input_itemID.setValidator(validator)
         self.input_itemID.setMaximumSize(300,30)
 
         #add widgets to delete item name layout

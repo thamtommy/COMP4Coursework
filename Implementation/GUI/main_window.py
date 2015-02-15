@@ -19,7 +19,6 @@ from delete_item_off_menu import *
 from delete_booking import*
 
 from table_display import *
-from table_class import *
 
 from update_item_price import *
 from radio_button_widget_class import *
@@ -175,13 +174,16 @@ class RestaurantWindow(QMainWindow):
         if TableNumber == 1:
             if self.TableOneOccupied == False:
                 self.table1 = AssignCustomer(TableNumber)
-                self.table1.bookingRetrieved.connect(self.table1.close)
                 bookingDetails = self.table1.bookingDetails
-                TableOneOrder = OrderWindow(bookingDetails)
+                self.TableOneOrder = OrderWindow(bookingDetails)
                 self.TableOneOccupied = True
+                if self.TableOneOrder.Finished == True:
+                    self.TableOneOccupied = False
             elif self.TableOneOccupied == True:
                 bookingDetails = self.table1.bookingDetails
-                TableOneOrder = OrderWindow(bookingDetails)
+                self.TableOneOrder = OrderWindow(bookingDetails)
+                
+
                              
                 
         elif TableNumber == 2:
@@ -189,11 +191,11 @@ class RestaurantWindow(QMainWindow):
                 self.table2 = AssignCustomer(TableNumber)
                 self.table2.bookingRetrieved.connect(self.table2.close)
                 bookingDetails = self.table2.bookingDetails
-                TableTwoOrder = OrderWindow(bookingDetails)
+                self.TableTwoOrder = OrderWindow(bookingDetails)
                 self.TableTwoOccupied = True
             elif self.TableTwoOccupied == True:
                 bookingDetails = self.table2.bookingDetails
-                TableTwoOrder = OrderWindow(bookingDetails)
+                self.TableTwoOrder = OrderWindow(bookingDetails)
                              
 
 
@@ -202,11 +204,11 @@ class RestaurantWindow(QMainWindow):
                 self.table3 = AssignCustomer(TableNumber)
                 self.table3.bookingRetrieved.connect(self.table3.close)
                 bookingDetails = self.table3.bookingDetails
-                TableThreeOrder = OrderWindow(bookingDetails)
+                self.TableThreeOrder = OrderWindow(bookingDetails)
                 self.TableThreeOccupied = True
             elif self.TableThreeOccupied == True:
                 bookingDetails = self.table3.bookingDetails
-                TableThreeOrder = OrderWindow(bookingDetails)
+                self.TableThreeOrder = OrderWindow(bookingDetails)
                 
 
     def main_stack_layout(self):
@@ -248,7 +250,7 @@ class RestaurantWindow(QMainWindow):
                         INNER JOIN Bookings
                         ON Customers.CustomerID = Bookings.CustomerID
                         WHERE Bookings.Date = '{0}'
-                        """.format(TodaysDate,)
+                        """.format(TodaysDate)
         
         #filter_query = "Date like '%{0}%'".format(TodaysDate)
         self.display_bookings = DisplayTable()

@@ -3,12 +3,13 @@ import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 import time
-import pdb
+
 
 
 class RandomCustomer(QWidget):
-    """this class creates a window to add bookings"""
     bookingCreated = pyqtSignal()
+    """this class creates a window to add bookings"""
+    
 
     def __init__(self,TableNumber):
         super().__init__()
@@ -117,9 +118,10 @@ class RandomCustomer(QWidget):
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             cursor.execute("select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' ".format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
-            bookingDetails = cursor.fetchone()
-            print("Street booking : {0} ".format(bookingDetails))
-            return bookingDetails
+            self.bookingDetails = cursor.fetchone()
+            print("Street booking : {0} ".format(self.bookingDetails))
+
+        return self.bookingDetails
 
         
 

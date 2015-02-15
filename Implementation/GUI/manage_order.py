@@ -5,6 +5,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from table_display import *
 from add_item_to_order import *
+from print_invoice import *
 
 ##        bookingID = bookingDetails[0]
 ##        customerID = bookingDetails[1]
@@ -18,19 +19,23 @@ class OrderWindow(QDialog):
 
     def __init__(self,bookingDetails):
         super().__init__()
+
+        self.Finished = False
+        
         self.setFixedSize(1000,500)
         self.setWindowTitle("Manage Order")
         self.bookingDetails = bookingDetails
-        print("booking ID : {0}".format(bookingDetails[0]))
-        print(self.bookingDetails)
         #create buttons
         self.back_button = QPushButton("Back") # Will be an arrow
         self.add_button = QPushButton("Add")
         self.delete_button = QPushButton("Delete")
         self.finish_button = QPushButton("Finish")
+        self.invoice_button = QPushButton("Print Invoice")
 
         #connections
         self.add_button.clicked.connect(self.AddItem)
+        self.finish_button.clicked.connect(self.Finish)
+        self.invoice_button.clicked.connect(self.Invoice)
 
 
         #date widget
@@ -83,27 +88,21 @@ class OrderWindow(QDialog):
 
         #add buttons to layouts
         self.manage_order.addWidget(self.add_button)
-        
         self.manage_order.addWidget(self.delete_button)
         self.manage_order.addWidget(self.finish_button)
+        self.manage_order.addWidget(self.invoice_button)
 
-        #widgets
-        ##labels to drink/dish
         self.dishes_ordered.addWidget(self.dishes_label)
         self.drinks_ordered.addWidget(self.drinks_label)
-        ##labels to order information
+
         self.order_information.addWidget(self.table_number_label)
         self.order_information.addWidget(self.date_label)
         self.order_information.addWidget(self.time_label)
         self.order_information.addWidget(self.number_people_label)
-        ##table to drinks/dish
+
         self.drinks_ordered.addWidget(self.drinks_ordered_table)
         self.dishes_ordered.addWidget(self.dishes_ordered_table)
 
-
-
-        #layouts
-        ##add layouts to items ordered layout
         self.items_ordered.addLayout(self.dishes_ordered)
         self.items_ordered.addLayout(self.drinks_ordered)
         ##add layouts to main order layout
@@ -111,17 +110,22 @@ class OrderWindow(QDialog):
         self.order_layout.addLayout(self.items_ordered)
         self.order_layout.addLayout(self.manage_order)
 
-        #create widget to display main order layout
-
         self.setLayout(self.order_layout)
 
         self.adjustSize
         self.exec_()
 
     def AddItem(self):
-        print(self.bookingDetails[3])
         self.AddOrderItem = AddItemToMenu(self.bookingDetails)
         self.AddOrderItem.exec_()
+
+    def Finish(self):
+        print("Finished")
+        self.Finished = True
+        return self.Finished
+
+    def Invoice(self):
+        self.Invoice = PrintInvoice()
         
         
         

@@ -2,6 +2,7 @@ import sys
 import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+import time
 
 class AddBookingWindow(QWidget):
     bookingAdded = pyqtSignal()
@@ -58,7 +59,9 @@ class AddBookingWindow(QWidget):
         #dates and times
         self.date_edit = QDateEdit()
         self.maximumdate = QDate(2050,1,30)
+        self.minimumdate = QDate.currentDate()
         self.date_edit.setMaximumDate(self.maximumdate)
+        self.date_edit.setMinimumDate(self.minimumdate)
         self.time_edit = QTimeEdit()
         
         

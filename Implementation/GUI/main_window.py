@@ -1,8 +1,3 @@
-# plan #
-#get customers that booked to (table number), get booking details, get booking id so that I can use table BookingItems
-#to manage order - display booking items table to track what customer ordered
-#but first i need to get table number and pass it to methods
-
 
 import sys
 import time
@@ -56,6 +51,15 @@ class RestaurantWindow(QMainWindow):
         self.TableFiveOccupied = False
         self.TableSixOccupied = False
         self.TableSevenOccupied = False
+        self.TableEightOccupied = False
+        self.TableNineOccupied = False
+        self.TableTenOccupied = False
+        self.TableElevenOccupied = False
+        self.TableTwelveOccupied = False
+        self.TableThirteenOccupied = False
+        self.TableFourteenOccupied = False
+        self.TableFifteenOccupied = False
+        self.TableSixteenOccupied = False
 
 
         self.titleFont = QFont()
@@ -88,7 +92,7 @@ class RestaurantWindow(QMainWindow):
 
 
         
-        self.setFixedSize(1000,500)          
+        self.setFixedSize(1280,800)          
 
     def create_tool_bar(self):
         #create toolbar
@@ -170,45 +174,240 @@ class RestaurantWindow(QMainWindow):
 
     def radio_button_connect(self):
         TableNumber = self.table_buttons.selected_button()
-        print(TableNumber)
-        if TableNumber == 1:
-            if self.TableOneOccupied == False:
-                self.table1 = AssignCustomer(TableNumber)
-                bookingDetails = self.table1.bookingDetails
-                self.TableOneOrder = OrderWindow(bookingDetails)
-                self.TableOneOccupied = True
-                if self.TableOneOrder.Finished == True:
-                    self.TableOneOccupied = False
-            elif self.TableOneOccupied == True:
-                bookingDetails = self.table1.bookingDetails
-                self.TableOneOrder = OrderWindow(bookingDetails)
-                
+        print("Table Number {0} Selected".format(TableNumber))
+        
+        try:
+            if TableNumber == 1:
+                if self.TableOneOccupied == False:
+                    self.table1 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table1.bookingDetails
+                    self.TableOneOrder = OrderWindow(bookingDetails)
+                    self.TableOneOccupied = True
+                    if self.TableOneOrder.Finished == True:
+                        self.TableOneOccupied = False
+                elif self.TableOneOccupied == True:
+                    bookingDetails = self.table1.bookingDetails
+                    self.TableOneOrder = OrderWindow(bookingDetails)
+                    if self.TableOneOrder.Finished == True:
+                        self.TableOneOccupied = False                            
+                    
+            elif TableNumber == 2:
+                if self.TableTwoOccupied == False:
+                    self.table2 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table2.bookingDetails
+                    self.TableTwoOrder = OrderWindow(bookingDetails)
+                    self.TableTwoOccupied = True
+                    if self.TableTwoOrder.Finished == True:
+                        self.TableTwoOccupied = False
+                elif self.TableTwoOccupied == True:
+                    bookingDetails = self.table2.bookingDetails
+                    self.TableTwoOrder = OrderWindow(bookingDetails)
+                    if self.TableTwoOrder.Finished == True:
+                        self.TableTwoOccupied = False
 
-                             
-                
-        elif TableNumber == 2:
-            if self.TableTwoOccupied == False:
-                self.table2 = AssignCustomer(TableNumber)
-                self.table2.bookingRetrieved.connect(self.table2.close)
-                bookingDetails = self.table2.bookingDetails
-                self.TableTwoOrder = OrderWindow(bookingDetails)
-                self.TableTwoOccupied = True
-            elif self.TableTwoOccupied == True:
-                bookingDetails = self.table2.bookingDetails
-                self.TableTwoOrder = OrderWindow(bookingDetails)
-                             
+            elif TableNumber == 3:
+                if self.TableThreeOccupied == False:
+                    self.table3 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table3.bookingDetails
+                    self.TableThreeOrder = OrderWindow(bookingDetails)
+                    self.TableThreeOccupied = True
+                    if self.TableThreeOrder.Finished == True:
+                        self.TableThreeOccupied = False
+                elif self.TableThreeOccupied == True:
+                    bookingDetails = self.table3.bookingDetails
+                    self.TableThreeOrder = OrderWindow(bookingDetails)
+                    if self.TableThreeOrder.Finished == True:
+                        self.TableThreeOccupied = False
+                        
+            elif TableNumber == 4:
+                if self.TableFourOccupied == False:
+                    self.table4 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table4.bookingDetails
+                    self.TableFourOrder = OrderWindow(bookingDetails)
+                    self.TableFourOccupied = True
+                    if self.TableFourOrder.Finished == True:
+                        self.TableFourOccupied = False
+                elif self.TableFourOccupied == True:
+                    bookingDetails = self.table4.bookingDetails
+                    self.TableFourOrder = OrderWindow(bookingDetails)
+                    if self.TableFourOrder.Finished == True:
+                        self.TableFourOccupied = False
+
+            elif TableNumber == 5:
+                if self.TableFiveOccupied == False:
+                    self.table5 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table5.bookingDetails
+                    self.TableFiveOrder = OrderWindow(bookingDetails)
+                    self.TableFiveOccupied = True
+                    if self.TableFiveOrder.Finished == True:
+                        self.TableFiveOccupied = False 
+                elif self.TableFiveOccupied == True:
+                    bookingDetails = self.table5.bookingDetails
+                    self.TableFiveOrder = OrderWindow(bookingDetails)
+                    if self.TableFiveOrder.Finished == True:
+                        self.TableFiveOccupied = False
+
+            elif TableNumber == 6:
+                if self.TableSixOccupied == False:
+                    self.table6 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table6.bookingDetails
+                    self.TableSixOrder = OrderWindow(bookingDetails)
+                    self.TableSixOccupied = True
+                    if self.TableSixOrder.Finished == True:
+                        self.TableSixOccupied = False 
+                elif self.TableSixOccupied == True:
+                    bookingDetails = self.table6.bookingDetails
+                    self.TableSixOrder = OrderWindow(bookingDetails)
+                    if self.TableSixOrder.Finished == True:
+                        self.TableSixOccupied = False
+
+                        
+            elif TableNumber == 7:
+                if self.TableSevenOccupied == False:
+                    self.table7 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table7.bookingDetails
+                    self.TableSevenOrder = OrderWindow(bookingDetails)
+                    self.TableSevenOccupied = True
+                    if self.TableSevenOrder.Finished == True:
+                        self.TableSevenOccupied = False 
+                elif self.TableSevenOccupied == True:
+                    bookingDetails = self.table7.bookingDetails
+                    self.TableSevenOrder = OrderWindow(bookingDetails)
+                    if self.TableSevenOrder.Finished == True:
+                        self.TableSevenOccupied = False
+
+            elif TableNumber == 8:
+                if self.TableEightOccupied == False:
+                    self.table8 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table8.bookingDetails
+                    self.TableEightOrder = OrderWindow(bookingDetails)
+                    self.TableEightOccupied = True
+                    if self.TableEightOrder.Finished == True:
+                        self.TableEightOccupied = False 
+                elif self.TableEightOccupied == True:
+                    bookingDetails = self.table8.bookingDetails
+                    self.TableEightOrder = OrderWindow(bookingDetails)
+                    if self.TableEightOrder.Finished == True:
+                        self.TableEightOccupied = False
+
+            elif TableNumber == 9:
+                if self.TableNineOccupied == False:
+                    self.table9 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table9.bookingDetails
+                    self.TableNineOrder = OrderWindow(bookingDetails)
+                    self.TableNineOccupied = True
+                    if self.TableNineOrder.Finished == True:
+                        self.TableNineOccupied = False 
+                elif self.TableNineOccupied == True:
+                    bookingDetails = self.table9.bookingDetails
+                    self.TableNineOrder = OrderWindow(bookingDetails)
+                    if self.TableNineOrder.Finished == True:
+                        self.TableNineOccupied = False
+
+            elif TableNumber == 10:
+                if self.TableTenOccupied == False:
+                    self.table10 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table10.bookingDetails
+                    self.TableTenOrder = OrderWindow(bookingDetails)
+                    self.TableTenOccupied = True
+                    if self.TableTenOrder.Finished == True:
+                        self.TableTenOccupied = False 
+                elif self.TableTenOccupied == True:
+                    bookingDetails = self.table10.bookingDetails
+                    self.TableTenOrder = OrderWindow(bookingDetails)
+                    if self.TableTenOrder.Finished == True:
+                        self.TableTenOccupied = False
+
+            elif TableNumber == 11:
+                if self.TableElevenOccupied == False:
+                    self.table11 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table11.bookingDetails
+                    self.TableElevenOrder = OrderWindow(bookingDetails)
+                    self.TableElevenOccupied = True
+                    if self.TableElevenOrder.Finished == True:
+                        self.TableElevenOccupied = False 
+                elif self.TableElevenOccupied == True:
+                    bookingDetails = self.table11.bookingDetails
+                    self.TableElevenOrder = OrderWindow(bookingDetails)
+                    if self.TableElevenOrder.Finished == True:
+                        self.TableElevenOccupied = False
+
+            elif TableNumber == 12:
+                if self.TableTwelveOccupied == False:
+                    self.table12 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table12.bookingDetails
+                    self.TableTwelveOrder = OrderWindow(bookingDetails)
+                    self.TableTwelveOccupied = True
+                    if self.TableTwelveOrder.Finished == True:
+                        self.TableTwelveOccupied = False 
+                elif self.TableTwelveOccupied == True:
+                    bookingDetails = self.table12.bookingDetails
+                    self.TableTwelveOrder = OrderWindow(bookingDetails)
+                    if self.TableTwelveOrder.Finished == True:
+                        self.TableTwelveOccupied = False
+
+            elif TableNumber == 13:
+                if self.TableThirteenOccupied == False:
+                    self.table13 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table13.bookingDetails
+                    self.TableThirteenOrder = OrderWindow(bookingDetails)
+                    self.TableThirteenOccupied = True
+                    if self.TableThirteenOrder.Finished == True:
+                        self.TableThirteenOccupied = False 
+                elif self.TableThirteenOccupied == True:
+                    bookingDetails = self.table13.bookingDetails
+                    self.TableThirteenOrder = OrderWindow(bookingDetails)
+                    if self.TableThirteenOrder.Finished == True:
+                        self.TableThirteenOccupied = False
+
+            elif TableNumber == 14:
+                if self.TableFourteenOccupied == False:
+                    self.table14 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table14.bookingDetails
+                    self.TableFourteenOrder = OrderWindow(bookingDetails)
+                    self.TableFourteenOccupied = True
+                    if self.TableFourteenOrder.Finished == True:
+                        self.TableFourteenOccupied = False 
+                elif self.TableFourteenOccupied == True:
+                    bookingDetails = self.table14.bookingDetails
+                    self.TableFourteenOrder = OrderWindow(bookingDetails)
+                    if self.TableFourteenOrder.Finished == True:
+                        self.TableFourteenOccupied = False
+
+            elif TableNumber == 15:
+                if self.TableFifteenOccupied == False:
+                    self.table15 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table15.bookingDetails
+                    self.TableFifteenOrder = OrderWindow(bookingDetails)
+                    self.TableFifteenOccupied = True
+                    if self.TableFifteenOrder.Finished == True:
+                        self.TableFifteenOccupied = False 
+                elif self.TableFifteenOccupied == True:
+                    bookingDetails = self.table15.bookingDetails
+                    self.TableFifteenOrder = OrderWindow(bookingDetails)
+                    if self.TableFifteenOrder.Finished == True:
+                        self.TableFifteenOccupied = False
+
+            elif TableNumber == 16:
+                if self.TableSixteenOccupied == False:
+                    self.table16 = AssignCustomer(TableNumber)
+                    bookingDetails = self.table16.bookingDetails
+                    self.TableSixteenOrder = OrderWindow(bookingDetails)
+                    self.TableSixteenOccupied = True
+                    if self.TableSixteenOrder.Finished == True:
+                        self.TableSixteenOccupied = False 
+                elif self.TableSixteenOccupied == True:
+                    bookingDetails = self.table16.bookingDetails
+                    self.TableSixteenOrder = OrderWindow(bookingDetails)
+                    if self.TableSixteenOrder.Finished == True:
+                        self.TableSixteenOccupied = False
+
+        except AttributeError:
+            pass
 
 
-        elif TableNumber == 3:
-            if self.TableThreeOccupied == False:
-                self.table3 = AssignCustomer(TableNumber)
-                self.table3.bookingRetrieved.connect(self.table3.close)
-                bookingDetails = self.table3.bookingDetails
-                self.TableThreeOrder = OrderWindow(bookingDetails)
-                self.TableThreeOccupied = True
-            elif self.TableThreeOccupied == True:
-                bookingDetails = self.table3.bookingDetails
-                self.TableThreeOrder = OrderWindow(bookingDetails)
+
+                    
                 
 
     def main_stack_layout(self):
@@ -227,11 +426,13 @@ class RestaurantWindow(QMainWindow):
             
         self.table_buttons = RadioButtonWidget("Table Numbers", "Please select a Table" , tableList)
         self.select_table_button = QPushButton("Select Table")
+
         self.select_table_button.clicked.connect(self.radio_button_connect)
         
         
         self.table_radio_layout.addWidget(self.table_buttons)
         self.table_radio_layout.addWidget(self.select_table_button)
+
         
 
         #booking section
@@ -252,10 +453,10 @@ class RestaurantWindow(QMainWindow):
                         WHERE Bookings.Date = '{0}'
                         """.format(TodaysDate)
         
-        #filter_query = "Date like '%{0}%'".format(TodaysDate)
         self.display_bookings = DisplayTable()
         self.display_bookings.show_results(bookingQuery)
-        #self.display_bookings.model.setFilter(filter_query)
+        self.display_bookings.setMaximumHeight(500)
+
         
         #connections
 

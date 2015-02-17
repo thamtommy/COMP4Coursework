@@ -64,18 +64,70 @@ class AddItemToMenu(QDialog):
     def add_item_to_menu(self,bookingDetails):
         bookingID = self.bookingDetails[0]
         print("i am adding an item to {0}".format(bookingID))
-        ItemID = self.input_itemID.text()
+        self.ItemID = self.input_itemID.text()
         Quantity = self.input_itemQuantity.text()
 
-        MenuItem = (bookingID,ItemID,Quantity)
+        MenuItem = (bookingID,self.ItemID,Quantity)
+
+        addedAlready = self.checkExistingItem
+
+        if addedAlready == True:
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                cursor.execute("select Quantity from Booking_Items where ItemID=? and BookingID = ?",(self.ItemID,bookingID))
+                dbquantity = cursor.fetchone()
+                
+            
+            newQuantity = dbquantity + Quantity
+            updateOrder = (newQuantity,self.ItemID)
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                sql = "update Booking_Items set Quantity=? where ItemID=?"
+                cursor.execute(sql,updateOrder)
+                db.commit()
+
+        elif addedAlready == False:
+
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                sql = "insert into Booking_Items(BookingID,ItemID,Quantity) values (?,?,?)"
+                cursor.execute(sql,MenuItem)
+                db.commit()
+
+            self.itemAdded.emit()
+
+    def checkExistingItem(self):
+        addedAlready = False
+        itemsOrdered = []
+        with sqlite3.connect("restaurant.db") as db:
+            cursor = db.cursor()
+            cursor.execute("""SELECT
+                            Items.ItemName
+                            FROM Items
+                            INNER JOIN Booking_Items
+                            ON Booking_Items.ItemID = Items.ItemID
+                            WHERE Booking_Items.BookingID = ? """,(self.bookingDetails[0],))
+            items = cursor.fetchall()
+            for each in items:
+                itemsOrdered.append(each[0])
 
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            sql = "insert into Booking_Items(BookingID,ItemID,Quantity) values (?,?,?)"
-            cursor.execute(sql,MenuItem)
-            db.commit()
+            cursor.execute("""SELECT
+                            Items.ItemName
+                            FROM Items
+                            INNER JOIN Booking_Items
+                            ON Booking_Items.ItemID = Items.ItemID
+                            WHERE Booking_Items.BookingID = ?
+                            AND Items.ItemID = ?""",(self.bookingDetails[0],self.ItemID))
+            item = cursor.fetchone()
 
-        self.itemAdded.emit()
+        if len(item) > 0 :
+            if item in itemsOrdered:
+                addedAlready = True
+
+        return addedAlready
+        
             
 if __name__ == "__main__":
     application = QApplication(sys.argv)

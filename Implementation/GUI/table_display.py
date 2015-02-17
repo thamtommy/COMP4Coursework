@@ -50,11 +50,10 @@ class DisplayTable(QWidget):
 
     def refresh(self):
         
-        print("here")
         self.results_table.setModel(self.model)
-        #print(self.model.lastError().text())
         self.model.select()
-        #self.model.emit()
+        
+
         
 if __name__ == "__main__":
     application = QApplication(sys.argv)

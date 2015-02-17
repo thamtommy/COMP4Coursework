@@ -63,6 +63,7 @@ class AddBookingWindow(QWidget):
         self.date_edit.setMaximumDate(self.maximumdate)
         self.date_edit.setMinimumDate(self.minimumdate)
         self.time_edit = QTimeEdit()
+        self.time_edit.setDisplayFormat("hh:mm")
         
         
         

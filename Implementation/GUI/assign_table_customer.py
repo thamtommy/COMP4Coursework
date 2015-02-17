@@ -11,6 +11,7 @@ class AssignCustomer(QDialog):
     def __init__(self,TableNumber):
         super().__init__()
         self.setWindowTitle("Assign customer to table {0}".format(TableNumber))
+        self.setMinimumSize(600,600)
 
         self.main_assign_layout = QVBoxLayout()
         self.choose_customer = QHBoxLayout()

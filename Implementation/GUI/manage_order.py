@@ -30,15 +30,14 @@ class OrderWindow(QDialog):
         self.add_button = QPushButton("Add")
         self.delete_button = QPushButton("Delete")
         self.finish_button = QPushButton("Finish")
-        self.invoice_button = QPushButton("Print Invoice")
+        self.preview_invoice = QPushButton("Invoice Preview")
+        self.invoice_button = QPushButton("Print Invoice")   
 
         #connections
         self.add_button.clicked.connect(self.AddItem)
         self.finish_button.clicked.connect(self.Finish)
         self.invoice_button.clicked.connect(self.Invoice)
-
-
-        #date widget
+        self.preview_invoice.clicked.connect(self.InvoicePreview)
 
 
         #create labels
@@ -50,7 +49,7 @@ class OrderWindow(QDialog):
         self.number_people_label = QLabel("Number of people : {0} ".format(bookingDetails[3]))
         
         #tables
-        drinkQuery = """SELECT
+        self.drinkQuery = """SELECT
                         Booking_Items.Quantity,
                         Items.ItemName,
                         Items.ItemPrice
@@ -61,10 +60,10 @@ class OrderWindow(QDialog):
                         AND Items.ItemTypeID = 2
                         """.format(bookingDetails[0])
         self.drinks_ordered_table = DisplayTable()
-        self.drinks_ordered_table.show_results(drinkQuery)
+        self.drinks_ordered_table.show_results(self.drinkQuery)
 
         
-        dishQuery = """SELECT
+        self.dishQuery = """SELECT
                         Booking_Items.Quantity,
                         Items.ItemName,
                         Items.ItemPrice
@@ -75,7 +74,7 @@ class OrderWindow(QDialog):
                         AND Items.ItemTypeID = 1
                         """.format(bookingDetails[0])
         self.dishes_ordered_table = DisplayTable()
-        self.dishes_ordered_table.show_results(dishQuery)
+        self.dishes_ordered_table.show_results(self.dishQuery)
         
         
         #create layouts
@@ -90,6 +89,7 @@ class OrderWindow(QDialog):
         self.manage_order.addWidget(self.add_button)
         self.manage_order.addWidget(self.delete_button)
         self.manage_order.addWidget(self.finish_button)
+        self.manage_order.addWidget(self.preview_invoice)
         self.manage_order.addWidget(self.invoice_button)
 
         self.dishes_ordered.addWidget(self.dishes_label)
@@ -116,17 +116,30 @@ class OrderWindow(QDialog):
         self.exec_()
 
     def AddItem(self):
-        self.AddOrderItem = AddItemToMenu(self.bookingDetails)
+        self.AddOrderItem = AddItemToMenu(self.bookingDetails)        
         self.AddOrderItem.exec_()
+        self.AddOrderItem.itemAdded.connect(self.refreshQuery)
+        
+
+    def refreshQuery(self):
+        self.dishes_ordered_table.show_results(self.dishQuery).exec_()
+        self.dishes_ordered_table.show_results(self.drinkQuery).exec_()
 
     def Finish(self):
-        print("Finished")
         self.Finished = True
         self.close()
         return self.Finished
 
     def Invoice(self):
-        self.Invoice = PrintInvoice()
+        self.Invoice = CustomerInvoice(self.bookingDetails)
+        self.Invoice.print_invoice()
+
+    def InvoicePreview(self):
+        self.Invoice = CustomerInvoice(self.bookingDetails)
+        self.Invoice.print_preview()
+        
+
+    
         
         
         

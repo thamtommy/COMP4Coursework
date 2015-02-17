@@ -17,7 +17,7 @@ class RadioButtonWidget(QWidget):
 
         self.radio_button_list[0].setChecked(True)
 
-        self.radio_button_layout = QVBoxLayout()
+        self.radio_button_layout = QHBoxLayout()
 
         counter = 1
         for each in self.radio_button_list:

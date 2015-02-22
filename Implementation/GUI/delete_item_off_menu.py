@@ -2,14 +2,17 @@ import sys
 import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from table_display import *
 
 class DeleteItemOffMenu(QWidget):
-    itemDeleted = pyqtSignal()
     """this class creates a window to add bookings"""
 
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Delete Item Off Menu")
+
+        self.display_table = DisplayTable()
+        self.display_table.show_table("Items")
 
         #create layouts
         self.main_layout = QVBoxLayout()
@@ -48,6 +51,7 @@ class DeleteItemOffMenu(QWidget):
         self.delete_itemID_layout.addWidget(self.delete_itemID)
         
         #add layouts to main layout
+        self.main_layout.addWidget(self.display_table)
         self.main_layout.addLayout(self.delete_item_name_layout)
         self.main_layout.addLayout(self.delete_itemID_layout)
 
@@ -59,6 +63,8 @@ class DeleteItemOffMenu(QWidget):
         self.delete_item_name.clicked.connect(self.delete_item_off_menu)
         self.delete_itemID.clicked.connect(self.delete_itemID_off_menu)
 
+        self.display_table.refresh()
+
     def delete_item_off_menu(self):
         item_name = self.input_item_name.text()
         item_name = (item_name,)
@@ -68,8 +74,8 @@ class DeleteItemOffMenu(QWidget):
             sql = "delete from Items where ItemName = ?"
             cursor.execute(sql,item_name)
             db.commit()
-            
-        self.itemDeleted.emit()
+
+        self.display_table.refresh()    
 
     def delete_itemID_off_menu(self):
         itemID = self.input_itemID.text()
@@ -80,7 +86,7 @@ class DeleteItemOffMenu(QWidget):
             cursor.execute(sql)
             db.commit()
 
-        self.itemDeleted.emit()
+        self.display_table.refresh()
             
 if __name__ == "__main__":
     application = QApplication(sys.argv)

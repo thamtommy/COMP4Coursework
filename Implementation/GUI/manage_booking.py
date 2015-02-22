@@ -4,8 +4,6 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from add_booking import*
-from delete_booking import*
 from table_display import *
 
 class BookingWindow(QWidget):
@@ -15,8 +13,8 @@ class BookingWindow(QWidget):
         super().__init__()
 
         #create layouts
+        self.manage_layout = QVBoxLayout()
         self.manage_booking = QHBoxLayout()
-
 
         #create buttons
         self.back_button = QPushButton("Back") # Will be an arrow
@@ -27,23 +25,16 @@ class BookingWindow(QWidget):
         self.manage_booking.addWidget(self.add_button)
         self.manage_booking.addWidget(self.delete_button)
 
-        #create widget to display main booking layout
+        self.display_booking_table = DisplayTable()
+        self.display_booking_table.show_table("Bookings")
 
-        self.setLayout(self.manage_booking)
-
-        #set layout to stacked layout
-
+        self.manage_layout.addWidget(self.display_booking_table)
+        self.manage_layout.addLayout(self.manage_booking)
         
 
 
 
-    def refresh_database(self):
-        self.display_widget = DisplayTable()
-        print("refresh")
-        self.display_widget.refresh()
-        
-
-
+        self.setLayout(self.manage_layout)
 
 
 if __name__ == "__main__":

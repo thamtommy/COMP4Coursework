@@ -14,7 +14,6 @@ from delete_item_off_menu import *
 from delete_booking import*
 
 from table_display import *
-from search_order import *
 
 from update_item_price import *
 from radio_button_widget_class import *
@@ -68,9 +67,29 @@ class RestaurantWindow(QMainWindow):
         self.create_menu_bar()
         self.create_tool_bar()
         
-        self.main_layout()
+        self.main_stack_layout()
         #stacked layouts 
+        self.stacked_layout = QStackedLayout()
+        self.central_widget = QWidget()
+        self.central_widget.setLayout(self.stacked_layout)
+        self.setCentralWidget(self.central_widget)
+        self.stacked_layout.addWidget(self.main_widget_layout)
+        self.add_item_stack_layout()
+        self.delete_item_stack_layout()
+        self.view_customers_stack_layout()
+        self.view_bookings_stack_layout()
+        self.manage_booking_stack_layout()
+        self.update_item_stack_layout()
+        self.add_booking_stack_layout()
+        self.delete_booking_stack_layout()
+        self.view_dishes_stack_layout()
+        self.view_drinks_stack_layout()
+        
 
+        
+
+
+        
         self.setFixedSize(1280,800)          
 
     def create_tool_bar(self):
@@ -86,12 +105,11 @@ class RestaurantWindow(QMainWindow):
         self.main_screen_label_bar = QAction("Main Screen",self)
         self.main_screen_label_bar.setToolTip("This will direct you to main screen")
         self.main_screen_tool_bar.addAction(self.main_screen_label_bar)
-        self.main_screen_label_bar.triggered.connect(self.main_layout)
+        self.main_screen_label_bar.triggered.connect(self.main_screen)
       
-        self.orders_label_bar = QAction("Search Order",self)
-        self.orders_label_bar.setToolTip("Search an order by using a booking ID")
+        self.orders_label_bar = QAction("Orders",self)
+        self.orders_label_bar.setToolTip("All orders will be displayed")
         self.orders_tool_bar.addAction(self.orders_label_bar)
-        self.orders_label_bar.triggered.connect(self.search_order_connect)
 
         self.bookings_label_bar = QAction("Bookings",self)
         self.bookings_label_bar.setToolTip("All bookings will be displayed")
@@ -145,8 +163,8 @@ class RestaurantWindow(QMainWindow):
         
         
         #connections
-        self.add_item_box.triggered.connect(self.add_item_connect)
-        self.delete_item_box.triggered.connect(self.delete_item_connect)
+        self.add_item_box.triggered.connect(self.add_item_menu_connect)
+        self.delete_item_box.triggered.connect(self.delete_item_menu_connect)
         self.update_item_box.triggered.connect(self.update_item_connect)
 
         self.add_booking_box.triggered.connect(self.add_booking_connect)
@@ -390,7 +408,7 @@ class RestaurantWindow(QMainWindow):
                     
                 
 
-    def main_layout(self):
+    def main_stack_layout(self):
 
         #create layouts
         self.main_layout = QVBoxLayout()
@@ -399,6 +417,7 @@ class RestaurantWindow(QMainWindow):
 
 
         #radio button
+        
         tableList = []
         for each in range(1,17):
             tableList.append("Table {0}".format(each))
@@ -415,6 +434,7 @@ class RestaurantWindow(QMainWindow):
         
 
         #booking section
+
         self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
         TodaysDate = time.strftime("%d/%m/%Y")
         print(TodaysDate)
@@ -429,12 +449,11 @@ class RestaurantWindow(QMainWindow):
                         INNER JOIN Bookings
                         ON Customers.CustomerID = Bookings.CustomerID
                         WHERE Bookings.Date = '{0}'
-                        ORDER BY Bookings.Time
                         """.format(TodaysDate)
         
         self.display_bookings = DisplayTable()
         self.display_bookings.show_results(bookingQuery)
-
+        self.display_bookings.setMaximumHeight(500)
 
         
         #connections
@@ -462,80 +481,183 @@ class RestaurantWindow(QMainWindow):
         self.main_widget_layout = QWidget()
         self.main_widget_layout.setLayout(self.main_layout)
 
-        self.setCentralWidget(self.main_widget_layout)
+        return self.main_widget_layout
     
-    def add_item_connect(self):
+    def add_item_stack_layout(self):
         self.add_menu_item = AddItemToMenu()
-        self.setCentralWidget(self.add_menu_item)
-        
-    def delete_item_connect(self):
+        self.stacked_layout.addWidget(self.add_menu_item)
+
+####        if not hasattr(self,"add_item_menu_bar"):
+####            self.add_item_menu_bar = DisplayTable()
+####        self.add_item_menu_bar.show_table("Items")
+####        self.add_item_menu_bar.refresh
+##
+##        self.add_item_layout = QVBoxLayout()
+##        self.add_item_layout.addWidget(self.add_item_menu_bar)
+##        self.add_item_layout.addWidget(self.add_menu_item)
+##        self.add_item_widget = QWidget()
+##        self.add_item_widget.setLayout(self.add_item_layout)
+##        self.stacked_layout.addWidget(self.add_item_widget)
+##        self.add_menu_item.itemAdded.connect(self.add_item_menu_bar.refresh)
+             
+
+    def add_item_menu_connect(self):
+        self.stacked_layout.setCurrentIndex(1)
+
+
+    def delete_item_stack_layout(self):
         self.delete_menu_item = DeleteItemOffMenu()
-        self.setCentralWidget(self.delete_menu_item)      
+        self.stacked_layout.addWidget(self.delete_menu_item)
+        
+##        if not hasattr(self,"display_widget2"):
+##            self.delete_item_menu_bar = DisplayTable()
+##        self.delete_item_menu_bar.show_table("Items")
+##        self.delete_item_menu_bar.refresh
+##        self.delete_item_layout = QVBoxLayout()
+##        self.delete_item_layout.addWidget(self.delete_item_menu_bar )
+##        self.delete_item_layout.addWidget(self.delete_menu_item)
+##        self.delete_item_widget = QWidget()
+##        self.delete_item_widget.setLayout(self.delete_item_layout)
+##        self.stacked_layout.addWidget(self.delete_item_widget)
+##        self.delete_menu_item.itemDeleted.connect(self.delete_item_menu_bar.refresh) 
+    
+
+    def delete_item_menu_connect(self):
+        self.stacked_layout.setCurrentIndex(2)
+
+    def view_customers_stack_layout(self):
+        self.display_widget2 = DisplayTable()
+        self.display_widget2.show_table("Customers")
+
+        self.view_customers_layout = QVBoxLayout()
+        self.view_customers_layout.addWidget(self.display_widget2)
+        self.view_customers_widget = QWidget()
+        self.view_customers_widget.setLayout(self.view_customers_layout)
+        self.stacked_layout.addWidget(self.view_customers_widget)
 
     def view_customers_connect(self):
-        self.tool_bar_customers = DisplayTable()
-        self.tool_bar_customers.show_table("Customers")
-        self.setCentralWidget(self.tool_bar_customers)
-     
+        self.stacked_layout.setCurrentIndex(3)
+
+    def view_bookings_stack_layout(self):
+        self.tool_bar_bookings = DisplayTable()
+        self.tool_bar_bookings.show_table("Bookings")
+
+        self.view_bookings_layout = QVBoxLayout()
+        self.view_bookings_layout.addWidget(self.tool_bar_bookings)
+        self.view_bookings_widget = QWidget()
+        self.view_bookings_widget.setLayout(self.view_bookings_layout)
+        self.stacked_layout.addWidget(self.view_bookings_widget) 
 
     def view_bookings_connect(self):
-        viewBooking = """SELECT
-                        Bookings.BookingID,
-                        Customers.CustomerID,
-                        Customers.FirstName,
-                        Customers.LastName,
-                        Bookings.NumberOfPeople,
-                        Bookings.TableNumber,
-                        Bookings.Time,
-                        Bookings.Date,
-                        Customers.TelephoneNo
-                        FROM Customers
-                        INNER JOIN Bookings
-                        ON Customers.CustomerID = Bookings.CustomerID
-                        ORDER BY Bookings.Date,Bookings.Time"""
-                        
-        self.view_bookings = DisplayTable()
-        self.view_bookings.show_results(viewBooking)
-        self.setCentralWidget(self.view_bookings)
+        self.stacked_layout.setCurrentIndex(4)
 
-    def manage_booking_connect(self):
+    def main_screen(self):
+        self.stacked_layout.setCurrentIndex(0)
+        
+    def manage_booking_stack_layout(self):
         self.manage_bookings = BookingWindow()
         self.manage_bookings.add_button.clicked.connect(self.add_booking_connect) #connection
         self.manage_bookings.delete_button.clicked.connect(self.delete_booking_connect) #connection
-        self.setCentralWidget(self.manage_bookings)
+
+        self.display_booking_table = DisplayTable()
+        self.display_booking_table.show_table("Bookings")
+
+        self.manage_booking_layout = QVBoxLayout()
+        self.manage_booking_layout.addWidget(self.display_booking_table)
+        self.manage_booking_layout.addWidget(self.manage_bookings)
+        self.manage_booking_widget = QWidget()
+        self.manage_booking_widget.setLayout(self.manage_booking_layout)
+        self.stacked_layout.addWidget(self.manage_booking_widget)
+
+    def manage_booking_connect(self):
+        self.stacked_layout.setCurrentIndex(5)
+    
+    def update_item_stack_layout(self):
+        self.update_item = UpdateItemPrice()
+
+        self.update_price_menu = DisplayTable()
+        self.update_price_menu.show_table("Items")
+
+        self.update_item_layout = QVBoxLayout()
+        self.update_item_layout.addWidget(self.update_price_menu)
+        self.update_item_layout.addWidget(self.update_item)
+        self.update_item_widget = QWidget()
+        self.update_item_widget.setLayout(self.update_item_layout)
+        self.stacked_layout.addWidget(self.update_item_widget)
+        self.update_item.itemPriceUpdated.connect(self.update_price_menu.refresh)
+        
 
     def update_item_connect(self):
-        self.update_item = UpdateItemPrice()
-        self.setCentralWidget(self.update_item)     
+        self.stacked_layout.setCurrentIndex(6)
+
+    def add_booking_stack_layout(self):
+        self.add_booking = AddBookingWindow()
+       
+        self.booking_table_widget = DisplayTable()
+        self.booking_table_widget.show_table("Bookings")
+
+        self.add_booking_layout = QVBoxLayout()
+        self.add_booking_layout.addWidget(self.booking_table_widget)
+        self.add_booking_layout.addWidget(self.add_booking)
+        self.add_booking_widget = QWidget()
+        self.add_booking_widget.setLayout(self.add_booking_layout)
+        self.stacked_layout.addWidget(self.add_booking_widget)
+        self.add_booking.bookingAdded.connect(self.booking_table_widget.refresh)
+        
 
     def add_booking_connect(self):
-        self.add_booking = AddBookingWindow()
-        self.setCentralWidget(self.add_booking)
+        self.stacked_layout.setCurrentIndex(7)
+
+
+    def delete_booking_stack_layout(self):
+        self.delete_booking = DeleteBookingWindow()
+        self.booking_table_widget2 = DisplayTable()
+        self.booking_table_widget2.show_table("Bookings")
+
+        self.delete_booking_layout = QVBoxLayout()
+        self.delete_booking_layout.addWidget(self.booking_table_widget2)
+        self.delete_booking_layout.addWidget(self.delete_booking)
+        self.delete_booking_widget = QWidget()
+        self.delete_booking_widget.setLayout(self.delete_booking_layout)
+        self.stacked_layout.addWidget(self.delete_booking_widget)
+        self.delete_booking.bookingDeleted.connect(self.booking_table_widget2.refresh)
 
     def delete_booking_connect(self):
-        self.delete_booking = DeleteBookingWindow()
-        self.setCentralWidget(self.delete_booking)
-    
+        self.stacked_layout.setCurrentIndex(8)
 
-    def view_dishes_connect(self):
+    def view_dishes_stack_layout(self):
         filter_query = "ItemTypeID like '%1%'"
 
         self.view_dishes_tool = DisplayTable()
         self.view_dishes_tool.show_table("Items")
         self.view_dishes_tool.model.setFilter(filter_query)
-        self.setCentralWidget(self.view_dishes_tool)
+        
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.view_dishes_tool)
+        self.main_widget = QWidget()
+        self.main_widget.setLayout(self.layout)
+        self.stacked_layout.addWidget(self.main_widget) 
+      
 
-    def view_drinks_connect(self):
+    def view_dishes_connect(self):
+        self.stacked_layout.setCurrentIndex(9)
+
+    def view_drinks_stack_layout(self):
         filter_query = "ItemTypeID like '%2%'"
 
         self.view_drinks_tool = DisplayTable()
         self.view_drinks_tool.show_table("Items")
         self.view_drinks_tool.model.setFilter(filter_query)
-        self.setCentralWidget(self.view_drinks_tool)
+        
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.view_drinks_tool)
+        self.main_widget = QWidget()
+        self.main_widget.setLayout(self.layout)
+        self.stacked_layout.addWidget(self.main_widget) 
+     
 
-    def search_order_connect(self):
-        self.search_order = SearchOrder()
-        self.setCentralWidget(self.search_order)
+    def view_drinks_connect(self):
+        self.stacked_layout.setCurrentIndex(10)
 
 
 def main():

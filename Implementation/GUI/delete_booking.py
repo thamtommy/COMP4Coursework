@@ -5,39 +5,34 @@ from PyQt4.QtGui import *
 from table_display import *
 
 class DeleteBookingWindow(QWidget):
-    bookingDeleted = pyqtSignal()
     """this class creates a main window to delete bookings"""
 
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Delete Booking")
-        #create layouts
+
         self.main_layout = QVBoxLayout()
         self.input_layout = QHBoxLayout()
 
-        self.main_layout.addLayout(self.input_layout)
-        
-        #create label
+
+        self.display_table = DisplayTable()
+        self.display_table.show_table("Bookings")
         self.bookingIDlabel = QLabel("Booking ID")
         self.bookingIDlabel.setMaximumSize(133,20)
 
-        #line edit
+
         self.input_bookingID = QLineEdit()
         self.input_bookingID.setMaximumSize(self.input_bookingID.sizeHint())
-        
-        #create buttons
         self.delete_bookingID = QPushButton("Delete BookingID")
         self.delete_bookingID.setMaximumSize(133,20)
         self.delete_bookingID.clicked.connect(self.delete_booking)
-
-        #add to input layout
+        
         self.input_layout.addWidget(self.bookingIDlabel)
         self.input_layout.addWidget(self.input_bookingID)
         self.input_layout.addWidget(self.delete_bookingID)
 
-
-        #create a widget to display main layout
-        #self.delete_booking_widget = QWidget()
+        self.main_layout.addWidget(self.display_table)
+        self.main_layout.addLayout(self.input_layout)
         self.setLayout(self.main_layout)
 
 
@@ -49,7 +44,8 @@ class DeleteBookingWindow(QWidget):
             cursor.execute(sql)
             db.commit()
 
-        self.bookingDeleted.emit()
+        self.display_table.refresh()
+
             
                              
 

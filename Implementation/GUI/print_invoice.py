@@ -124,7 +124,7 @@ table, th, td {
    
    <br>
    <br> """
-        html +=""" <center><b>   Total Price</b> : {0}</center> 
+        html +=""" <center><b>   Total Price</b> : £ {0}</center> 
    <br>
    <br>
    <em>All meal rates are invlusive of VAT <br>

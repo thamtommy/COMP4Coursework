@@ -2,6 +2,7 @@ import sys
 import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from table_display import *
 
 class AddItemToMenu(QWidget):
     itemAdded = pyqtSignal()
@@ -10,6 +11,9 @@ class AddItemToMenu(QWidget):
     def __init__(self):
         super().__init__()
         #self.setWindowTitle("Add Item To Menu")
+
+        self.display_table = DisplayTable()
+        self.display_table.show_table("Items")
 
         #create layouts
         self.main_layout = QVBoxLayout()
@@ -38,7 +42,7 @@ class AddItemToMenu(QWidget):
         self.input_item_name.setValidator(validatorr)
         self.input_item_name.setMaximumSize(300,30)
 
-        regexp = QRegExp("^\\d\\d?$")
+        regexp = QRegExp("^(?!0\d)\d\d(\.\d\d)?$")
         validator = QRegExpValidator(regexp)
         self.input_item_price = QLineEdit()
         self.input_item_price.setValidator(validator)
@@ -57,7 +61,8 @@ class AddItemToMenu(QWidget):
         #add button to layout
         self.add_complete_layout.addWidget(self.add_complete)
         
-        #add layouts to main layout
+        #add layouts/table to main layout
+        self.main_layout.addWidget(self.display_table)
         self.main_layout.addLayout(self.add_item_layout)
         self.main_layout.addLayout(self.add_complete_layout)
 
@@ -68,8 +73,10 @@ class AddItemToMenu(QWidget):
         #connections
         self.add_complete.clicked.connect(self.add_item_to_menu)
 
+        self.display_table.refresh()
+
     def add_item_to_menu(self):
-        ItemName = self.input_item_name.text()
+        ItemName = self.input_item_name.text().capitalize()
         ItemPrice = self.input_item_price.text()
         ItemType = self.select_item_type.currentIndex()
         if ItemType == 0:
@@ -84,6 +91,7 @@ class AddItemToMenu(QWidget):
             cursor.execute(sql,MenuItem)
             db.commit()
 
+        self.display_table.refresh()
         self.itemAdded.emit()
             
 if __name__ == "__main__":

@@ -2,38 +2,33 @@ import sys
 import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from table_display import *
 
 class UpdateItemPrice(QDialog):
-    itemPriceUpdated = pyqtSignal()
     """this class creates a window to add bookings"""
 
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Update Item Price")
 
-        #create layouts
         self.main_layout = QVBoxLayout()
         self.update_item_layout = QGridLayout()
         self.update_complete_layout = QHBoxLayout()
         
+        self.display_table = DisplayTable()
+        self.display_table.show_table("Items")
         
-        #create buttons
         self.update_complete = QPushButton("Update Item")
-
-
     
-        #labels
         self.itemID_label = QLabel("Item ID : ")
         self.item_price_label = QLabel("New Item Price : ")
 
 
-        #line edit
         regexp = QRegExp("^\\d\\d\\d?$")
         validator = QRegExpValidator(regexp)
         self.input_itemID = QLineEdit()
         self.input_itemID.setValidator(validator)
         self.input_itemID.setMaximumSize(300,30)
-
 
         regexp2 = QRegExp("^\\d\\d?$")
         validator2 = QRegExpValidator(regexp2)
@@ -41,28 +36,20 @@ class UpdateItemPrice(QDialog):
         self.input_item_price.setValidator(validator2)
         self.input_item_price.setMaximumSize(300,30)
 
-        #add labels to layout
+
         self.update_item_layout.addWidget(self.itemID_label,0,0)
         self.update_item_layout.addWidget(self.item_price_label,1,0)
-
-
-        #add line edit to layout
         self.update_item_layout.addWidget(self.input_itemID,0,1)
         self.update_item_layout.addWidget(self.input_item_price,1,1)
-
-
-        #add button to layout
         self.update_complete_layout.addWidget(self.update_complete)
         
-        #add layouts to main layout
+        self.main_layout.addWidget(self.display_table)
         self.main_layout.addLayout(self.update_item_layout)
         self.main_layout.addLayout(self.update_complete_layout)
 
-
-        #create a widget to display main layout
         self.setLayout(self.main_layout)
 
-        #connections
+        #connection
         self.update_complete.clicked.connect(self.update_item)
 
     def update_item(self):
@@ -76,7 +63,9 @@ class UpdateItemPrice(QDialog):
             cursor.execute(sql,UpdateItem)
             db.commit()
 
-        self.itemPriceUpdated.emit()
+        self.display_table.refresh()
+        
+     
             
 if __name__ == "__main__":
     application = QApplication(sys.argv)

@@ -12,21 +12,29 @@ class AssignCustomer(QDialog):
         super().__init__()
         self.setWindowTitle("Assign customer to table {0}".format(TableNumber))
         self.setMinimumSize(600,600)
+        self.tableNumber = TableNumber
+
+        self.titleFont = QFont()
+        self.titleFont.setPointSize(15)
+
+
+        self.todays_bookings_label = QLabel("Todays bookings for table {0}".format(TableNumber))
+        self.todays_bookings_label.setFont(self.titleFont)
+        self.todays_bookings_label.setAlignment(Qt.AlignLeft)
+        self.todays_bookings_label.setFixedWidth(400)
+
 
         self.main_assign_layout = QVBoxLayout()
         self.choose_customer = QHBoxLayout()
         self.create_combo_box(TableNumber)
-        
-        #add buttons to layouts
-        self.choose_customer.addWidget(self.customer_combo_box)
-        
-        self.select_customer = QPushButton("Select")
-        self.choose_customer.addWidget(self.select_customer)
-        self.select_customer.clicked.connect(self.select_connect)
-        
         self.add_customer_layout = QGridLayout()
         self.create_complete_layout = QHBoxLayout()
         
+
+        self.choose_customer.addWidget(self.customer_combo_box)
+        self.select_customer = QPushButton("Select")
+        self.choose_customer.addWidget(self.select_customer)
+        self.select_customer.clicked.connect(self.select_connect)        
         
         #create buttons
         self.create_complete = QPushButton("Create")
@@ -38,7 +46,7 @@ class AssignCustomer(QDialog):
         self.time_arrived_label = QLabel("Time Of Arrival : ")
         self.date_arrived_label = QLabel("Date Of Arrival : ")
 
-        self.systemtime = time.strftime("%H:%M:%S")
+        self.systemtime = time.strftime("%H:%M")
         self.system_time_label = QLineEdit(self.systemtime)
         self.system_time_label.setReadOnly(True)
         sizehint = self.system_time_label.sizeHint()
@@ -53,13 +61,15 @@ class AssignCustomer(QDialog):
         self.display_table_number.setReadOnly(True)
         self.display_table_number.setMaximumSize(sizehint)
 
-
-        #line edit
+        regexp = QRegExp("^\\d\\d?$")
+        validator = QRegExpValidator(regexp)
         self.input_number_of_people = QLineEdit()
+        self.input_number_of_people.setValidator(validator)
         self.input_number_of_people.setMaximumSize(sizehint)
 
 
         displayQuery = """SELECT
+                        Customers.FirstName,
                         Customers.LastName,
                         Bookings.NumberOfPeople,
                         Bookings.Time
@@ -73,32 +83,31 @@ class AssignCustomer(QDialog):
         self.display_customers = DisplayTable()
         self.display_customers.show_results(displayQuery)
 
-        #add labels to layout
+
         self.add_customer_layout.addWidget(self.table_number_label,0,0)
         self.add_customer_layout.addWidget(self.display_table_number,0,1)
-        
-
         self.add_customer_layout.addWidget(self.time_arrived_label,1,0)
         self.add_customer_layout.addWidget(self.date_arrived_label,2,0)
-
         self.add_customer_layout.addWidget(self.system_time_label,1,1)
         self.add_customer_layout.addWidget(self.system_date_label,2,1)
-
         self.add_customer_layout.addWidget(self.number_of_people_label,3,0)
-
-        #add line edit to layout
         self.add_customer_layout.addWidget(self.input_number_of_people,3,1)
-
-
+        self.add_customer_layout.addWidget(self.create_complete,4,0,2,2)
         #add button to layout
         self.create_complete_layout.addWidget(self.create_complete)
         
         #add layouts to main layout
 
+        self.assign_street_box = QGroupBox("Customer that has not booked in advance")
+        self.assign_street_box.setLayout(self.add_customer_layout)
+
+        self.assign_booked_box = QGroupBox("Customer that has booked in advance")
+        self.assign_booked_box.setLayout(self.choose_customer)
+
+        self.main_assign_layout.addWidget(self.todays_bookings_label)
         self.main_assign_layout.addWidget(self.display_customers)
-        self.main_assign_layout.addLayout(self.choose_customer)
-        self.main_assign_layout.addLayout(self.add_customer_layout)
-        self.main_assign_layout.addLayout(self.create_complete_layout)                            
+        self.main_assign_layout.addWidget(self.assign_booked_box)
+        self.main_assign_layout.addWidget(self.assign_street_box)                          
         self.setLayout(self.main_assign_layout)
         
         self.exec_()
@@ -120,11 +129,7 @@ class AssignCustomer(QDialog):
             sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
             cursor.execute(sql,Booking)
             db.commit()
-
-        #get booking id and select * from bookings where bookingid = ?
-
-        Time = ("{0}".format(Time))
-
+            
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             cursor.execute("select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' ".format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
@@ -134,6 +139,7 @@ class AssignCustomer(QDialog):
         return self.bookingDetails
 
     def select_connect(self):
+        TodaysDate = time.strftime("%d/%m/%Y")
         customerCurrentIndex = self.customer_combo_box.currentIndex()
         print("Customer : {0}".format(customerCurrentIndex))
         CustomerID = self.CustomerList[customerCurrentIndex]
@@ -141,7 +147,7 @@ class AssignCustomer(QDialog):
         
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            cursor.execute("select * from Bookings where CustomerID = {0}".format(CustomerID))
+            cursor.execute("select * from Bookings where CustomerID = {0} and TableNumber = {1} and Date = '{2}'".format(CustomerID,self.tableNumber,TodaysDate))
             self.bookingDetails = cursor.fetchone()         
             print(self.bookingDetails)
 

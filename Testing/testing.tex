@@ -9,7 +9,12 @@
     \begin{tabular}{|p{2cm}|p{5cm}|p{5cm}|p{4cm}|}
         \hline
         \textbf{Test Series} & \textbf{Purpose of Test Series} & \textbf{Testing Strategy} & \textbf{Strategy Rationale}\\ \hline
-        Example & Example & Example & Example \\ \hline
+         1 & Test the flow of control between the user interfaces & Top-down testing &  \\ \hline
+	2 & Test validation of data input is detected & Bottom-up testing & Each component will be tested once it is developed \\ \hline
+	3 & Test information input is stored in the correct place & Black box testing & Each component will be tested once it is developed \\ \hline
+	4 & Test algorithms to make sure that the output is correct & White box testing & Each component will be tested once it is developed \\ \hline
+	5 & Test that the system fufils the specification & Acceptance testing & Each component will be tested once it is developed \\ \hline
+	6 & Test database has referential integrity & Integration testing & Each component will be tested once it is developed \\ \hline
     \end{tabular}
 \end{center}
 
@@ -29,7 +34,49 @@
     \begin{longtable}{|p{1.5cm}|p{2.5cm}|p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
         \hline
         \textbf{Test Series} & \textbf{Purpose of Test} & \textbf{Test Description} & \textbf{Test Data} & \textbf{Test Data Type (Normal/ Erroneous/ Boundary)} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Evidence}\\ \hline
-        Example & Example & Example & Example & Example & Example & Example & Example \\ \hline
+        1.01 & Test 'Change password' button functions correctly & Should direct user to change password interface  & Click Change password button & Normal & Change password interface should be displayed &  &  \\ \hline
+        1.02 & Test Cancel button functions correctly on change password interface & Should redirect user to login screen  & Click Cancel button on change password interface & Normal & Change password interfact should close &  &  \\ \hline
+        1.03 & Test interactive table functions correctly & Should direct user to the order details from the table selected  & Click on occupied table & Normal & Table  information screen should be displayed &  &  \\ \hline
+        1.04 & Test unoccupied table functions correctly & Should direct user to 'add details to table'  interface  & Click on unoccupied table & Normal & 'Add details to table' interface should be displayed &  &  \\ \hline
+        1.05 & Test Table information screen, add button functions correctly & Should direct user to add item  interface  & Click Add on table information screen & Normal & Add item interface should be displayed &  &  \\ \hline
+        1.06 & Test table information screen, delete function correctly & Should change colour of delete button and red box will appear to indiciate deletion for items  & Click Delete button & Normal & Delete button should change colour and red boxes should appear next to each order item &  &  \\ \hline
+        1.07 & Test 'Change password' button functions correctly & Should direct user to change password interface  & Click Change password button & Normal & Change password interface should be displayed &  &  \\ \hline
+        1.08 & Test back arrow button functions correctly on table information screen & Should direct user to main screen & Click back arrow button & Normal & User redirected back to main screen should be displayed &  &  \\ \hline
+        1.09 & Test 'Manage Bookings' button functions correctly on main screen & Should direct user to Manage Bookings interface  & Click Manage Bookings & Normal & Manage Bookings interface should be displayed &  &  \\ \hline
+        1.10 & Test Add button functions correctly on Manage Bookings interface & Should direct user to create booking interface  & Click Add button & Normal & Create booking interface should be displayed &  &  \\ \hline
+        1.11 & Test Cancel button functions correctly on create booking interface & Should redirect user to Manage Bookings interface  & Click Cancel button & Normal & User should be redirected to Manage Bookings interface &  &  \\ \hline
+        1.12 & Test back arrow on manage bookings interface functions correctly & Should redirect user to main screen  & Click Change back arrow button & Normal & Main screen should be displayed &  &  \\ \hline
+        1.13 & Test Delete button on Manage Bookings screen & Should direct user to bookings display interface  & Click Dlete button & Normal & Bookings display should be displayed  &  &  \\ \hline
+        1.14 & Test back arrow button functions correctly on bookings display screen & Should redirect user to Manage Bookings interface  & Click back arrow button & Normal & User should be redirected to Manage Bookings interface &  &  \\ \hline
+        2.01 & Verify password entered & The field cannot be left blank  & (Nothing), Treem & Erroneous, Normal & Error, Accepted &  &  \\ \hline
+        2.02 & Verify new password entered at change password screen & The field cannot be left blank  & (Nothing), PineTree & Erroneous, Normal & Error, Accepted &  &  \\ \hline
+        2.03 & Verify retype new password entered at change password screen & The field cannot be left blank  & (Nothing), PineTree & Erroneous, Normal & Error, Accepted &  &  \\ \hline
+        2.04 & Verify old password entered at change password screen & The field cannot be left blank  & (Nothing) ,Treem & Erroneous, Normal & Error, Accepted &  &  \\ \hline
+        2.05 & Verify Number of people entered at 'add details table' & The field cannot be left blank  & (Nothing),3 , pigs& Erroneous, Normal, Erroneous & Error, Accepted, Error &  &  \\ \hline
+        2.06 & Verify MenuID entered at 'add item to order' interface & The field cannot be left blank  & (Nothing),3, 9552 & Erroneous, Normal, Erroneous & Error, Accepted, Error &  &  \\ \hline
+        2.07 & Verify First Name entered at 'enter booking details' interface & The field cannot be left blank  & (Nothing), Milly, 63 & Erroneous, Normal, Erroneous & Error, Accepted, Error &  &  \\ \hline
+        2.08 & Verify Last Name entered at 'enter booking details' interface & The field cannot be left blank  & (Nothing), Milk, 2 & Erroneous, Normal, Erroneous & Error, Accepted, Error &  &  \\ \hline
+        2.09 & Verify Telephone Number entered at 'enter booking details'' interface & The field cannot be left blank  & (Nothing),01523 859372, 014829, 0158925 8295289 & Erroneous, Normal, Erroneous, Errorneous & Error, Accepted, Error, Error &  &  \\ \hline
+        2.10 & Verify Table Number entered at 'enter booking details' interface & The field cannot be left blank  & (Nothing),7, Hey & Erroneous, Normal, Erroneous & Error, Accepted, Error &  &  \\ \hline
+        2.11 & Verify Number Of People entered at 'enter booking details' interface & The field cannot be left blank  & (Nothing),3, Lisa & Erroneous, Normal, Erroneous & Error, Accepted, Error &  &  \\ \hline
+        2.12 & Verify Date entered at 'enter booking details' interface & The field cannot be left blank  & (Nothing),06/05/13, Homer, 032/63/153 & Erroneous, Normal, Erroneous, Erroneous & Error, Accepted, Error, Error &  &  \\ \hline
+        2.13 & Verify Time entered at 'enter booking details' interface & The field cannot be left blank  & (Nothing),18:12, Bart, 53:62 & Erroneous, Normal, Erroneous, Erroneous & Error, Accepted, Error, Error &  &  \\ \hline
+        3.01 & Verify all table details entered are added to relevant database tables & Information should be added to the correct fields in customer, order and orderitem  tables. If necessary reservation table  & customer information, order information, orderitem information, if necessary reservation table & Normal &Added to customer, order and orderitem table. If necessary reservation table  & & \\ \hline
+        3.02 & Verify that all details entered at 'enter booking details' interface are added to the reservation database & All of the information should be added to the correct field in the reservations table  & Reservation informationl & Normal & Added to the reservation table & &  \\ \hline
+        4.01 & Verify password changed & Password should not successfully change if length is not bigger than 4 and old password does not match input old password   & -Try changing password with incorrect input and length of 2 new password, -Try changing password with new password having length of 2, - Try changing password with correct input and correct length&Error, Error, Accepted  & & \\ \hline
+        4.02 & Verify add item function works correctly & Entering MenuID will return information based on that ID & Enter ID &  Normal & Return all information based on the ID  & & \\ \hline
+        4.03 & Verify Total price calculation functions correctly & Adds up all items prices together to get a total & Enter items to order &  Normal & Calculates the total price based on items entered  & & \\ \hline
+	4.04 & Check bookings displayed on correct day & Should display all bookings that match with system date & Create a range of bookings that have different dates & Normal& Displays correct bookings & & \\ \hline
+         5.01 & Verify program fulfills the specification & Run through the program, testing all aspects to make sure the meet the objectives in the specification & Enter information in all places required input &  Normal & Program fulfils specification  & & \\ \hline
+	6.01 & Verify menu item name updates in case an item is mistakenly spelt & Check  the item name is updated in all records that it appears in & Update name of a menu item (Wate to Water) & Normal & Wate should change to Water & & \\ \hline
+	6.02 & Verify menu item price updates in case an item is mistakenly priced & Check the price of the item is updated in all records the item appears in & Update price of a menu item (0.060) to (0.60) & Normal & Price should change to 0.60 & & \\ \hline
+	
+
+
+
+
+
+
     \end{longtable}
 \end{center}
 

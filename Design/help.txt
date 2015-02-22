@@ -1,0 +1,9 @@
+Make booking - create record
+Once the customers come and order - create customerID which attaches to the reservationID
+
+Where to put Stop? after finish order?
+
+Improvements:
+Add page references to figures
+
+

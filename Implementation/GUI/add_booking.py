@@ -39,14 +39,17 @@ class AddBookingWindow(QWidget):
         self.input_last_name.setMaximumSize(300,30)
                
         self.input_number_of_people = QLineEdit()
-        regexp = QRegExp("^[0-9]*$")
+        regexp = QRegExp("^\d|\d\d")
         validator = QRegExpValidator(regexp)
         self.input_number_of_people.setValidator(validator)
         self.input_number_of_people.setMaximumSize(300,30)
         self.input_number_of_people.setMaxLength(2)
 
+        regexp2 = QRegExp("^[0-9]*$")
+        validator2 = QRegExpValidator(regexp2)
+
         self.input_telephone_number = QLineEdit()
-        self.input_telephone_number.setValidator(validator)
+        self.input_telephone_number.setValidator(validator2)
         self.input_telephone_number.setMaximumSize(300,30)
         self.input_telephone_number.setMaxLength(11)
 
@@ -96,7 +99,6 @@ class AddBookingWindow(QWidget):
 
 
         #create a widget to display main layout
-        self.add_booking_widget = QWidget()
         self.setLayout(self.main_layout)
         
 
@@ -107,12 +109,9 @@ class AddBookingWindow(QWidget):
         FirstName = self.input_first_name.text().capitalize()
         LastName = self.input_last_name.text().capitalize()
         TeleNumber = self.input_telephone_number.text()
-        NumberOfPeople = self.input_number_of_people.text()
+        NumberOfPeople = int(self.input_number_of_people.text())
         TableNumber = self.select_table_number.currentIndex() + 1
-        try:
-            NumberOfPeople = int(NumberOfPeople)
-        except ValueError:
-            pass
+
 
         
         BookingDate = self.date_edit.text()
@@ -139,6 +138,7 @@ class AddBookingWindow(QWidget):
             with sqlite3.connect("restaurant.db") as db:
                 cursor = db.cursor()
                 sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
+                cursor.execute("PRAGMA foreign_keys = ON")
                 cursor.execute(sql,booking)
                 db.commit()
 

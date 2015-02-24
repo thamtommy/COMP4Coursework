@@ -46,7 +46,7 @@ def BookingItem():
              ItemID integer,
              Quantity integer,
              primary key(BookingItemID),
-             foreign key(BookingID) references Booking(BookingID),
+             foreign key(BookingID) references Bookings(BookingID) on delete cascade,
              foreign key(ItemID) references Items(ItemID))"""
     create_table(db_name,"Booking_Items",sql)
              
@@ -84,18 +84,33 @@ def Customer():
     
 if __name__ == "__main__":
     db_name = "restaurant.db"
+    Table()
     Type()
     Items()
     BookingItem()
-    Booking()
-    Table()
+    Booking()    
     Customer()
+
     data = ("Street","Customer","None")
     with sqlite3.connect("restaurant.db") as db:
         cursor = db.cursor()
         sql = "insert into Customers (FirstName,LastName,TelephoneNo) values (?,?,?)"
+        cursor.execute("PRAGMA foreign_keys = ON")
         cursor.execute(sql,data)
         db.commit()
 
+    data = ("Dish",)
+    data2 = ("Drink",)
     
+    with sqlite3.connect("restaurant.db") as db:
+        cursor = db.cursor()
+        sql = "insert into ItemType (Type) values (?)"
+        cursor.execute(sql,data)
+        cursor.execute(sql,data2)
+        db.commit()
+
+    with sqlite3.connect("restaurant.db") as db:
+        cursor = db.cursor() 
+        for each in range(1,17):
+            cursor.execute("insert into Table_Numbers (TableNumber) values (?)", (each,))
         

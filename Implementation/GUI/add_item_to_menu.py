@@ -42,7 +42,7 @@ class AddItemToMenu(QWidget):
         self.input_item_name.setValidator(validatorr)
         self.input_item_name.setMaximumSize(300,30)
 
-        regexp = QRegExp("^(?!0\d)\d\d(\.\d\d)?$")
+        regexp = QRegExp("(^\d|\d\d)(\.\d\d)?$")
         validator = QRegExpValidator(regexp)
         self.input_item_price = QLineEdit()
         self.input_item_price.setValidator(validator)
@@ -88,6 +88,7 @@ class AddItemToMenu(QWidget):
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             sql = "insert into Items(ItemName,ItemPrice,ItemTypeID) values (?,?,?)"
+            cursor.execute("PRAGMA foreign_keys = ON")
             cursor.execute(sql,MenuItem)
             db.commit()
 

@@ -41,6 +41,7 @@ class DeleteBookingWindow(QWidget):
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             sql = ("delete from Bookings where BookingID = {0}".format(booking))
+            cursor.execute("PRAGMA foreign_keys = ON")
             cursor.execute(sql)
             db.commit()
 

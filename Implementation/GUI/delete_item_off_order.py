@@ -95,6 +95,7 @@ class DeleteItemOffOrder(QDialog):
                 with sqlite3.connect("restaurant.db") as db:
                     cursor = db.cursor()
                     sql = "delete from Booking_Items where BookingID = ? and ItemID = ? "
+                    cursor.execute("PRAGMA foreign_keys = ON")
                     cursor.execute(sql,MenuItem)
                     db.commit()
             else:
@@ -103,6 +104,7 @@ class DeleteItemOffOrder(QDialog):
                 with sqlite3.connect("restaurant.db") as db:
                     cursor = db.cursor()
                     sql = "update Booking_Items set Quantity=? where ItemID=?"
+                    cursor.execute("PRAGMA foreign_keys = ON")
                     cursor.execute(sql,updateOrder)
                     db.commit()
                 
@@ -113,6 +115,7 @@ class DeleteItemOffOrder(QDialog):
             with sqlite3.connect("restaurant.db") as db:
                 cursor = db.cursor()
                 sql = "delete from Booking_Items where BookingID = ? and ItemID = ? "
+                cursor.execute("PRAGMA foreign_keys = ON")
                 cursor.execute(sql,MenuItem)
                 db.commit()
 

@@ -17,8 +17,9 @@ from table_display import *
 from search_order import *
 
 from update_item_price import *
-from radio_button_widget_class import *
+from update_booking import*
 
+from radio_button_widget_class import *
 from assign_table_customer import *
 
 
@@ -128,6 +129,7 @@ class RestaurantWindow(QMainWindow):
 
         self.add_booking_box = QAction("Add Booking",self)
         self.delete_booking_box = QAction("Delete Booking",self)
+        self.update_booking_box = QAction("Update Booking",self)
         
         self.menu = QMenuBar()
         self.menu_bar = self.menu.addMenu("Item Menu")
@@ -142,6 +144,7 @@ class RestaurantWindow(QMainWindow):
 
         self.bookings_bar.addAction(self.add_booking_box)
         self.bookings_bar.addAction(self.delete_booking_box)
+        self.bookings_bar.addAction(self.update_booking_box)
         
         
         #connections
@@ -151,6 +154,7 @@ class RestaurantWindow(QMainWindow):
 
         self.add_booking_box.triggered.connect(self.add_booking_connect)
         self.delete_booking_box.triggered.connect(self.delete_booking_connect)
+        self.update_booking_box.triggered.connect(self.update_booking_connect)
 
     def radio_button_connect(self):
         TableNumber = self.table_buttons.selected_button()
@@ -536,6 +540,10 @@ class RestaurantWindow(QMainWindow):
     def search_order_connect(self):
         self.search_order = SearchOrder()
         self.setCentralWidget(self.search_order)
+
+    def update_booking_connect(self):
+        self.update_booking = UpdateBooking()
+        self.setCentralWidget(self.update_booking)
 
 
 def main():

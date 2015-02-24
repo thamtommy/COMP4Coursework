@@ -92,10 +92,7 @@ class AssignCustomer(QDialog):
         self.add_customer_layout.addWidget(self.system_date_label,2,1)
         self.add_customer_layout.addWidget(self.number_of_people_label,3,0)
         self.add_customer_layout.addWidget(self.input_number_of_people,3,1)
-        self.add_customer_layout.addWidget(self.create_complete,4,0,2,2)
-        #add button to layout
-        self.create_complete_layout.addWidget(self.create_complete)
-        
+        self.add_customer_layout.addWidget(self.create_complete,4,0,2,2)  
         #add layouts to main layout
 
         self.assign_street_box = QGroupBox("Customer that has not booked in advance")
@@ -127,6 +124,7 @@ class AssignCustomer(QDialog):
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
+            cursor.execute("PRAGMA foreign_keys = ON")
             cursor.execute(sql,Booking)
             db.commit()
             
@@ -152,9 +150,8 @@ class AssignCustomer(QDialog):
             print(self.bookingDetails)
 
         self.close()
+        
         return self.bookingDetails
-        
-        
 
     def create_combo_box(self,TableNumber):
         self.CustomerList = []

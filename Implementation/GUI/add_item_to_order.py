@@ -74,6 +74,7 @@ class AddItemToOrder(QDialog):
             with sqlite3.connect("restaurant.db") as db:
                 cursor = db.cursor()
                 sql = "update Booking_Items set Quantity=? where ItemID=?"
+                cursor.execute("PRAGMA foreign_keys = ON")
                 cursor.execute(sql,updateOrder)
                 db.commit()
                 
@@ -84,6 +85,7 @@ class AddItemToOrder(QDialog):
             with sqlite3.connect("restaurant.db") as db:
                 cursor = db.cursor()
                 sql = "insert into Booking_Items(BookingID,ItemID,Quantity) values (?,?,?)"
+                cursor.execute("PRAGMA foreign_keys = ON")
                 cursor.execute(sql,MenuItem)
                 db.commit()
 

@@ -7,6 +7,7 @@ from table_display import *
 from add_item_to_order import *
 from print_invoice import *
 from delete_item_off_order import *
+from cascade_style_sheet import*
 
 ##        bookingID = bookingDetails[0]
 ##        customerID = bookingDetails[1]
@@ -16,13 +17,14 @@ from delete_item_off_order import *
 ##        Time = bookingDetails[5]
 
 class OrderWindow(QDialog):
-    """this class creates a main window to observe the restaurant"""
+    """this class will be used to manage the orders"""
 
     def __init__(self,bookingDetails):
         super().__init__()
         self.Finished = False
         self.setFixedSize(1000,500)
         self.setWindowTitle("Manage Order")
+        self.setStyleSheet(css)
         self.bookingDetails = bookingDetails
         self.CalcTotal()
 

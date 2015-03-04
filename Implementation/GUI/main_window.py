@@ -21,21 +21,7 @@ from update_booking import*
 
 from radio_button_widget_class import *
 from assign_table_customer import *
-
-
-
-#stacked layout index
-## 0 - main screen
-## 1 - add item (menu bar)
-## 2 - delete item (menu bar)
-## 3 - view customers (tool bar)
-## 4 - view bookings (tool bar)
-## 5 - manage bookings (QPushButton)
-## 6 - update item (menu bar)
-## 7 - add booking (manage booking)
-## 8 - delete booking (manage booking)
-## 9 - view dishes(tool bar)
-## 10 - view dishes(tool bar)
+from cascade_style_sheet import *
 
 class RestaurantWindow(QMainWindow):
     """this class creates a main window to observe the restaurant"""
@@ -43,7 +29,8 @@ class RestaurantWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Restaurant Simulation")
-
+        self.setStyleSheet(css)
+        
         self.TableOneOccupied = False
         self.TableTwoOccupied = False
         self.TableThreeOccupied = False
@@ -72,7 +59,7 @@ class RestaurantWindow(QMainWindow):
         self.main_layout()
         #stacked layouts 
 
-        self.setFixedSize(1280,800)          
+        self.setMinimumSize(1080,800)          
 
     def create_tool_bar(self):
         #create toolbar
@@ -94,12 +81,12 @@ class RestaurantWindow(QMainWindow):
         self.orders_tool_bar.addAction(self.orders_label_bar)
         self.orders_label_bar.triggered.connect(self.search_order_connect)
 
-        self.bookings_label_bar = QAction("Bookings",self)
+        self.bookings_label_bar = QAction("View Bookings",self)
         self.bookings_label_bar.setToolTip("All bookings will be displayed")
         self.bookings_tool_bar.addAction(self.bookings_label_bar)
         self.bookings_label_bar.triggered.connect(self.view_bookings_connect)
 
-        self.view_customers_label = QAction("View Customer",self)
+        self.view_customers_label = QAction("View Customers",self)
         self.view_customers_label.setToolTip("All customers will be displayed")
         self.view_customers.addAction(self.view_customers_label)
         self.view_customers_label.triggered.connect(self.view_customers_connect)
@@ -134,7 +121,6 @@ class RestaurantWindow(QMainWindow):
         self.menu = QMenuBar()
         self.menu_bar = self.menu.addMenu("Item Menu")
         self.bookings_bar = self.menu.addMenu("Bookings")
-        self.options_bar = self.menu.addMenu("Options")
         
         self.setMenuBar(self.menu)
 
@@ -155,6 +141,82 @@ class RestaurantWindow(QMainWindow):
         self.add_booking_box.triggered.connect(self.add_booking_connect)
         self.delete_booking_box.triggered.connect(self.delete_booking_connect)
         self.update_booking_box.triggered.connect(self.update_booking_connect)
+
+    def main_layout(self):
+
+        #create layouts
+        self.main_layout = QVBoxLayout()
+        self.booking_layout = QVBoxLayout() #box 1,0
+        self.table_radio_layout = QVBoxLayout()
+
+
+        #radio button
+        tableList = []
+        for each in range(1,17):
+            tableList.append("Table {0}".format(each))
+            
+        self.table_buttons = RadioButtonWidget("Table Numbers", "Please select a Table" , tableList)
+        self.select_table_button = QPushButton("Select Table")
+
+        self.select_table_button.clicked.connect(self.radio_button_connect)
+        
+        
+        self.table_radio_layout.addWidget(self.table_buttons)
+        self.table_radio_layout.addWidget(self.select_table_button)
+
+        
+
+        #booking section
+        self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
+        TodaysDate = time.strftime("%d/%m/%Y")
+        print(TodaysDate)
+
+        bookingQuery = """SELECT
+                        Customers.FirstName,
+                        Customers.LastName,
+                        Bookings.NumberOfPeople,
+                        Bookings.TableNumber,
+                        Bookings.Time
+                        FROM Customers
+                        INNER JOIN Bookings
+                        ON Customers.CustomerID = Bookings.CustomerID
+                        WHERE Bookings.Date = '{0}'
+                        ORDER BY Bookings.Time
+                        """.format(TodaysDate)
+        
+        self.display_bookings = DisplayTable()
+        self.display_bookings.show_results(bookingQuery)
+
+
+        
+        #connections
+
+        self.manage_bookings.clicked.connect(self.manage_booking_connect)
+
+
+        #add widgets to booking layout
+        self.todays_bookings_label = QLabel("Todays Bookings")
+        self.todays_bookings_label.setFont(self.titleFont)
+        self.todays_bookings_label.setFixedWidth(400)
+        
+        self.booking_layout.addWidget(self.todays_bookings_label)
+        self.booking_layout.addWidget(self.display_bookings)
+        self.booking_layout.addWidget(self.manage_bookings)
+        
+        
+
+        #add layouts to main layout
+        self.main_layout.addLayout(self.table_radio_layout)
+        self.main_layout.addLayout(self.booking_layout)
+
+
+        #create a widget to display main layout
+        self.main_widget_layout = QWidget()
+        self.main_widget_layout.setLayout(self.main_layout)
+
+        self.setCentralWidget(self.main_widget_layout)
+    
+
 
     def radio_button_connect(self):
         TableNumber = self.table_buttons.selected_button()
@@ -387,87 +449,8 @@ class RestaurantWindow(QMainWindow):
                         self.TableSixteenOccupied = False
 
         except AttributeError:
-            pass
-
-
-
-                    
+            pass             
                 
-
-    def main_layout(self):
-
-        #create layouts
-        self.main_layout = QVBoxLayout()
-        self.booking_layout = QVBoxLayout() #box 1,0
-        self.table_radio_layout = QVBoxLayout()
-
-
-        #radio button
-        tableList = []
-        for each in range(1,17):
-            tableList.append("Table {0}".format(each))
-            
-        self.table_buttons = RadioButtonWidget("Table Numbers", "Please select a Table" , tableList)
-        self.select_table_button = QPushButton("Select Table")
-
-        self.select_table_button.clicked.connect(self.radio_button_connect)
-        
-        
-        self.table_radio_layout.addWidget(self.table_buttons)
-        self.table_radio_layout.addWidget(self.select_table_button)
-
-        
-
-        #booking section
-        self.manage_bookings = QPushButton("Manage Bookings") # Manage bookings button
-        TodaysDate = time.strftime("%d/%m/%Y")
-        print(TodaysDate)
-
-        bookingQuery = """SELECT
-                        Customers.FirstName,
-                        Customers.LastName,
-                        Bookings.NumberOfPeople,
-                        Bookings.TableNumber,
-                        Bookings.Time
-                        FROM Customers
-                        INNER JOIN Bookings
-                        ON Customers.CustomerID = Bookings.CustomerID
-                        WHERE Bookings.Date = '{0}'
-                        ORDER BY Bookings.Time
-                        """.format(TodaysDate)
-        
-        self.display_bookings = DisplayTable()
-        self.display_bookings.show_results(bookingQuery)
-
-
-        
-        #connections
-
-        self.manage_bookings.clicked.connect(self.manage_booking_connect)
-
-
-        #add widgets to booking layout
-        self.todays_bookings_label = QLabel("Todays Bookings")
-        self.todays_bookings_label.setFont(self.titleFont)
-        self.todays_bookings_label.setFixedWidth(400)
-        
-        self.booking_layout.addWidget(self.todays_bookings_label)
-        self.booking_layout.addWidget(self.display_bookings)
-        self.booking_layout.addWidget(self.manage_bookings)
-        
-        
-
-        #add layouts to main layout
-        self.main_layout.addLayout(self.table_radio_layout)
-        self.main_layout.addLayout(self.booking_layout)
-
-
-        #create a widget to display main layout
-        self.main_widget_layout = QWidget()
-        self.main_widget_layout.setLayout(self.main_layout)
-
-        self.setCentralWidget(self.main_widget_layout)
-    
     def add_item_connect(self):
         self.add_menu_item = AddItemToMenu()
         self.setCentralWidget(self.add_menu_item)

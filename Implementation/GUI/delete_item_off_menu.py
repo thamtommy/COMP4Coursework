@@ -5,12 +5,10 @@ from PyQt4.QtGui import *
 from table_display import *
 
 class DeleteItemOffMenu(QWidget):
-    """this class creates a window to add bookings"""
+    """this class creates a widget to delete items off the menu"""
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Delete Item Off Menu")
-
         self.display_table = DisplayTable()
         self.display_table.show_table("Items")
 
@@ -63,31 +61,36 @@ class DeleteItemOffMenu(QWidget):
         self.delete_item_name.clicked.connect(self.delete_item_off_menu)
         self.delete_itemID.clicked.connect(self.delete_itemID_off_menu)
 
-        self.display_table.refresh()
-
     def delete_item_off_menu(self):
         item_name = self.input_item_name.text()
-        item_name = (item_name,)
         print(item_name)
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            sql = "delete from Items where ItemName = ?"
-            cursor.execute(sql,item_name)
-            db.commit()
+        if len(item_name)>1:
+            item_name = (item_name,)
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                sql = "delete from Items where ItemName = ?"
+                cursor.execute(sql,item_name)
+                db.commit()
 
-        self.display_table.refresh()    
+            self.display_table.refresh()
+        else:
+            QMessageBox.about(self,"Error","Please make sure you have filled in the required field ")
 
     def delete_itemID_off_menu(self):
         itemID = self.input_itemID.text()
         print(itemID)
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            sql = ("delete from Items where ItemID = {0}".format(itemID))
-            cursor.execute(sql)
-            db.commit()
-
-        self.display_table.refresh()
+        try:
             
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                sql = ("delete from Items where ItemID = {0}".format(itemID))
+                cursor.execute(sql)
+                db.commit()
+
+            self.display_table.refresh()
+
+        except (sqlite3.OperationalError) or AttributeError:
+            QMessageBox.about(self,"Error","Please make sure you have filled in the required field correctly")
 if __name__ == "__main__":
     application = QApplication(sys.argv)
     window = DeleteItemOffMenu()

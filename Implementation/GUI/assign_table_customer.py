@@ -4,15 +4,19 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from table_display import *
 import time
+from cascade_style_sheet import *
 
 class AssignCustomer(QDialog):
-    """this class creates a window to observe the bookings"""
+    """this class will be used to either assign a customer that has
+       made a booking to a table or assign a customer that has not booking
+       to a table"""
 
     def __init__(self,TableNumber):
         super().__init__()
         self.setWindowTitle("Assign customer to table {0}".format(TableNumber))
         self.setMinimumSize(600,600)
         self.tableNumber = TableNumber
+        self.setStyleSheet(css)
 
         self.titleFont = QFont()
         self.titleFont.setPointSize(15)
@@ -93,7 +97,6 @@ class AssignCustomer(QDialog):
         self.add_customer_layout.addWidget(self.number_of_people_label,3,0)
         self.add_customer_layout.addWidget(self.input_number_of_people,3,1)
         self.add_customer_layout.addWidget(self.create_complete,4,0,2,2)  
-        #add layouts to main layout
 
         self.assign_street_box = QGroupBox("Customer that has not booked in advance")
         self.assign_street_box.setLayout(self.add_customer_layout)
@@ -110,9 +113,8 @@ class AssignCustomer(QDialog):
         self.exec_()
 
     def create_booking(self):
+        #create bookingID for customer that has walked in
         TableNumber = self.display_table_number.text()
-
-        #create bookingID for customer
         CustomerID = 1
         NumberOfPeople = self.input_number_of_people.text()
         Date = self.systemdate
@@ -121,20 +123,28 @@ class AssignCustomer(QDialog):
 
         Booking = (CustomerID,TableNumber,NumberOfPeople,Date,Time)
 
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
-            cursor.execute("PRAGMA foreign_keys = ON")
-            cursor.execute(sql,Booking)
-            db.commit()
-            
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            cursor.execute("select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' ".format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
-            self.bookingDetails = cursor.fetchone()
 
-        self.close()
-        return self.bookingDetails
+
+        if len(NumberOfPeople) > 0 and (int(NumberOfPeople)>0):
+
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
+                cursor.execute("PRAGMA foreign_keys = ON")
+                cursor.execute(sql,Booking)
+                db.commit()
+                
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                cursor.execute("select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' ".format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
+                self.bookingDetails = cursor.fetchone()
+
+            self.close()
+            return self.bookingDetails
+        else:
+            print("Please enter a valid number.")
+
+            
 
     def select_connect(self):
         TodaysDate = time.strftime("%d/%m/%Y")

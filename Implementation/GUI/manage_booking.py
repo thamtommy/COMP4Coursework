@@ -7,7 +7,7 @@ from PyQt4.QtGui import *
 from table_display import *
 
 class BookingWindow(QWidget):
-    """this class creates a window to observe the bookings"""
+    """this class creates a widget to observe the bookings"""
 
     def __init__(self):
         super().__init__()
@@ -17,7 +17,7 @@ class BookingWindow(QWidget):
         self.manage_booking = QHBoxLayout()
 
         #create buttons
-        self.back_button = QPushButton("Back") # Will be an arrow
+        self.back_button = QPushButton("Back") 
         self.add_button = QPushButton("Add Booking")
         self.delete_button = QPushButton("Delete Booking")
 
@@ -30,10 +30,6 @@ class BookingWindow(QWidget):
 
         self.manage_layout.addWidget(self.display_booking_table)
         self.manage_layout.addLayout(self.manage_booking)
-        
-
-
-
         self.setLayout(self.manage_layout)
 
 

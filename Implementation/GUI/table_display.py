@@ -6,6 +6,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 class DisplayTable(QWidget):
+    """this class will be used to display tables from the database"""
+    
     def __init__(self):
         super().__init__()
         self.stacked_layout = QStackedLayout()

@@ -5,7 +5,7 @@ from PyQt4.QtGui import *
 from table_display import *
 
 class DeleteBookingWindow(QWidget):
-    """this class creates a main window to delete bookings"""
+    """this class creates a widget to delete bookings"""
 
     def __init__(self):
         super().__init__()
@@ -20,9 +20,12 @@ class DeleteBookingWindow(QWidget):
         self.bookingIDlabel = QLabel("Booking ID")
         self.bookingIDlabel.setMaximumSize(133,20)
 
-
+        regexp = QRegExp("^\d\d\d")
+        validator = QRegExpValidator(regexp)
         self.input_bookingID = QLineEdit()
+        self.input_bookingID.setValidator(validator)
         self.input_bookingID.setMaximumSize(self.input_bookingID.sizeHint())
+        
         self.delete_bookingID = QPushButton("Delete BookingID")
         self.delete_bookingID.setMaximumSize(133,20)
         self.delete_bookingID.clicked.connect(self.delete_booking)
@@ -38,14 +41,18 @@ class DeleteBookingWindow(QWidget):
 
     def delete_booking(self):
         booking = self.input_bookingID.text()
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            sql = ("delete from Bookings where BookingID = {0}".format(booking))
-            cursor.execute("PRAGMA foreign_keys = ON")
-            cursor.execute(sql)
-            db.commit()
+        try:
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                sql = ("delete from Bookings where BookingID = {0}".format(booking))
+                cursor.execute("PRAGMA foreign_keys = ON")
+                cursor.execute(sql)
+                db.commit()
 
-        self.display_table.refresh()
+            self.display_table.refresh()
+
+        except sqlite3.OperationalError:
+            QMessageBox.about(self, "Error","Please make sure you have filled in the required field")
 
             
                              

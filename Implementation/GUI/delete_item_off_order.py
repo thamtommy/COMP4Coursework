@@ -3,32 +3,32 @@ import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from table_display import *
+from cascade_style_sheet import *
 
 class DeleteItemOffOrder(QDialog):
     orderitemDeleted = pyqtSignal()
-    """this class creates a window to add an item to order"""
+    """this class will be used to delete an item off the order"""
 
     def __init__(self,bookingDetails):
         super().__init__()
         self.setWindowTitle("Delete Item Off Order")
         self.bookingDetails = bookingDetails
         self.setMinimumSize(600,600)
+        self.setStyleSheet(css)
+        
         #create layouts
         self.main_layout = QVBoxLayout()
         self.delete_item_layout = QGridLayout()
         self.delete_complete_layout = QHBoxLayout()
         
-        
         #create buttons
         self.delete_complete = QPushButton("Delete Item")
 
-       
         #labels
         self.itemID_label = QLabel("Item ID : ")
         self.itemQuantity_label = QLabel("Item Quantity : ")
 
         #line edit
-
         regexp = QRegExp("^\\d\\d\\d?$")
         validator = QRegExpValidator(regexp)
         self.input_itemID = QLineEdit()
@@ -56,18 +56,17 @@ class DeleteItemOffOrder(QDialog):
         #add labels to layout
         self.delete_item_layout.addWidget(self.itemID_label,0,0)
         self.delete_item_layout.addWidget(self.itemQuantity_label,1,0)
+
         #add line edit to layout
         self.delete_item_layout.addWidget(self.input_itemID,0,1)
         self.delete_item_layout.addWidget(self.input_itemQuantity,1,1)
         #add button to layout
         self.delete_complete_layout.addWidget(self.delete_complete)
+
         #add layouts to main layout
         self.main_layout.addWidget(self.item_table)
         self.main_layout.addLayout(self.delete_item_layout)
         self.main_layout.addLayout(self.delete_complete_layout)
-
-
-        #create a widget to display main layout
         self.setLayout(self.main_layout)
 
         #connections

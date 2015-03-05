@@ -3,16 +3,18 @@ import sqlite3
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from table_display import *
+from cascade_style_sheet import *
 
 class AddItemToOrder(QDialog):
     orderitemAdded = pyqtSignal()
-    """this class creates a window to add an item to order"""
+    """this class creates a widget to add an item to order"""
 
     def __init__(self,bookingDetails):
         super().__init__()
         self.setWindowTitle("Add Item To Order")
         self.setMinimumSize(600,600)
         self.bookingDetails = bookingDetails
+        self.setStyleSheet(css)
    
         self.main_layout = QVBoxLayout()
         self.add_item_layout = QGridLayout()
@@ -23,7 +25,6 @@ class AddItemToOrder(QDialog):
         self.itemQuantity_label = QLabel("Item Quantity : ")
 
         #line edit
-
         regexp = QRegExp("^\\d\\d\\d?$")
         validator = QRegExpValidator(regexp)
         self.input_itemID = QLineEdit()
@@ -56,40 +57,41 @@ class AddItemToOrder(QDialog):
         bookingID = self.bookingDetails[0]
         self.ItemID = self.input_itemID.text()
         Quantity = self.input_itemQuantity.text()
-
         MenuItem = (bookingID,self.ItemID,Quantity)
-
         addedAlready = self.checkExistingItem()
         print(addedAlready)
 
-        if addedAlready == True:
-            with sqlite3.connect("restaurant.db") as db:
-                cursor = db.cursor()
-                cursor.execute("select Quantity from Booking_Items where ItemID=? and BookingID = ?",(self.ItemID,bookingID))
-                dbquantity = cursor.fetchone()[0]
-                
-            
-            newQuantity = dbquantity + int(Quantity)
-            updateOrder = (newQuantity,self.ItemID)
-            with sqlite3.connect("restaurant.db") as db:
-                cursor = db.cursor()
-                sql = "update Booking_Items set Quantity=? where ItemID=?"
-                cursor.execute("PRAGMA foreign_keys = ON")
-                cursor.execute(sql,updateOrder)
-                db.commit()
-                
-            self.orderitemAdded.emit()
+        try:
 
-        elif addedAlready == False:
+            if addedAlready == True:
+                with sqlite3.connect("restaurant.db") as db:
+                    cursor = db.cursor()
+                    cursor.execute("select Quantity from Booking_Items where ItemID=? and BookingID = ?",(self.ItemID,bookingID))
+                    dbquantity = cursor.fetchone()[0]
+                    
+                newQuantity = dbquantity + int(Quantity)
+                updateOrder = (newQuantity,self.ItemID)
+                with sqlite3.connect("restaurant.db") as db:
+                    cursor = db.cursor()
+                    sql = "update Booking_Items set Quantity=? where ItemID=?"
+                    cursor.execute("PRAGMA foreign_keys = ON")
+                    cursor.execute(sql,updateOrder)
+                    db.commit()
+                    
+                self.orderitemAdded.emit()
 
-            with sqlite3.connect("restaurant.db") as db:
-                cursor = db.cursor()
-                sql = "insert into Booking_Items(BookingID,ItemID,Quantity) values (?,?,?)"
-                cursor.execute("PRAGMA foreign_keys = ON")
-                cursor.execute(sql,MenuItem)
-                db.commit()
+            elif addedAlready == False:
 
-            self.orderitemAdded.emit()
+                with sqlite3.connect("restaurant.db") as db:
+                    cursor = db.cursor()
+                    sql = "insert into Booking_Items(BookingID,ItemID,Quantity) values (?,?,?)"
+                    cursor.execute("PRAGMA foreign_keys = ON")
+                    cursor.execute(sql,MenuItem)
+                    db.commit()
+
+                self.orderitemAdded.emit()
+        except sqlite3.IntegrityError:
+             QMessageBox.about(self, "Error", "Please make sure the item exists")
 
     def checkExistingItem(self):
         addedAlready = False
@@ -121,8 +123,7 @@ class AddItemToOrder(QDialog):
                 item = cursor.fetchone()[0]
         except TypeError:
             pass
-
-            
+  
         if item in itemsOrdered:
             addedAlready = True
 

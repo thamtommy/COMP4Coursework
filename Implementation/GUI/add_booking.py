@@ -6,8 +6,8 @@ from table_display import *
 import time
 
 class AddBookingWindow(QWidget):
-    bookingAdded = pyqtSignal()
-    """this class creates a window to add bookings"""
+
+    """this class creates a widget to add bookings"""
 
     def __init__(self):
         super().__init__()
@@ -20,7 +20,7 @@ class AddBookingWindow(QWidget):
         self.display_table.show_table("Bookings")
         self.add_complete = QPushButton("Add Booking")
         
-        self.first_name_label = QLabel("First Name:")#Sometimes only first/last is given
+        self.first_name_label = QLabel("First Name:")
         self.last_name_label = QLabel("Last Name:")
         self.date_label = QLabel("Date:")
         self.time_label = QLabel("Time:")
@@ -96,9 +96,6 @@ class AddBookingWindow(QWidget):
         self.main_layout.addWidget(self.display_table)
         self.main_layout.addLayout(self.add_booking_layout)
         self.main_layout.addLayout(self.add_complete_layout)
-
-
-        #create a widget to display main layout
         self.setLayout(self.main_layout)
         
 
@@ -109,42 +106,47 @@ class AddBookingWindow(QWidget):
         FirstName = self.input_first_name.text().capitalize()
         LastName = self.input_last_name.text().capitalize()
         TeleNumber = self.input_telephone_number.text()
-        NumberOfPeople = int(self.input_number_of_people.text())
-        TableNumber = self.select_table_number.currentIndex() + 1
-
-
-        
+        try:
+            NumberOfPeople = int(self.input_number_of_people.text())
+        except ValueError:
+            pass
+        TableNumber = self.select_table_number.currentIndex() + 1  
         BookingDate = self.date_edit.text()
         BookingTime = self.time_edit.text()
+
+        try:
         
-        if (len(FirstName) > 1) and (len(LastName) > 1) and (len(str(NumberOfPeople)) > 0) and (len(str(TeleNumber)) == 11): 
+            if (len(FirstName) > 1) and (len(LastName) > 1) and ((len(str(NumberOfPeople))) > 0 and (NumberOfPeople)>1) and (len(str(TeleNumber)) == 11): 
 
-            customer = (FirstName,LastName,TeleNumber)
+                customer = (FirstName,LastName,TeleNumber)
 
-            with sqlite3.connect("restaurant.db") as db:
-                cursor = db.cursor()
-                sql = "insert into Customers(FirstName,LastName,TelephoneNo) values (?,?,?)"
-                cursor.execute(sql,customer)
-                db.commit()
+                with sqlite3.connect("restaurant.db") as db:
+                    cursor = db.cursor()
+                    sql = "insert into Customers(FirstName,LastName,TelephoneNo) values (?,?,?)"
+                    cursor.execute(sql,customer)
+                    db.commit()
 
-            with sqlite3.connect("restaurant.db") as db:
-                cursor = db.cursor()
-                cursor.execute("select CustomerID from Customers where TelephoneNo=? and FirstName=? and LastName=?",(TeleNumber,FirstName,LastName))
-                customerid = cursor.fetchone()[0]
-                print(customerid)      
-                
-            booking = (customerid,TableNumber,NumberOfPeople,BookingDate,BookingTime)
-            print(booking)
-            with sqlite3.connect("restaurant.db") as db:
-                cursor = db.cursor()
-                sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
-                cursor.execute("PRAGMA foreign_keys = ON")
-                cursor.execute(sql,booking)
-                db.commit()
+                with sqlite3.connect("restaurant.db") as db:
+                    cursor = db.cursor()
+                    cursor.execute("select CustomerID from Customers where TelephoneNo=? and FirstName=? and LastName=?",(TeleNumber,FirstName,LastName))
+                    customerid = cursor.fetchone()[0]
+                    print(customerid)      
+                    
+                booking = (customerid,TableNumber,NumberOfPeople,BookingDate,BookingTime)
+                print(booking)
+                with sqlite3.connect("restaurant.db") as db:
+                    cursor = db.cursor()
+                    sql = "insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)"
+                    cursor.execute("PRAGMA foreign_keys = ON")
+                    cursor.execute(sql,booking)
+                    db.commit()
 
-            self.display_table.refresh()
-        else:
-            print("Please make sure you haven't left any empty spaces")
+                self.display_table.refresh()
+            else:
+                QMessageBox.about(self, "Error","Please make sure you haven't left any empty spaces")
+
+        except ValueError:
+            print("Booking unsucessful")
             
 if __name__ == "__main__":
     application = QApplication(sys.argv)

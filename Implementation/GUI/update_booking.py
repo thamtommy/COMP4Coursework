@@ -7,7 +7,7 @@ import time
 
 class UpdateBooking(QWidget):
     bookingAdded = pyqtSignal()
-    """this class is used to update bookings"""
+    """this class will be used to update bookings"""
 
     def __init__(self):
         super().__init__()
@@ -31,12 +31,16 @@ class UpdateBooking(QWidget):
         self.telephone_number = QLabel("Telephone Number:")
         self.table_number_label = QLabel("Table Number:")
 
-        self.input_bookingID = QLineEdit()
-        self.input_bookingID.setMaximumSize(300,30)
-        self.input_number_of_people = QLineEdit()
-        regexp = QRegExp("^\d\d")
+        regexp = QRegExp("^\d\d\d\d")
         validator = QRegExpValidator(regexp)
-        self.input_number_of_people.setValidator(validator)
+        self.input_bookingID = QLineEdit()
+        self.input_bookingID.setValidator(validator)
+        self.input_bookingID.setMaximumSize(300,30)
+        
+        self.input_number_of_people = QLineEdit()
+        regexp2 = QRegExp("^\d\d")
+        validator2 = QRegExpValidator(regexp2)
+        self.input_number_of_people.setValidator(validator2)
         self.input_number_of_people.setMaximumSize(300,30)
         self.input_number_of_people.setMaxLength(2)
         self.input_number_of_people.setPlaceholderText("Expected number")
@@ -101,6 +105,7 @@ class UpdateBooking(QWidget):
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             sql = "update Bookings set Date=? where BookingID=?"
+            cursor.execute("PRAGMA foreign_keys = ON")
             cursor.execute(sql,UpdateDate)
             db.commit()
 
@@ -114,6 +119,7 @@ class UpdateBooking(QWidget):
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             sql = "update Bookings set Time=? where BookingID=?"
+            cursor.execute("PRAGMA foreign_keys = ON")
             cursor.execute(sql,UpdateTime)
             db.commit()
 
@@ -122,18 +128,21 @@ class UpdateBooking(QWidget):
 
     def update_peopleNo(self):
         bookingID = self.input_bookingID.text()
-        NumberOfPeople = int(self.input_number_of_people.text())
-        UpdatePeople = (NumberOfPeople,bookingID)
-        if len(str(NumberOfPeople)) > 0:
-             with sqlite3.connect("restaurant.db") as db:
-                cursor = db.cursor()
-                sql = "update Bookings set NumberOfPeople=? where BookingID=?"
-                cursor.execute(sql,UpdatePeople)
-                db.commit()
+        try:
+            NumberOfPeople = int(self.input_number_of_people.text())
+            if len(str(NumberOfPeople)) > 0 and (NumberOfPeople>0):
+                UpdatePeople = (NumberOfPeople,bookingID)
+                with sqlite3.connect("restaurant.db") as db:
+                    cursor = db.cursor()
+                    sql = "update Bookings set NumberOfPeople=? where BookingID=?"
+                    cursor.execute("PRAGMA foreign_keys = ON")
+                    cursor.execute(sql,UpdatePeople)
+                    db.commit()
 
-             self.display_table.refresh()
-        else:
-            print("Please enter a value")
+            self.display_table.refresh() 
+
+        except ValueError or UnboundLocalError:
+            QMessageBox.about(self, "Error","Please enter a suitable value")
 
 
     def update_tableNo(self):
@@ -144,6 +153,7 @@ class UpdateBooking(QWidget):
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
             sql = "update Bookings set TableNumber=? where BookingID=?"
+            cursor.execute("PRAGMA foreign_keys = ON")
             cursor.execute(sql,UpdateTableNo)
             db.commit()
 

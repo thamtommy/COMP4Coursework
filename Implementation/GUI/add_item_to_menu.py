@@ -5,12 +5,10 @@ from PyQt4.QtGui import *
 from table_display import *
 
 class AddItemToMenu(QWidget):
-    itemAdded = pyqtSignal()
-    """this class creates a window to add bookings"""
+    """this class creates a widget to add items to the menu"""
 
     def __init__(self):
         super().__init__()
-        #self.setWindowTitle("Add Item To Menu")
 
         self.display_table = DisplayTable()
         self.display_table.show_table("Items")
@@ -20,7 +18,6 @@ class AddItemToMenu(QWidget):
         self.add_item_layout = QGridLayout()
         self.add_complete_layout = QHBoxLayout()
         
-        
         #create buttons
         self.add_complete = QPushButton("Add Item")
 
@@ -29,14 +26,13 @@ class AddItemToMenu(QWidget):
         self.select_item_type.addItem("Dish")
         self.select_item_type.addItem("Drink")
          
-        
         #labels
         self.item_name_label = QLabel("Item Name : ")
         self.item_price_label = QLabel("Item Price : ")
         self.item_type_label = QLabel("Item Type : ")
 
         #line edit
-        regexpp = QRegExp("[a-z | A-Z]{1,10}")
+        regexpp = QRegExp("[a-z | A-Z]{1,20}")
         validatorr = QRegExpValidator(regexpp)
         self.input_item_name = QLineEdit()
         self.input_item_name.setValidator(validatorr)
@@ -65,12 +61,9 @@ class AddItemToMenu(QWidget):
         self.main_layout.addWidget(self.display_table)
         self.main_layout.addLayout(self.add_item_layout)
         self.main_layout.addLayout(self.add_complete_layout)
-
-
-        #create a widget to display main layout
         self.setLayout(self.main_layout)
 
-        #connections
+        #connection
         self.add_complete.clicked.connect(self.add_item_to_menu)
 
         self.display_table.refresh()
@@ -85,15 +78,20 @@ class AddItemToMenu(QWidget):
             ItemType = 2
         MenuItem = (ItemName,ItemPrice,ItemType)
         print(MenuItem)
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            sql = "insert into Items(ItemName,ItemPrice,ItemTypeID) values (?,?,?)"
-            cursor.execute("PRAGMA foreign_keys = ON")
-            cursor.execute(sql,MenuItem)
-            db.commit()
+        if len(ItemName)>1 and (len(ItemPrice)>0):
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                sql = "insert into Items(ItemName,ItemPrice,ItemTypeID) values (?,?,?)"
+                cursor.execute("PRAGMA foreign_keys = ON")
+                cursor.execute(sql,MenuItem)
+                db.commit()
 
-        self.display_table.refresh()
-        self.itemAdded.emit()
+            self.display_table.refresh()
+        else:
+            QMessageBox.about(self, "Error","Please make sure you have filled in the required fields")
+
+
+
             
 if __name__ == "__main__":
     application = QApplication(sys.argv)

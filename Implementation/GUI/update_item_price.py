@@ -5,12 +5,10 @@ from PyQt4.QtGui import *
 from table_display import *
 
 class UpdateItemPrice(QDialog):
-    """this class creates a window to add bookings"""
+    """this class creates a widget to update prices of items on the menu"""
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Update Item Price")
-
         self.main_layout = QVBoxLayout()
         self.update_item_layout = QGridLayout()
         self.update_complete_layout = QHBoxLayout()
@@ -30,7 +28,7 @@ class UpdateItemPrice(QDialog):
         self.input_itemID.setValidator(validator)
         self.input_itemID.setMaximumSize(300,30)
 
-        regexp2 = QRegExp("^\\d\\d?$")
+        regexp2 = QRegExp("(^\d|\d\d)(\.\d\d)?$")
         validator2 = QRegExpValidator(regexp2)
         self.input_item_price = QLineEdit()
         self.input_item_price.setValidator(validator2)
@@ -57,13 +55,18 @@ class UpdateItemPrice(QDialog):
         ItemPrice = self.input_item_price.text()
         UpdateItem = (ItemPrice,ItemID)
         print(UpdateItem)
-        with sqlite3.connect("restaurant.db") as db:
-            cursor = db.cursor()
-            sql = "update Items set ItemPrice=? where ItemID=?"
-            cursor.execute(sql,UpdateItem)
-            db.commit()
+        if len(ItemID)>0 and (len(ItemPrice)>0):
+            
+            with sqlite3.connect("restaurant.db") as db:
+                cursor = db.cursor()
+                sql = "update Items set ItemPrice=? where ItemID=?"
+                cursor.execute("PRAGMA foreign_keys = ON")
+                cursor.execute(sql,UpdateItem)
+                db.commit()
 
-        self.display_table.refresh()
+            self.display_table.refresh()
+        else:
+            QMessageBox.about(self,"Error","Please fill in the required fields")
         
      
             

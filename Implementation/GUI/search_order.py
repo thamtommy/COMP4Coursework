@@ -6,7 +6,7 @@ from table_display import *
 from print_invoice import *
 
 class SearchOrder(QWidget):
-    """this class creates a main window to delete bookings"""
+    """this class will be used to search for orders using booking IDs"""
 
     def __init__(self):
         super().__init__()

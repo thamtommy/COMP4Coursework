@@ -4,7 +4,7 @@ from PyQt4.QtGui import *
 import sys
 
 class CustomerInvoice(QDialog):
-    """This class provides a dialog box for getting email information"""
+    """This class provides a dialog box for invoices"""
     def __init__(self,bookingDetails):
         super().__init__()
         self.bookingDetails = bookingDetails

@@ -4,14 +4,82 @@
 
 \subsection{Software}
 
+\begin {itemize}
+	\item Python 3
+	\item IDLE
+	\item PyQt
+	\item SQLite 3
+	\item SQLite Database Browser
+	
+\end {itemize}
+
 \subsection{Usage Explanation}
 
+
+The table below includes all the listed software from the previous section with the explanation as to why I used them.
+The listed software can be downloaded for free which made the creation of my system an easier approach. Also, this would mean that my client wouldn't need to purchase anything.
+
+\begin{center}
+\begin{tabular}{|p{4cm}|p{8.5cm}|}
+\hline
+\textbf{Software} & \textbf{Usage Explanation} \\ \hline
+
+Python 3 & I used Python because it was the only programming language I was familiar with as I learnt how to use it during my time at sixth form. \\ \hline
+IDLE & I used IDLE to write the Python scripts and since I am the most familiar with this software , it made implementation of the client application easier. \\ \hline
+PyQt& PyQt included everything needed to create the graphical user interfance for my system and there was a lot of information on PyQt accessible which helped me create the graphical interface more effectively. \\ \hline
+SQLite3 & Although this came with python, I have used this to create the database and manipulate the database as it was  easy for me to understand on how to do so and was very effective in doing so. \\ \hline
+SQLite Database Browser & This software helped me make the system's code relating the database a much more easier process because it allowed me to observe whether the database queries excutely correctly or not. \\ \hline
+
+\end{tabular}
+\end{center}
 \subsection{Features Used}
+
+\begin{center}
+\begin{tabular}{|p{4cm}|p{8.5cm}|}
+\hline
+\textbf{Software} & \textbf{Features Used} \\ \hline
+
+Python 3 & I took advantage of the ability to import modules to structure my code clearer.  \\ \hline
+IDLE & There are countless number of features that IDLE has to offer which helped me create the application but I will mention a few of them. The syntax highlighter made it easier to understand the code that I was writing which is important when a system is complex(helps track what you are doing). Also it prevented me from making more errors. For example, I was able to spot out straight away if i mispelt a keywork such as print or while, etc. The 'Go to File/Line' feature when an error occurs, helped me tremendously as it was the main factor of helping me debug my program. Being able to run the system allowed me to test the system \\ \hline
+PyQt& PyQt has many features that allowed me to create graphical user interface (GUI) for my system. The core components that I used to create the GUI were main windows, dialog boxes and widgets. \\ \hline
+SQLite3 &I was able to create the database for the system through SQLite3. I used most of core features that was available to me through SQLite3 such as being able to ADD, DELETE,UPDATE to/from the database. Enforcing referential integrity was useful as it helped the database to become consistent.   \\ \hline
+SQLite Database Browser& I mainly used 'Browse Data' to check whether I have added, deleted or updated a record successfully. I also used 'Execute SQL' for the SELECT statements in the apllication as it allowed me to see whether the SQL query was correct or not.  \\ \hline
+
+\end{tabular}
+\end{center}
 
 \section{System Overview}
 
 %use as many subsections as necessary for the system components
 \subsection{System Component}
+
+\subsubsection{Graphical User Interface (GUI)}
+Having a graphical user interface for the system makes it a lot more userable, giving the user a much more user friendly experience. Including a GUI makes it easier for the user to navigate around the system.
+
+\subsubsection{Manage Item Menu}
+The item menu can be managed at any time through the menu bar 'Item Menu'. The user can add/delete/update an item. \\
+
+To add an item to the menu, the user must select 'Add Item'. By selecting 'Add Item', the user will be presented with a layout that consists of a table widget displaying all the records of the menu and the fields which will be used to input information for the new item. \\
+
+Deleting an item off the menu can also be found under the 'Item Menu' menu by selecting 'Delete Item'. The user will be presented with a layout that contains the same table widget that displays all records of the menu and has either the choose to delete an item by inputting the item name or the item ID. \\
+
+The user also has the option to update an item's price. To do this, the user must select 'Update Item Price' where the user will be presented with a layout that contains the same the item menu table widget as the add and delete item layout. The user would have to input the ID of the item and the new price then click on the 'Update Item' button to update an item's price.
+
+
+\subsubsection{Manage Bookings}
+
+The user will be able to add/delete and update bookings. To do this, the user could either selection these options through "Bookings" on the menu bar or click on the 'Manage Bookings' button at the bottom of the main screen. \\
+
+Clicking on the button will switch the central widget to the manage bookings widget where the user will be presented with the Bookings table widget where all of the booking records will be displayed and below the widget are the buttons "Add Booking" and "Delete Booking". Clicking on Add Booking will then present the user with the same table widget and the required fields which the user would have to successfully fill to add a booking. As for the "Delete Booking" button, the user will be presented with the same Bookings table widget and a input field for the user to delete a booking by inputting a booking id and pressing "Delete BookingID". \\
+
+The "Bookings" menu bar also has 3 options; "Add Bookings", "Delete Booking" and "Update Booking". The add/delete booking options are the same as described in the paragraph above. As for the "Update Booking" option, the user will be presented with the usual Bookings table widget and the input fields to update the booking.  
+
+\subsubsection{Manage Sit-In Orders}
+
+To manage an order, the user must select the table and if not already, assign a customer to the table ( A dialog box will pop up telling the user to assign a customer to the selected table). After assigning a customer to the table, the table will be known as 'occupied' which would allow the user to select that table without assigning a customer to that table everytime. So now that the table is occupied, there will be a manage order box where the booking details will be displayed on a row at the top of the box. The dishes and drinks ordered will be split into two table widget, the dishes ordered will be displayed on the left and the drinks on the right. \\
+
+The user has all the neccessary options on the manage order box such as "Add", "Delete", "Finish", "Invoice Preview" and "Print Invoice". The "Add" button is for adding items to the order, the "Delete" button will be used to delete items off the order, the "Invoice Preview" will show the user what the invoice would look like for the order, the "Print Invoice" will print the invoice and the "Finish" button will set the status of the table as unoccupied, clearing the booking details for that table and so the user would have to assign a customer to that table when selecting the table from the main screen.
+
 
 \section{Code Structure}
 
@@ -26,6 +94,50 @@
 \end{comment}
 
 \section{Variable Listing}
+
+\begin{center}
+\begin{longtable}{|p{3cm}|p{4.5cm}|p{3cm}|p{1cm}|}
+\hline
+\textbf{Variable Name} & \textbf{Purpose} & \textbf{Line number in code} & \textbf{Section} \\ \hline
+%add booking .py
+regExp & Holds the regular expression to only allow the user to enter letters for name inputs & 31 & \\ \hline
+regexp & Holds the regular expression to only allow the user to input digits & 42 & \\ \hline
+regexp2 & Holds the regular expression to only allow the user to input digits & 48 & \\ \hline
+each & Stepper variable used in the for loop &57, 58 & \\ \hline
+self.maximumdate&Used to set maximum date for QDateEdit &63 & \\ \hline
+self.minimumdate&Used to set minimum date for QDateEdit &64 & \\ \hline
+FirstName&Used to store user input &106, 119 ,121 & \\ \hline
+LastName & Used to store user input & 107, 119, 121 & \\ \hline
+TeleNumber&Used to store user input  &108, 119, 121 & \\ \hline
+NumberOfPeople&Used to store user input &110, 119, 135 & \\ \hline
+TableNumber&Holds the index of the table number combo box &113, 129, 135 & \\ \hline
+BookingDate & Used to store user input & 114, 135 & \\ \hline
+BookingTime&Used to store user input &115, 135 & \\ \hline
+customer&Holds the variables FirstName,LastName and TeleNumber to create a record for Customers &121 & \\ \hline
+db&Stores the path of the database &123,129,137 & \\ \hline
+booking& Holds the variables customerid, TableNumber, NumberOfPeople, BookingDate and BookingTime to create a record for Bookings& 135 & \\ \hline
+%add item to menu.py
+regexpp& Holds the regular expression to only allow a maximum of 20 letters & 35 & \\ \hline
+ItemName & Used to store user input & 72 & \\ \hline
+ItemPrice & Used to store user input & 73 & \\ \hline
+ItemType & Holds the selected index of the item type combo box & 73,74,76,78,79 & \\ \hline
+MenuItem & Holds the variables ItemName, ItemPrice and ItemType to create a record for Items & 79 & \\ \hline
+%add item to order.py
+self.bookingDetails & Holds booking details such as bookingid, customerid, booking date, booking time, table number and number of people & 16& \\ \hline
+bookingID & Holds booking id & 57 & \\ \hline
+self.ItemID & Used to store user input & 58 & \\ \hline
+Quantity & Used to store user input & 59 & \\ \hline
+addedAlready & Holds a boolean value to indicate whether an item has been added to the order already (Used to increase quantity) & 61, 66, 83, 97, 128, 130 & \\ \hline
+newQuantity & Used to calculate the new quantity after adding an item that's already been added & 72 & \\ \hline
+updateOrder & Holds the new quantity and item id to update the record & 73 & \\ \hline
+itemsOrdered & Holds an array of ordered items for a particular booking & 98, 111& \\ \hline
+
+
+
+
+
+\end{longtable}
+\end{center}
 
 \section{System Evidence}
 

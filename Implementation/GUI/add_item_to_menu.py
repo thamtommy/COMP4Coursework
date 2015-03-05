@@ -18,7 +18,6 @@ class AddItemToMenu(QWidget):
         self.add_item_layout = QGridLayout()
         self.add_complete_layout = QHBoxLayout()
         
-        
         #create buttons
         self.add_complete = QPushButton("Add Item")
 
@@ -27,7 +26,6 @@ class AddItemToMenu(QWidget):
         self.select_item_type.addItem("Dish")
         self.select_item_type.addItem("Drink")
          
-        
         #labels
         self.item_name_label = QLabel("Item Name : ")
         self.item_price_label = QLabel("Item Price : ")
@@ -65,7 +63,7 @@ class AddItemToMenu(QWidget):
         self.main_layout.addLayout(self.add_complete_layout)
         self.setLayout(self.main_layout)
 
-        #connections
+        #connection
         self.add_complete.clicked.connect(self.add_item_to_menu)
 
         self.display_table.refresh()

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.19)  3 MAR 2015 23:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.19)  5 MAR 2015 02:43
 entering extended mode
 **C:/Users/Tommy/Documents/GitHub/COMP4Coursework/coursework.tex
 (C:/Users/Tommy/Documents/GitHub/COMP4Coursework/coursework.tex
@@ -2287,15 +2287,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 418--418
  []
 
 
-Overfull \hbox (14.32745pt too wide) in paragraph at lines 397--423
- [] 
+Overfull \hbox (14.32745pt too wide) in alignment at lines 397--418
+ [] [] [] [] [] [] 
  []
 
-[65] [66]
-Overfull \vbox (221.3165pt too high) has occurred while \output is active []
+
+Underfull \vbox (badness 10000) detected at line 418
+ []
 
 
-[67] <./Design/Images/ERDiagram.pdf, id=1330, 597.23125pt x 845.1575pt>
+Overfull \hbox (14.32745pt too wide) in alignment at lines 418--421
+ [] [] [] [] [] [] 
+ []
+
+[65] [66] <./Design/Images/ERDiagram.pdf, id=1327, 597.23125pt x 845.1575pt>
 File: ./Design/Images/ERDiagram.pdf Graphic file (type pdf)
 
 <use ./Design/Images/ERDiagram.pdf>
@@ -2306,11 +2311,11 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 436--437
 [][]
  []
 
-[68] [69]
+[67] [68]
 Overfull \vbox (138.76338pt too high) has occurred while \output is active []
 
 
-[70pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[69pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2334,7 +2339,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 443--449
 
  []
 
-[71] [72]
+[70] [71]
 (C:\Users\Tommy\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
@@ -2372,7 +2377,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 661--662
 
  []
 
-[73] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[72] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Underfull \hbox (badness 10000) in paragraph at lines 667--668
@@ -2389,7 +2394,7 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [74]
+) [73]
 Underfull \hbox (badness 10000) in paragraph at lines 693--694
 
  []
@@ -2539,7 +2544,7 @@ Overfull \hbox (46.43301pt too wide) in paragraph at lines 704--720
  [] 
  []
 
-[75] [76]
+[74] [75]
 Underfull \hbox (badness 1033) in paragraph at lines 734--734
 []|\OT1/cmr/m/n/10 Test al-go-rithms to make sure
  []
@@ -4268,12 +4273,12 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 764--789
  [] [] [] [] [] [] [] [] 
  []
 
-[77
+[76
 
-] [78] [79] [80] [81] [82] [83] [84] [85] [86])
+] [77] [78] [79] [80] [81] [82] [83] [84] [85])
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Testing\testing.tex
 Chapter 3.
-[87
+[86
 
 
 
@@ -4288,7 +4293,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
 []|\OT1/cmr/m/n/10 Test al-go-rithms \OT1/cmr/bx/n/10 and SQL
  []
 
-[88
+[87
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 39--39
@@ -5809,7 +5814,7 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 58--78
  [] [] [] [] [] [] [] [] 
  []
 
-[89] [90] [91]
+[88] [89] [90]
 Underfull \hbox (badness 1701) in paragraph at lines 79--79
 \OT1/cmr/m/n/10 tered at 'en-ter
  []
@@ -6529,7 +6534,7 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 78--104
  [] [] [] [] [] [] [] [] 
  []
 
-[92] [93] [94] [95] [96] [97] [98] [99] [100] [101]
+[91] [92] [93] [94] [95] [96] [97] [98] [99] [100]
 Underfull \hbox (badness 10000) in paragraph at lines 113--113
 []|\OT1/cmr/bx/n/10 Purpose of
  []
@@ -8128,7 +8133,7 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 132--155
  [] [] [] [] [] [] [] [] 
  []
 
-[102] [103] [104] [105]
+[101] [102] [103] [104]
 Underfull \hbox (badness 10000) in paragraph at lines 156--156
 []|\OT1/cmr/m/n/10 After suc-cess-
  []
@@ -8588,23 +8593,23 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 155--169
  [] [] [] [] [] [] [] [] 
  []
 
-[106] [107] [108] [109] [110] [111] [112] [113]
+[105] [106] [107] [108] [109] [110] [111] [112]
 Overfull \hbox (34.03302pt too wide) in paragraph at lines 178--204
  [] 
  []
 
-[114
+[113
 
 ]
 Overfull \hbox (34.03302pt too wide) in paragraph at lines 212--235
  [] 
  []
 
-[115]
+[114]
 
 LaTeX Warning: File `./Testing/images/test 1.pdf' not found on input line 245.
 
-<./Testing/images/test 1.pdf, id=1605, 597.23125pt x 845.1575pt>
+<./Testing/images/test 1.pdf, id=1602, 597.23125pt x 845.1575pt>
 File: ./Testing/images/test 1.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test 1.pdf>
@@ -8615,18 +8620,18 @@ Overfull \hbox (81.574pt too wide) in paragraph at lines 245--246
 []\OT1/cmr/m/n/10 1.pdf []
  []
 
-[116] [117]
+[115] [116]
 Overfull \vbox (82.45787pt too high) has occurred while \output is active []
 
 
-[118pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[117pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.248 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test 1.p
-df>] <./Testing/images/test2.pdf, id=1636, 597.23125pt x 845.1575pt>
+df>] <./Testing/images/test2.pdf, id=1633, 597.23125pt x 845.1575pt>
 File: ./Testing/images/test2.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test2.pdf>
@@ -8641,14 +8646,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 250--251
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[119pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[118pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.253 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test2.pd
-f>] <./Testing/images/test3.pdf, id=1658, 597.23125pt x 845.1575pt>
+f>] <./Testing/images/test3.pdf, id=1655, 597.23125pt x 845.1575pt>
 File: ./Testing/images/test3.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test3.pdf>
@@ -8663,14 +8668,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 255--256
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[120pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[119pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.258 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test3.pd
-f>] <./Testing/images/test4.pdf, id=1681, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/test4.pdf, id=1677, 845.1575pt x 597.23125pt>
 File: ./Testing/images/test4.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test4.pdf>
@@ -8681,20 +8686,20 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 262--263
 [][]
  []
 
-[121
+[120
 
 ]
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[122pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[121pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.265 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test4.pd
-f>] <./Testing/images/test5.pdf, id=1702, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/test5.pdf, id=1699, 845.1575pt x 597.23125pt>
 File: ./Testing/images/test5.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test5.pdf>
@@ -8709,14 +8714,14 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 267--268
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[123pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[122pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.270 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test5.pd
-f>] <./Testing/images/Test6.pdf, id=1724, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/Test6.pdf, id=1721, 845.1575pt x 597.23125pt>
 File: ./Testing/images/Test6.pdf Graphic file (type pdf)
 
 <use ./Testing/images/Test6.pdf>
@@ -8731,14 +8736,14 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 272--273
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[124pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[123pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.275 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/Test6.pd
-f>] <./Testing/images/Test7.pdf, id=1746, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/Test7.pdf, id=1743, 845.1575pt x 597.23125pt>
 File: ./Testing/images/Test7.pdf Graphic file (type pdf)
 
 <use ./Testing/images/Test7.pdf>
@@ -8753,14 +8758,14 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 277--278
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[125pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[124pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.280 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/Test7.pd
-f>] <./Testing/images/testt1.pdf, id=1768, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/testt1.pdf, id=1765, 845.1575pt x 597.23125pt>
 File: ./Testing/images/testt1.pdf Graphic file (type pdf)
 
 <use ./Testing/images/testt1.pdf>
@@ -8775,14 +8780,14 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 282--283
 Overfull \vbox (118.29134pt too high) has occurred while \output is active []
 
 
-[126pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[125pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.285 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/testt1.p
-df>] <./Testing/images/booking11.pdf, id=1791, 845.1575pt x 597.23125pt>
+df>] <./Testing/images/booking11.pdf, id=1787, 845.1575pt x 597.23125pt>
 File: ./Testing/images/booking11.pdf Graphic file (type pdf)
 
 <use ./Testing/images/booking11.pdf>
@@ -8798,7 +8803,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 287--288
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[127pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[126pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -8806,7 +8811,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.290 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/booking1
 1.pdf>]
-<./Testing/images/booking11delete.pdf, id=1809, 845.1575pt x 597.23125pt>
+<./Testing/images/booking11delete.pdf, id=1806, 845.1575pt x 597.23125pt>
 File: ./Testing/images/booking11delete.pdf Graphic file (type pdf)
 
 <use ./Testing/images/booking11delete.pdf>
@@ -8822,16 +8827,16 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 292--293
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[128pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[127pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.295 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/booking1
-1delete.pdf>] [129
+1delete.pdf>] [128
 
-]) [130]
+]) [129]
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Maintenance\maintenance.tex
 Chapter 4.
 
@@ -8839,7 +8844,7 @@ Overfull \hbox (35.85942pt too wide) in paragraph at lines 23--34
  [] 
  []
 
-[131
+[130
 
 
 
@@ -8848,12 +8853,12 @@ Overfull \hbox (35.85942pt too wide) in paragraph at lines 38--49
  [] 
  []
 
-[132]
+[131]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-[133]
+[132]
 Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
@@ -8878,17 +8883,81 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-[134] Excluding 'comment' comment.
-Overfull \hbox (48.25941pt too wide) in paragraph at lines 99--107
- [] 
+[133] Excluding 'comment' comment.
+Overfull \hbox (8.12346pt too wide) in paragraph at lines 101--101
+[]|\OT1/cmr/bx/n/10 Section| 
  []
 
-[135] [136] Excluding 'comment' comment. [137
+
+Underfull \hbox (badness 3815) in paragraph at lines 116--116
+[]|\OT1/cmr/m/n/10 Holds the vari-ables First-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
+\OT1/cmr/m/n/10 Name,LastName and Te-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
+[]|\OT1/cmr/m/n/10 Stores the path of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
+[]|\OT1/cmr/m/n/10 Holds the vari-ables cus-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
+\OT1/cmr/m/n/10 tomerid, TableNum-ber,
+ []
+
+
+Underfull \hbox (badness 5105) in paragraph at lines 118--118
+\OT1/cmr/m/n/10 Num-berOf-Peo-ple, Book-ing-
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 118--118
+\OT1/cmr/m/n/10 Date and Book-ing-Time to
+ []
+
+
+Overfull \hbox (32.20663pt too wide) in alignment at lines 99--122
+ [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 122
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 124--124
+[]|\OT1/cmr/m/n/10 Holds the vari-ables Item-
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 131--131
+[]|\OT1/cmr/m/n/10 Used to cal-cu-late the new
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 133--133
+[]|\OT1/cmr/m/n/10 Holds an ar-ray of or-dered
+ []
+
+
+Overfull \hbox (32.20663pt too wide) in alignment at lines 122--139
+ [] [] [] [] 
+ []
+
+[134] [135] [136] [137] Excluding 'comment' comment. [138
 
 ])
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Manual\manual.tex
 Chapter 5.
-) [138
+) [139
 
 
 
@@ -8897,10 +8966,10 @@ Chapter 5.
 Overfull \vbox (248.63841pt too high) has occurred while \output is active []
 
 
-[139]
+[140]
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Evaluation\evaluation.tex
 Chapter 6.
-) [140
+) [141
 
 
 
@@ -8908,7 +8977,7 @@ Chapter 6.
 Overfull \vbox (6.61086pt too high) has occurred while \output is active []
 
 
-[141]
+[142]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 19.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
  (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\coursework.aux
@@ -8929,10 +8998,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 19.
  ) 
 Here is how much of TeX's memory you used:
- 11279 strings out of 493921
- 163403 string characters out of 3145277
- 339698 words of memory out of 3000000
- 13944 multiletter control sequences out of 15000+200000
+ 11284 strings out of 493921
+ 163438 string characters out of 3145277
+ 340394 words of memory out of 3000000
+ 13946 multiletter control sequences out of 15000+200000
  11044 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  41i,12n,45p,1044b,1736s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -8948,9 +9017,9 @@ iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmu10.pfb>
-Output written on coursework.pdf (142 pages, 1520635 bytes).
+Output written on coursework.pdf (143 pages, 1524749 bytes).
 PDF statistics:
- 2012 PDF objects out of 2073 (max. 8388607)
- 379 named destinations out of 1000 (max. 500000)
+ 2018 PDF objects out of 2073 (max. 8388607)
+ 382 named destinations out of 1000 (max. 500000)
  1315 words of extra memory for PDF output out of 10000 (max. 10000000)
 

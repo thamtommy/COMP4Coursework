@@ -25,7 +25,6 @@ class AddItemToOrder(QDialog):
         self.itemQuantity_label = QLabel("Item Quantity : ")
 
         #line edit
-
         regexp = QRegExp("^\\d\\d\\d?$")
         validator = QRegExpValidator(regexp)
         self.input_itemID = QLineEdit()
@@ -58,9 +57,7 @@ class AddItemToOrder(QDialog):
         bookingID = self.bookingDetails[0]
         self.ItemID = self.input_itemID.text()
         Quantity = self.input_itemQuantity.text()
-
         MenuItem = (bookingID,self.ItemID,Quantity)
-
         addedAlready = self.checkExistingItem()
         print(addedAlready)
 
@@ -72,7 +69,6 @@ class AddItemToOrder(QDialog):
                     cursor.execute("select Quantity from Booking_Items where ItemID=? and BookingID = ?",(self.ItemID,bookingID))
                     dbquantity = cursor.fetchone()[0]
                     
-                
                 newQuantity = dbquantity + int(Quantity)
                 updateOrder = (newQuantity,self.ItemID)
                 with sqlite3.connect("restaurant.db") as db:
@@ -127,8 +123,7 @@ class AddItemToOrder(QDialog):
                 item = cursor.fetchone()[0]
         except TypeError:
             pass
-
-            
+  
         if item in itemsOrdered:
             addedAlready = True
 

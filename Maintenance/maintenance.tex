@@ -96,14 +96,47 @@ The user has all the neccessary options on the manage order box such as "Add", "
 \section{Variable Listing}
 
 \begin{center}
-\begin{tabular}{|p{4cm}|p{4.5cm}|p{4cm}|}
+\begin{longtable}{|p{3cm}|p{4.5cm}|p{3cm}|p{1cm}|}
 \hline
-\textbf{Variable Name} & \textbf{Purpose} & \textbf{Location in code} \\ \hline
+\textbf{Variable Name} & \textbf{Purpose} & \textbf{Line number in code} & \textbf{Section} \\ \hline
+%add booking .py
+regExp & Holds the regular expression to only allow the user to enter letters for name inputs & 31 & \\ \hline
+regexp & Holds the regular expression to only allow the user to input digits & 42 & \\ \hline
+regexp2 & Holds the regular expression to only allow the user to input digits & 48 & \\ \hline
+each & Stepper variable used in the for loop &57, 58 & \\ \hline
+self.maximumdate&Used to set maximum date for QDateEdit &63 & \\ \hline
+self.minimumdate&Used to set minimum date for QDateEdit &64 & \\ \hline
+FirstName&Used to store user input &106, 119 ,121 & \\ \hline
+LastName & Used to store user input & 107, 119, 121 & \\ \hline
+TeleNumber&Used to store user input  &108, 119, 121 & \\ \hline
+NumberOfPeople&Used to store user input &110, 119, 135 & \\ \hline
+TableNumber&Holds the index of the table number combo box &113, 129, 135 & \\ \hline
+BookingDate & Used to store user input & 114, 135 & \\ \hline
+BookingTime&Used to store user input &115, 135 & \\ \hline
+customer&Holds the variables FirstName,LastName and TeleNumber to create a record for Customers &121 & \\ \hline
+db&Stores the path of the database &123,129,137 & \\ \hline
+booking& Holds the variables customerid, TableNumber, NumberOfPeople, BookingDate and BookingTime to create a record for Bookings& 135 & \\ \hline
+%add item to menu.py
+regexpp& Holds the regular expression to only allow a maximum of 20 letters & 35 & \\ \hline
+ItemName & Used to store user input & 72 & \\ \hline
+ItemPrice & Used to store user input & 73 & \\ \hline
+ItemType & Holds the selected index of the item type combo box & 73,74,76,78,79 & \\ \hline
+MenuItem & Holds the variables ItemName, ItemPrice and ItemType to create a record for Items & 79 & \\ \hline
+%add item to order.py
+self.bookingDetails & Holds booking details such as bookingid, customerid, booking date, booking time, table number and number of people & 16& \\ \hline
+bookingID & Holds booking id & 57 & \\ \hline
+self.ItemID & Used to store user input & 58 & \\ \hline
+Quantity & Used to store user input & 59 & \\ \hline
+addedAlready & Holds a boolean value to indicate whether an item has been added to the order already (Used to increase quantity) & 61, 66, 83, 97, 128, 130 & \\ \hline
+newQuantity & Used to calculate the new quantity after adding an item that's already been added & 72 & \\ \hline
+updateOrder & Holds the new quantity and item id to update the record & 73 & \\ \hline
+itemsOrdered & Holds an array of ordered items for a particular booking & 98, 111& \\ \hline
 
-Python 3 & I took advantage of the ability to import modules to structure my code clearer.  & No \\ \hline
 
 
-\end{tabular}
+
+
+\end{longtable}
 \end{center}
 
 \section{System Evidence}

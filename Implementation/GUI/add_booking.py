@@ -6,7 +6,7 @@ from table_display import *
 import time
 
 class AddBookingWindow(QWidget):
-    bookingAdded = pyqtSignal()
+
     """this class creates a widget to add bookings"""
 
     def __init__(self):
@@ -110,10 +110,7 @@ class AddBookingWindow(QWidget):
             NumberOfPeople = int(self.input_number_of_people.text())
         except ValueError:
             pass
-        TableNumber = self.select_table_number.currentIndex() + 1
-
-
-        
+        TableNumber = self.select_table_number.currentIndex() + 1  
         BookingDate = self.date_edit.text()
         BookingTime = self.time_edit.text()
 

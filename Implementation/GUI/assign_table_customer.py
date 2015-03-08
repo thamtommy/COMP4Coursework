@@ -8,7 +8,7 @@ from cascade_style_sheet import *
 
 class AssignCustomer(QDialog):
     """this class will be used to either assign a customer that has
-       made a booking to a table or assign a customer that has not booking
+       made a booking to a table or assign a customer that has not made a booking
        to a table"""
 
     def __init__(self,TableNumber):
@@ -120,7 +120,6 @@ class AssignCustomer(QDialog):
         Date = self.systemdate
         Time = self.systemtime
        
-
         Booking = (CustomerID,TableNumber,NumberOfPeople,Date,Time)
 
 
@@ -136,7 +135,7 @@ class AssignCustomer(QDialog):
                 
             with sqlite3.connect("restaurant.db") as db:
                 cursor = db.cursor()
-                cursor.execute("select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' ".format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
+                cursor.execute("select * from Bookings where CustomerID = {?} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' ".format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
                 self.bookingDetails = cursor.fetchone()
 
             self.close()
@@ -171,7 +170,7 @@ class AssignCustomer(QDialog):
         ## get all customer IDs that are on table _
         with sqlite3.connect("restaurant.db") as db:
             cursor = db.cursor()
-            cursor.execute("select CustomerID from Bookings where TableNumber = {0} and Date = '{1}'".format(TableNumber,(TodaysDate)))
+            cursor.execute("select CustomerID from Bookings where TableNumber = {0} and Date = '{1}'".format(TableNumber,TodaysDate))
             customers = cursor.fetchall()
             for each in customers:
                 self.CustomerList.append(each[0])          

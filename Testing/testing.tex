@@ -69,7 +69,7 @@ I have not tested the rows that are in grey due to changes in my program.
         2.07.02 & Verify Last Name entered at 'enter booking details' interface & User inputs name  & 2 & Erroneous &Error & Could not enter numbers - expected due to regular expression  &  \\ \hline
         2.08 & Verify Telephone Number entered at 'enter booking details'' interface & User inputs nothing  & (Nothing)& Errorneous &Error &Add booking did not proceed - expected  &  \\ \hline
         2.08.01 & Verify Telephone Number entered at 'enter booking details'' interface & User inputs number  & 01523 859372 &Normal&Accepted&Add booking did proceed - expected  &  \\ \hline
-        2.08.02 & Verify Telephone Number entered at 'enter booking details'' interface & User inputs number  &  014829&Boundary &Error & Add booking did not proceed - expected  &  \\ \hline
+        2.08.02 & Verify \subsubsection{ Number entered at 'enter booking details'' interface & User inputs number  &  014829&Boundary &Error & Add booking did not proceed - expected  &  \\ \hline
        \rowcolor{gray}  *2.09 & Verify Table Number entered at 'enter booking details' interface & User inputs number  & (Nothing)& Erroneous& Error&  &  \\ \hline
        \rowcolor{gray}  *2.09.01 & Verify Table Number entered at 'enter booking details' interface & User inputs number  & 7 & Normal&Accepted &  &  \\ \hline
        \rowcolor{gray}  *2.09.02 & Verify Table Number entered at 'enter booking details' interface & User inputs number  & Hey & Erroneous &Error &  &  \\ \hline
@@ -162,8 +162,10 @@ I have not tested the rows that are in grey due to changes in my program.
            4.08 & Check search order function & Leave the booking field blank and click Search Order & (Nothing) &  Erroneous &  Error /empty table appear & Empty table appeared    &  \\ \hline
            4.08.01 & Check search order function & Enter a booking ID that doesn't exist and click Search Order & 93 &  Boundary &  Error / empty table appear &  Empty table appeared  &  \\ \hline
            4.08.02& Check search order function & Enter a booking ID that exists and click Search Order & 11 &  Normal &  A populated table appear & Correct table appeared   & \ref{fig:searchFunction} on page \pageref{fig:searchFunction} \\ \hline
+	4.09 & Check Customer details entered are stored correctly & Input details using normal data & "Moe", "Iro", "15/04/2015", "17:30", " 5", "01639435231", (select table 1)  & Normal & A new customer record will be created with the details "Moe", "Iro" and "01639435231". & First Name and Last Name stored correctly - expected however, Telephone did not store correctly as it stored "1639435231" instead of "01639435231" & \\ \hline
 	6.03 & Ensure order gets deleted when booking gets deleted & After deleting a booking, the order should be deleted with it.  & Delete a booking which has booking items   & Normal & Order should be deleted &Order(Booking items) has been deleted &\ref{fig:searchDeletedBooking} on page \pageref{fig:searchDeletedBooking} \\ \hline
 	6.04 & Check if an item that does not exist is added to an order & Adding an item that does not exist from the manage order box  & Add Item ID 933 & Boundary & Nothing should happen as there isnt an item with an ID of 993 & No items were added& \\ \hline
+	
 
 
     \end{longtable}
@@ -241,15 +243,21 @@ The actual results for the tests can be found on the detailed plans, there is a 
 
 \subsection{Evidence}
 
+\subsubsection{From main screen to manage bookings}
+
 \begin{figure}[H]
     \includegraphics[height = 20cm]{./Testing/images/test1}
-    \caption{Manage Order layout} \label{fig:Test1}
+    \caption{Manage Booking layout} \label{fig:Test1}
 \end{figure}
+
+\subsubsection{Add Booking screen from manage bookings}
 
 \begin{figure}[H]
     \includegraphics[height = 20cm]{./Testing/images/test2.pdf}
     \caption{Add Booking} \label{fig:Test2}
 \end{figure}
+
+\subsubsection{Delete Booking screen from manage bookings}
 
 \begin{figure}[H]
     \includegraphics[height = 20cm]{./Testing/images/test3.pdf}
@@ -258,35 +266,49 @@ The actual results for the tests can be found on the detailed plans, there is a 
 
 \begin{landscape}
 
+\subsubsection{Assign Customer to table validation}
+
 \begin{figure}[H]
     \includegraphics[height = 15cm]{./Testing/images/test4.pdf}
     \caption{Assign customer validation} \label{fig:Test4}
 \end{figure}
+
+\subsubsection{Manage Order Box from Assign Customer}
 
 \begin{figure}[H]
     \includegraphics[height = 15cm]{./Testing/images/test5.pdf}
     \caption{Check all details transferred} \label{fig:Test5}
 \end{figure}
 
+\subsubsection{Increase Quantity Check}
+
 \begin{figure}[H]
     \includegraphics[height = 15cm]{./Testing/images/Test6.pdf}
     \caption{Quantity check} \label{fig:Test6}
 \end{figure}
+
+\subsubsection{Invoice Preview}
 
 \begin{figure}[H]
     \includegraphics[height = 15cm]{./Testing/images/Test7.pdf}
     \caption{Invoice check} \label{fig:Test7}
 \end{figure}
 
+\subsubsection{Select function from Assign Customer}
+
 \begin{figure}[H]
     \includegraphics[height = 15cm]{./Testing/images/testt1.pdf}
-    \caption{Check the select function works ( passes the correct details of the selected customer} \label{fig:Test1}
+    \caption{Check the select function works ( passes the correct details of the selected customer)} \label{fig:Test1}
 \end{figure}
+
+\subsubsection{Search Order tab from tool bar}
 
 \begin{figure}[H]
     \includegraphics[height = 15cm]{./Testing/images/booking11.pdf}
     \caption{Checking the search function} \label{fig:searchFunction}
 \end{figure}
+
+\subsubsection{Referential Integrity test relating the deletion of a booking}
 
 \begin{figure}[H]
     \includegraphics[height = 15cm]{./Testing/images/booking11delete.pdf}
@@ -303,7 +325,7 @@ I made sure I tested my program thoroughly by going through different types of t
 
 \subsection{Problems Encountered}
 
-I encountered a problem on test 4.03. The total price did not refresh after adding an item, it would only refresh after closing the manage order box and selecting the table again.However, the algorithm to calculate the total price was correct  
+I encountered a problem on test 4.03 . The total price did not refresh after adding an item, it would only refresh after closing the manage order box and selecting the table again.However, the algorithm to calculate the total price was correct  
 
 \subsection{Strengths of Testing}
 

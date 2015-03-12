@@ -77,116 +77,121 @@
 \contentsline {subsection}{\numberline {3.1.2}Changes to Outline Plan}{89}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}Original Detailed Plan}{89}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}Changes to Detailed Plan}{103}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Test Data}{115}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Original Test Data}{115}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Changes to Test Data}{116}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Annotated Samples}{117}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Actual Results}{117}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Evidence}{119}{subsection.3.3.2}
-\contentsline {subsubsection}{From main screen to manage bookings}{119}{section*.13}
-\contentsline {subsubsection}{Add Booking screen from manage bookings}{120}{section*.14}
-\contentsline {subsubsection}{Delete Booking screen from manage bookings}{121}{section*.15}
-\contentsline {subsubsection}{Assign Customer to table validation}{123}{section*.16}
-\contentsline {subsubsection}{Manage Order Box from Assign Customer}{124}{section*.17}
-\contentsline {subsubsection}{Increase Quantity Check}{125}{section*.18}
-\contentsline {subsubsection}{Invoice Preview}{126}{section*.19}
-\contentsline {subsubsection}{Select function from Assign Customer}{127}{section*.20}
-\contentsline {subsubsection}{Search Order tab from tool bar}{128}{section*.21}
-\contentsline {subsubsection}{Referential Integrity test relating the deletion of a booking}{129}{section*.22}
-\contentsline {section}{\numberline {3.4}Evaluation}{130}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Approach to Testing}{130}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Problems Encountered}{130}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Strengths of Testing}{130}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Weaknesses of Testing}{130}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Reliability of Application}{130}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Robustness of Application}{131}{subsection.3.4.6}
-\contentsline {chapter}{\numberline {4}System Maintenance}{132}{chapter.4}
-\contentsline {section}{\numberline {4.1}Environment}{132}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Software}{132}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Usage Explanation}{132}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Features Used}{134}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}System Overview}{134}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}System Component}{134}{subsection.4.2.1}
-\contentsline {subsubsection}{Graphical User Interface (GUI)}{134}{section*.23}
-\contentsline {subsubsection}{Manage Item Menu}{135}{section*.24}
-\contentsline {subsubsection}{Manage Bookings}{135}{section*.25}
-\contentsline {subsubsection}{Manage Sit-In Orders}{136}{section*.26}
-\contentsline {section}{\numberline {4.3}Code Structure}{137}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Particular Code Section}{137}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Displaying a table}{137}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Switching central widgets}{138}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Variable Listing}{138}{section.4.4}
-\contentsline {section}{\numberline {4.5}System Evidence}{141}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}User Interface}{141}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}ER Diagram}{164}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Database Table Views}{165}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Database SQL}{171}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}SQL Queries}{172}{subsection.4.5.5}
-\contentsline {section}{\numberline {4.6}Testing}{177}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Summary of Results}{177}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Known Issues}{177}{subsection.4.6.2}
-\contentsline {subsubsection}{Test 4.03 - Manage order total price}{177}{section*.27}
-\contentsline {section}{\numberline {4.7}Code Explanations}{177}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Difficult Sections}{177}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Select function (section 4.10.4)}{178}{subsection.4.7.2}
-\contentsline {subsection}{\numberline {4.7.3}Creating the combo box (section 4.10.4)}{179}{subsection.4.7.3}
-\contentsline {subsection}{\numberline {4.7.4}Self-created Algorithms}{181}{subsection.4.7.4}
-\contentsline {section}{\numberline {4.8}Settings}{185}{section.4.8}
-\contentsline {section}{\numberline {4.9}Acknowledgements}{185}{section.4.9}
-\contentsline {section}{\numberline {4.10}Code Listing}{186}{section.4.10}
-\contentsline {subsection}{\numberline {4.10.1}add\_booking.py}{187}{subsection.4.10.1}
-\contentsline {subsection}{\numberline {4.10.2}add\_item\_to\_menu.py}{193}{subsection.4.10.2}
-\contentsline {subsection}{\numberline {4.10.3}add\_item\_to\_order.py}{197}{subsection.4.10.3}
-\contentsline {subsection}{\numberline {4.10.4}assign\_table\_customer.py}{202}{subsection.4.10.4}
-\contentsline {subsection}{\numberline {4.10.5}cascade\_style\_sheet.py}{210}{subsection.4.10.5}
-\contentsline {subsection}{\numberline {4.10.6}delete\_booking.py}{214}{subsection.4.10.6}
-\contentsline {subsection}{\numberline {4.10.7}delete\_item\_off\_menu.py}{217}{subsection.4.10.7}
-\contentsline {subsection}{\numberline {4.10.8}delete\_item\_off\_order.py}{221}{subsection.4.10.8}
-\contentsline {subsection}{\numberline {4.10.9}main\_window.py}{227}{subsection.4.10.9}
-\contentsline {subsection}{\numberline {4.10.10}manage\_booking.py}{247}{subsection.4.10.10}
-\contentsline {subsection}{\numberline {4.10.11}manage\_order.py}{249}{subsection.4.10.11}
-\contentsline {subsection}{\numberline {4.10.12}new\_create\_tables\_cli.py}{257}{subsection.4.10.12}
-\contentsline {subsection}{\numberline {4.10.13}print\_invoice.py}{262}{subsection.4.10.13}
-\contentsline {subsection}{\numberline {4.10.14}radio\_button\_widget\_class.py}{268}{subsection.4.10.14}
-\contentsline {subsection}{\numberline {4.10.15}search\_order.py}{270}{subsection.4.10.15}
-\contentsline {subsection}{\numberline {4.10.16}table\_display.py}{274}{subsection.4.10.16}
-\contentsline {subsection}{\numberline {4.10.17}update\_booking.py}{277}{subsection.4.10.17}
-\contentsline {subsection}{\numberline {4.10.18}update\_item\_price.py}{284}{subsection.4.10.18}
-\contentsline {chapter}{\numberline {5}User Manual}{287}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{287}{section.5.1}
-\contentsline {section}{\numberline {5.2}Installation}{287}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Software}{287}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Hardware}{287}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Prerequisite Installation}{289}{subsection.5.2.3}
-\contentsline {subsubsection}{Installing Python}{289}{section*.28}
-\contentsline {subsubsection}{Installing PyQt}{289}{section*.29}
-\contentsline {subsubsection}{Etc.}{289}{section*.30}
-\contentsline {subsection}{\numberline {5.2.4}System Installation}{289}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Running the System}{289}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Tutorial}{289}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Introduction}{289}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Assumptions}{289}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Tutorial Questions}{289}{subsection.5.3.3}
-\contentsline {subsubsection}{Question 1}{289}{section*.31}
-\contentsline {subsubsection}{Question 2}{289}{section*.32}
-\contentsline {subsection}{\numberline {5.3.4}Saving}{289}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Limitations}{289}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Error Recovery}{289}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Error 1}{289}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Error 2}{289}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}System Recovery}{289}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Backing-up Data}{289}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Restoring Data}{289}{subsection.5.5.2}
-\contentsline {chapter}{\numberline {6}Evaluation}{290}{chapter.6}
-\contentsline {section}{\numberline {6.1}Customer Requirements}{291}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Objective Evaluation}{291}{subsection.6.1.1}
-\contentsline {section}{\numberline {6.2}Effectiveness}{291}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Objective Evaluation}{291}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}Learnability}{291}{section.6.3}
-\contentsline {section}{\numberline {6.4}Usability}{291}{section.6.4}
-\contentsline {section}{\numberline {6.5}Maintainability}{291}{section.6.5}
-\contentsline {section}{\numberline {6.6}Suggestions for Improvement}{291}{section.6.6}
-\contentsline {section}{\numberline {6.7}End User Evidence}{291}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Questionnaires}{291}{subsection.6.7.1}
-\contentsline {subsection}{\numberline {6.7.2}Graphs}{291}{subsection.6.7.2}
-\contentsline {subsection}{\numberline {6.7.3}Written Statements}{291}{subsection.6.7.3}
+\contentsline {section}{\numberline {3.2}Test Data}{116}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Original Test Data}{116}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Changes to Test Data}{117}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Annotated Samples}{118}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Actual Results}{118}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Evidence}{120}{subsection.3.3.2}
+\contentsline {subsubsection}{From main screen to manage bookings (Test 1.09)}{120}{section*.13}
+\contentsline {subsubsection}{Add Booking screen from manage bookings (Test 1.10)}{121}{section*.14}
+\contentsline {subsubsection}{Delete Booking screen from manage bookings (Test 1.13)}{122}{section*.15}
+\contentsline {subsubsection}{Search Order from tool bar (Test 1.21)}{124}{section*.16}
+\contentsline {subsubsection}{Assign Customer to table validation (Test 2.04)}{125}{section*.17}
+\contentsline {subsubsection}{Leave Telephone Number field empty error (Test 2.08)}{126}{section*.18}
+\contentsline {subsubsection}{Telephone Number boundary test (Test 2.08.02)}{127}{section*.19}
+\contentsline {subsubsection}{Add Item to Menu verification (Test 2.13.01)}{128}{section*.20}
+\contentsline {subsubsection}{Manage Order Box from Assign Customer (Test 3.03) }{129}{section*.21}
+\contentsline {subsubsection}{Select function from Assign Customer (Test 3.04)}{130}{section*.22}
+\contentsline {subsubsection}{Total Price Update (Test 4.03)}{131}{section*.23}
+\contentsline {subsubsection}{Increase Quantity Check (Test 4.05)}{132}{section*.24}
+\contentsline {subsubsection}{Checking if booking \& customer details has stored correctly (Test 4.09) }{133}{section*.25}
+\contentsline {subsubsection}{Invoice Preview (Test 1.32 \& 3.05)}{134}{section*.26}
+\contentsline {subsubsection}{Search Order tab from tool bar (Test 4.08.02)}{135}{section*.27}
+\contentsline {subsubsection}{Referential Integrity test relating the deletion of a booking (Test 6.03)}{136}{section*.28}
+\contentsline {section}{\numberline {3.4}Evaluation}{137}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Approach to Testing}{137}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Problems Encountered}{137}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Strengths of Testing}{137}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Weaknesses of Testing}{137}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Reliability of Application}{138}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Robustness of Application}{138}{subsection.3.4.6}
+\contentsline {chapter}{\numberline {4}System Maintenance}{139}{chapter.4}
+\contentsline {section}{\numberline {4.1}Environment}{139}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Software}{139}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Usage Explanation}{139}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Features Used}{141}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}System Overview}{141}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}System Component}{141}{subsection.4.2.1}
+\contentsline {subsubsection}{Graphical User Interface (GUI)}{141}{section*.29}
+\contentsline {subsubsection}{Manage Item Menu}{142}{section*.30}
+\contentsline {subsubsection}{Manage Bookings}{142}{section*.31}
+\contentsline {subsubsection}{Manage Sit-In Orders}{143}{section*.32}
+\contentsline {section}{\numberline {4.3}Code Structure}{144}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Displaying a table}{144}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Switching central widgets}{145}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Variable Listing}{145}{section.4.4}
+\contentsline {section}{\numberline {4.5}System Evidence}{148}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}User Interface}{148}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}ER Diagram}{171}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Database Table Views}{172}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Database SQL}{178}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}SQL Queries}{179}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}Testing}{184}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Summary of Results}{184}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Known Issues}{184}{subsection.4.6.2}
+\contentsline {subsubsection}{Test 4.03 - Manage order total price}{184}{section*.33}
+\contentsline {section}{\numberline {4.7}Code Explanations}{184}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Difficult Sections}{184}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Select function (section 4.10.4)}{185}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Creating the combo box (section 4.10.4)}{186}{subsection.4.7.3}
+\contentsline {subsection}{\numberline {4.7.4}Self-created Algorithms}{188}{subsection.4.7.4}
+\contentsline {section}{\numberline {4.8}Settings}{192}{section.4.8}
+\contentsline {section}{\numberline {4.9}Acknowledgements}{192}{section.4.9}
+\contentsline {section}{\numberline {4.10}Code Listing}{193}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}add\_booking.py}{194}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}add\_item\_to\_menu.py}{200}{subsection.4.10.2}
+\contentsline {subsection}{\numberline {4.10.3}add\_item\_to\_order.py}{204}{subsection.4.10.3}
+\contentsline {subsection}{\numberline {4.10.4}assign\_table\_customer.py}{209}{subsection.4.10.4}
+\contentsline {subsection}{\numberline {4.10.5}cascade\_style\_sheet.py}{217}{subsection.4.10.5}
+\contentsline {subsection}{\numberline {4.10.6}delete\_booking.py}{221}{subsection.4.10.6}
+\contentsline {subsection}{\numberline {4.10.7}delete\_item\_off\_menu.py}{224}{subsection.4.10.7}
+\contentsline {subsection}{\numberline {4.10.8}delete\_item\_off\_order.py}{228}{subsection.4.10.8}
+\contentsline {subsection}{\numberline {4.10.9}main\_window.py}{234}{subsection.4.10.9}
+\contentsline {subsection}{\numberline {4.10.10}manage\_booking.py}{254}{subsection.4.10.10}
+\contentsline {subsection}{\numberline {4.10.11}manage\_order.py}{256}{subsection.4.10.11}
+\contentsline {subsection}{\numberline {4.10.12}new\_create\_tables\_cli.py}{264}{subsection.4.10.12}
+\contentsline {subsection}{\numberline {4.10.13}print\_invoice.py}{269}{subsection.4.10.13}
+\contentsline {subsection}{\numberline {4.10.14}radio\_button\_widget\_class.py}{275}{subsection.4.10.14}
+\contentsline {subsection}{\numberline {4.10.15}search\_order.py}{277}{subsection.4.10.15}
+\contentsline {subsection}{\numberline {4.10.16}table\_display.py}{281}{subsection.4.10.16}
+\contentsline {subsection}{\numberline {4.10.17}update\_booking.py}{284}{subsection.4.10.17}
+\contentsline {subsection}{\numberline {4.10.18}update\_item\_price.py}{291}{subsection.4.10.18}
+\contentsline {chapter}{\numberline {5}User Manual}{294}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{294}{section.5.1}
+\contentsline {section}{\numberline {5.2}Installation}{294}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Software}{294}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Hardware}{294}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Prerequisite Installation}{295}{subsection.5.2.3}
+\contentsline {subsubsection}{Installing Python}{295}{section*.34}
+\contentsline {subsubsection}{Installing PyQt}{295}{section*.35}
+\contentsline {subsubsection}{Etc.}{295}{section*.36}
+\contentsline {subsection}{\numberline {5.2.4}System Installation}{295}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Running the System}{303}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Tutorial}{303}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Introduction}{303}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Assumptions}{303}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Tutorial Questions}{303}{subsection.5.3.3}
+\contentsline {subsubsection}{Question 1}{303}{section*.37}
+\contentsline {subsubsection}{Question 2}{303}{section*.38}
+\contentsline {subsection}{\numberline {5.3.4}Saving}{303}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Limitations}{303}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Error Recovery}{303}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Error 1}{303}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Error 2}{303}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}System Recovery}{303}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Backing-up Data}{303}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Restoring Data}{303}{subsection.5.5.2}
+\contentsline {chapter}{\numberline {6}Evaluation}{304}{chapter.6}
+\contentsline {section}{\numberline {6.1}Customer Requirements}{305}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Objective Evaluation}{305}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Effectiveness}{305}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Objective Evaluation}{305}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Learnability}{305}{section.6.3}
+\contentsline {section}{\numberline {6.4}Usability}{305}{section.6.4}
+\contentsline {section}{\numberline {6.5}Maintainability}{305}{section.6.5}
+\contentsline {section}{\numberline {6.6}Suggestions for Improvement}{305}{section.6.6}
+\contentsline {section}{\numberline {6.7}End User Evidence}{305}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Questionnaires}{305}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Graphs}{305}{subsection.6.7.2}
+\contentsline {subsection}{\numberline {6.7.3}Written Statements}{305}{subsection.6.7.3}

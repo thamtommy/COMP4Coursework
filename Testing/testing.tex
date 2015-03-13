@@ -67,9 +67,9 @@ I have not tested the rows that are in grey due to changes in my program.
         2.07 & Verify Last Name entered at 'enter booking details' interface & User inputs name  & (Nothing)& Erroneous& Error&Add booking did not proceeed after clicking add booking  &  \\ \hline
         2.07.01 & Verify Last Name entered at 'enter booking details' interface & User inputs name  &  Milk&  Normal& Accepted &Milk was accepted and booking proceeded - expected  &  \\ \hline
         2.07.02 & Verify Last Name entered at 'enter booking details' interface & User inputs name  & 2 & Erroneous &Error & Could not enter numbers - expected due to regular expression  &  \\ \hline
-        2.08 & Verify Telephone Number entered at 'enter booking details'' interface & User inputs nothing  & (Nothing)& Errorneous &Error &Add booking did not proceed - expected  &  \\ \hline
+        2.08 & Verify Telephone Number entered at 'enter booking details'' interface & User inputs nothing  & (Nothing)& Errorneous &Error &Add booking did not proceed - expected  &  \ref{fig:Test12} on page \pageref{fig:Test12}  \\ \hline
         2.08.01 & Verify Telephone Number entered at 'enter booking details'' interface & User inputs number  & 01523 859372 &Normal&Accepted&Add booking did proceed - expected  &  \\ \hline
-        2.08.02 & Verify \subsubsection{ Number entered at 'enter booking details'' interface & User inputs number  &  014829&Boundary &Error & Add booking did not proceed - expected  &  \\ \hline
+        2.08.02 & Verify Number entered at 'enter booking details'' interface & User inputs number  &  014829&Boundary &Error & Add booking did not proceed - expected  &  \ref{fig:Test13} on page \pageref{fig:Test13} \\ \hline
        \rowcolor{gray}  *2.09 & Verify Table Number entered at 'enter booking details' interface & User inputs number  & (Nothing)& Erroneous& Error&  &  \\ \hline
        \rowcolor{gray}  *2.09.01 & Verify Table Number entered at 'enter booking details' interface & User inputs number  & 7 & Normal&Accepted &  &  \\ \hline
        \rowcolor{gray}  *2.09.02 & Verify Table Number entered at 'enter booking details' interface & User inputs number  & Hey & Erroneous &Error &  &  \\ \hline
@@ -90,7 +90,7 @@ I have not tested the rows that are in grey due to changes in my program.
       \rowcolor{gray}   *4.01.01 & Verify password changed & Password should not successfully change if length is not bigger than 4 and old password does not match input old password   &Try changing password with new password having length of 2&Error& & \\ \hline
       \rowcolor{gray}   *4.01.02 & Verify password changed & Password should not successfully change if length is not bigger than 4 and old password does not match input old password   &  Try changing password with correct input and correct length&Accepted  & & \\ \hline
        \rowcolor{gray}  *4.02 & Verify add item function works correctly & Entering MenuID will return information based on that ID & Enter ID &  Normal & Return all information based on the ID  & & \\ \hline
-        4.03 & Verify Total price calculation functions correctly & Adds up all items prices together to get a total & Enter items to order &  Normal & Calculates the total price based on items entered  & Total doesnt update - unexpected & \\ \hline
+        4.03 & Verify Total price calculation functions correctly & Adds up all items prices together to get a total & Enter items to order &  Normal & Calculates the total price based on items entered  & Total doesnt update - unexpected & \ref{fig:Test10} on page \pageref{fig:Test10} \\ \hline
 	4.04 & Check bookings displayed on correct day & Should display all bookings that match with system date & Create a range of bookings that have different dates & Normal& Displays correct bookings & & \\ \hline
          5.01 & Verify program fulfills the specification & Run through the program, testing all aspects to make sure the meet the objectives in the specification & Enter information in all places required input &  Normal & Program fulfils specification  & Can run through program without any problems, some minor objectives were not met such as having clickable tables (I have radio buttons instead). & \\ \hline
 	 \rowcolor{gray}*6.01 & Verify menu item name updates in case an item is mistakenly spelt & Check  the item name is updated in all records that it appears in & Update name of a menu item (Wate to Water) & Normal & Wate should change to Water & & \\ \hline
@@ -112,12 +112,12 @@ I have not tested the rows that are in grey due to changes in my program.
         \hline
         \textbf{Test Series} & \textbf{Purpose of Test} & \textbf{Test Description} & \textbf{Test Data} & \textbf{Test Data Type (Normal/ Erroneous/ Boundary)} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Evidence}\\ \hline
        1.15 & Test Add Item on 'Item Menu' menu bar & Check if Add Item layout is displayed after clicking on Add Item & Click on Add Item & Normal & Add Item layout displayed & Add Item layout displayed - expected &  \\ \hline
-       1.16 & Test Delete Item on 'Item Menu' menu bar & Check if Delete Item layout is displayed after clicking on Delete Item & Click on Delete Item & Normal & Delete Item layout displayed & Delete Item layout is displayed & Example \\ \hline
+       1.16 & Test Delete Item on 'Item Menu' menu bar & Check if Delete Item layout is displayed after clicking on Delete Item & Click on Delete Item & Normal & Delete Item layout displayed & Delete Item layout is displayed &  \\ \hline
        1.17 & Test Update Item Price on 'Item Menu' menu bar & Check if Update Item Price layout is displayed after clicking on Update Item Price & Click on Update Item Price & Normal & Update Item Price layout displayed & Update Item Price layout displayed - expected & \\ \hline
        1.18 & Test Add Booking on 'Bookings' menu bar & Check if Add Booking layout is displayed after clicking on Add Booking & Click on Add Booking & Normal & Add Booking layout displayed &Add Booking layout displayed - expected &  \\ \hline
        1.19 & Test Delete Booking on 'Bookings' menu bar & Check if Delete Booking layout is displayed after clicking on Delete Booking & Click on Delete Booking & Normal & Delete Booking layout displayed & Delete Booking layout displayed - expected & \\ \hline
        1.20 & Test Update Booking on 'Bookings' menu bar & Check if Update Booking layout is displayed after clicking on Update Booking & Click on Update Booking & Normal & Update Booking layout displayed & Update Booking layout displayed - expected &  \\ \hline
-       1.21 & Test 'Search Order' on tool bar & Check if Search Order layout is displayed after clicking on Search Order & Click on Search Order & Normal & Search Order layout displayed & Search Order layout displayed - expected & \\ \hline
+       1.21 & Test 'Search Order' on tool bar & Check if Search Order layout is displayed after clicking on Search Order & Click on Search Order & Normal & Search Order layout displayed & Search Order layout displayed - expected & \ref{fig:searchOrder} on page \pageref{fig:searchOrder} \\ \hline
        1.22 & Test 'View Bookings' on tool bar & Check if View Bookings layout is displayed after clicking on View Bookings & Click on View Bookings & Normal & View Bookings layout displayed & View Bookings layout displayed - expected &  \\ \hline
        1.23 & Test 'View Customers' on tool bar & Check if View Customers layout is displayed after clicking on View Customers & Click on View Customers & Normal & View Customers layout displayed &View Customers layout displayed - expected &  \\ \hline
        1.24 & Test 'View Dishes' on tool bar & Check View Dishes layout is displayed after clicking on View Dishes & Click on View Dishes & Normal & View Dishes layout displayed & View Dishes layout displayed - expected & \\ \hline
@@ -133,7 +133,7 @@ I have not tested the rows that are in grey due to changes in my program.
        1.33 & Test Print Invoice button on manage order box & Check if print option appear after clicking Print Invoice & Click on Print Invoice & Normal & Print options appear & Print options appeared - expected & \\ \hline
         2.04.03 & Verify Number of people entered at 'assign customer to table' & Check if user input is valid after clicking Create  & 0 &  Boundary &  Input not accepted &  Input was not accepted - expected  &  \\ \hline
         2.13 & Verify Item Name input at Add Item to Menu & Check if user input is valid after clicking Add Item assuming all other fields are filled with normal data  & Rice &  Normal &  Accepted & Item was successfully added  &  \\ \hline
-        2.13.01 & Verify Item Name input at Add Item to Menu & Check if user input is valid after clicking Add Item assuming all other fields are filled with normal data  & (Nothing) & Erroneus & Error  &Item add unsuccessful - expected    &  \\ \hline
+        2.13.01 & Verify Item Name input at Add Item to Menu & Check if user input is valid after clicking Add Item assuming all other fields are filled with normal data  & (Nothing) & Erroneus & Error  &Item add unsuccessful - expected    & \ref{fig:Test11} on page \pageref{fig:Test11}  \\ \hline
         2.14 & Verify ItemID input at Update Item Price & Check if user input is valid after clicking Update Item assuming all other fields are filled with normal data  & 7 &  Normal &  Accepted & Price was successfully updated   &  \\ \hline
         2.14.01 & Verify ItemID input at Update Item Price & Check if user input is valid after clicking Update Item assuming all other fields are filled with normal data  & 0 &  Boundary & Error  &  Nothing happened - expected   &  \\ \hline
         2.15 & Verify Number Of People at Update Booking & Check if user input is valid after clicking Update Number Of People with a booking that exists  & 5 &  Normal &  Accepted & Booking updated - expected    &  \\ \hline
@@ -149,7 +149,7 @@ I have not tested the rows that are in grey due to changes in my program.
 
 
 	3.03 & Check all details from the creation of a booking at Assign Customer to table is transferred & Check all correct details are transferred over to the Manage Order box & Click on Create after filling in fields correctly & Normal & All relevent details displayed & All relevent details transferred & \ref{fig:Test5} on page \pageref{fig:Test5}\\ \hline
-	3.04 & Check all details from the selecting of a booking at Assign Customer to table is transferred & Check all correct details are transferred over to the Manage Order box & Click on Select after selecting a booking from combo box & Normal & All relevent details displayed & All relevent details transferred \ref{fig:Test1} on page \pageref{fig:Test1}&\\ \hline
+	3.04 & Check all details from the selecting of a booking at Assign Customer to table is transferred & Check all correct details are transferred over to the Manage Order box & Click on Select after selecting a booking from combo box & Normal & All relevent details displayed & All relevent details transferred &\ref{fig:Test8} on page \pageref{fig:Test8}\\ \hline
 
 	3.05 & Check all details from an order is transferred to invoice & Compare the order details to invoice details to make sure they are the same & Click on Invoice Preview & Normal & All relevent details displayed & All relevent details transferred & \ref{fig:Test7} on page \pageref{fig:Test7} \\ \hline
 	3.06 & Booking added is stored in correct table & After successfully adding a booking, the booking should be displayed in table above & Add Booking & Normal & All relevent details displayed & All relevent details displayed in table above &\\ \hline
@@ -162,7 +162,7 @@ I have not tested the rows that are in grey due to changes in my program.
            4.08 & Check search order function & Leave the booking field blank and click Search Order & (Nothing) &  Erroneous &  Error /empty table appear & Empty table appeared    &  \\ \hline
            4.08.01 & Check search order function & Enter a booking ID that doesn't exist and click Search Order & 93 &  Boundary &  Error / empty table appear &  Empty table appeared  &  \\ \hline
            4.08.02& Check search order function & Enter a booking ID that exists and click Search Order & 11 &  Normal &  A populated table appear & Correct table appeared   & \ref{fig:searchFunction} on page \pageref{fig:searchFunction} \\ \hline
-	4.09 & Check Customer details entered are stored correctly & Input details using normal data & "Moe", "Iro", "15/04/2015", "17:30", " 5", "01639435231", (select table 1)  & Normal & A new customer record will be created with the details "Moe", "Iro" and "01639435231". & First Name and Last Name stored correctly - expected however, Telephone did not store correctly as it stored "1639435231" instead of "01639435231" & \\ \hline
+	4.09 & Check Customer details entered are stored correctly & Input details using normal data & "Moe", "Iro", "15/04/2015", "17:30", " 5", "01639435231", (select table 1)  & Normal & A new customer record will be created with the details "Moe", "Iro" and "01639435231". & First Name and Last Name stored correctly - expected however, Telephone did not store correctly as it stored "1639435231" instead of "01639435231" &  \ref{fig:Test9} on page \pageref{fig:Test9}\\ \hline
 	6.03 & Ensure order gets deleted when booking gets deleted & After deleting a booking, the order should be deleted with it.  & Delete a booking which has booking items   & Normal & Order should be deleted &Order(Booking items) has been deleted &\ref{fig:searchDeletedBooking} on page \pageref{fig:searchDeletedBooking} \\ \hline
 	6.04 & Check if an item that does not exist is added to an order & Adding an item that does not exist from the manage order box  & Add Item ID 933 & Boundary & Nothing should happen as there isnt an item with an ID of 993 & No items were added& \\ \hline
 	
@@ -243,77 +243,128 @@ The actual results for the tests can be found on the detailed plans, there is a 
 
 \subsection{Evidence}
 
-\subsubsection{From main screen to manage bookings}
+\subsubsection{From main screen to manage bookings (Test 1.09)}
 
 \begin{figure}[H]
     \includegraphics[height = 20cm]{./Testing/images/test1}
     \caption{Manage Booking layout} \label{fig:Test1}
 \end{figure}
 
-\subsubsection{Add Booking screen from manage bookings}
+\subsubsection{Add Booking screen from manage bookings (Test 1.10)}
 
 \begin{figure}[H]
     \includegraphics[height = 20cm]{./Testing/images/test2.pdf}
     \caption{Add Booking} \label{fig:Test2}
 \end{figure}
 
-\subsubsection{Delete Booking screen from manage bookings}
+\subsubsection{Delete Booking screen from manage bookings (Test 1.13)}
 
 \begin{figure}[H]
     \includegraphics[height = 20cm]{./Testing/images/test3.pdf}
     \caption{Delete Booking layout} \label{fig:Test3}
 \end{figure}
 
+
 \begin{landscape}
 
-\subsubsection{Assign Customer to table validation}
+
+\subsubsection{Search Order from tool bar (Test 1.21)}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Testing/images/test4.pdf}
+    \includegraphics[height = 15cm]{./Maintenance/images/png/screen17}
+    \caption{Search Order layout} \label{fig:searchOrder}
+\end{figure}
+
+\subsubsection{Assign Customer to table validation (Test 2.04)}
+
+\begin{figure}[H]
+    \includegraphics[width = 20cm]{./Testing/images/test4.pdf}
     \caption{Assign customer validation} \label{fig:Test4}
 \end{figure}
 
-\subsubsection{Manage Order Box from Assign Customer}
+\subsubsection{Leave Telephone Number field empty error (Test 2.08)}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Testing/images/test5.pdf}
+    \includegraphics[width = 20cm]{./Testing/images/test12}
+    \caption{Error box pop up} \label{fig:Test12}
+\end{figure}
+
+\subsubsection{Telephone Number boundary test (Test 2.08.02)}
+
+\begin{figure}[H]
+    \includegraphics[width = 20cm]{./Testing/images/test13}
+    \caption{Error box pop up} \label{fig:Test13}
+\end{figure}
+
+
+
+\subsubsection{Add Item to Menu verification (Test 2.13.01)}
+
+\begin{figure}[H]
+    \includegraphics[width = 20cm]{./Testing/images/test11}
+    \caption{Item add verification} \label{fig:Test11}
+\end{figure}
+
+\subsubsection{Manage Order Box from Assign Customer (Test 3.03) }
+
+\begin{figure}[H]
+    \includegraphics[width = 20cm]{./Testing/images/test5.pdf}
     \caption{Check all details transferred} \label{fig:Test5}
 \end{figure}
 
-\subsubsection{Increase Quantity Check}
+\subsubsection{Select function from Assign Customer (Test 3.04)}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Testing/images/Test6.pdf}
+    \includegraphics[width = 20cm]{./Testing/images/testt1.pdf}
+    \caption{Check the select function works ( passes the correct details of the selected customer)} \label{fig:Test8}
+\end{figure}
+
+\subsubsection{Total Price Update (Test 4.03)}
+
+\begin{figure}[H]
+    \includegraphics[width = 20cm]{./Testing/images/test10}
+    \caption{Total Price does not update at the manage order box after adding item} \label{fig:Test10}
+\end{figure}
+
+\subsubsection{Increase Quantity Check (Test 4.05)}
+
+\begin{figure}[H]
+    \includegraphics[width = 20cm]{./Testing/images/Test6.pdf}
     \caption{Quantity check} \label{fig:Test6}
 \end{figure}
 
-\subsubsection{Invoice Preview}
+\subsubsection{Checking if booking \& customer details has stored correctly (Test 4.09) } 
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Testing/images/Test7.pdf}
+    \includegraphics[width = 20cm]{./Testing/images/test9}
+    \caption{Adding a booking also creates a new customer record} \label{fig:Test9}
+\end{figure}
+
+\subsubsection{Invoice Preview (Test 1.32 \& 3.05)}
+
+\begin{figure}[H]
+    \includegraphics[width = 20cm]{./Testing/images/Test7.pdf}
     \caption{Invoice check} \label{fig:Test7}
 \end{figure}
 
-\subsubsection{Select function from Assign Customer}
+\subsubsection{Search Order tab from tool bar (Test 4.08.02)}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Testing/images/testt1.pdf}
-    \caption{Check the select function works ( passes the correct details of the selected customer)} \label{fig:Test1}
-\end{figure}
-
-\subsubsection{Search Order tab from tool bar}
-
-\begin{figure}[H]
-    \includegraphics[height = 15cm]{./Testing/images/booking11.pdf}
+    \includegraphics[width = 20cm]{./Testing/images/booking11.pdf}
     \caption{Checking the search function} \label{fig:searchFunction}
 \end{figure}
 
-\subsubsection{Referential Integrity test relating the deletion of a booking}
+\subsubsection{Referential Integrity test relating the deletion of a booking (Test 6.03)}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Testing/images/booking11delete.pdf}
+    \includegraphics[width = 20cm]{./Testing/images/booking11delete.pdf}
     \caption{Checking if the order is deleted after deleting booking ID 11} \label{fig:searchDeletedBooking}
 \end{figure}
+
+
+
+
+
 
 \end{landscape}
 
@@ -321,11 +372,11 @@ The actual results for the tests can be found on the detailed plans, there is a 
 
 \subsection{Approach to Testing}
 
-I made sure I tested my program thoroughly by going through different types of testing strategies. Going through different testing strategies made me cover most, if not all areas of my program such as testing the flow of control, validation, algorithms and the outputs.  I chose this approach to ensure my whether my program was usable or not.
+I made sure I tested my program thoroughly by going through different types of testing strategies. Going through different testing strategies made me cover most, if not all areas of my program such as testing the flow of control, validation, algorithms and the outputs.  I chose this approach to ensure my whether my program was usable or not. My first strategy (series 1) was top-down testing which enabled me to test the effectiveness of the navigation in the application. Series 2.
 
 \subsection{Problems Encountered}
 
-I encountered a problem on test 4.03 . The total price did not refresh after adding an item, it would only refresh after closing the manage order box and selecting the table again.However, the algorithm to calculate the total price was correct  
+I encountered a problem on test 4.03 (\ref{fig:Test10} on page \pageref{fig:Test10}) . The total price did not refresh after adding an item, it would only refresh after closing the manage order box and selecting the table again. I also experienced a problem on test 4.09 (\ref{fig:Test9} on page \pageref{fig:Test9}) where all the details of the booking correctly stored in the database apart from the telephone number. The telephone number stored the telephone number input however, if 0 was the first number, the 0 would not be stored but the rest of the numbers would.
 
 \subsection{Strengths of Testing}
 
@@ -333,12 +384,12 @@ The strengths of the approach I took were that I was able to find out whether my
 
 \subsection{Weaknesses of Testing}
 
-When I tested the sql statements, I relied on the tables displayed on my application to tell me whether the sql statements worked without problems. For example, I deleted a booking on test 6.03 and checked to see if there was an order attached to the booking. The order did not display after searching for the booking but it may have still been in the database - which is what I didn't check. Also, the applcation has 16 radio buttons that represent the tables in the restaurant - I did not test all of them which would of meant that there could have been a fault with the application within the radio buttons that I did not test.
+When I tested the sql statements, I relied on the tables displayed on my application to tell me whether the sql statements worked without problems. For example, I deleted a booking on test 6.03 (\ref{fig:searchDeletedBooking} on page \pageref{fig:searchDeletedBooking}) and checked to see if there was an order attached to the booking. The order did not display after searching for the booking but it may have still been in the database - which is what I didn't check. Also, the applcation has 16 radio buttons that represent the tables in the restaurant - I did not test all of them which would of meant that there could have been a fault with the application within the radio buttons that I did not test. Moreover, I did not test on what would happen if I added relatively the same record twice. For example, adding an item to the menu called 'Pork' with a price of 5.3 and then adding 'Pork' again with a price of 4.3 . This would cause confusion after adding lots of records to the database. 
 
 \subsection{Reliability of Application}
 
-I believe that the application is reliable. I have tested the input validation which worked as the system did not proceed if there was an invalid input which would mean there couldn't be any faulty data in the database. However, it would be up to the User to input the correct data such as correctly spelling an item when adding an item to the menu or inputting the right ID when deleting a record.
+I believe that the application is reliable. I have tested the input validation which worked as the system did not proceed if there was an invalid input which would mean there couldn't be any faulty data in the database. Examples of validation can be found on tests 2.08(\ref{fig:Test12} on page \pageref{fig:Test12}) , 2.08.02 (\ref{fig:Test13} on page \pageref{fig:Test13}) and 2.13.01 (\ref{fig:Test11} on page \pageref{fig:Test11}) . However, it would be up to the User to input the correct data such as correctly spelling an item when adding an item to the menu or inputting the right ID when deleting a record.
 
 
 \subsection{Robustness of Application}
-After testing my system without closing it, I believe that application is robust as I did not experience any crahses or any problems that made me not be able use the application normally. Testing the validation did not affect the application in anyway, same goes for the execution of the sql queries.
+After testing my system without closing it, I believe that application is robust as I did not experience any crashes or any problems that made me not be able use the application normally. Testing the validation did not affect the application in anyway, same goes for the execution of the sql queries.

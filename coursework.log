@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.19)  12 MAR 2015 23:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.19)  13 MAR 2015 23:56
 entering extended mode
 **C:/Users/Tommy/Documents/GitHub/COMP4Coursework/coursework.tex
 (C:/Users/Tommy/Documents/GitHub/COMP4Coursework/coursework.tex
@@ -688,8 +688,11 @@ LaTeX Warning: Label `tab:3nF' multiply defined.
 
 ) (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Testing\testing.aux)
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Maintenance\maintenance.aux)
-(C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Manual\manual.aux)
-(C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Evaluation\evaluation.aux))
+(C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Manual\manual.aux
+
+LaTeX Warning: Label `fig:additemorder1' multiply defined.
+
+) (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Evaluation\evaluation.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
@@ -747,18 +750,18 @@ ext4): destination with the same identifier (name{page.1}) has been already use
 d, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 ...ter}{\numberline {2}Design}{30}{chapter.2}
+l.43 ...ter}{\numberline {2}Design}{31}{chapter.2}
                                                    [1
 
-] [2] [3])
+] [2] [3] [4])
 \tf@toc=\write6
- [4]
+ [5]
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Analysis\analysis.tex
 Chapter 1.
-[5
+[6
 
 
-] [6]
+] [7]
 Overfull \hbox (1.17194pt too wide) in paragraph at lines 74--74
 []|\OT1/cmr/bx/n/10 Destination| 
  []
@@ -863,10 +866,10 @@ Underfull \hbox (badness 5288) in paragraph at lines 83--83
 \OT1/cmr/m/n/10 Special fried rice
  []
 
-[7] [8]
+[8] [9]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 96.
- [9] <./Analysis/Dataflowkey.pdf, id=861, 597.23125pt x 845.1575pt>
+ [10] <./Analysis/Dataflowkey.pdf, id=921, 597.23125pt x 845.1575pt>
 File: ./Analysis/Dataflowkey.pdf Graphic file (type pdf)
 
 <use ./Analysis/Dataflowkey.pdf>
@@ -881,14 +884,14 @@ Overfull \hbox (16.92291pt too wide) in paragraph at lines 155--156
 Overfull \vbox (27.4968pt too high) has occurred while \output is active []
 
 
-[10pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.158 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Analysis/Dataflowkey.pd
-f>] <./Analysis/PlacingOrder.pdf, id=877, 597.23125pt x 845.1575pt>
+f>] <./Analysis/PlacingOrder.pdf, id=937, 597.23125pt x 845.1575pt>
 File: ./Analysis/PlacingOrder.pdf Graphic file (type pdf)
 
 <use ./Analysis/PlacingOrder.pdf>
@@ -899,7 +902,7 @@ Overfull \hbox (16.92291pt too wide) in paragraph at lines 160--161
 [][]
  []
 
-<./Analysis/InvoiceGeneration.pdf, id=878, 597.23125pt x 845.1575pt>
+<./Analysis/InvoiceGeneration.pdf, id=938, 597.23125pt x 845.1575pt>
 File: ./Analysis/InvoiceGeneration.pdf Graphic file (type pdf)
 
 <use ./Analysis/InvoiceGeneration.pdf>
@@ -911,53 +914,53 @@ Overfull \hbox (16.92291pt too wide) in paragraph at lines 165--166
 [][]
  []
 
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.168 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Analysis/PlacingOrder.p
-df>] <./Analysis/DrinkPad.jpg, id=893, 373.395pt x 511.9125pt>
+df>] <./Analysis/DrinkPad.jpg, id=954, 373.395pt x 511.9125pt>
 File: ./Analysis/DrinkPad.jpg Graphic file (type jpg)
 
 <use ./Analysis/DrinkPad.jpg>
 Package pdftex.def Info: ./Analysis/DrinkPad.jpg used on input line 174.
 (pdftex.def)             Requested size: 249.04524pt x 341.43306pt.
- [12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.176 \end{figure}
                    <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Analysis/In
-voiceGeneration.pdf>] [13pdfTeX warning (ext4): destination with the same ident
+voiceGeneration.pdf>] [14pdfTeX warning (ext4): destination with the same ident
 ifier (name{figure.1.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.177 \newpage
                <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Analysis/DrinkP
-ad.jpg>] <./Analysis/DishPad.jpg, id=915, 217.5628pt x 302.63063pt>
+ad.jpg>] <./Analysis/DishPad.jpg, id=975, 217.5628pt x 302.63063pt>
 File: ./Analysis/DishPad.jpg Graphic file (type jpg)
 
 <use ./Analysis/DishPad.jpg>
 Package pdftex.def Info: ./Analysis/DishPad.jpg used on input line 183.
 (pdftex.def)             Requested size: 245.46133pt x 341.43306pt.
- [14pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+ [15pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.188 \newpage
                <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Analysis/DishPa
-d.jpg>] <./Analysis/Invoice.jpg, id=921, 340.27126pt x 475.02469pt>
+d.jpg>] <./Analysis/Invoice.jpg, id=981, 340.27126pt x 475.02469pt>
 File: ./Analysis/Invoice.jpg Graphic file (type jpg)
 
 <use ./Analysis/Invoice.jpg>
 Package pdftex.def Info: ./Analysis/Invoice.jpg used on input line 192.
 (pdftex.def)             Requested size: 285.34822pt x 398.33858pt.
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1043,7 +1046,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \OT1/cmr/m/n/10 Total price
  []
 
-[16]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 226--226
 []|\OT1/cmr/bx/n/10 Data
  []
@@ -1168,19 +1171,19 @@ Underfull \hbox (badness 1038) in paragraph at lines 239--239
 []|\OT1/cmr/m/n/10 Computer - Ta-ble
  []
 
-[17]
+[18]
 File: ./Analysis/PlacingOrder.pdf Graphic file (type pdf)
  <use ./Analysis/PlacingOrder.pdf>
 Package pdftex.def Info: ./Analysis/PlacingOrder.pdf used on input line 252.
 (pdftex.def)             Requested size: 321.70723pt x 455.24408pt.
- [18pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+ [19pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.256 \newpage
               ]
-<./Analysis/ProposeInvoice.pdf, id=943, 597.23125pt x 845.1575pt>
+<./Analysis/ProposeInvoice.pdf, id=1003, 597.23125pt x 845.1575pt>
 File: ./Analysis/ProposeInvoice.pdf Graphic file (type pdf)
 
 <use ./Analysis/ProposeInvoice.pdf>
@@ -1226,7 +1229,7 @@ Overfull \hbox (1.92747pt too wide) in paragraph at lines 269--284
  [] 
  []
 
-[19pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1241,13 +1244,13 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 302.
- [20] [21] <./Analysis/ERDiagram.pdf, id=968, 597.23125pt x 845.1575pt>
+ [21] [22] <./Analysis/ERDiagram.pdf, id=1028, 597.23125pt x 845.1575pt>
 File: ./Analysis/ERDiagram.pdf Graphic file (type pdf)
 
 <use ./Analysis/ERDiagram.pdf>
 Package pdftex.def Info: ./Analysis/ERDiagram.pdf used on input line 378.
 (pdftex.def)             Requested size: 321.70723pt x 455.24408pt.
- [22] [23pdfTeX warning (ext4): destination with the same identifier (name{figu
+ [23] [24pdfTeX warning (ext4): destination with the same identifier (name{figu
 re.1.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1261,34 +1264,34 @@ mr/m/it/10 TableID\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 MenuID\OT1/cmr/m/n/10 , Di
 shOrdered, DrinkO-rdered, Quan-
  []
 
-<./Analysis/Objects.pdf, id=987, 597.23125pt x 845.1575pt>
+<./Analysis/Objects.pdf, id=1048, 597.23125pt x 845.1575pt>
 File: ./Analysis/Objects.pdf Graphic file (type pdf)
 
 <use ./Analysis/Objects.pdf>
 Package pdftex.def Info: ./Analysis/Objects.pdf used on input line 411.
 (pdftex.def)             Requested size: 321.70723pt x 455.24408pt.
- [24]
-<./Analysis/Keyfail.pdf, id=994, 597.23125pt x 845.1575pt>
+ [25]
+<./Analysis/Keyfail.pdf, id=1054, 597.23125pt x 845.1575pt>
 File: ./Analysis/Keyfail.pdf Graphic file (type pdf)
 
 <use ./Analysis/Keyfail.pdf>
 Package pdftex.def Info: ./Analysis/Keyfail.pdf used on input line 418.
 (pdftex.def)             Requested size: 321.70723pt x 455.24408pt.
- [25pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+ [26pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.421 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Analysis/Objects.pdf>]
-[26pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+[27pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.429 	\item 1
               9" Display <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Analy
-sis/Keyfail.pdf>] [27]
+sis/Keyfail.pdf>] [28]
 Underfull \hbox (badness 10000) in paragraph at lines 472--472
 []|\OT1/cmr/m/n/10 Python
  []
@@ -1378,13 +1381,13 @@ Overfull \hbox (5.58028pt too wide) in paragraph at lines 469--480
  [] 
  []
 
-[28]) [29] (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Design\design.tex
+[29]) [30] (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Design\design.tex
 Chapter 2.
-[30
+[31
 
 
 
-] [31] <./Design/Images/flowchart0.pdf, id=1044, 597.23125pt x 845.1575pt>
+] [32] <./Design/Images/flowchart0.pdf, id=1104, 597.23125pt x 845.1575pt>
 File: ./Design/Images/flowchart0.pdf Graphic file (type pdf)
 
 <use ./Design/Images/flowchart0.pdf>
@@ -1395,18 +1398,18 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 71--72
 [][]
  []
 
-[32] [33]
+[33] [34]
 Overfull \vbox (98.79118pt too high) has occurred while \output is active []
 
 
-[34pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[35pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.74 
       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/flowchart0
-.pdf>] <./Design/Images/flowchart1.pdf, id=1067, 597.23125pt x 845.1575pt>
+.pdf>] <./Design/Images/flowchart1.pdf, id=1127, 597.23125pt x 845.1575pt>
 File: ./Design/Images/flowchart1.pdf Graphic file (type pdf)
 
 <use ./Design/Images/flowchart1.pdf>
@@ -1421,14 +1424,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 76--77
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[35pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.79 
       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/flowchart1
-.pdf>] <./Design/Images/flowchart2.pdf, id=1082, 597.23125pt x 845.1575pt>
+.pdf>] <./Design/Images/flowchart2.pdf, id=1143, 597.23125pt x 845.1575pt>
 File: ./Design/Images/flowchart2.pdf Graphic file (type pdf)
 
 <use ./Design/Images/flowchart2.pdf>
@@ -1443,14 +1446,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 81--82
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[36pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
+[37pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.84 
       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/flowchart2
-.pdf>] <./Design/Images/flowchart3.pdf, id=1098, 597.23125pt x 845.1575pt>
+.pdf>] <./Design/Images/flowchart3.pdf, id=1158, 597.23125pt x 845.1575pt>
 File: ./Design/Images/flowchart3.pdf Graphic file (type pdf)
 
 <use ./Design/Images/flowchart3.pdf>
@@ -1465,14 +1468,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 86--87
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[37pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4
+[38pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.89 
       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/flowchart3
-.pdf>] <./Design/Images/flowchart4.pdf, id=1113, 597.23125pt x 845.1575pt>
+.pdf>] <./Design/Images/flowchart4.pdf, id=1173, 597.23125pt x 845.1575pt>
 File: ./Design/Images/flowchart4.pdf Graphic file (type pdf)
 
 <use ./Design/Images/flowchart4.pdf>
@@ -1487,14 +1490,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 91--92
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[38pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5
+[39pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.94 
       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/flowchart4
-.pdf>] <./Design/Images/flowchart5.pdf, id=1128, 597.23125pt x 845.1575pt>
+.pdf>] <./Design/Images/flowchart5.pdf, id=1188, 597.23125pt x 845.1575pt>
 File: ./Design/Images/flowchart5.pdf Graphic file (type pdf)
 
 <use ./Design/Images/flowchart5.pdf>
@@ -1509,14 +1512,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 96--97
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[39pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.99 
       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/flowchart5
-.pdf>] <./Design/Images/Interface1.pdf, id=1143, 597.23125pt x 845.1575pt>
+.pdf>] <./Design/Images/Interface1.pdf, id=1203, 597.23125pt x 845.1575pt>
 File: ./Design/Images/Interface1.pdf Graphic file (type pdf)
 
 <use ./Design/Images/Interface1.pdf>
@@ -1528,11 +1531,11 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 104--105
 [][]
  []
 
-[40]
+[41]
 Overfull \vbox (88.7023pt too high) has occurred while \output is active []
 
 
-[41pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1540,7 +1543,7 @@ Overfull \vbox (88.7023pt too high) has occurred while \output is active []
 l.107 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
 1.pdf>]
-<./Design/Images/InterfaceMenuBar.pdf, id=1167, 597.23125pt x 845.1575pt>
+<./Design/Images/InterfaceMenuBar.pdf, id=1228, 597.23125pt x 845.1575pt>
 File: ./Design/Images/InterfaceMenuBar.pdf Graphic file (type pdf)
 
 <use ./Design/Images/InterfaceMenuBar.pdf>
@@ -1556,7 +1559,7 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 109--110
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[42pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1564,7 +1567,7 @@ Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 l.112 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
 MenuBar.pdf>]
-<./Design/Images/InterfaceMenuBar1.pdf, id=1188, 597.23125pt x 845.1575pt>
+<./Design/Images/InterfaceMenuBar1.pdf, id=1248, 597.23125pt x 845.1575pt>
 File: ./Design/Images/InterfaceMenuBar1.pdf Graphic file (type pdf)
 
 <use ./Design/Images/InterfaceMenuBar1.pdf>
@@ -1580,7 +1583,7 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 114--115
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[43pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9
+[44pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1588,7 +1591,7 @@ Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 l.117 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
 MenuBar1.pdf>]
-<./Design/Images/Interface2.pdf, id=1203, 597.23125pt x 845.1575pt>
+<./Design/Images/Interface2.pdf, id=1263, 597.23125pt x 845.1575pt>
 File: ./Design/Images/Interface2.pdf Graphic file (type pdf)
 
 <use ./Design/Images/Interface2.pdf>
@@ -1604,14 +1607,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 119--120
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[44pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[45pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 0}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.122 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
-2.pdf>] <./Design/Images/Interface7.pdf, id=1218, 597.23125pt x 845.1575pt>
+2.pdf>] <./Design/Images/Interface7.pdf, id=1278, 597.23125pt x 845.1575pt>
 File: ./Design/Images/Interface7.pdf Graphic file (type pdf)
 
 <use ./Design/Images/Interface7.pdf>
@@ -1627,14 +1630,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 125--126
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[45pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[46pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.128 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
-7.pdf>] <./Design/Images/Interface3.pdf, id=1233, 597.23125pt x 845.1575pt>
+7.pdf>] <./Design/Images/Interface3.pdf, id=1293, 597.23125pt x 845.1575pt>
 File: ./Design/Images/Interface3.pdf Graphic file (type pdf)
 
 <use ./Design/Images/Interface3.pdf>
@@ -1650,14 +1653,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 130--131
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[46pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[47pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.133 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
-3.pdf>] <./Design/Images/Interface33.pdf, id=1248, 597.23125pt x 845.1575pt>
+3.pdf>] <./Design/Images/Interface33.pdf, id=1308, 597.23125pt x 845.1575pt>
 File: ./Design/Images/Interface33.pdf Graphic file (type pdf)
 
 <use ./Design/Images/Interface33.pdf>
@@ -1673,14 +1676,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 135--136
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[47pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[48pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.138 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
-33.pdf>] <./Design/Images/Interface4.pdf, id=1263, 597.23125pt x 845.1575pt>
+33.pdf>] <./Design/Images/Interface4.pdf, id=1324, 597.23125pt x 845.1575pt>
 File: ./Design/Images/Interface4.pdf Graphic file (type pdf)
 
 <use ./Design/Images/Interface4.pdf>
@@ -1696,14 +1699,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 140--141
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[48pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.143 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
-4.pdf>] <./Design/Images/Interface5.pdf, id=1279, 597.23125pt x 845.1575pt>
+4.pdf>] <./Design/Images/Interface5.pdf, id=1339, 597.23125pt x 845.1575pt>
 File: ./Design/Images/Interface5.pdf Graphic file (type pdf)
 
 <use ./Design/Images/Interface5.pdf>
@@ -1719,14 +1722,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 145--146
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[49pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[50pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.148 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
-5.pdf>] <./Design/Images/Interface6.pdf, id=1294, 597.23125pt x 845.1575pt>
+5.pdf>] <./Design/Images/Interface6.pdf, id=1354, 597.23125pt x 845.1575pt>
 File: ./Design/Images/Interface6.pdf Graphic file (type pdf)
 
 <use ./Design/Images/Interface6.pdf>
@@ -1742,32 +1745,32 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 150--151
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[50pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[51pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.153 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Interface
-6.pdf>] <./Design/Images/structure1.pdf, id=1309, 845.1575pt x 597.23125pt>
+6.pdf>] <./Design/Images/structure1.pdf, id=1369, 845.1575pt x 597.23125pt>
 File: ./Design/Images/structure1.pdf Graphic file (type pdf)
 
 <use ./Design/Images/structure1.pdf>
 Package pdftex.def Info: ./Design/Images/structure1.pdf used on input line 163.
 
 (pdftex.def)             Requested size: 483.17624pt x 341.43306pt.
- [51] [52]
+ [52] [53]
 Overfull \vbox (12.64838pt too high) has occurred while \output is active []
 
 
-[53pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[54pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.166 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/structure
-1.pdf>] <./Design/Images/structure2.pdf, id=1332, 845.1575pt x 597.23125pt>
+1.pdf>] <./Design/Images/structure2.pdf, id=1393, 845.1575pt x 597.23125pt>
 File: ./Design/Images/structure2.pdf Graphic file (type pdf)
 
 <use ./Design/Images/structure2.pdf>
@@ -1783,14 +1786,14 @@ Overfull \hbox (81.79134pt too wide) in paragraph at lines 168--169
 Overfull \vbox (78.91797pt too high) has occurred while \output is active []
 
 
-[54pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[55pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.171 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/structure
-2.pdf>] <./Design/Images/structure3.pdf, id=1348, 597.23125pt x 845.1575pt>
+2.pdf>] <./Design/Images/structure3.pdf, id=1408, 597.23125pt x 845.1575pt>
 File: ./Design/Images/structure3.pdf Graphic file (type pdf)
 
 <use ./Design/Images/structure3.pdf>
@@ -1806,7 +1809,7 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 173--174
 Overfull \vbox (54.99956pt too high) has occurred while \output is active []
 
 
-[55pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[56pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1827,7 +1830,7 @@ ewPassword\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 4 \OML/cmm/m/it/
 10 AND NewPassword \OT1/cmr/m/n/10 =$
  []
 
-[56] <./Design/Images/Objects2.pdf, id=1369, 597.23125pt x 845.1575pt>
+[57] <./Design/Images/Objects2.pdf, id=1429, 597.23125pt x 845.1575pt>
 File: ./Design/Images/Objects2.pdf Graphic file (type pdf)
 
 <use ./Design/Images/Objects2.pdf>
@@ -1838,11 +1841,11 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 253--254
 [][]
  []
 
-[57] [58]
+[58] [59]
 Overfull \vbox (84.79118pt too high) has occurred while \output is active []
 
 
-[59pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[60pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 0}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1850,7 +1853,7 @@ Overfull \vbox (84.79118pt too high) has occurred while \output is active []
 l.256 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/Objects2.
 pdf>]
-<./Design/Images/ClassDefinitions.pdf, id=1393, 597.23125pt x 845.1575pt>
+<./Design/Images/ClassDefinitions.pdf, id=1454, 597.23125pt x 845.1575pt>
 File: ./Design/Images/ClassDefinitions.pdf Graphic file (type pdf)
 
 <use ./Design/Images/ClassDefinitions.pdf>
@@ -1862,18 +1865,18 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 261--262
 [][]
  []
 
-[60]
+[61]
 Overfull \vbox (82.45787pt too high) has occurred while \output is active []
 
 
-[61pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[62pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.264 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Design/Images/ClassDefi
-nitions.pdf>] [62]
+nitions.pdf>] [63]
 Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
@@ -1888,7 +1891,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
-[63]
+[64]
 Underfull \hbox (badness 1237) in paragraph at lines 364--364
 []|\OT1/cmr/m/n/10 Calculated by adding up the drink
  []
@@ -1898,7 +1901,7 @@ Underfull \hbox (badness 1817) in paragraph at lines 373--373
 []|\OT1/cmr/m/n/10 Booking tele-phone
  []
 
-[64]
+[65]
 Underfull \hbox (badness 10000) in paragraph at lines 399--399
 []|\OT1/cmr/bx/n/10 Data
  []
@@ -2297,7 +2300,7 @@ Overfull \hbox (14.32745pt too wide) in alignment at lines 418--421
  [] [] [] [] [] [] 
  []
 
-[65] [66] <./Design/Images/ERDiagram.pdf, id=1437, 597.23125pt x 845.1575pt>
+[66] [67] <./Design/Images/ERDiagram.pdf, id=1497, 597.23125pt x 845.1575pt>
 File: ./Design/Images/ERDiagram.pdf Graphic file (type pdf)
 
 <use ./Design/Images/ERDiagram.pdf>
@@ -2308,11 +2311,11 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 436--437
 [][]
  []
 
-[67] [68]
+[68] [69]
 Overfull \vbox (138.76338pt too high) has occurred while \output is active []
 
 
-[69pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[70pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2336,7 +2339,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 443--449
 
  []
 
-[70] [71]
+[71] [72]
 (C:\Users\Tommy\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
@@ -2374,7 +2377,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 661--662
 
  []
 
-[72] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[73] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Underfull \hbox (badness 10000) in paragraph at lines 667--668
@@ -2391,7 +2394,7 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [73]
+) [74]
 Underfull \hbox (badness 10000) in paragraph at lines 693--694
 
  []
@@ -2541,7 +2544,7 @@ Overfull \hbox (46.43301pt too wide) in paragraph at lines 704--720
  [] 
  []
 
-[74] [75]
+[75] [76]
 Underfull \hbox (badness 1033) in paragraph at lines 734--734
 []|\OT1/cmr/m/n/10 Test al-go-rithms to make sure
  []
@@ -4270,12 +4273,12 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 764--789
  [] [] [] [] [] [] [] [] 
  []
 
-[76
+[77
 
-] [77] [78] [79] [80] [81] [82] [83] [84] [85])
+] [78] [79] [80] [81] [82] [83] [84] [85] [86])
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Testing\testing.tex
 Chapter 3.
-[86
+[87
 
 
 
@@ -4295,13 +4298,13 @@ Underfull \hbox (badness 1721) in paragraph at lines 15--15
 \OT1/cmr/m/n/10 rect for the ap-pli-ca-tion
  []
 
-[87
+[88
 
 ]
 Overfull \vbox (14.99158pt too high) has occurred while \output is active []
 
 
-[88]
+[89]
 Underfull \hbox (badness 10000) in paragraph at lines 27--27
 []|\OT1/cmr/m/n/10 Test al-go-rithms \OT1/cmr/bx/n/10 and SQL
  []
@@ -5825,7 +5828,7 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 58--78
  [] [] [] [] [] [] [] [] 
  []
 
-[89] [90] [91] [92]
+[90] [91] [92] [93]
 Underfull \hbox (badness 1701) in paragraph at lines 79--79
 \OT1/cmr/m/n/10 tered at 'en-ter
  []
@@ -6545,7 +6548,7 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 78--104
  [] [] [] [] [] [] [] [] 
  []
 
-[93] [94] [95] [96] [97] [98] [99] [100] [101] [102]
+[94] [95] [96] [97] [98] [99] [100] [101] [102] [103]
 Underfull \hbox (badness 10000) in paragraph at lines 113--113
 []|\OT1/cmr/bx/n/10 Purpose of
  []
@@ -8144,7 +8147,7 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 132--155
  [] [] [] [] [] [] [] [] 
  []
 
-[103] [104] [105] [106]
+[104] [105] [106] [107]
 Underfull \hbox (badness 10000) in paragraph at lines 156--156
 []|\OT1/cmr/m/n/10 After suc-cess-
  []
@@ -8744,19 +8747,19 @@ Overfull \hbox (19.07034pt too wide) in alignment at lines 155--171
  [] [] [] [] [] [] [] [] 
  []
 
-[107] [108] [109] [110] [111] [112] [113] [114] [115]
+[108] [109] [110] [111] [112] [113] [114] [115] [116]
 Overfull \hbox (34.03302pt too wide) in paragraph at lines 180--206
  [] 
  []
 
-[116
+[117
 
 ]
 Overfull \hbox (34.03302pt too wide) in paragraph at lines 214--237
  [] 
  []
 
-[117] <./Testing/images/test1.pdf, id=1743, 597.23125pt x 845.1575pt>
+[118] <./Testing/images/test1.pdf, id=1803, 597.23125pt x 845.1575pt>
 File: ./Testing/images/test1.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test1.pdf>
@@ -8767,18 +8770,18 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 249--250
 [][]
  []
 
-[118] [119]
+[119] [120]
 Overfull \vbox (109.41618pt too high) has occurred while \output is active []
 
 
-[120pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[121pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.252 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test1.pd
-f>] <./Testing/images/test2.pdf, id=1775, 597.23125pt x 845.1575pt>
+f>] <./Testing/images/test2.pdf, id=1835, 597.23125pt x 845.1575pt>
 File: ./Testing/images/test2.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test2.pdf>
@@ -8793,14 +8796,14 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 256--257
 Overfull \vbox (84.95787pt too high) has occurred while \output is active []
 
 
-[121pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[122pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.259 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test2.pd
-f>] <./Testing/images/test3.pdf, id=1798, 597.23125pt x 845.1575pt>
+f>] <./Testing/images/test3.pdf, id=1858, 597.23125pt x 845.1575pt>
 File: ./Testing/images/test3.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test3.pdf>
@@ -8815,7 +8818,7 @@ Overfull \hbox (57.12949pt too wide) in paragraph at lines 263--264
 Overfull \vbox (84.95787pt too high) has occurred while \output is active []
 
 
-[122pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[123pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -8823,7 +8826,7 @@ Overfull \vbox (84.95787pt too high) has occurred while \output is active []
 l.266 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test3.pd
 f>]
-<./Maintenance/images/png/screen17.png, id=1821, 840.89156pt x 631.60968pt>
+<./Maintenance/images/png/screen17.png, id=1881, 840.89156pt x 631.60968pt>
 File: ./Maintenance/images/png/screen17.png Graphic file (type png)
 
 <use ./Maintenance/images/png/screen17.png>
@@ -8835,20 +8838,20 @@ Overfull \hbox (18.21886pt too wide) in paragraph at lines 274--275
 [][]
  []
 
-[123
+[124
 
 ]
 Overfull \vbox (147.69409pt too high) has occurred while \output is active []
 
 
-[124pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[125pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.277 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/png/
-screen17.png>] <./Testing/images/test4.pdf, id=1833, 845.1575pt x 597.23125pt>
+screen17.png>] <./Testing/images/test4.pdf, id=1893, 845.1575pt x 597.23125pt>
 File: ./Testing/images/test4.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test4.pdf>
@@ -8863,14 +8866,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 281--282
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[125pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[126pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.284 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test4.pd
-f>] <./Testing/images/test12.pdf, id=1851, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/test12.pdf, id=1912, 845.1575pt x 597.23125pt>
 File: ./Testing/images/test12.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test12.pdf>
@@ -8885,14 +8888,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 288--289
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[126pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[127pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.291 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test12.p
-df>] <./Testing/images/test13.pdf, id=1875, 845.1575pt x 597.23125pt>
+df>] <./Testing/images/test13.pdf, id=1935, 845.1575pt x 597.23125pt>
 File: ./Testing/images/test13.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test13.pdf>
@@ -8907,14 +8910,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 295--296
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[127pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[128pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.298 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test13.p
-df>] <./Testing/images/test11.pdf, id=1898, 845.1575pt x 597.23125pt>
+df>] <./Testing/images/test11.pdf, id=1958, 845.1575pt x 597.23125pt>
 File: ./Testing/images/test11.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test11.pdf>
@@ -8929,14 +8932,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 304--305
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[128pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[129pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.307 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test11.p
-df>] <./Testing/images/test5.pdf, id=1921, 845.1575pt x 597.23125pt>
+df>] <./Testing/images/test5.pdf, id=1981, 845.1575pt x 597.23125pt>
 File: ./Testing/images/test5.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test5.pdf>
@@ -8951,14 +8954,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 311--312
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[129pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[130pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.314 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test5.pd
-f>] <./Testing/images/testt1.pdf, id=1944, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/testt1.pdf, id=2004, 845.1575pt x 597.23125pt>
 File: ./Testing/images/testt1.pdf Graphic file (type pdf)
 
 <use ./Testing/images/testt1.pdf>
@@ -8973,14 +8976,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 318--319
 Overfull \vbox (123.5878pt too high) has occurred while \output is active []
 
 
-[130pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[131pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.321 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/testt1.p
-df>] <./Testing/images/test10.pdf, id=1967, 845.1575pt x 597.23125pt>
+df>] <./Testing/images/test10.pdf, id=2027, 845.1575pt x 597.23125pt>
 File: ./Testing/images/test10.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test10.pdf>
@@ -8995,14 +8998,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 325--326
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[131pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[132pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.328 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test10.p
-df>] <./Testing/images/Test6.pdf, id=1990, 845.1575pt x 597.23125pt>
+df>] <./Testing/images/Test6.pdf, id=2051, 845.1575pt x 597.23125pt>
 File: ./Testing/images/Test6.pdf Graphic file (type pdf)
 
 <use ./Testing/images/Test6.pdf>
@@ -9017,14 +9020,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 332--333
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[132pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[133pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.335 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/Test6.pd
-f>] <./Testing/images/test9.pdf, id=2014, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/test9.pdf, id=2074, 845.1575pt x 597.23125pt>
 File: ./Testing/images/test9.pdf Graphic file (type pdf)
 
 <use ./Testing/images/test9.pdf>
@@ -9039,14 +9042,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 339--340
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[133pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[134pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.342 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/test9.pd
-f>] <./Testing/images/Test7.pdf, id=2037, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/Test7.pdf, id=2097, 845.1575pt x 597.23125pt>
 File: ./Testing/images/Test7.pdf Graphic file (type pdf)
 
 <use ./Testing/images/Test7.pdf>
@@ -9061,14 +9064,14 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 346--347
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[134pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[135pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.349 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/Test7.pd
-f>] <./Testing/images/booking11.pdf, id=2060, 845.1575pt x 597.23125pt>
+f>] <./Testing/images/booking11.pdf, id=2120, 845.1575pt x 597.23125pt>
 File: ./Testing/images/booking11.pdf Graphic file (type pdf)
 
 <use ./Testing/images/booking11.pdf>
@@ -9084,7 +9087,7 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 353--354
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[135pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[136pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 15}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9092,7 +9095,7 @@ Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 l.356 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/booking1
 1.pdf>]
-<./Testing/images/booking11delete.pdf, id=2079, 845.1575pt x 597.23125pt>
+<./Testing/images/booking11delete.pdf, id=2139, 845.1575pt x 597.23125pt>
 File: ./Testing/images/booking11delete.pdf Graphic file (type pdf)
 
 <use ./Testing/images/booking11delete.pdf>
@@ -9108,16 +9111,16 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 360--361
 Overfull \vbox (123.03224pt too high) has occurred while \output is active []
 
 
-[136pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+[137pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.363 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/images/booking1
-1delete.pdf>] [137
+1delete.pdf>] [138
 
-]) [138]
+]) [139]
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Maintenance\maintenance.tex
 Chapter 4.
 
@@ -9125,7 +9128,7 @@ Overfull \hbox (35.85942pt too wide) in paragraph at lines 23--34
  [] 
  []
 
-[139
+[140
 
 
 
@@ -9134,12 +9137,12 @@ Overfull \hbox (35.85942pt too wide) in paragraph at lines 38--49
  [] 
  []
 
-[140]
+[141]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-[141]
+[142]
 Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
@@ -9164,7 +9167,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-[142]
+[143]
 (C:\Users\Tommy\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
@@ -9172,11 +9175,11 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\table_displ
-ay.py) [143] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+ay.py) [144] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\main_window
-.py) [144]
+.py) [145]
 Overfull \hbox (8.12346pt too wide) in paragraph at lines 106--106
 []|\OT1/cmr/bx/n/10 Section| 
  []
@@ -9275,7 +9278,7 @@ Overfull \hbox (32.20663pt too wide) in alignment at lines 127--151
  [] [] [] [] 
  []
 
-[145]
+[146]
 Underfull \hbox (badness 6063) in paragraph at lines 152--152
 []|\OT1/cmr/m/n/10 self.TableFive Oc-
  []
@@ -9345,8 +9348,8 @@ Overfull \hbox (32.20663pt too wide) in alignment at lines 151--174
  [] [] [] [] 
  []
 
-[146] [147] [148]
-<./Maintenance/images/screen1.pdf, id=2194, 845.1575pt x 597.23125pt>
+[147] [148] [149]
+<./Maintenance/images/screen1.pdf, id=2256, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen1.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen1.pdf>
@@ -9358,13 +9361,13 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 184--185
 [][]
  []
 
-[149
+[150
 
 ]
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[150pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[151pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9372,7 +9375,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.187 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en1.pdf>]
-<./Maintenance/images/screen2.pdf, id=2218, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen2.pdf, id=2280, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen2.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen2.pdf>
@@ -9388,7 +9391,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 189--190
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[151pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[152pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9396,7 +9399,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.192 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en2.pdf>]
-<./Maintenance/images/screen3.pdf, id=2237, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen3.pdf, id=2299, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen3.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen3.pdf>
@@ -9412,7 +9415,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 194--195
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[152pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[153pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9420,7 +9423,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.197 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en3.pdf>]
-<./Maintenance/images/screen4.pdf, id=2256, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen4.pdf, id=2318, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen4.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen4.pdf>
@@ -9436,7 +9439,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 199--200
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[153pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[154pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9444,7 +9447,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.202 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en4.pdf>]
-<./Maintenance/images/screen5.pdf, id=2275, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen5.pdf, id=2337, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen5.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen5.pdf>
@@ -9460,7 +9463,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 204--205
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[154pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[155pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9468,7 +9471,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.207 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en5.pdf>]
-<./Maintenance/images/screen6.pdf, id=2294, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen6.pdf, id=2356, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen6.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen6.pdf>
@@ -9484,7 +9487,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 209--210
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[155pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[156pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9492,7 +9495,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.212 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en6.pdf>]
-<./Maintenance/images/screen7.pdf, id=2313, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen7.pdf, id=2376, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen7.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen7.pdf>
@@ -9508,7 +9511,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 214--215
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[156pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[157pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9516,7 +9519,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.217 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en7.pdf>]
-<./Maintenance/images/screen8.pdf, id=2333, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen8.pdf, id=2395, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen8.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen8.pdf>
@@ -9532,7 +9535,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 219--220
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[157pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[158pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9540,7 +9543,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.222 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en8.pdf>]
-<./Maintenance/images/screen9.pdf, id=2352, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen9.pdf, id=2414, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen9.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen9.pdf>
@@ -9556,7 +9559,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 224--225
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[158pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[159pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9564,7 +9567,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.227 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en9.pdf>]
-<./Maintenance/images/screen10.pdf, id=2371, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen10.pdf, id=2433, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen10.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen10.pdf>
@@ -9580,7 +9583,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 229--230
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[159pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[160pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9588,7 +9591,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.232 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en10.pdf>]
-<./Maintenance/images/screen11.pdf, id=2390, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen11.pdf, id=2452, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen11.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen11.pdf>
@@ -9604,7 +9607,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 234--235
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[160pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[161pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9612,7 +9615,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.237 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en11.pdf>]
-<./Maintenance/images/screen12.pdf, id=2409, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen12.pdf, id=2471, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen12.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen12.pdf>
@@ -9628,7 +9631,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 239--240
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[161pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[162pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9636,7 +9639,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.242 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en12.pdf>]
-<./Maintenance/images/screen13.pdf, id=2428, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen13.pdf, id=2491, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen13.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen13.pdf>
@@ -9652,7 +9655,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 244--245
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[162pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[163pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9660,7 +9663,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.247 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en13.pdf>]
-<./Maintenance/images/screen14.pdf, id=2448, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen14.pdf, id=2510, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen14.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen14.pdf>
@@ -9676,7 +9679,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 249--250
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[163pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[164pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9684,7 +9687,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.252 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en14.pdf>]
-<./Maintenance/images/screen15.pdf, id=2467, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen15.pdf, id=2529, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen15.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen15.pdf>
@@ -9700,7 +9703,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 254--255
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[164pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[165pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 15}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9708,7 +9711,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.257 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en15.pdf>]
-<./Maintenance/images/screen16.pdf, id=2486, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen16.pdf, id=2548, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen16.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen16.pdf>
@@ -9724,7 +9727,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 259--260
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[165pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[166pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9732,7 +9735,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.262 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en16.pdf>]
-<./Maintenance/images/screen17.pdf, id=2505, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen17.pdf, id=2567, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen17.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen17.pdf>
@@ -9748,7 +9751,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 264--265
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[166pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[167pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 17}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9756,7 +9759,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.267 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en17.pdf>]
-<./Maintenance/images/screen18.pdf, id=2524, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen18.pdf, id=2586, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen18.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen18.pdf>
@@ -9772,7 +9775,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 269--270
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[167pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[168pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9780,7 +9783,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.272 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en18.pdf>]
-<./Maintenance/images/screen19.pdf, id=2543, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen19.pdf, id=2606, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen19.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen19.pdf>
@@ -9796,7 +9799,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 274--275
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[168pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[169pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9804,7 +9807,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.277 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en19.pdf>]
-<./Maintenance/images/screen20.pdf, id=2563, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen20.pdf, id=2625, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen20.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen20.pdf>
@@ -9820,7 +9823,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 279--280
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[169pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[170pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 20}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9828,7 +9831,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.282 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/scre
 en20.pdf>]
-<./Maintenance/images/screen21.pdf, id=2582, 845.1575pt x 597.23125pt>
+<./Maintenance/images/screen21.pdf, id=2644, 845.1575pt x 597.23125pt>
 File: ./Maintenance/images/screen21.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/screen21.pdf>
@@ -9844,7 +9847,7 @@ Overfull \hbox (53.97353pt too wide) in paragraph at lines 284--285
 Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 
 
-[170pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[171pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 21}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9852,7 +9855,7 @@ Overfull \vbox (117.73578pt too high) has occurred while \output is active []
 l.287 \end{landscape}
                       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintena
 nce/images/screen21.pdf>]
-<./Maintenance/images/erDiagram.pdf, id=2601, 597.23125pt x 845.1575pt>
+<./Maintenance/images/erDiagram.pdf, id=2663, 597.23125pt x 845.1575pt>
 File: ./Maintenance/images/erDiagram.pdf Graphic file (type pdf)
 
 <use ./Maintenance/images/erDiagram.pdf>
@@ -9860,7 +9863,7 @@ Package pdftex.def Info: ./Maintenance/images/erDiagram.pdf used on input line
 291.
 (pdftex.def)             Requested size: 301.59483pt x 426.79134pt.
 
-<./Maintenance/images/entities.png, id=2602, 420.82219pt x 442.65375pt>
+<./Maintenance/images/entities.png, id=2664, 420.82219pt x 442.65375pt>
 File: ./Maintenance/images/entities.png Graphic file (type png)
 
 <use ./Maintenance/images/entities.png>
@@ -9872,7 +9875,7 @@ Overfull \hbox (60.76338pt too wide) in paragraph at lines 298--299
 [][]
  []
 
-[171
+[172
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.22})
  has been already used, duplicate ignored
@@ -9882,7 +9885,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.22})
 l.301 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/erDi
 agram.pdf>]
-<./Maintenance/images/itemtype.png, id=2617, 421.575pt x 442.65375pt>
+<./Maintenance/images/itemtype.png, id=2679, 421.575pt x 442.65375pt>
 File: ./Maintenance/images/itemtype.png Graphic file (type png)
 
 <use ./Maintenance/images/itemtype.png>
@@ -9894,14 +9897,14 @@ Overfull \hbox (61.48926pt too wide) in paragraph at lines 303--304
 [][]
  []
 
-[172pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[173pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 23}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.306 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/enti
-ties.png>] <./Maintenance/images/items.png, id=2624, 421.575pt x 444.91219pt>
+ties.png>] <./Maintenance/images/items.png, id=2686, 421.575pt x 444.91219pt>
 File: ./Maintenance/images/items.png Graphic file (type png)
 
 <use ./Maintenance/images/items.png>
@@ -9913,7 +9916,7 @@ Overfull \hbox (59.40506pt too wide) in paragraph at lines 308--309
 [][]
  []
 
-[173pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[174pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 24}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9921,7 +9924,7 @@ Overfull \hbox (59.40506pt too wide) in paragraph at lines 308--309
 l.311 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/item
 type.png>]
-<./Maintenance/images/customers.png, id=2631, 420.82219pt x 444.91219pt>
+<./Maintenance/images/customers.png, id=2694, 420.82219pt x 444.91219pt>
 File: ./Maintenance/images/customers.png Graphic file (type png)
 
 <use ./Maintenance/images/customers.png>
@@ -9933,7 +9936,7 @@ Overfull \hbox (58.6829pt too wide) in paragraph at lines 313--314
 [][]
  []
 
-[174pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[175pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 25}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9941,7 +9944,7 @@ Overfull \hbox (58.6829pt too wide) in paragraph at lines 313--314
 l.316 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/item
 s.png>]
-<./Maintenance/images/bookings.png, id=2639, 515.67656pt x 487.06969pt>
+<./Maintenance/images/bookings.png, id=2701, 515.67656pt x 487.06969pt>
 File: ./Maintenance/images/bookings.png Graphic file (type png)
 
 <use ./Maintenance/images/bookings.png>
@@ -9953,7 +9956,7 @@ Overfull \hbox (106.8611pt too wide) in paragraph at lines 318--319
 [][]
  []
 
-[175pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[176pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -9961,7 +9964,7 @@ Overfull \hbox (106.8611pt too wide) in paragraph at lines 318--319
 l.321 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/cust
 omers.png>]
-<./Maintenance/images/bookingitems.png, id=2646, 416.30531pt x 440.39531pt>
+<./Maintenance/images/bookingitems.png, id=2708, 416.30531pt x 440.39531pt>
 File: ./Maintenance/images/bookingitems.png Graphic file (type png)
 
 <use ./Maintenance/images/bookingitems.png>
@@ -9973,14 +9976,14 @@ Overfull \hbox (58.45993pt too wide) in paragraph at lines 323--324
 [][]
  []
 
-[176pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[177pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 27}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.326 
        <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Maintenance/images/book
-ings.png>] [177pdfTeX warning (ext4): destination with the same identifier (nam
+ings.png>] [178pdfTeX warning (ext4): destination with the same identifier (nam
 e{figure.4.28}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -10005,7 +10008,7 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [178]
+) [179]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
@@ -10042,7 +10045,7 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [179]
+) [180]
 Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
@@ -10083,7 +10086,7 @@ Overfull \hbox (34.0993pt too wide) in paragraph at lines 466--467
 [][][][][][][][][][][][][][][][][][][]  
  []
 
-[180] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[181] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Overfull \hbox (2.59937pt too wide) in paragraph at lines 470--471
@@ -10122,43 +10125,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 511--512
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [181]
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
-
- []
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
-
- []
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-Underfull \hbox (badness 10000) in paragraph at lines 555--556
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 555--556
-
- []
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 ) [182]
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
+
+ []
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
+
+ []
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
+
+ []
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+) [183]
 Underfull \hbox (badness 10000) in paragraph at lines 565--566
 
  []
@@ -10206,7 +10209,7 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [183] [184]
+) [184] [185]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
@@ -10231,7 +10234,7 @@ Overfull \hbox (35.85942pt too wide) in paragraph at lines 634--645
  [] 
  []
 
-[185] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[186] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\assign_tabl
@@ -10245,7 +10248,7 @@ Overfull \hbox (35.85942pt too wide) in paragraph at lines 653--665
  [] 
  []
 
-[186] [187] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[187] [188] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\main_window
@@ -10254,7 +10257,7 @@ Overfull \hbox (35.85942pt too wide) in paragraph at lines 673--689
  [] 
  []
 
-[188] [189] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[189] [190] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\add_item_to
@@ -10283,7 +10286,7 @@ Overfull \hbox (141.1991pt too wide) in paragraph at lines 122--123
 [][][][][][][][][][][][][][][][][][]  
  []
 
-) [190] [191] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+) [191] [192] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\delete_item
@@ -10307,223 +10310,850 @@ Underfull \hbox (badness 10000) in paragraph at lines 705--722
 
  []
 
-[192] [193] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[193] [194] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\add_booking
-.py [194
+.py [195
 
-] [195] [196] [197] [198]) [199]
+] [196] [197] [198] [199]) [200]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\add_item_to
-_menu.py [200] [201] [202]) [203]
+_menu.py [201] [202] [203]) [204]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\add_item_to
-_order.py [204] [205] [206] [207]) [208]
+_order.py [205] [206] [207] [208]) [209]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\assign_tabl
-e_customer.py [209] [210] [211] [212] [213] [214] [215]) [216]
+e_customer.py [210] [211] [212] [213] [214] [215] [216]) [217]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\cascade_sty
-le_sheet.py [217] [218] [219]) [220]
+le_sheet.py [218] [219] [220]) [221]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\delete_book
-ing.py [221] [222]) [223]
+ing.py [222] [223]) [224]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\delete_item
-_off_menu.py [224] [225] [226]) [227]
+_off_menu.py [225] [226] [227]) [228]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\delete_item
-_off_order.py [228] [229] [230] [231] [232]) [233]
+_off_order.py [229] [230] [231] [232] [233]) [234]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\main_window
-.py [234] [235] [236] [237] [238] [239] [240] [241] [242] [243] [244] [245]
-[246] [247] [248] [249] [250]
+.py [235] [236] [237] [238] [239] [240] [241] [242] [243] [244] [245] [246]
+[247] [248] [249] [250] [251]
 Overfull \hbox (4.39893pt too wide) in paragraph at lines 491--492
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[251] [252]) [253] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[252] [253]) [254] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\manage_book
-ing.py [254]) [255] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def
+ing.py [255]) [256] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def
 "
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\manage_orde
-r.py [256] [257] [258] [259] [260] [261] [262]) [263]
+r.py [257] [258] [259] [260] [261] [262] [263]) [264]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\new_create_
-tables_cli.py [264] [265] [266] [267]) [268]
+tables_cli.py [265] [266] [267] [268]) [269]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\print_invoi
-ce.py [269] [270] [271]
+ce.py [270] [271] [272]
 LaTeX Font Info:    Font shape `OT1/cmtt/m/ui' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/it' tried instead on input line 110.
 
- [272]
+ [273]
 Overfull \hbox (23.29889pt too wide) in paragraph at lines 119--121
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[273]) [274] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[274]) [275] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\radio_butto
-n_widget_class.py [275]) [276]
+n_widget_class.py [276]) [277]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\search_orde
-r.py [277] [278] [279]) [280]
+r.py [278] [279] [280]) [281]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\table_displ
-ay.py [281] [282]) [283]
+ay.py [282] [283]) [284]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\update_book
-ing.py [284] [285] [286] [287] [288] [289]) [290]
+ing.py [285] [286] [287] [288] [289] [290]) [291]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Implementation\GUI\update_item
-_price.py [291] [292]) [293])
+_price.py [292] [293]) [294])
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Manual\manual.tex
 Chapter 5.
-[294
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[295
 
 
 
 
-] [295] <./Manual/images/install1.png, id=6006, 1008.01593pt x 601.4972pt>
+] [296] <./Manual/images/install1.png, id=6065, 1008.01593pt x 601.4972pt>
 File: ./Manual/images/install1.png Graphic file (type png)
 
 <use ./Manual/images/install1.png>
-Package pdftex.def Info: ./Manual/images/install1.png used on input line 43.
+Package pdftex.def Info: ./Manual/images/install1.png used on input line 39.
 (pdftex.def)             Requested size: 476.84377pt x 284.52756pt.
 
-<./Manual/images/install2.png, id=6007, 381.67593pt x 300.3722pt>
+<./Manual/images/install2.png, id=6066, 381.67593pt x 300.3722pt>
 File: ./Manual/images/install2.png Graphic file (type png)
 
 <use ./Manual/images/install2.png>
-Package pdftex.def Info: ./Manual/images/install2.png used on input line 51.
+Package pdftex.def Info: ./Manual/images/install2.png used on input line 47.
 (pdftex.def)             Requested size: 361.57089pt x 284.52756pt.
- [296
+ [297
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.53 \end{figure}
+l.49 \end{figure}
                   <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/image
 s/install1.png>]
-<./Manual/images/install3.png, id=6014, 383.93437pt x 299.61937pt>
+<./Manual/images/install3.png, id=6073, 383.93437pt x 299.61937pt>
 File: ./Manual/images/install3.png Graphic file (type png)
 
 <use ./Manual/images/install3.png>
-Package pdftex.def Info: ./Manual/images/install3.png used on input line 58.
+Package pdftex.def Info: ./Manual/images/install3.png used on input line 54.
 (pdftex.def)             Requested size: 364.62427pt x 284.52756pt.
- [297pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+ [298pdfTeX warning (ext4): destination with the same identifier (name{figure.5
 .2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.60 \end{figure}
+l.56 \end{figure}
                   <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/image
 s/install2.png>]
-<./Manual/images/install4.png, id=6021, 382.42876pt x 302.63063pt>
+<./Manual/images/install4.png, id=6080, 382.42876pt x 302.63063pt>
 File: ./Manual/images/install4.png Graphic file (type png)
 
 <use ./Manual/images/install4.png>
-Package pdftex.def Info: ./Manual/images/install4.png used on input line 65.
+Package pdftex.def Info: ./Manual/images/install4.png used on input line 61.
 (pdftex.def)             Requested size: 359.55309pt x 284.52756pt.
- [298pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+ [299pdfTeX warning (ext4): destination with the same identifier (name{figure.5
 .3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.67 \end{figure}
+l.63 \end{figure}
                   <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/image
 s/install3.png>]
-<./Manual/images/install5.png, id=6028, 383.18156pt x 301.8778pt>
+<./Manual/images/install5.png, id=6087, 383.18156pt x 301.8778pt>
 File: ./Manual/images/install5.png Graphic file (type png)
 
 <use ./Manual/images/install5.png>
-Package pdftex.def Info: ./Manual/images/install5.png used on input line 72.
+Package pdftex.def Info: ./Manual/images/install5.png used on input line 68.
 (pdftex.def)             Requested size: 361.15544pt x 284.52756pt.
- [299pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+ [300pdfTeX warning (ext4): destination with the same identifier (name{figure.5
 .4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.74 \end{figure}
+l.70 \end{figure}
                   <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/image
 s/install4.png>]
-<./Manual/images/install6.png, id=6035, 383.18156pt x 299.61937pt>
+<./Manual/images/install6.png, id=6095, 383.18156pt x 299.61937pt>
 File: ./Manual/images/install6.png Graphic file (type png)
 
 <use ./Manual/images/install6.png>
-Package pdftex.def Info: ./Manual/images/install6.png used on input line 79.
+Package pdftex.def Info: ./Manual/images/install6.png used on input line 75.
 (pdftex.def)             Requested size: 363.90932pt x 284.52756pt.
- [300pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+ [301pdfTeX warning (ext4): destination with the same identifier (name{figure.5
 .5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.81 \end{figure}
+l.77 \end{figure}
                   <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/image
 s/install5.png>]
-<./Manual/images/install7.png, id=6043, 1012.5328pt x 603.75563pt>
+<./Manual/images/install7.png, id=6102, 1012.5328pt x 603.75563pt>
 File: ./Manual/images/install7.png Graphic file (type png)
 
 <use ./Manual/images/install7.png>
-Package pdftex.def Info: ./Manual/images/install7.png used on input line 86.
+Package pdftex.def Info: ./Manual/images/install7.png used on input line 82.
 (pdftex.def)             Requested size: 477.15738pt x 284.52756pt.
- [301pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+ [302pdfTeX warning (ext4): destination with the same identifier (name{figure.5
 .6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.88 \end{figure}
+l.84 \end{figure}
                   <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/image
-s/install6.png>] [302pdfTeX warning (ext4): destination with the same identifie
-r (name{figure.5.7}) has been already used, duplicate ignored
+s/install6.png>]
+<./Manual/images/runsystem.png, id=6109, 1012.5328pt x 603.75563pt>
+File: ./Manual/images/runsystem.png Graphic file (type png)
+
+<use ./Manual/images/runsystem.png>
+Package pdftex.def Info: ./Manual/images/runsystem.png used on input line 92.
+(pdftex.def)             Requested size: 429.44783pt x 256.0748pt.
+ [303pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.90 \end{landscape}
-                     <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/im
-ages/install7.png>]) [303
+l.94 \end{figure}
+                  <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/image
+s/install7.png>]
+<./Testing/images/mainscreen.png, id=6116, 977.15062pt x 627.84563pt>
+File: ./Testing/images/mainscreen.png Graphic file (type png)
+
+<use ./Testing/images/mainscreen.png>
+Package pdftex.def Info: ./Testing/images/mainscreen.png used on input line 99.
+
+(pdftex.def)             Requested size: 398.53203pt x 256.0748pt.
+ [304pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.101 \end{figure}
+                   <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/imag
+es/runsystem.png>] [305pdfTeX warning (ext4): destination with the same identif
+ier (name{figure.5.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.105 \end{landscape}
+                      <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Testing/
+images/mainscreen.png>]
+Overfull \hbox (34.03302pt too wide) in paragraph at lines 120--137
+ [] 
+ []
+
+<./Manual/images/AddItem1.png, id=6129, 840.89156pt x 630.85687pt>
+File: ./Manual/images/AddItem1.png Graphic file (type png)
+
+<use ./Manual/images/AddItem1.png>
+Package pdftex.def Info: ./Manual/images/AddItem1.png used on input line 143.
+(pdftex.def)             Requested size: 341.32907pt x 256.0748pt.
+ [306
 
 ]
+<./Manual/images/AddItem2.png, id=6135, 841.64438pt x 629.35126pt>
+File: ./Manual/images/AddItem2.png Graphic file (type png)
+
+<use ./Manual/images/AddItem2.png>
+Package pdftex.def Info: ./Manual/images/AddItem2.png used on input line 152.
+(pdftex.def)             Requested size: 342.45657pt x 256.0748pt.
+ [307pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.155 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AddItem1.
+png>] <./Manual/images/AddItem3.png, id=6142, 842.39719pt x 631.60968pt>
+File: ./Manual/images/AddItem3.png Graphic file (type png)
+
+<use ./Manual/images/AddItem3.png>
+Package pdftex.def Info: ./Manual/images/AddItem3.png used on input line 157.
+(pdftex.def)             Requested size: 341.54175pt x 256.0748pt.
+ [308pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.160 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AddItem2.
+png>] <./Manual/images/DeleteItem1.png, id=6149, 840.89156pt x 630.85687pt>
+File: ./Manual/images/DeleteItem1.png Graphic file (type png)
+
+<use ./Manual/images/DeleteItem1.png>
+Package pdftex.def Info: ./Manual/images/DeleteItem1.png used on input line 169
+.
+(pdftex.def)             Requested size: 341.32907pt x 256.0748pt.
+ [309pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.172 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AddItem3.
+png>] <./Manual/images/DeleteItem2.png, id=6156, 842.39719pt x 634.62094pt>
+File: ./Manual/images/DeleteItem2.png Graphic file (type png)
+
+<use ./Manual/images/DeleteItem2.png>
+Package pdftex.def Info: ./Manual/images/DeleteItem2.png used on input line 176
+.
+(pdftex.def)             Requested size: 339.92216pt x 256.0748pt.
+ [310pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.179 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/DeleteIte
+m1.png>] <./Manual/images/UpdateItem1.png, id=6163, 840.89156pt x 630.85687pt>
+File: ./Manual/images/UpdateItem1.png Graphic file (type png)
+
+<use ./Manual/images/UpdateItem1.png>
+Package pdftex.def Info: ./Manual/images/UpdateItem1.png used on input line 187
+.
+(pdftex.def)             Requested size: 341.32907pt x 256.0748pt.
+ [311pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.190 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/DeleteIte
+m2.png>] <./Manual/images/UpdateItem2.png, id=6170, 843.15pt x 631.60968pt>
+File: ./Manual/images/UpdateItem2.png Graphic file (type png)
+
+<use ./Manual/images/UpdateItem2.png>
+Package pdftex.def Info: ./Manual/images/UpdateItem2.png used on input line 197
+.
+(pdftex.def)             Requested size: 341.84697pt x 256.0748pt.
+ [312pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.200 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/UpdateIte
+m1.png>] <./Manual/images/AddBooking1.png, id=6178, 840.89156pt x 633.11531pt>
+File: ./Manual/images/AddBooking1.png Graphic file (type png)
+
+<use ./Manual/images/AddBooking1.png>
+Package pdftex.def Info: ./Manual/images/AddBooking1.png used on input line 210
+.
+(pdftex.def)             Requested size: 340.12296pt x 256.0748pt.
+ [313pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.213 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/UpdateIte
+m2.png>] <./Manual/images/AddBooking2.png, id=6185, 838.63312pt x 633.86812pt>
+File: ./Manual/images/AddBooking2.png Graphic file (type png)
+
+<use ./Manual/images/AddBooking2.png>
+Package pdftex.def Info: ./Manual/images/AddBooking2.png used on input line 217
+.
+(pdftex.def)             Requested size: 338.79997pt x 256.0748pt.
+ [314pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.17}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.220 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AddBookin
+g1.png>] <./Manual/images/AddBooking3.png, id=6192, 842.39719pt x 718.18312pt>
+File: ./Manual/images/AddBooking3.png Graphic file (type png)
+
+<use ./Manual/images/AddBooking3.png>
+Package pdftex.def Info: ./Manual/images/AddBooking3.png used on input line 224
+.
+(pdftex.def)             Requested size: 300.37062pt x 256.0748pt.
+ [315pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.227 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AddBookin
+g2.png>]
+<./Manual/images/DeleteBooking1.png, id=6199, 840.89156pt x 633.11531pt>
+File: ./Manual/images/DeleteBooking1.png Graphic file (type png)
+
+<use ./Manual/images/DeleteBooking1.png>
+Package pdftex.def Info: ./Manual/images/DeleteBooking1.png used on input line 
+237.
+(pdftex.def)             Requested size: 340.12296pt x 256.0748pt.
+ [316pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.19}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.240 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AddBookin
+g3.png>] <./Manual/images/DeleteBooking2.png, id=6206, 834.86906pt x 626.34pt>
+File: ./Manual/images/DeleteBooking2.png Graphic file (type png)
+
+<use ./Manual/images/DeleteBooking2.png>
+Package pdftex.def Info: ./Manual/images/DeleteBooking2.png used on input line 
+242.
+(pdftex.def)             Requested size: 341.34311pt x 256.0748pt.
+ [317pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.20}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.245 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/DeleteBoo
+king1.png>]
+<./Manual/images/UpdateBooking1.png, id=6213, 840.89156pt x 633.11531pt>
+File: ./Manual/images/UpdateBooking1.png Graphic file (type png)
+
+<use ./Manual/images/UpdateBooking1.png>
+Package pdftex.def Info: ./Manual/images/UpdateBooking1.png used on input line 
+249.
+(pdftex.def)             Requested size: 340.12296pt x 256.0748pt.
+ [318pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.21}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.252 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/DeleteBoo
+king2.png>]
+<./Manual/images/UpdateBooking2.png, id=6221, 842.39719pt x 633.86812pt>
+File: ./Manual/images/UpdateBooking2.png Graphic file (type png)
+
+<use ./Manual/images/UpdateBooking2.png>
+Package pdftex.def Info: ./Manual/images/UpdateBooking2.png used on input line 
+254.
+(pdftex.def)             Requested size: 340.32063pt x 256.0748pt.
+ [319pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.22}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.257 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/UpdateBoo
+king1.png>]
+<./Manual/images/assignExample1.png, id=6228, 464.4853pt x 478.78876pt>
+File: ./Manual/images/assignExample1.png Graphic file (type png)
+
+<use ./Manual/images/assignExample1.png>
+Package pdftex.def Info: ./Manual/images/assignExample1.png used on input line 
+265.
+(pdftex.def)             Requested size: 248.42276pt x 256.0748pt.
+ [320pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.23}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.268 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/UpdateBoo
+king2.png>]
+<./Manual/images/base/assignExample2.png, id=6235, 766.36313pt x 404.26031pt>
+File: ./Manual/images/base/assignExample2.png Graphic file (type png)
+
+<use ./Manual/images/base/assignExample2.png>
+Package pdftex.def Info: ./Manual/images/base/assignExample2.png used on input 
+line 272.
+(pdftex.def)             Requested size: 485.45412pt x 256.0748pt.
+
+Overfull \hbox (140.45412pt too wide) in paragraph at lines 272--273
+[][]
+ []
+
+[321pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+24}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.275 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/assignExa
+mple1.png>]
+<./Manual/images/AssignCust1.png, id=6242, 841.64438pt x 630.10406pt>
+File: ./Manual/images/AssignCust1.png Graphic file (type png)
+
+<use ./Manual/images/AssignCust1.png>
+Package pdftex.def Info: ./Manual/images/AssignCust1.png used on input line 280
+.
+(pdftex.def)             Requested size: 342.04561pt x 256.0748pt.
+ [322pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.25}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.283 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/base/assi
+gnExample2.png>]
+<./Manual/images/AssignCust2.png, id=6249, 841.64438pt x 633.86812pt>
+File: ./Manual/images/AssignCust2.png Graphic file (type png)
+
+<use ./Manual/images/AssignCust2.png>
+Package pdftex.def Info: ./Manual/images/AssignCust2.png used on input line 285
+.
+(pdftex.def)             Requested size: 340.01651pt x 256.0748pt.
+ [323pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.26}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.288 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AssignCus
+t1.png>]
+<./Manual/images/base/ManageOrder.png, id=6256, 844.65562pt x 634.62094pt>
+File: ./Manual/images/base/ManageOrder.png Graphic file (type png)
+
+<use ./Manual/images/base/ManageOrder.png>
+Package pdftex.def Info: ./Manual/images/base/ManageOrder.png used on input lin
+e 290.
+(pdftex.def)             Requested size: 340.83348pt x 256.0748pt.
+ [324pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.27}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.293 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AssignCus
+t2.png>]
+File: ./Manual/images/base/ManageOrder.png Graphic file (type png)
+ <use ./Manual/images/base/ManageOrder.png>
+Package pdftex.def Info: ./Manual/images/base/ManageOrder.png used on input lin
+e 299.
+(pdftex.def)             Requested size: 340.83348pt x 256.0748pt.
+ [325pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.28}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.302 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/base/Mana
+geOrder.png>]
+<./Manual/images/AddItemOrder1.png, id=6270, 844.65562pt x 634.62094pt>
+File: ./Manual/images/AddItemOrder1.png Graphic file (type png)
+
+<use ./Manual/images/AddItemOrder1.png>
+Package pdftex.def Info: ./Manual/images/AddItemOrder1.png used on input line 3
+06.
+(pdftex.def)             Requested size: 340.83348pt x 256.0748pt.
+ [326pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.29}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.309 
+      ]
+<./Manual/images/AddItemOrder2.png, id=6276, 842.39719pt x 627.09282pt>
+File: ./Manual/images/AddItemOrder2.png Graphic file (type png)
+
+<use ./Manual/images/AddItemOrder2.png>
+Package pdftex.def Info: ./Manual/images/AddItemOrder2.png used on input line 3
+11.
+(pdftex.def)             Requested size: 344.0097pt x 256.0748pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+[][]
+ []
+
+[327pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+30}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.314 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AddItemOr
+der1.png>]
+File: ./Manual/images/base/ManageOrder.png Graphic file (type png)
+ <use ./Manual/images/base/ManageOrder.png>
+Package pdftex.def Info: ./Manual/images/base/ManageOrder.png used on input lin
+e 318.
+(pdftex.def)             Requested size: 340.83348pt x 256.0748pt.
+ [328pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.31}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.321 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/AddItemOr
+der2.png>]
+<./Manual/images/DeleteItemOrder1.png, id=6289, 844.65562pt x 634.62094pt>
+File: ./Manual/images/DeleteItemOrder1.png Graphic file (type png)
+
+<use ./Manual/images/DeleteItemOrder1.png>
+Package pdftex.def Info: ./Manual/images/DeleteItemOrder1.png used on input lin
+e 323.
+(pdftex.def)             Requested size: 340.83348pt x 256.0748pt.
+ [329pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.32}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.326 
+      ]
+<./Manual/images/DeleteItemOrder2.png, id=6295, 843.90282pt x 632.3625pt>
+File: ./Manual/images/DeleteItemOrder2.png Graphic file (type png)
+
+<use ./Manual/images/DeleteItemOrder2.png>
+Package pdftex.def Info: ./Manual/images/DeleteItemOrder2.png used on input lin
+e 328.
+(pdftex.def)             Requested size: 341.74014pt x 256.0748pt.
+ [330pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.33}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.331 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/DeleteIte
+mOrder1.png>]
+<./Manual/images/PrintInvoice1.png, id=6303, 844.65562pt x 634.62094pt>
+File: ./Manual/images/PrintInvoice1.png Graphic file (type png)
+
+<use ./Manual/images/PrintInvoice1.png>
+Package pdftex.def Info: ./Manual/images/PrintInvoice1.png used on input line 3
+40.
+(pdftex.def)             Requested size: 340.83348pt x 256.0748pt.
+ [331pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.34}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.343 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/DeleteIte
+mOrder2.png>]
+<./Manual/images/PrintInvoice2.png, id=6311, 767.11594pt x 406.51875pt>
+File: ./Manual/images/PrintInvoice2.png Graphic file (type png)
+
+<use ./Manual/images/PrintInvoice2.png>
+Package pdftex.def Info: ./Manual/images/PrintInvoice2.png used on input line 3
+47.
+(pdftex.def)             Requested size: 483.23877pt x 256.0748pt.
+
+Overfull \hbox (138.23877pt too wide) in paragraph at lines 347--348
+[][]
+ []
+
+[332pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+35}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.350 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/PrintInvo
+ice1.png>]
+<./Manual/images/PrintInvoice3.png, id=6318, 842.39719pt x 633.11531pt>
+File: ./Manual/images/PrintInvoice3.png Graphic file (type png)
+
+<use ./Manual/images/PrintInvoice3.png>
+Package pdftex.def Info: ./Manual/images/PrintInvoice3.png used on input line 3
+55.
+(pdftex.def)             Requested size: 340.73196pt x 256.0748pt.
+ [333pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.36}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.358 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/PrintInvo
+ice2.png>]
+<./Manual/images/PrintInvoice4.png, id=6326, 843.15pt x 631.60968pt>
+File: ./Manual/images/PrintInvoice4.png Graphic file (type png)
+
+<use ./Manual/images/PrintInvoice4.png>
+Package pdftex.def Info: ./Manual/images/PrintInvoice4.png used on input line 3
+60.
+(pdftex.def)             Requested size: 341.84697pt x 256.0748pt.
+ [334pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.37}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.363 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/PrintInvo
+ice3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
+
+ []
+
+<./Manual/images/HamError1.png, id=6333, 840.89156pt x 628.59843pt>
+File: ./Manual/images/HamError1.png Graphic file (type png)
+
+<use ./Manual/images/HamError1.png>
+Package pdftex.def Info: ./Manual/images/HamError1.png used on input line 385.
+(pdftex.def)             Requested size: 342.548pt x 256.0748pt.
+ [335pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.38}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.388 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/PrintInvo
+ice4.png>] <./Manual/images/HamError2.png, id=6340, 840.89156pt x 628.59843pt>
+File: ./Manual/images/HamError2.png Graphic file (type png)
+
+<use ./Manual/images/HamError2.png>
+Package pdftex.def Info: ./Manual/images/HamError2.png used on input line 392.
+(pdftex.def)             Requested size: 342.548pt x 256.0748pt.
+ [336pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.39}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.395 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/HamError1
+.png>] <./Manual/images/HamError3.png, id=6348, 840.13875pt x 627.09282pt>
+File: ./Manual/images/HamError3.png Graphic file (type png)
+
+<use ./Manual/images/HamError3.png>
+Package pdftex.def Info: ./Manual/images/HamError3.png used on input line 399.
+(pdftex.def)             Requested size: 343.08743pt x 256.0748pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+[][]
+ []
+
+[337pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+40}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.402 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/HamError2
+.png>] <./Manual/images/backup.png, id=6355, 1013.28563pt x 604.50844pt>
+File: ./Manual/images/backup.png Graphic file (type png)
+
+<use ./Manual/images/backup.png>
+Package pdftex.def Info: ./Manual/images/backup.png used on input line 416.
+(pdftex.def)             Requested size: 429.22598pt x 256.0748pt.
+
+Overfull \hbox (84.22598pt too wide) in paragraph at lines 416--417
+[][]
+ []
+
+[338pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+41}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.419 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/HamError3
+.png>] <./Manual/images/backup2.png, id=6362, 1014.79124pt x 603.0028pt>
+File: ./Manual/images/backup2.png Graphic file (type png)
+
+<use ./Manual/images/backup2.png>
+Package pdftex.def Info: ./Manual/images/backup2.png used on input line 425.
+(pdftex.def)             Requested size: 430.94766pt x 256.0748pt.
+
+Overfull \hbox (85.94766pt too wide) in paragraph at lines 425--426
+[][]
+ []
+
+[339pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+42}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.428 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/backup.pn
+g>] <./Manual/images/backup3.png, id=6369, 1014.03844pt x 605.26125pt>
+File: ./Manual/images/backup3.png Graphic file (type png)
+
+<use ./Manual/images/backup3.png>
+Package pdftex.def Info: ./Manual/images/backup3.png used on input line 431.
+(pdftex.def)             Requested size: 429.01878pt x 256.0748pt.
+
+Overfull \hbox (84.01878pt too wide) in paragraph at lines 431--432
+[][]
+ []
+
+[340pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+43}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.434 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/backup2.p
+ng>] <./Manual/images/restore.png, id=6376, 1016.29688pt x 602.25pt>
+File: ./Manual/images/restore.png Graphic file (type png)
+
+<use ./Manual/images/restore.png>
+Package pdftex.def Info: ./Manual/images/restore.png used on input line 445.
+(pdftex.def)             Requested size: 432.14532pt x 256.0748pt.
+
+Overfull \hbox (87.14532pt too wide) in paragraph at lines 445--446
+[][]
+ []
+
+[341pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+44}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.448 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/backup3.p
+ng>] <./Manual/images/restore2.png, id=6383, 1013.28563pt x 606.01407pt>
+File: ./Manual/images/restore2.png Graphic file (type png)
+
+<use ./Manual/images/restore2.png>
+Package pdftex.def Info: ./Manual/images/restore2.png used on input line 454.
+(pdftex.def)             Requested size: 428.17459pt x 256.0748pt.
+
+Overfull \hbox (83.17459pt too wide) in paragraph at lines 454--455
+[][]
+ []
+
+[342pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+45}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.457 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/restore.p
+ng>] <./Manual/images/restore3.png, id=6391, 1013.28563pt x 605.26125pt>
+File: ./Manual/images/restore3.png Graphic file (type png)
+
+<use ./Manual/images/restore3.png>
+Package pdftex.def Info: ./Manual/images/restore3.png used on input line 461.
+(pdftex.def)             Requested size: 428.70029pt x 256.0748pt.
+
+Overfull \hbox (83.70029pt too wide) in paragraph at lines 461--462
+[][]
+ []
+
+[343pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+46}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.464 
+       <C:/Users/Tommy/Documents/GitHub/COMP4Coursework/Manual/images/restore2.
+png>]) [344pdfTeX warning (ext4): destination with the same identifier (name{fi
+gure.5.47}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.17 \include{./Manual/manual}
+                               <C:/Users/Tommy/Documents/GitHub/COMP4Coursework
+/Manual/images/restore3.png>]
 (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\Evaluation\evaluation.tex
 Chapter 6.
-) [304
+) [345
 
 
 
@@ -10531,7 +11161,7 @@ Chapter 6.
 Overfull \vbox (6.61086pt too high) has occurred while \output is active []
 
 
-[305]
+[346]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 19.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
  (C:\Users\Tommy\Documents\GitHub\COMP4Coursework\coursework.aux
@@ -10544,7 +11174,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 19.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 19.
 Package rerunfilecheck Info: File `coursework.out' has not changed.
-(rerunfilecheck)             Checksum: 4239E70469DA6F393AF658A1567DC57A;11505.
+(rerunfilecheck)             Checksum: F3C112996312918CCA5C92E03C8BAE91;12563.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -10552,13 +11182,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 19.
  ) 
 Here is how much of TeX's memory you used:
- 16133 strings out of 493921
- 251798 string characters out of 3145277
- 345380 words of memory out of 3000000
- 15435 multiletter control sequences out of 15000+200000
+ 16463 strings out of 493921
+ 259637 string characters out of 3145277
+ 347650 words of memory out of 3000000
+ 15637 multiletter control sequences out of 15000+200000
  11212 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,12n,45p,1115b,2438s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,12n,45p,1160b,2438s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:
@@ -10572,9 +11202,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmu10.pfb>
-Output written on coursework.pdf (306 pages, 3646087 bytes).
+Output written on coursework.pdf (347 pages, 4739123 bytes).
 PDF statistics:
- 6826 PDF objects out of 7423 (max. 8388607)
- 3496 named destinations out of 3580 (max. 500000)
- 1696 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7186 PDF objects out of 7423 (max. 8388607)
+ 3585 named destinations out of 4296 (max. 500000)
+ 1974 words of extra memory for PDF output out of 10000 (max. 10000000)
 

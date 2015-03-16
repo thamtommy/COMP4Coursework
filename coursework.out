@@ -130,6 +130,7 @@
 \BOOKMARK [1][-]{section.5.2}{Installation}{chapter.5}% 130
 \BOOKMARK [2][-]{subsection.5.2.1}{Software}{section.5.2}% 131
 \BOOKMARK [2][-]{subsection.5.2.2}{Hardware}{section.5.2}% 132
+<<<<<<< HEAD
 \BOOKMARK [2][-]{subsection.5.2.3}{Prerequisite Installation}{section.5.2}% 133
 \BOOKMARK [2][-]{subsection.5.2.4}{System Installation}{section.5.2}% 134
 \BOOKMARK [2][-]{subsection.5.2.5}{Running the System}{section.5.2}% 135
@@ -158,3 +159,44 @@
 \BOOKMARK [2][-]{subsection.6.7.1}{Questionnaires}{section.6.7}% 158
 \BOOKMARK [2][-]{subsection.6.7.2}{Graphs}{section.6.7}% 159
 \BOOKMARK [2][-]{subsection.6.7.3}{Written Statements}{section.6.7}% 160
+=======
+\BOOKMARK [2][-]{subsection.5.2.3}{Operating System}{section.5.2}% 133
+\BOOKMARK [2][-]{subsection.5.2.4}{Prerequisite Installation}{section.5.2}% 134
+\BOOKMARK [2][-]{subsection.5.2.5}{System Installation}{section.5.2}% 135
+\BOOKMARK [2][-]{subsection.5.2.6}{Running the System}{section.5.2}% 136
+\BOOKMARK [1][-]{section.5.3}{Tutorial}{chapter.5}% 137
+\BOOKMARK [2][-]{subsection.5.3.1}{Introduction}{section.5.3}% 138
+\BOOKMARK [2][-]{subsection.5.3.2}{Assumptions}{section.5.3}% 139
+\BOOKMARK [2][-]{subsection.5.3.3}{Tutorial Questions}{section.5.3}% 140
+\BOOKMARK [2][-]{subsection.5.3.4}{How do I add an item to the menu?}{section.5.3}% 141
+\BOOKMARK [2][-]{subsection.5.3.5}{How do I delete an item off the menu?}{section.5.3}% 142
+\BOOKMARK [2][-]{subsection.5.3.6}{How do I update an item's price?}{section.5.3}% 143
+\BOOKMARK [2][-]{subsection.5.3.7}{How do I add a booking?}{section.5.3}% 144
+\BOOKMARK [2][-]{subsection.5.3.8}{How do I delete a booking?}{section.5.3}% 145
+\BOOKMARK [2][-]{subsection.5.3.9}{How do I update a booking?}{section.5.3}% 146
+\BOOKMARK [2][-]{subsection.5.3.10}{How do I manage an order for a table?}{section.5.3}% 147
+\BOOKMARK [2][-]{subsection.5.3.11}{A customer has come in without booking in advance how do I assign him to a table?}{section.5.3}% 148
+\BOOKMARK [2][-]{subsection.5.3.12}{How do I add an item to an order}{section.5.3}% 149
+\BOOKMARK [2][-]{subsection.5.3.13}{How do I delete an item off an order}{section.5.3}% 150
+\BOOKMARK [2][-]{subsection.5.3.14}{How do I print an invoice?}{section.5.3}% 151
+\BOOKMARK [2][-]{subsection.5.3.15}{Saving}{section.5.3}% 152
+\BOOKMARK [2][-]{subsection.5.3.16}{Limitations}{section.5.3}% 153
+\BOOKMARK [1][-]{section.5.4}{Error Recovery}{chapter.5}% 154
+\BOOKMARK [2][-]{subsection.5.4.1}{Empty field error when trying to add an item}{section.5.4}% 155
+\BOOKMARK [1][-]{section.5.5}{System Recovery}{chapter.5}% 156
+\BOOKMARK [2][-]{subsection.5.5.1}{Backing-up Data}{section.5.5}% 157
+\BOOKMARK [2][-]{subsection.5.5.2}{Restoring Data}{section.5.5}% 158
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 159
+\BOOKMARK [1][-]{section.6.1}{Customer Requirements}{chapter.6}% 160
+\BOOKMARK [2][-]{subsection.6.1.1}{Objective Evaluation}{section.6.1}% 161
+\BOOKMARK [1][-]{section.6.2}{Effectiveness}{chapter.6}% 162
+\BOOKMARK [2][-]{subsection.6.2.1}{Objective Evaluation}{section.6.2}% 163
+\BOOKMARK [1][-]{section.6.3}{Learnability}{chapter.6}% 164
+\BOOKMARK [1][-]{section.6.4}{Usability}{chapter.6}% 165
+\BOOKMARK [1][-]{section.6.5}{Maintainability}{chapter.6}% 166
+\BOOKMARK [1][-]{section.6.6}{Suggestions for Improvement}{chapter.6}% 167
+\BOOKMARK [1][-]{section.6.7}{End User Evidence}{chapter.6}% 168
+\BOOKMARK [2][-]{subsection.6.7.1}{Questionnaires}{section.6.7}% 169
+\BOOKMARK [2][-]{subsection.6.7.2}{Graphs}{section.6.7}% 170
+\BOOKMARK [2][-]{subsection.6.7.3}{Written Statements}{section.6.7}% 171
+>>>>>>> branch 'master' of https://github.com/thamtommy/COMP4Coursework.git

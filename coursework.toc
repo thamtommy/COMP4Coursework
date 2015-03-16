@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \contentsline {chapter}{\numberline {1}Analysis}{5}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introduction}{5}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Client Identification}{5}{subsection.1.1.1}
@@ -195,3 +196,210 @@
 \contentsline {subsection}{\numberline {6.7.1}Questionnaires}{305}{subsection.6.7.1}
 \contentsline {subsection}{\numberline {6.7.2}Graphs}{305}{subsection.6.7.2}
 \contentsline {subsection}{\numberline {6.7.3}Written Statements}{305}{subsection.6.7.3}
+=======
+\contentsline {chapter}{\numberline {1}Analysis}{6}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{6}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Client Identification}{6}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Define the current system}{6}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Describe the problems}{7}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Section appendix}{7}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}Investigation}{8}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}The current system}{8}{subsection.1.2.1}
+\contentsline {subsubsection}{Data sources and destinations}{8}{section*.2}
+\contentsline {subsubsection}{Algorithms}{10}{section*.3}
+\contentsline {subsubsection}{Data flow diagram}{11}{section*.4}
+\contentsline {subsubsection}{Input Forms, Output Forms, Report Formats}{14}{section*.5}
+\contentsline {subsection}{\numberline {1.2.2}The proposed system}{17}{subsection.1.2.2}
+\contentsline {subsubsection}{Data sources and destinations}{17}{section*.6}
+\contentsline {subsubsection}{Data flow diagram}{19}{section*.7}
+\contentsline {subsubsection}{Data dictionary}{21}{section*.8}
+\contentsline {subsubsection}{Volumetrics}{21}{section*.9}
+\contentsline {section}{\numberline {1.3}Objectives}{21}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}General Objectives}{21}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Specific Objectives}{22}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Core Objectives}{23}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Other Objectives}{23}{subsection.1.3.4}
+\contentsline {section}{\numberline {1.4}ER Diagrams and Descriptions}{24}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}ER Diagram}{24}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Entity Descriptions}{25}{subsection.1.4.2}
+\contentsline {section}{\numberline {1.5}Object Analysis}{25}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Object Listing}{25}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Relationship diagrams}{26}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.3}Class definitions}{27}{subsection.1.5.3}
+\contentsline {section}{\numberline {1.6}Other Abstractions and Graphs}{28}{section.1.6}
+\contentsline {section}{\numberline {1.7}Constraints}{28}{section.1.7}
+\contentsline {subsection}{\numberline {1.7.1}Hardware}{28}{subsection.1.7.1}
+\contentsline {subsection}{\numberline {1.7.2}Software}{28}{subsection.1.7.2}
+\contentsline {subsection}{\numberline {1.7.3}Time}{28}{subsection.1.7.3}
+\contentsline {subsection}{\numberline {1.7.4}User Knowledge}{28}{subsection.1.7.4}
+\contentsline {subsection}{\numberline {1.7.5}Access restrictions}{29}{subsection.1.7.5}
+\contentsline {section}{\numberline {1.8}Limitations}{29}{section.1.8}
+\contentsline {subsection}{\numberline {1.8.1}Areas which will not be included in computerisation}{29}{subsection.1.8.1}
+\contentsline {subsection}{\numberline {1.8.2}Areas considered for future computerisation}{29}{subsection.1.8.2}
+\contentsline {section}{\numberline {1.9}Solutions}{30}{section.1.9}
+\contentsline {subsection}{\numberline {1.9.1}Alternative solutions}{30}{subsection.1.9.1}
+\contentsline {subsection}{\numberline {1.9.2}Justification of chosen solution}{30}{subsection.1.9.2}
+\contentsline {chapter}{\numberline {2}Design}{31}{chapter.2}
+\contentsline {section}{\numberline {2.1}Overall System Design}{31}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Short description of the main parts of the system}{31}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}System flowcharts showing an overview of the complete system}{35}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}User Interface Designs}{42}{section.2.2}
+\contentsline {section}{\numberline {2.3}Hardware Specification}{52}{section.2.3}
+\contentsline {section}{\numberline {2.4}Program Structure}{54}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Top-down design structure charts}{54}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Algorithms in pseudo-code for each data transformation process}{57}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Object Diagrams}{60}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Class Definitions}{62}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Prototyping}{63}{section.2.5}
+\contentsline {section}{\numberline {2.6}Definition of Data Requirements}{63}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Identification of all data input items}{63}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Identification of all data output items}{64}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Explanation of how data output items are generated}{66}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Data Dictionary}{66}{subsection.2.6.4}
+\contentsline {subsubsection}{Data dictionary}{66}{section*.10}
+\contentsline {subsection}{\numberline {2.6.5}Identification of appropriate storage media}{68}{subsection.2.6.5}
+\contentsline {section}{\numberline {2.7}Database Design}{70}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Normalisation}{70}{subsection.2.7.1}
+\contentsline {subsubsection}{ER Diagrams}{70}{section*.11}
+\contentsline {subsubsection}{Entity Descriptions}{71}{section*.12}
+\contentsline {subsection}{\numberline {2.7.2}SQL Queries}{73}{subsection.2.7.2}
+\contentsline {section}{\numberline {2.8}Security and Integrity of the System and Data}{74}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}Security and Integrity of Data}{74}{subsection.2.8.1}
+\contentsline {subsection}{\numberline {2.8.2}System Security}{75}{subsection.2.8.2}
+\contentsline {section}{\numberline {2.9}Validation}{76}{section.2.9}
+\contentsline {section}{\numberline {2.10}Testing}{76}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}Outline Plan}{77}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}Detailed Plan}{77}{subsection.2.10.2}
+\contentsline {chapter}{\numberline {3}Testing}{87}{chapter.3}
+\contentsline {section}{\numberline {3.1}Test Plan}{87}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Original Outline Plan}{89}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Changes to Outline Plan}{90}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Original Detailed Plan}{90}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Changes to Detailed Plan}{104}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Test Data}{117}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Original Test Data}{117}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Changes to Test Data}{118}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Annotated Samples}{119}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Actual Results}{119}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Evidence}{121}{subsection.3.3.2}
+\contentsline {subsubsection}{From main screen to manage bookings (Test 1.09)}{121}{section*.13}
+\contentsline {subsubsection}{Add Booking screen from manage bookings (Test 1.10)}{122}{section*.14}
+\contentsline {subsubsection}{Delete Booking screen from manage bookings (Test 1.13)}{123}{section*.15}
+\contentsline {subsubsection}{Search Order from tool bar (Test 1.21)}{125}{section*.16}
+\contentsline {subsubsection}{Assign Customer to table validation (Test 2.04)}{126}{section*.17}
+\contentsline {subsubsection}{Leave Telephone Number field empty error (Test 2.08)}{127}{section*.18}
+\contentsline {subsubsection}{Telephone Number boundary test (Test 2.08.02)}{128}{section*.19}
+\contentsline {subsubsection}{Add Item to Menu verification (Test 2.13.01)}{129}{section*.20}
+\contentsline {subsubsection}{Manage Order Box from Assign Customer (Test 3.03) }{130}{section*.21}
+\contentsline {subsubsection}{Select function from Assign Customer (Test 3.04)}{131}{section*.22}
+\contentsline {subsubsection}{Total Price Update (Test 4.03)}{132}{section*.23}
+\contentsline {subsubsection}{Increase Quantity Check (Test 4.05)}{133}{section*.24}
+\contentsline {subsubsection}{Checking if booking \& customer details has stored correctly (Test 4.09) }{134}{section*.25}
+\contentsline {subsubsection}{Invoice Preview (Test 1.32 \& 3.05)}{135}{section*.26}
+\contentsline {subsubsection}{Search Order tab from tool bar (Test 4.08.02)}{136}{section*.27}
+\contentsline {subsubsection}{Referential Integrity test relating the deletion of a booking (Test 6.03)}{137}{section*.28}
+\contentsline {section}{\numberline {3.4}Evaluation}{138}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Approach to Testing}{138}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Problems Encountered}{138}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Strengths of Testing}{138}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Weaknesses of Testing}{138}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Reliability of Application}{139}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Robustness of Application}{139}{subsection.3.4.6}
+\contentsline {chapter}{\numberline {4}System Maintenance}{140}{chapter.4}
+\contentsline {section}{\numberline {4.1}Environment}{140}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Software}{140}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Usage Explanation}{140}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Features Used}{142}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}System Overview}{142}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}System Component}{142}{subsection.4.2.1}
+\contentsline {subsubsection}{Graphical User Interface (GUI)}{142}{section*.29}
+\contentsline {subsubsection}{Manage Item Menu}{143}{section*.30}
+\contentsline {subsubsection}{Manage Bookings}{143}{section*.31}
+\contentsline {subsubsection}{Manage Sit-In Orders}{144}{section*.32}
+\contentsline {section}{\numberline {4.3}Code Structure}{145}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Displaying a table}{145}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Switching central widgets}{146}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Variable Listing}{146}{section.4.4}
+\contentsline {section}{\numberline {4.5}System Evidence}{149}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}User Interface}{149}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}ER Diagram}{172}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Database Table Views}{173}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Database SQL}{179}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}SQL Queries}{180}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}Testing}{185}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Summary of Results}{185}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Known Issues}{185}{subsection.4.6.2}
+\contentsline {subsubsection}{Test 4.03 - Manage order total price}{185}{section*.33}
+\contentsline {section}{\numberline {4.7}Code Explanations}{185}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Difficult Sections}{185}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Select function (section 4.10.4)}{186}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Creating the combo box (section 4.10.4)}{187}{subsection.4.7.3}
+\contentsline {subsection}{\numberline {4.7.4}Self-created Algorithms}{189}{subsection.4.7.4}
+\contentsline {section}{\numberline {4.8}Settings}{193}{section.4.8}
+\contentsline {section}{\numberline {4.9}Acknowledgements}{193}{section.4.9}
+\contentsline {section}{\numberline {4.10}Code Listing}{194}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}add\_booking.py}{195}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}add\_item\_to\_menu.py}{201}{subsection.4.10.2}
+\contentsline {subsection}{\numberline {4.10.3}add\_item\_to\_order.py}{205}{subsection.4.10.3}
+\contentsline {subsection}{\numberline {4.10.4}assign\_table\_customer.py}{210}{subsection.4.10.4}
+\contentsline {subsection}{\numberline {4.10.5}cascade\_style\_sheet.py}{218}{subsection.4.10.5}
+\contentsline {subsection}{\numberline {4.10.6}delete\_booking.py}{222}{subsection.4.10.6}
+\contentsline {subsection}{\numberline {4.10.7}delete\_item\_off\_menu.py}{225}{subsection.4.10.7}
+\contentsline {subsection}{\numberline {4.10.8}delete\_item\_off\_order.py}{229}{subsection.4.10.8}
+\contentsline {subsection}{\numberline {4.10.9}main\_window.py}{235}{subsection.4.10.9}
+\contentsline {subsection}{\numberline {4.10.10}manage\_booking.py}{255}{subsection.4.10.10}
+\contentsline {subsection}{\numberline {4.10.11}manage\_order.py}{257}{subsection.4.10.11}
+\contentsline {subsection}{\numberline {4.10.12}new\_create\_tables\_cli.py}{265}{subsection.4.10.12}
+\contentsline {subsection}{\numberline {4.10.13}print\_invoice.py}{270}{subsection.4.10.13}
+\contentsline {subsection}{\numberline {4.10.14}radio\_button\_widget\_class.py}{276}{subsection.4.10.14}
+\contentsline {subsection}{\numberline {4.10.15}search\_order.py}{278}{subsection.4.10.15}
+\contentsline {subsection}{\numberline {4.10.16}table\_display.py}{282}{subsection.4.10.16}
+\contentsline {subsection}{\numberline {4.10.17}update\_booking.py}{285}{subsection.4.10.17}
+\contentsline {subsection}{\numberline {4.10.18}update\_item\_price.py}{292}{subsection.4.10.18}
+\contentsline {chapter}{\numberline {5}User Manual}{295}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{295}{section.5.1}
+\contentsline {section}{\numberline {5.2}Installation}{295}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Software}{295}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Hardware}{295}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Operating System}{296}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Prerequisite Installation}{296}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}System Installation}{296}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Running the System}{304}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Tutorial}{306}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Introduction}{306}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Assumptions}{306}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Tutorial Questions}{306}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}How do I add an item to the menu?}{306}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}How do I delete an item off the menu?}{309}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}How do I update an item's price?}{311}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}How do I add a booking?}{313}{subsection.5.3.7}
+\contentsline {subsection}{\numberline {5.3.8}How do I delete a booking?}{317}{subsection.5.3.8}
+\contentsline {subsection}{\numberline {5.3.9}How do I update a booking?}{319}{subsection.5.3.9}
+\contentsline {subsection}{\numberline {5.3.10}How do I manage an order for a table?}{320}{subsection.5.3.10}
+\contentsline {subsection}{\numberline {5.3.11}A customer has come in without booking in advance how do I assign him to a table?}{322}{subsection.5.3.11}
+\contentsline {subsection}{\numberline {5.3.12}How do I add an item to an order}{325}{subsection.5.3.12}
+\contentsline {subsection}{\numberline {5.3.13}How do I delete an item off an order}{329}{subsection.5.3.13}
+\contentsline {subsection}{\numberline {5.3.14}How do I print an invoice?}{331}{subsection.5.3.14}
+\contentsline {subsubsection}{Manage Order method}{331}{section*.34}
+\contentsline {subsubsection}{Search Order method}{333}{section*.35}
+\contentsline {subsection}{\numberline {5.3.15}Saving}{335}{subsection.5.3.15}
+\contentsline {subsection}{\numberline {5.3.16}Limitations}{335}{subsection.5.3.16}
+\contentsline {section}{\numberline {5.4}Error Recovery}{335}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Empty field error when trying to add an item}{335}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}System Recovery}{338}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Backing-up Data}{338}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Restoring Data}{341}{subsection.5.5.2}
+\contentsline {chapter}{\numberline {6}Evaluation}{345}{chapter.6}
+\contentsline {section}{\numberline {6.1}Customer Requirements}{346}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Objective Evaluation}{346}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Effectiveness}{346}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Objective Evaluation}{346}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Learnability}{346}{section.6.3}
+\contentsline {section}{\numberline {6.4}Usability}{346}{section.6.4}
+\contentsline {section}{\numberline {6.5}Maintainability}{346}{section.6.5}
+\contentsline {section}{\numberline {6.6}Suggestions for Improvement}{346}{section.6.6}
+\contentsline {section}{\numberline {6.7}End User Evidence}{346}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Questionnaires}{346}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Graphs}{346}{subsection.6.7.2}
+\contentsline {subsection}{\numberline {6.7.3}Written Statements}{346}{subsection.6.7.3}
+>>>>>>> branch 'master' of https://github.com/thamtommy/COMP4Coursework.git

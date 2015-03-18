@@ -54,14 +54,14 @@ SQLite Inspector& I mainly used 'Browse Data' to check whether I have added, del
 \subsection{System Component}
 
 \subsubsection{Graphical User Interface (GUI)}
-Having a graphical user interface for the system makes it a lot more userable, giving the user a much more user friendly experience. Including a GUI makes it easier for the user to navigate around the system.
+Having a graphical user interface for the system makes it a lot more userable, giving the user a much more user friendly experience. Including a GUI makes it easier for the user to navigate around the system. I have used a QMainWindow and a QDialog to create the graphical user interface.
 
 \subsubsection{Manage Item Menu}
 The item menu can be managed at any time through the menu bar 'Item Menu'. The user can add/delete/update an item. \\
 
-To add an item to the menu, the user must select 'Add Item'. By selecting 'Add Item', the user will be presented with a layout that consists of a table widget displaying all the records of the menu and the fields which will be used to input information for the new item. \\
+To add an item to the menu, the user must select 'Add Item'. By selecting 'Add Item', the user will be presented with a layout that consists of a table widget displaying all the records of the item menu and the fields (QLineEdits) which will be used to input information for the new item. \\
 
-Deleting an item off the menu can also be found under the 'Item Menu' menu by selecting 'Delete Item'. The user will be presented with a layout that contains the same table widget that displays all records of the menu and has either the choose to delete an item by inputting the item name or the item ID. \\
+Deleting an item off the menu can also be found under the 'Item Menu' menu by selecting 'Delete Item'. The user will be presented with a layout that contains the same table widget that displays all records of the menu and has either the choice to delete an item by inputting the item name or the item ID. \\
 
 The user also has the option to update an item's price. To do this, the user must select 'Update Item Price' where the user will be presented with a layout that contains the same the item menu table widget as the add and delete item layout. The user would have to input the ID of the item and the new price then click on the 'Update Item' button to update an item's price.
 
@@ -70,15 +70,15 @@ The user also has the option to update an item's price. To do this, the user mus
 
 The user will be able to add/delete and update bookings. To do this, the user could either selection these options through "Bookings" on the menu bar or click on the 'Manage Bookings' button at the bottom of the main screen. \\
 
-Clicking on the button will switch the central widget to the manage bookings widget where the user will be presented with the Bookings table widget where all of the booking records will be displayed and below the widget are the buttons "Add Booking" and "Delete Booking". Clicking on Add Booking will then present the user with the same table widget and the required fields which the user would have to successfully fill to add a booking. As for the "Delete Booking" button, the user will be presented with the same Bookings table widget and a input field for the user to delete a booking by inputting a booking id and pressing "Delete BookingID". \\
+Clicking on the button will switch the central widget to the manage bookings widget where the user will be presented with the Bookings table widget where all of the booking records will be displayed and below the widget are the QPushButtons "Add Booking" and "Delete Booking". Clicking on Add Booking will then present the user with the same table widget and the required fields which the user would have to successfully fill to add a booking. As for the "Delete Booking"  QPushButton, the user will be presented with the same Bookings table widget and an input field for the user to input the selected booking they would like to delete and a "Delete BookingID" QPushButton to proceed the deletion. \\
 
 The "Bookings" menu bar also has 3 options; "Add Bookings", "Delete Booking" and "Update Booking". The add/delete booking options are the same as described in the paragraph above. As for the "Update Booking" option, the user will be presented with the usual Bookings table widget and the input fields to update the booking.  
 
 \subsubsection{Manage Sit-In Orders}
 
-To manage an order, the user must select the table and if not already, assign a customer to the table ( A dialog box will pop up telling the user to assign a customer to the selected table). After assigning a customer to the table, the table will be known as 'occupied' which would allow the user to select that table without assigning a customer to that table everytime. So now that the table is occupied, there will be a manage order box where the booking details will be displayed on a row at the top of the box. The dishes and drinks ordered will be split into two table widget, the dishes ordered will be displayed on the left and the drinks on the right. \\
+To manage an order, the user must select the table radio button and click on the "Select Table" QPushButton. If the table is unoccupied then the user would have to assign a customer to the table ( A QDialog box will pop up telling the user to assign a customer to the selected table). After assigning a customer to the table, the table will be known as 'occupied' which would allow the user to select that table without assigning a customer to that table everytime. So now that the table is occupied, there will be a manage order QDialog box where the booking details will be displayed using QLabels on a row at the top of the box. The dishes and drinks ordered will be split into two table widgets, the dishes ordered will be displayed on the left and the drinks on the right. \\
 
-The user has all the neccessary options on the manage order box such as "Add", "Delete", "Finish", "Invoice Preview" and "Print Invoice". The "Add" button is for adding items to the order, the "Delete" button will be used to delete items off the order, the "Invoice Preview" will show the user what the invoice would look like for the order, the "Print Invoice" will print the invoice and the "Finish" button will set the status of the table as unoccupied, clearing the booking details for that table and so the user would have to assign a customer to that table when selecting the table from the main screen.
+The user has all the neccessary options on the manage order box such as "Add", "Delete", "Finish", "Invoice Preview" and "Print Invoice" QPushButtons. The "Add" QPushButoon would be used to add items to the order, the "Delete" QPushButton will be used to delete items off the order, the "Invoice Preview" will show the user what the invoice would look like for the order, the "Print Invoice" will print the invoice and the "Finish" button will set the status of the table as unoccupied, clearing the booking details for that table and so the user would have to assign a customer to that table when selecting the table from the main screen.
 
 
 \section{Code Structure}
@@ -385,46 +385,51 @@ CREATE TABLE Customers(
 
 \subsection{SQL Queries}
 
+\subsubsection{Used to create customer records}
 \begin{sql}
 insert into Customers (FirstName,LastName,TelephoneNo) values (?,?,?)
 \end{sql}
 
+\subsubsection{Used to create the item types}
 \begin{sql}
 insert into ItemType (Type) values (?)
 \end{sql}
 
-
+\subsubsection{Used to insert the table numbers}
 \begin{sql}
 insert into Table_Numbers (TableNumber) values (?)
 \end{sql}
 
-\begin{sql}
-insert into Customers(FirstName,LastName,TelephoneNo) values (?,?,?)
-\end{sql}
-
+\subsubsection{Used to get a customer id}
 \begin{sql}
 select CustomerID from Customers where TelephoneNo=? and FirstName=? and LastName=?
 \end{sql}
 
+\subsubsection{Used to create a booking}
 \begin{sql}
-insert into Bookings(CustomerID,TableNumber,NumberOfPeople,Date,Time) values (?,?,?,?,?)
+insert into Bookings(CustomerID, TableNumber, NumberOfPeople, Date, Time) values (?,?,?,?,?)
 \end{sql}
 
+\subsubsection{Used to insert an item to the menu}
 \begin{sql}
 insert into Items(ItemName,ItemPrice,ItemTypeID) values (?,?,?)
 \end{sql}
 
+\subsubsection{Used to get quantity of an ordered item}
 \begin{sql}
 select Quantity from Booking_Items where ItemID=? and BookingID = ?
 \end{sql}
 
+\subsubsection{Used to update the quantity of an ordered item}
 \begin{sql}
 update Booking_Items set Quantity=? where ItemID=?
 \end{sql}
 
+\subsubsection{Used to add an item to an order}
 \begin{sql}
 insert into Booking_Items(BookingID,ItemID,Quantity) values (?,?,?)
 \end{sql}
+
 
 \begin{sql}
 SELECT
@@ -462,34 +467,45 @@ AND Bookings.TableNumber = {1}
 \end{sql}
 This query fetches all the bookings that matches the system date and the relevant table number with the customer's first name, last name, number of people and booking time. \\ \\
 
+\subsubsection{Used to get booking details of a customer}
+
 \begin{sql}
-select * from Bookings where CustomerID = {?} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' .format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
+select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' .format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
 \end{sql}
 
+\subsection{Used to get booking details for the selected table and the date that matches the computer system}
 \begin{sql}
 select * from Bookings where CustomerID = {0} and TableNumber = {1} and Date = '{2}'.format(CustomerID,self.tableNumber,TodaysDate)
 \end{sql}
 
+
+\subsubsection{Used to get the customer ID of a booking on the selected table and the date that matches the computer system}
 \begin{sql}
 select CustomerID from Bookings where TableNumber = {0} and Date = '{1}'.format(TableNumber,TodaysDate)
 \end{sql}
+
+\subsubsection{Used to get the last name of a customer}
 
 \begin{sql}
 select LastName from Customers where CustomerID = {0}.format(customer))
 \end{sql}
 
+\subsubsection{Used to delete a booking}
 \begin{sql}
 delete from Bookings where BookingID = {0}.format(booking)
 \end{sql}
 
+\subsubsection{Used to delete an item off the item menu given the name of the item}
 \begin{sql}
 delete from Items where ItemName = ?
 \end{sql}
 
+\subsubsection{Used to delete an item off the item menu given the ID of the item}
 \begin{sql}
 delete from Items where ItemID = {0}.format(itemID)
 \end{sql}
 
+\subsubsection{Used to delete ordered items off the selected booking}
 \begin{sql}
 delete from Booking_Items where BookingID = ? and ItemID = ? 
 \end{sql}
@@ -587,22 +603,27 @@ SELECT
 \end{sql}
 This query fetches all the ordered items with its information such as quantity, name and price \\ \\
 
+\subsubsection{Used to update the booking date, given the ID}
 \begin{sql}
 update Bookings set Date=? where BookingID=?
 \end{sql}
 
+\subsubsection{Used to update the booking time, given the ID]
 \begin{sql}
 update Bookings set Time=? where BookingID=?
 \end{sql}
 
+\subsubsection{Used to update the number of people expected for the selected booking, given the ID}
 \begin{sql}
 update Bookings set NumberOfPeople=? where BookingID=?
 \end{sql}
 
+\subsubsection{Used to update the table number of the booking, given the ID}
 \begin{sql}
 update Bookings set TableNumber=? where BookingID=?
 \end{sql}
 
+\subsubsection{Used to update the price of an item}
 \begin{sql}
 update Items set ItemPrice=? where ItemID=?
 \end{sql}

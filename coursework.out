@@ -96,78 +96,79 @@
 \BOOKMARK [2][-]{subsection.4.5.3}{Database Table Views}{section.4.5}% 96
 \BOOKMARK [2][-]{subsection.4.5.4}{Database SQL}{section.4.5}% 97
 \BOOKMARK [2][-]{subsection.4.5.5}{SQL Queries}{section.4.5}% 98
-\BOOKMARK [1][-]{section.4.6}{Testing}{chapter.4}% 99
-\BOOKMARK [2][-]{subsection.4.6.1}{Summary of Results}{section.4.6}% 100
-\BOOKMARK [2][-]{subsection.4.6.2}{Known Issues}{section.4.6}% 101
-\BOOKMARK [1][-]{section.4.7}{Code Explanations}{chapter.4}% 102
-\BOOKMARK [2][-]{subsection.4.7.1}{Difficult Sections}{section.4.7}% 103
-\BOOKMARK [2][-]{subsection.4.7.2}{Select function \(section 4.10.4\)}{section.4.7}% 104
-\BOOKMARK [2][-]{subsection.4.7.3}{Creating the combo box \(section 4.10.4\)}{section.4.7}% 105
-\BOOKMARK [2][-]{subsection.4.7.4}{Self-created Algorithms}{section.4.7}% 106
-\BOOKMARK [1][-]{section.4.8}{Settings}{chapter.4}% 107
-\BOOKMARK [1][-]{section.4.9}{Acknowledgements}{chapter.4}% 108
-\BOOKMARK [1][-]{section.4.10}{Code Listing}{chapter.4}% 109
-\BOOKMARK [2][-]{subsection.4.10.1}{add\137booking.py}{section.4.10}% 110
-\BOOKMARK [2][-]{subsection.4.10.2}{add\137item\137to\137menu.py}{section.4.10}% 111
-\BOOKMARK [2][-]{subsection.4.10.3}{add\137item\137to\137order.py}{section.4.10}% 112
-\BOOKMARK [2][-]{subsection.4.10.4}{assign\137table\137customer.py}{section.4.10}% 113
-\BOOKMARK [2][-]{subsection.4.10.5}{cascade\137style\137sheet.py}{section.4.10}% 114
-\BOOKMARK [2][-]{subsection.4.10.6}{delete\137booking.py}{section.4.10}% 115
-\BOOKMARK [2][-]{subsection.4.10.7}{delete\137item\137off\137menu.py}{section.4.10}% 116
-\BOOKMARK [2][-]{subsection.4.10.8}{delete\137item\137off\137order.py}{section.4.10}% 117
-\BOOKMARK [2][-]{subsection.4.10.9}{main\137window.py}{section.4.10}% 118
-\BOOKMARK [2][-]{subsection.4.10.10}{manage\137booking.py}{section.4.10}% 119
-\BOOKMARK [2][-]{subsection.4.10.11}{manage\137order.py}{section.4.10}% 120
-\BOOKMARK [2][-]{subsection.4.10.12}{new\137create\137tables\137cli.py}{section.4.10}% 121
-\BOOKMARK [2][-]{subsection.4.10.13}{print\137invoice.py}{section.4.10}% 122
-\BOOKMARK [2][-]{subsection.4.10.14}{radio\137button\137widget\137class.py}{section.4.10}% 123
-\BOOKMARK [2][-]{subsection.4.10.15}{search\137order.py}{section.4.10}% 124
-\BOOKMARK [2][-]{subsection.4.10.16}{table\137display.py}{section.4.10}% 125
-\BOOKMARK [2][-]{subsection.4.10.17}{update\137booking.py}{section.4.10}% 126
-\BOOKMARK [2][-]{subsection.4.10.18}{update\137item\137price.py}{section.4.10}% 127
-\BOOKMARK [0][-]{chapter.5}{User Manual}{}% 128
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 129
-\BOOKMARK [1][-]{section.5.2}{Installation}{chapter.5}% 130
-\BOOKMARK [2][-]{subsection.5.2.1}{Software}{section.5.2}% 131
-\BOOKMARK [2][-]{subsection.5.2.2}{Hardware}{section.5.2}% 132
-\BOOKMARK [2][-]{subsection.5.2.3}{Operating System}{section.5.2}% 133
-\BOOKMARK [2][-]{subsection.5.2.4}{Prerequisite Installation}{section.5.2}% 134
-\BOOKMARK [2][-]{subsection.5.2.5}{System Installation}{section.5.2}% 135
-\BOOKMARK [2][-]{subsection.5.2.6}{Running the System}{section.5.2}% 136
-\BOOKMARK [1][-]{section.5.3}{Tutorial}{chapter.5}% 137
-\BOOKMARK [2][-]{subsection.5.3.1}{Introduction}{section.5.3}% 138
-\BOOKMARK [2][-]{subsection.5.3.2}{Assumptions}{section.5.3}% 139
-\BOOKMARK [2][-]{subsection.5.3.3}{Tutorial Questions}{section.5.3}% 140
-\BOOKMARK [2][-]{subsection.5.3.4}{How do I add an item to the menu?}{section.5.3}% 141
-\BOOKMARK [2][-]{subsection.5.3.5}{How do I delete an item off the menu?}{section.5.3}% 142
-\BOOKMARK [2][-]{subsection.5.3.6}{How do I update an item's price?}{section.5.3}% 143
-\BOOKMARK [2][-]{subsection.5.3.7}{How do I add a booking?}{section.5.3}% 144
-\BOOKMARK [2][-]{subsection.5.3.8}{How do I delete a booking?}{section.5.3}% 145
-\BOOKMARK [2][-]{subsection.5.3.9}{How do I update a booking?}{section.5.3}% 146
-\BOOKMARK [2][-]{subsection.5.3.10}{How do I manage an order for a table?}{section.5.3}% 147
-\BOOKMARK [2][-]{subsection.5.3.11}{A customer has come in without booking in advance how do I assign him to a table?}{section.5.3}% 148
-\BOOKMARK [2][-]{subsection.5.3.12}{How do I add an item to an order}{section.5.3}% 149
-\BOOKMARK [2][-]{subsection.5.3.13}{How do I delete an item off an order}{section.5.3}% 150
-\BOOKMARK [2][-]{subsection.5.3.14}{How do I print an invoice?}{section.5.3}% 151
-\BOOKMARK [2][-]{subsection.5.3.15}{Saving}{section.5.3}% 152
-\BOOKMARK [2][-]{subsection.5.3.16}{Limitations}{section.5.3}% 153
-\BOOKMARK [1][-]{section.5.4}{Error Recovery}{chapter.5}% 154
-\BOOKMARK [2][-]{subsection.5.4.1}{Empty field error when trying to add an item}{section.5.4}% 155
-\BOOKMARK [1][-]{section.5.5}{System Recovery}{chapter.5}% 156
-\BOOKMARK [2][-]{subsection.5.5.1}{Backing-up Data}{section.5.5}% 157
-\BOOKMARK [2][-]{subsection.5.5.2}{Restoring Data}{section.5.5}% 158
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 159
-\BOOKMARK [1][-]{section.6.1}{Customer Requirements}{chapter.6}% 160
-\BOOKMARK [2][-]{subsection.6.1.1}{Objective Evaluation}{section.6.1}% 161
-\BOOKMARK [2][-]{subsection.6.1.2}{Simple and clear GUI}{section.6.1}% 162
-\BOOKMARK [1][-]{section.6.2}{Effectiveness}{chapter.6}% 163
-\BOOKMARK [2][-]{subsection.6.2.1}{Order alterations}{section.6.2}% 164
-\BOOKMARK [2][-]{subsection.6.2.2}{Objective Evaluation}{section.6.2}% 165
-\BOOKMARK [1][-]{section.6.3}{Learnability}{chapter.6}% 166
-\BOOKMARK [1][-]{section.6.4}{Usability}{chapter.6}% 167
-\BOOKMARK [1][-]{section.6.5}{Maintainability}{chapter.6}% 168
-\BOOKMARK [1][-]{section.6.6}{Suggestions for Improvement}{chapter.6}% 169
-\BOOKMARK [1][-]{section.6.7}{End User Evidence}{chapter.6}% 170
-\BOOKMARK [2][-]{subsection.6.7.1}{Questionnaires}{section.6.7}% 171
-\BOOKMARK [2][-]{subsection.6.7.2}{Graphs}{section.6.7}% 172
-\BOOKMARK [2][-]{subsection.6.7.3}{Written Statements}{section.6.7}% 173
+\BOOKMARK [2][-]{subsection.4.5.6}{Used to get booking details for the selected table and the date that matches the computer system}{section.4.5}% 99
+\BOOKMARK [1][-]{section.4.6}{Testing}{chapter.4}% 100
+\BOOKMARK [2][-]{subsection.4.6.1}{Summary of Results}{section.4.6}% 101
+\BOOKMARK [2][-]{subsection.4.6.2}{Known Issues}{section.4.6}% 102
+\BOOKMARK [1][-]{section.4.7}{Code Explanations}{chapter.4}% 103
+\BOOKMARK [2][-]{subsection.4.7.1}{Difficult Sections}{section.4.7}% 104
+\BOOKMARK [2][-]{subsection.4.7.2}{Select function \(section 4.10.4\)}{section.4.7}% 105
+\BOOKMARK [2][-]{subsection.4.7.3}{Creating the combo box \(section 4.10.4\)}{section.4.7}% 106
+\BOOKMARK [2][-]{subsection.4.7.4}{Self-created Algorithms}{section.4.7}% 107
+\BOOKMARK [1][-]{section.4.8}{Settings}{chapter.4}% 108
+\BOOKMARK [1][-]{section.4.9}{Acknowledgements}{chapter.4}% 109
+\BOOKMARK [1][-]{section.4.10}{Code Listing}{chapter.4}% 110
+\BOOKMARK [2][-]{subsection.4.10.1}{add\137booking.py}{section.4.10}% 111
+\BOOKMARK [2][-]{subsection.4.10.2}{add\137item\137to\137menu.py}{section.4.10}% 112
+\BOOKMARK [2][-]{subsection.4.10.3}{add\137item\137to\137order.py}{section.4.10}% 113
+\BOOKMARK [2][-]{subsection.4.10.4}{assign\137table\137customer.py}{section.4.10}% 114
+\BOOKMARK [2][-]{subsection.4.10.5}{cascade\137style\137sheet.py}{section.4.10}% 115
+\BOOKMARK [2][-]{subsection.4.10.6}{delete\137booking.py}{section.4.10}% 116
+\BOOKMARK [2][-]{subsection.4.10.7}{delete\137item\137off\137menu.py}{section.4.10}% 117
+\BOOKMARK [2][-]{subsection.4.10.8}{delete\137item\137off\137order.py}{section.4.10}% 118
+\BOOKMARK [2][-]{subsection.4.10.9}{main\137window.py}{section.4.10}% 119
+\BOOKMARK [2][-]{subsection.4.10.10}{manage\137booking.py}{section.4.10}% 120
+\BOOKMARK [2][-]{subsection.4.10.11}{manage\137order.py}{section.4.10}% 121
+\BOOKMARK [2][-]{subsection.4.10.12}{new\137create\137tables\137cli.py}{section.4.10}% 122
+\BOOKMARK [2][-]{subsection.4.10.13}{print\137invoice.py}{section.4.10}% 123
+\BOOKMARK [2][-]{subsection.4.10.14}{radio\137button\137widget\137class.py}{section.4.10}% 124
+\BOOKMARK [2][-]{subsection.4.10.15}{search\137order.py}{section.4.10}% 125
+\BOOKMARK [2][-]{subsection.4.10.16}{table\137display.py}{section.4.10}% 126
+\BOOKMARK [2][-]{subsection.4.10.17}{update\137booking.py}{section.4.10}% 127
+\BOOKMARK [2][-]{subsection.4.10.18}{update\137item\137price.py}{section.4.10}% 128
+\BOOKMARK [0][-]{chapter.5}{User Manual}{}% 129
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 130
+\BOOKMARK [1][-]{section.5.2}{Installation}{chapter.5}% 131
+\BOOKMARK [2][-]{subsection.5.2.1}{Software}{section.5.2}% 132
+\BOOKMARK [2][-]{subsection.5.2.2}{Hardware}{section.5.2}% 133
+\BOOKMARK [2][-]{subsection.5.2.3}{Operating System}{section.5.2}% 134
+\BOOKMARK [2][-]{subsection.5.2.4}{Prerequisite Installation}{section.5.2}% 135
+\BOOKMARK [2][-]{subsection.5.2.5}{System Installation}{section.5.2}% 136
+\BOOKMARK [2][-]{subsection.5.2.6}{Running the System}{section.5.2}% 137
+\BOOKMARK [1][-]{section.5.3}{Tutorial}{chapter.5}% 138
+\BOOKMARK [2][-]{subsection.5.3.1}{Introduction}{section.5.3}% 139
+\BOOKMARK [2][-]{subsection.5.3.2}{Assumptions}{section.5.3}% 140
+\BOOKMARK [2][-]{subsection.5.3.3}{Tutorial Questions}{section.5.3}% 141
+\BOOKMARK [2][-]{subsection.5.3.4}{How do I add an item to the menu?}{section.5.3}% 142
+\BOOKMARK [2][-]{subsection.5.3.5}{How do I delete an item off the menu?}{section.5.3}% 143
+\BOOKMARK [2][-]{subsection.5.3.6}{How do I update an item's price?}{section.5.3}% 144
+\BOOKMARK [2][-]{subsection.5.3.7}{How do I add a booking?}{section.5.3}% 145
+\BOOKMARK [2][-]{subsection.5.3.8}{How do I delete a booking?}{section.5.3}% 146
+\BOOKMARK [2][-]{subsection.5.3.9}{How do I update a booking?}{section.5.3}% 147
+\BOOKMARK [2][-]{subsection.5.3.10}{How do I manage an order for a table?}{section.5.3}% 148
+\BOOKMARK [2][-]{subsection.5.3.11}{A customer has come in without booking in advance how do I assign him to a table?}{section.5.3}% 149
+\BOOKMARK [2][-]{subsection.5.3.12}{How do I add an item to an order}{section.5.3}% 150
+\BOOKMARK [2][-]{subsection.5.3.13}{How do I delete an item off an order}{section.5.3}% 151
+\BOOKMARK [2][-]{subsection.5.3.14}{How do I print an invoice?}{section.5.3}% 152
+\BOOKMARK [2][-]{subsection.5.3.15}{Saving}{section.5.3}% 153
+\BOOKMARK [2][-]{subsection.5.3.16}{Limitations}{section.5.3}% 154
+\BOOKMARK [1][-]{section.5.4}{Error Recovery}{chapter.5}% 155
+\BOOKMARK [2][-]{subsection.5.4.1}{Empty field error when trying to add an item}{section.5.4}% 156
+\BOOKMARK [1][-]{section.5.5}{System Recovery}{chapter.5}% 157
+\BOOKMARK [2][-]{subsection.5.5.1}{Backing-up Data}{section.5.5}% 158
+\BOOKMARK [2][-]{subsection.5.5.2}{Restoring Data}{section.5.5}% 159
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 160
+\BOOKMARK [1][-]{section.6.1}{Customer Requirements}{chapter.6}% 161
+\BOOKMARK [2][-]{subsection.6.1.1}{Objective Evaluation}{section.6.1}% 162
+\BOOKMARK [2][-]{subsection.6.1.2}{Simple and clear GUI}{section.6.1}% 163
+\BOOKMARK [1][-]{section.6.2}{Effectiveness}{chapter.6}% 164
+\BOOKMARK [2][-]{subsection.6.2.1}{Order alterations}{section.6.2}% 165
+\BOOKMARK [2][-]{subsection.6.2.2}{Objective Evaluation}{section.6.2}% 166
+\BOOKMARK [1][-]{section.6.3}{Learnability}{chapter.6}% 167
+\BOOKMARK [1][-]{section.6.4}{Usability}{chapter.6}% 168
+\BOOKMARK [1][-]{section.6.5}{Maintainability}{chapter.6}% 169
+\BOOKMARK [1][-]{section.6.6}{Suggestions for Improvement}{chapter.6}% 170
+\BOOKMARK [1][-]{section.6.7}{End User Evidence}{chapter.6}% 171
+\BOOKMARK [2][-]{subsection.6.7.1}{Questionnaires}{section.6.7}% 172
+\BOOKMARK [2][-]{subsection.6.7.2}{Graphs}{section.6.7}% 173
+\BOOKMARK [2][-]{subsection.6.7.3}{Written Statements}{section.6.7}% 174

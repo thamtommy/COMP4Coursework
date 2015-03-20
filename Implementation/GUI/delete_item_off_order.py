@@ -84,7 +84,7 @@ class DeleteItemOffOrder(QDialog):
         if OneQuantity == False:
             with sqlite3.connect("restaurant.db") as db:
                 cursor = db.cursor()
-                cursor.execute("select Quantity from Booking_Items where ItemID=? and BookingID = ?",(self.ItemID,self.bookingID))
+                cursor.execute("select Quantity from Booking_Items where ItemID=? and BookingID = ?",(self.ItemID, self.bookingID))
                 dbquantity = cursor.fetchone()[0]
                 
             newQuantity = dbquantity - int(Quantity)
@@ -129,7 +129,7 @@ class DeleteItemOffOrder(QDialog):
                                 Quantity
                                 FROM Booking_Items
                                 WHERE BookingID = ?
-                                AND ItemID = ?""",(self.bookingID,self.ItemID))
+                                AND ItemID = ?""",(self.bookingID, self.ItemID))
                 itemQuantity = cursor.fetchone()[0]
                 print(itemQuantity)
 

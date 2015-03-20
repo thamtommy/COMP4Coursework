@@ -66,7 +66,7 @@ class AddItemToOrder(QDialog):
             if addedAlready == True:
                 with sqlite3.connect("restaurant.db") as db:
                     cursor = db.cursor()
-                    cursor.execute("select Quantity from Booking_Items where ItemID=? and BookingID = ?",(self.ItemID,bookingID))
+                    cursor.execute("select Quantity from Booking_Items where ItemID=? and BookingID = ?",(self.ItemID, bookingID))
                     dbquantity = cursor.fetchone()[0]
                     
                 newQuantity = dbquantity + int(Quantity)
@@ -119,7 +119,7 @@ class AddItemToOrder(QDialog):
                                 INNER JOIN Booking_Items
                                 ON Booking_Items.ItemID = Items.ItemID
                                 WHERE Booking_Items.BookingID = ?
-                                AND Items.ItemID = ?""",(self.bookingDetails[0],self.ItemID))
+                                AND Items.ItemID = ?""",(self.bookingDetails[0], self.ItemID))
                 item = cursor.fetchone()[0]
         except TypeError:
             pass

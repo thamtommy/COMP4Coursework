@@ -31,14 +31,15 @@ The following hardware will be required to run the system:
 
 I created and tested the application on my Windows 8.1 64Bit computer and so the compiled executable I created should work on my client's computer as it also runs on Windows 8.1 6Bit (see page 27). I have not tested the application on a 32Bit computer therefore, I do not know if it will run without any problems. I can make a 32 Bit version of the application if needed.
 
-
 \subsection{Prerequisite Installation}
+
+The user will only need to download the install package and run the install package in order for the application to work.
 
 \subsection{System Installation}
 \begin{landscape}
 The new system has been packaged into a windows installer and so to install the new system, follow these steps: \\
 
-1. The install package is called "RestauranSetup", locate to the directory of the install package of where it has been placed. 
+1. The install package is called "RestaurantSetup", locate to the directory of the install package of where it has been placed. 
 
 
 \begin{figure}[H]
@@ -178,7 +179,7 @@ How do I delete an item off the menu? & 5.3.5 & \\ \hline
  How do I add a booking? & 5.3.7 & \\ \hline
  How do I delete a booking? & 5.3.8 & \\ \hline
  How do I update a booking? & 5.3.9 & \\ \hline
-How do I manage an order for a table & 5.3.10 \\ \hline
+How do I manage an order for a table & 5.3.10 & \\ \hline
  A customer has come in without booking advance, how do I assign him to a table? & 5.3.11 & \\ \hline
 How do I add an item to the order? & 5.3.12& \\ \hline
  How do I delete an item off the order? & 5.3.13 & \\ \hline
@@ -292,6 +293,9 @@ The table number field is a drop down box which has 16 numbers as there are 16 t
 \newpage
 \subsection{How do I delete a booking?}
 
+1. Click on "Bookings" at the top on the menu bar
+
+2. Click on "Delete Booking" and the delete booking screen should appear as shown in the image below.
 %\subsubsection{Using the menu bar}
 
 \begin{figure}[H]
@@ -299,23 +303,41 @@ The table number field is a drop down box which has 16 numbers as there are 16 t
     \caption{} \label{fig:deletebooking1}
 \end{figure}
 
+3. As you can see from the image below, there is a field requiring you to input the BookingID that they wish to delete. There is a table of bookings shown above the field to assist the user.
+
+4l. After inputting the Booking ID, click on "Delete BookingID" to delete the booking.
+
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/DeleteBooking2} 
     \caption{} \label{fig:deletebooking2}
 \end{figure}
 
+5. The booking should delete if the user entered a valid Booking ID - you can check by looking at the table where it will be removed if successful.
+
 \newpage
 \subsection{How do I update a booking?}
+
+1. Click on "Bookings" at the top on the menu bar
+
+2. Click on "Update Booking" and the update booking screen should appear as shown in the image below. 
 
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/UpdateBooking1} 
     \caption{} \label{fig:updatebooking1}
 \end{figure}
 
+3. As you can from the image below, there are 5 rows of input. You must input the Booking ID of the booking that you wish to update in order for the update functionality to work. 
+
+4. After inputting the Booking ID, you can update the booking details by entering/selecting the new information.
+
+5. Click on the relevent buttons after inputting the information to update the booking.
+
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/UpdateBooking2} 
     \caption{} \label{fig:updatebooking2}
 \end{figure}
+
+6. You will see the new updated information for the booking from the table shown above the fields.
 
 \newpage
 \subsection{How do I manage an order for a table?}
@@ -336,19 +358,31 @@ First of all, you have to assign the customer to the table. Assuming the custome
     \caption{} \label{fig:assignex2}
 \end{figure}
 
+4. The manage order box will come up with the details of the booking that the customer you selected made.
+
 \newpage
-\subsection{A customer has come in without booking in advance how do I assign him to a table?}
-Assuming a group of customers wanted to come in and you wanted to assign them to table 1.
+\subsection{A customer has come in without booking in advance how do I assign him/her to a table?}
+
+1. Select the table radio button  that you wish to assign the customer to (I have selected table 1 in this case).
+
+2. Click on "Select Table"
 
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/AssignCust1} 
     \caption{} \label{fig:assigncust1}
 \end{figure}
 
+3. The assign customer box will come up as show in the image below.
+
+4. The table number, time, date has been inputted for you therefore, you will onl need to input the number of people.
+
+5. Click on "Create"
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/AssignCust2} 
     \caption{} \label{fig:assigncust2}
 \end{figure}
+
+6. The assign customer box should close and the manage order box should appear with the booking details.
 
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/base/ManageOrder} 
@@ -372,28 +406,53 @@ Assuming a group of customers wanted to come in and you wanted to assign them to
     \caption{} \label{fig:additemorder2}
 \end{figure}
 
+3. The add item to order box will pop up.
+
+4. You now input the item id of the item the you wish to add to the order in the first field - use the table to assist you with this.
+
+5. You must also input the quantity of the item.
+
+6. Click on "Add Item"
+
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/AddItemOrder2} 
     \caption{} \label{fig:additemorder3}
 \end{figure}
 
+7. The item you added will now appear on the manage order box.
+
 \newpage
 \subsection{How do I delete an item off an order}
+
+1. Go to the selected table's manage order box by selecting the table and clicking on 'Select Table' at the main screen.
 
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/base/ManageOrder} 
     \caption{} \label{fig:additemorder1}
 \end{figure}
 
+2. Click on 'Delete'
+
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/DeleteItemOrder1} 
     \caption{} \label{fig:deleteitemorder2}
 \end{figure}
 
+3. The delete item off order will pop up.
+
+4. Input the item ID of the item that you wish to delete in the first field - use the table to assist you wish this (the table is indicated on the image below).
+
+5. Input the quantity of the item that you wish to delete in the second field.
+
+6. Click on "Delete Item"
+
+
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/DeleteItemOrder2} 
     \caption{} \label{fig:deleteitemorder3}
 \end{figure}
+
+7. The item that should have now been deleted by the amount and the results will be shown on the manage order box.
 
 \newpage
 \subsection{How do I print an invoice?}
@@ -402,6 +461,7 @@ There are two ways to do so, through the manage order or from 'Search Order' on 
 \subsubsection{Manage Order method}
 You will most likely find this method more convenient after a table has just finished with their meal .
 
+1. Assuming you are on the manage order box, click on "Print Invoice" as shown in the image below.
 
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/PrintInvoice1} 
@@ -417,6 +477,10 @@ You will most likely find this method more convenient after a table has just fin
 
 \subsubsection{Search Order method}
 This method can be used to print invoices of any order that has been created.
+
+1. Click on "Search Order" which is located on the tool bar.
+
+2. Input the Booking ID of the booking that you wish to print.
 
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/PrintInvoice3} 

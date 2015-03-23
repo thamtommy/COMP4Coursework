@@ -108,7 +108,7 @@ table, th, td {
                     <th>Quantity</th>
                     <th>Item</th>
                     <th>Price (£)</th>
-                   </tr>""".format(self.Date,self.Time,self.TableNo,self.bookingNo)
+                   </tr>""".format(self.Date, self.Time, self.TableNo, self.bookingNo)
         
         for count in range (len(self.items)):
             html += """<tr>

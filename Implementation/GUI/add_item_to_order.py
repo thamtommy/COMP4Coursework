@@ -105,7 +105,7 @@ class AddItemToOrder(QDialog):
                             FROM Items
                             INNER JOIN Booking_Items
                             ON Booking_Items.ItemID = Items.ItemID
-                            WHERE Booking_Items.BookingID = ? """,(self.bookingDetails[0],))
+                            WHERE Booking_Items.BookingID = ? """, (self.bookingDetails[0],))
             items = cursor.fetchall()
             for each in items:
                 itemsOrdered.append(each[0])
@@ -119,7 +119,7 @@ class AddItemToOrder(QDialog):
                                 INNER JOIN Booking_Items
                                 ON Booking_Items.ItemID = Items.ItemID
                                 WHERE Booking_Items.BookingID = ?
-                                AND Items.ItemID = ?""",(self.bookingDetails[0], self.ItemID))
+                                AND Items.ItemID = ?""", (self.bookingDetails[0], self.ItemID))
                 item = cursor.fetchone()[0]
         except TypeError:
             pass

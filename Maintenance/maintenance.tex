@@ -68,7 +68,7 @@ The user also has the option to update an item's price. To do this, the user mus
 
 \subsubsection{Manage Bookings}
 
-The user will be able to add/delete and update bookings. To do this, the user could either selection these options through "Bookings" on the menu bar or click on the 'Manage Bookings' button at the bottom of the main screen. \\
+The user will be able to add/delete and update bookings. The user can find these options through "Bookings" on the menu bar or click on the 'Manage Bookings' QPushButton at the bottom of the main screen however, the update booking option can only be accessed from the menu bar.  \\
 
 Clicking on the button will switch the central widget to the manage bookings widget where the user will be presented with the Bookings table widget where all of the booking records will be displayed and below the widget are the QPushButtons "Add Booking" and "Delete Booking". Clicking on Add Booking will then present the user with the same table widget and the required fields which the user would have to successfully fill to add a booking. As for the "Delete Booking"  QPushButton, the user will be presented with the same Bookings table widget and an input field for the user to input the selected booking they would like to delete and a "Delete BookingID" QPushButton to proceed the deletion. \\
 
@@ -98,6 +98,31 @@ Above are the show\_results and show\_table functions which is part of the table
     \pythonfile[firstline=494,lastline=504]{./Implementation/GUI/main_window.py}
 \end{figure}
 The functions shown above are used to switch the central widgets. I have created this in such a way so that I could just call the function whenever there was a click connection. Also, this was helpful because since there is a menu bar, the menu bar is used as an alternative to switch the central widget and so I could just call the connect functions above. 
+
+\subsection{Creating a module for each feature}
+\begin{figure}[H]
+    \pythonfile[firstline=5,lastline=24]{./Implementation/GUI/main_window.py}
+\end{figure}
+As you can see from the code snippet above, I have created modules for each feature/function and imported it into the main program. I did this because it allowed me to edit parts of the code easier and helped me keep track of the flow of the program.
+
+\subsection{Regular expression}
+\begin{figure}[H]
+    \pythonfile[firstline=28,lastline=31]{./Implementation/GUI/add_item_to_order.py}
+\end{figure}
+I have created a regular expression and set it to the input item id QLineEdit. This eliminated erroneous data from being inputted as the regular expression only allowed digits to be inputted.
+
+\subsection{Refreshing drinks/dishes ordered tables}
+\begin{figure}[H]
+    \pythonfile[firstline=133,lastline=146]{./Implementation/GUI/manage_order.py}
+\end{figure}
+The dishes/drinks tables refresh after an item gets added to the order so that the user can see what has been added. I have created signals in the add/delete item modules  and emitted the signals after the sql queries of adding/deleting have been executed. I have connected the signals to the RefreshQuery method which is the method that refreshes the tables.
+
+\subsection{Details on manage order}
+\begin{figure}[H]
+    \pythonfile[firstline=45,lastline=48]{./Implementation/GUI/manage_order.py}
+\end{figure}
+The details on the manage order box are passed from the assign customer box where the user would have to create/select a booking there. The booking details are then put into a list (bookingDetails) and passed into the manage order module and as you can see is used in the code snippet above.
+
 \section{Variable Listing}
 
 \begin{center}
@@ -105,69 +130,69 @@ The functions shown above are used to switch the central widgets. I have created
 \hline
 \textbf{Variable Name} & \textbf{Purpose} & \textbf{Line numbers} & \textbf{Section} \\ \hline
 %add booking .py
-regExp & Holds the regular expression to only allow the user to enter letters for name inputs & 31 & 4.10.1\\ \hline
-regexp & Holds the regular expression to only allow the user to input digits & 42 &4.10.1 \\ \hline
-regexp2 & Holds the regular expression to only allow the user to input digits & 48 &4.10.1 \\ \hline
-each & Stepper variable used in the for loop &57, 58 &4.10.1 \\ \hline
-self.maximumdate&Used to set maximum date for QDateEdit &63 &4.10.1 \\ \hline
-self.minimumdate&Used to set minimum date for QDateEdit &64 &4.10.1 \\ \hline
-FirstName&Used to store user input &106, 119 ,121 &4.10.1 \\ \hline
-LastName & Used to store user input & 107, 119, 121 &4.10.1 \\ \hline
-TeleNumber&Used to store user input  &108, 119, 121 & 4.10.1\\ \hline
+regExp & Holds the regular expression to only allow the user to enter letters for name inputs & 31 & 4.10.1 on page 199\\ \hline
+regexp & Holds the regular expression to only allow the user to input digits & 42 &4.10.1 on page 199 \\ \hline
+regexp2 & Holds the regular expression to only allow the user to input digits & 48 &4.10.1 on page 199 \\ \hline
+each & Stepper variable used in the for loop &57, 58 &4.10.1 on page 199 \\ \hline
+self.maximumdate&Used to set maximum date for QDateEdit &63 &4.10.1 on page 199 \\ \hline
+self.minimumdate&Used to set minimum date for QDateEdit &64 &4.10.1 on page 199 \\ \hline
+FirstName&Used to store user input &106, 119 ,121 &4.10.1 on page 199 \\ \hline
+LastName & Used to store user input & 107, 119, 121 &4.10.1  on page 199\\ \hline
+TeleNumber&Used to store user input  &108, 119, 121 & 4.10.1 on page 199\\ \hline
 NumberOfPeople&Used to store user input &110, 119, 135 & 4.10.1\\ \hline
-TableNumber&Holds the index of the table number combo box &113, 129, 135 &4.10.1 \\ \hline
-BookingDate & Used to store user input & 114, 135 & 4.10.1\\ \hline
-BookingTime&Used to store user input &115, 135 & 4.10.1\\ \hline
-customer&Holds the variables FirstName,LastName and TeleNumber to create a record for Customers &121 & 4.10.1\\ \hline
-db&Stores the path of the database &123,129,137 & 4.10.1\\ \hline
-booking& Holds the variables customerid, TableNumber, NumberOfPeople, BookingDate and BookingTime to create a record for Bookings& 135 &4.10.1 \\ \hline
+TableNumber&Holds the index of the table number combo box &113, 129, 135 &4.10.1 on page 199 \\ \hline
+BookingDate & Used to store user input & 114, 135 & 4.10.1 on page 199\\ \hline
+BookingTime&Used to store user input &115, 135 & 4.10.1 on page 199\\ \hline
+customer&Holds the variables FirstName,LastName and TeleNumber to create a record for Customers &121 & 4.10.1 on page 199\\ \hline
+db&Stores the path of the database &123,129,137 & 4.10.1 on page 199\\ \hline
+booking& Holds the variables customerid, TableNumber, NumberOfPeople, BookingDate and BookingTime to create a record for Bookings& 135 &4.10.1 on page 199 \\ \hline
 %add item to menu.py
-regexpp& Holds the regular expression to only allow a maximum of 20 letters & 35 &4.10.2 \\ \hline
-ItemName & Used to store user input & 72 &4.10.2 \\ \hline
-ItemPrice & Used to store user input & 73 &4.10.2 \\ \hline
-ItemType & Holds the selected index of the item type combo box & 73,74,76,78,79 &4.10.2 \\ \hline
-MenuItem & Holds the variables ItemName, ItemPrice and ItemType to create a record for Items & 79 &4.10.2 \\ \hline
+regexpp& Holds the regular expression to only allow a maximum of 20 letters & 35 &4.10.2 on page 205 \\ \hline
+ItemName & Used to store user input & 72 &4.10.2 on page 205 \\ \hline
+ItemPrice & Used to store user input & 73 &4.10.2 on page 205 \\ \hline
+ItemType & Holds the selected index of the item type combo box & 73,74,76,78,79 &4.10.2 on page 205 \\ \hline
+MenuItem & Holds the variables ItemName, ItemPrice and ItemType to create a record for Items & 79 &4.10.2 on page 205\\ \hline
 %add item to order.py
-self.bookingDetails & Holds booking details such as bookingid, customerid, booking date, booking time, table number and number of people & 16&4.10.3 \\ \hline
-bookingID & Holds booking id & 57 &4.10.3 \\ \hline
-self.ItemID & Used to store user input & 58 &4.10.3 \\ \hline
-Quantity & Used to store user input & 59 & 4.10.3\\ \hline
-addedAlready & Holds a boolean value to indicate whether an item has been added to the order already (Used to increase quantity) & 61, 66, 83, 97, 128, 130 &4.10.3 \\ \hline
-newQuantity & Used to calculate the new quantity after adding/deleting an item that's already been added to an order & 72 & 4.10.3\\ \hline
-updateOrder & Holds the new quantity and item id to update the record & 73 &4.10.3 \\ \hline
-itemsOrdered & Holds an array of ordered items for a particular booking & 98, 111&4.10.3 \\ \hline
+self.bookingDetails & Holds booking details such as bookingid, customerid, booking date, booking time, table number and number of people & 16&4.10.3 on page 209 \\ \hline
+bookingID & Holds booking id & 57 &4.10.3 on page 209 \\ \hline
+self.ItemID & Used to store user input & 58 &4.10.3 on page 209 \\ \hline
+Quantity & Used to store user input & 59 & 4.10.3 on page 209\\ \hline
+addedAlready & Holds a boolean value to indicate whether an item has been added to the order already (Used to increase quantity) & 61, 66, 83, 97, 128, 130 &4.10.3 on page 209 \\ \hline
+newQuantity & Used to calculate the new quantity after adding/deleting an item that's already been added to an order & 72 & 4.10.3 on page 209\\ \hline
+updateOrder & Holds the new quantity and item id to update the record & 73 &4.10.3  on page 209\\ \hline
+itemsOrdered & Holds an array of ordered items for a particular booking & 98, 111&4.10.3 on page 209 \\ \hline
 %assign table customer
-css & Holds the cascade style sheet code for the application&19 &4.10.4 \\ \hline
-Date & Holds the system date & 120 &4.10.4 \\ \hline
-Time & Holds the system time & 121 &4.10.4 \\ \hline
-self.CustomerList & Holds an array of customer id's that has a booking on a certain table and date & 152, 166, 176 &4.10.4 \\ \hline
-CustomerLastName & Holds an array of last names from the customer ids in self.CustomerList & 167, 184, 188 &4.10.4 \\ \hline
+css & Holds the cascade style sheet code for the application&19 &4.10.4 on page 214 \\ \hline
+Date & Holds the system date & 120 &4.10.4 on page 214 \\ \hline
+Time & Holds the system time & 121 &4.10.4 on page 214 \\ \hline
+self.CustomerList & Holds an array of customer id's that has a booking on a certain table and date & 152, 166, 176 &4.10.4 on page 214 \\ \hline
+CustomerLastName & Holds an array of last names from the customer ids in self.CustomerList & 167, 184, 188 &4.10.4 on page 214 \\ \hline
 %delete item off order
-OneQuantity & Holds a boolean value to indicate whether the quantity of an ordered item is one or not &82, 84, 112, 124, 117 & 4.10.8\\ \hline
+OneQuantity & Holds a boolean value to indicate whether the quantity of an ordered item is one or not &82, 84, 112, 124, 117 & 4.10.8 on page 233\\ \hline
 %main window.py
-self.TableOne Occupied & Holds a boolean value to indicate whether table one is occupied or not &34, 227 &4.10.9 \\ \hline
- self.TableTwo Occupied &Holds a boolean value to indicate whether table two is occupied or not &35, 241 & 4.10.9\\ \hline
-self.TableThree Occupied &Holds a boolean value to indicate whether table three is occupied or not &36, 255 &4.10.9 \\ \hline
- self.TableFour Occupied&Holds a boolean value to indicate whether table four is occupied or not &37, 269  & 4.10.9\\ \hline
-     self.TableFive Occupied &Holds a boolean value to indicate whether table five is occupied or not &38, 283 &4.10.9 \\ \hline
-     self.TableSix Occupied &Holds a boolean value to indicate whether table six is occupied or not &39, 297 &4.10.9 \\ \hline
-     self.TableSeven Occupied & Holds a boolean value to indicate whether table seven is occupied or not&40, 312  & 4.10.9\\ \hline
-     self.TableEight Occupied&Holds a boolean value to indicate whether table eight is occupied or not & 41, 326 &4.10.9 \\ \hline
-     self.TableNine Occupied &Holds a boolean value to indicate whether table nine is occupied or not &42, 340  &4.10.9 \\ \hline
-     self.TableTen Occupied &Holds a boolean value to indicate whether table ten is occupied or not & 43, 354 &4.10.9 \\ \hline
-     self.TableEleven Occupied&Holds a boolean value to indicate whether table eleven is occupied or not &44, 368  &4.10.9 \\ \hline
-     self.TableTwelve Occupied &Holds a boolean value to indicate whether table twelve is occupied or not &45, 382  & 4.10.9\\ \hline
-     self.TableThirteen Occupied &Holds a boolean value to indicate whether table thirteen is occupied or not &46, 396 &4.10.9 \\ \hline
-     self.TableFourteen Occupied& Holds a boolean value to indicate whether table fourteen is occupied or not&47, 410 &4.10.9 \\ \hline
-     self.TableFifteen Occupied &Holds a boolean value to indicate whether table fifteen is occupied or not &48, 424 &4.10.9 \\ \hline
-     self.TableSixteen Occupied &Holds a boolean value to indicate whether table sixteen is occupied or not &49, 438 &4.10.9 \\ \hline
-tableList & Used to store the number of tables for the radio button widget & 154,156 &4.10.9 \\ \hline
-Todays Date & Holds the system date & 171 &4.10.9  \\ \hline
+self.TableOne Occupied & Holds a boolean value to indicate whether table one is occupied or not &34, 227 &4.10.9 on page 239 \\ \hline
+ self.TableTwo Occupied &Holds a boolean value to indicate whether table two is occupied or not &35, 241 & 4.10.9 on page 239\\ \hline
+self.TableThree Occupied &Holds a boolean value to indicate whether table three is occupied or not &36, 255 &4.10.9  on page 239\\ \hline
+ self.TableFour Occupied&Holds a boolean value to indicate whether table four is occupied or not &37, 269  & 4.10.9 on page 239\\ \hline
+     self.TableFive Occupied &Holds a boolean value to indicate whether table five is occupied or not &38, 283 &4.10.9 on page 239 \\ \hline
+     self.TableSix Occupied &Holds a boolean value to indicate whether table six is occupied or not &39, 297 &4.10.9  on page 239\\ \hline
+     self.TableSeven Occupied & Holds a boolean value to indicate whether table seven is occupied or not&40, 312  & 4.10.9 on page 239\\ \hline
+     self.TableEight Occupied&Holds a boolean value to indicate whether table eight is occupied or not & 41, 326 &4.10.9  on page 239\\ \hline
+     self.TableNine Occupied &Holds a boolean value to indicate whether table nine is occupied or not &42, 340  &4.10.9 on page 239 \\ \hline
+     self.TableTen Occupied &Holds a boolean value to indicate whether table ten is occupied or not & 43, 354 &4.10.9 on page 239 \\ \hline
+     self.TableEleven Occupied&Holds a boolean value to indicate whether table eleven is occupied or not &44, 368  &4.10.9 on page 239 \\ \hline
+     self.TableTwelve Occupied &Holds a boolean value to indicate whether table twelve is occupied or not &45, 382  & 4.10.9 on page 239\\ \hline
+     self.TableThirteen Occupied &Holds a boolean value to indicate whether table thirteen is occupied or not &46, 396 &4.10.9  on page 239\\ \hline
+     self.TableFourteen Occupied& Holds a boolean value to indicate whether table fourteen is occupied or not&47, 410 &4.10.9  on page 239\\ \hline
+     self.TableFifteen Occupied &Holds a boolean value to indicate whether table fifteen is occupied or not &48, 424 &4.10.9 on page 239 \\ \hline
+     self.TableSixteen Occupied &Holds a boolean value to indicate whether table sixteen is occupied or not &49, 438 &4.10.9 on page 239 \\ \hline
+tableList & Used to store the number of tables for the radio button widget & 154,156 &4.10.9 on page 239 \\ \hline
+Todays Date & Holds the system date & 171 &4.10.9  on page 239 \\ \hline
 %manage order
-self.Finished & Holds a boolean value to indicate whether the table/booking has finished &24, 188 & 4.10.11 \\ \hline
-self.TotalPrice & Used to store the total price of all ordered items& 149, 181 &4.10.11 \\ \hline
-self.price & Holds an array of all the prices of all ordered items&150, 160, 162 &4.10.11 \\ \hline
-self.quantity & Holds an array of quantities of all ordered items & 151, 173, 174, 175 & 4.10.11\\ \hline
+self.Finished & Holds a boolean value to indicate whether the table/booking has finished &24, 188 & 4.10.11 on page 261 \\ \hline
+self.TotalPrice & Used to store the total price of all ordered items& 149, 181 &4.10.11 n page 261 \\ \hline
+self.price & Holds an array of all the prices of all ordered items&150, 160, 162 &4.10.11 n page 261 \\ \hline
+self.quantity & Holds an array of quantities of all ordered items & 151, 173, 174, 175 & 4.10.11 n page 261\\ \hline
 
 
 
@@ -183,166 +208,166 @@ self.quantity & Holds an array of quantities of all ordered items & 151, 173, 17
 \subsubsection{Main Screen}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen1}
+    \includegraphics[width=15cm]{./Maintenance/images/screen1}
     \caption{The screen that appears once application opens} \label{fig:screen1}
 \end{figure}
 
 \subsubsection{Manage Bookings}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen2}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen2}
     \caption{Manage Bookings that can be accessed from the main screen} \label{fig:screen2}
 \end{figure}
 
 \subsubsection{Add Bookings}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen3}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen3}
     \caption{Add Booking screen whic can be accessed from Bookings on the menu bar or the Manage Bookings screen} \label{fig:screen3}
 \end{figure}
 
 \subsubsection{Delete Bookings}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen4}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen4}
     \caption{Delete Booking screen which can be accessed from Bookings on the menu bar or the Manage Bookings screen} \label{fig:screen4}
 \end{figure}
 
 \subsubsection{Add Item To Menu}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen5}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen5}
     \caption{Add Item screen which can be accessed from Item Menu on the menu bar} \label{fig:screen5}
 \end{figure}
 
 \subsubsection{Delete Item Off Menu}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen6}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen6}
     \caption{Delete Item screen which can be accessed from Item Menu on he menu bar} \label{fig:screen6}
 \end{figure}
 
 \subsubsection{Update Item Price}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen7}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen7}
     \caption{Update Item Price screen which can be accessed from Item Menu on the menu bar} \label{fig:screen7}
 \end{figure}
 
 \subsubsection{Update Booking}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen8}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen8}
     \caption{Update Booking screen which can be accessed from Item Menu on the menu bar} \label{fig:screen8}
 \end{figure}
 
 \subsubsection{Assign Customer To Table}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen9}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen9}
     \caption{Assign customer box after clicking on "Select Table" on main screen} \label{fig:screen9}
 \end{figure}
 
 \subsubsection{Manage Order}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen10}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen10}
     \caption{Manage Order box after clicking on "Create" from assign customer box} \label{fig:screen10}
 \end{figure}
 
 \subsubsection{Add Item To Order}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen11}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen11}
     \caption{Add Item To Order box after clicking on "Add" from the Manage Order Box} \label{fig:screen11}
 \end{figure}
 
 \subsubsection{Delete Item Off Order}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen12}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen12}
     \caption{Delete Item Off Order box after clicking on "Delete" from the Manage Order box (The items ordered will be shown in the table)} \label{fig:screen12}
 \end{figure}
 
 \subsubsection{Invoice Preview}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen13}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen13}
     \caption{The peview of the ivoice relating to the order after clicking on Invoice Preview from the Manage Order box} \label{fig:screen13}
 \end{figure}
 
 \subsubsection{Print Options/Confirmation}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen14}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen14}
     \caption{Print options/confirmation after clicking on "Print Invoice" from the Manage Order box} \label{fig:screen14}
 \end{figure}
 
 \subsubsection{Assign box (Before clicking on "Select")}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen15}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen15}
     \caption{Before clicking on the "Select" button on the Assign Custome box} \label{fig:screen15}
 \end{figure}
 
 \subsubsection{After clicking on "Select"}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen16}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen16}
     \caption{After clicking on "Select"  - Manage Order box appears} \label{fig:screen16}
 \end{figure}
 
 \subsubsection{Search Order}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen17}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen17}
     \caption{Search Order screen which can be found on the Tool Bar} \label{fig:screen17}
 \end{figure}
 
 \subsubsection{View Bookings on Tool Bar}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen18}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen18}
     \caption{View Bookings screen which can be foundon the Tool Bar} \label{fig:screen18}
 \end{figure}
 
 \subsubsection{View Customers on Tool Bar}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen19}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen19}
     \caption{View Cusomers screen whic can be found on the Tool Bar} \label{fig:screen19}
 \end{figure}
 
 \subsubsection{View Dishes on Tool Bar}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen20}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen20}
     \caption{View Dishes screen ca be found on the Tool Bar} \label{fig:screen20}
 \end{figure}
 
 \subsubsection{View Drinks on Tool Bar}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/screen21}
+    \includegraphics[width = 15cm]{./Maintenance/images/screen21}
     \caption{View Drinks screen which can be found on the Tool Bar} \label{fig:screen21}
 \end{figure}
 \end{landscape}
 
 \subsection{ER Diagram}
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/erDiagram}
+    \includegraphics[width = 12cm ]{./Maintenance/images/erDiagram}
     \caption{ER Diagram of finished database} \label{fig:erDiagram}
 \end{figure}
 
 \subsection{Database Table Views}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/entities}
+    \includegraphics[height = 13cm]{./Maintenance/images/entities}
     \caption{ER Diagram of finished database} \label{fig:entities}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/itemtype}
+    \includegraphics[height = 12cm]{./Maintenance/images/itemtype}
     \caption{Item Type entity} \label{fig:itemtype}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/items}
+    \includegraphics[height = 13cm]{./Maintenance/images/items}
     \caption{Items entity} \label{fig:items}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/customers}
+    \includegraphics[height = 13cm]{./Maintenance/images/customers}
     \caption{Customers entity} \label{fig:customers}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/bookings}
+    \includegraphics[height = 12cm]{./Maintenance/images/bookings}
     \caption{Bookings entity} \label{fig:bookings}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[height = 15cm]{./Maintenance/images/bookingitems}
+    \includegraphics[height = 13cm]{./Maintenance/images/bookingitems}
     \caption{Booking Items entity} \label{fig:bookingitems}
 \end{figure}
 
@@ -407,50 +432,55 @@ CREATE TABLE Customers(
 
 \subsection{SQL Queries}
 
-\subsubsection{Used to create customer records}
+
 \begin{sql}
 insert into Customers (FirstName,LastName,TelephoneNo) values (?,?,?)
 \end{sql}
+The query above adds a new customer to the database \\ \\
 
-\subsubsection{Used to create the item types}
+
 \begin{sql}
 insert into ItemType (Type) values (?)
 \end{sql}
+The query above adds a new item type to the database \\ \\
 
-\subsubsection{Used to insert the table numbers}
 \begin{sql}
 insert into Table_Numbers (TableNumber) values (?)
 \end{sql}
+The query above adds a table number to the database \\ \\
 
-\subsubsection{Used to get a customer id}
 \begin{sql}
 select CustomerID from Customers where TelephoneNo=? and FirstName=? and LastName=?
 \end{sql}
+The query above gets a customer id from the database given the telephone number, first name and last name \\ \\
 
-\subsubsection{Used to create a booking}
 \begin{sql}
 insert into Bookings(CustomerID, TableNumber, NumberOfPeople, Date, Time) values (?,?,?,?,?)
 \end{sql}
+The query above adds a new booking to the database \\ \\
 
-\subsubsection{Used to insert an item to the menu}
 \begin{sql}
 insert into Items(ItemName,ItemPrice,ItemTypeID) values (?,?,?)
 \end{sql}
+The query above adds a item to the item menu database \\ \\
 
-\subsubsection{Used to get quantity of an ordered item}
+
 \begin{sql}
 select Quantity from Booking_Items where ItemID=? and BookingID = ?
 \end{sql}
+The query above gets the quantity of an ordered item from the database  \\ \\
 
-\subsubsection{Used to update the quantity of an ordered item}
+
 \begin{sql}
 update Booking_Items set Quantity=? where ItemID=?
 \end{sql}
+The query above updates the quantity of an ordered item \\ \\
 
-\subsubsection{Used to add an item to an order}
+
 \begin{sql}
 insert into Booking_Items(BookingID,ItemID,Quantity) values (?,?,?)
 \end{sql}
+The query above adds an item to an order (booking items database) \\ \\
 
 
 \begin{sql}
@@ -461,7 +491,7 @@ FROM Items
 ON Booking_Items.ItemID = Items.ItemID
 WHERE Booking_Items.BookingID = ?
 \end{sql}
-This query fetches all the item names that have been ordered, given the  booking id.  \\ \\
+The query above fetches all the item names that have been ordered, given the  booking id.  \\ \\
 
 \begin{sql}
 SELECT
@@ -472,7 +502,7 @@ ON Booking_Items.ItemID = Items.ItemID
  WHERE Booking_Items.BookingID = ?
  AND Items.ItemID = ?
 \end{sql}
-This query fetches the item name of an ordered item, given the booking id and item id. \\ \\
+The query above fetches the item name of an ordered item, given the booking id and item id. \\ \\
 
 \begin{sql}
 SELECT
@@ -487,50 +517,57 @@ WHERE Bookings.Date = '{0}'
 AND Bookings.TableNumber = {1}
 .format(self.systemdate,TableNumber)
 \end{sql}
-This query fetches all the bookings that matches the system date and the relevant table number with the customer's first name, last name, number of people and booking time. \\ \\
+The query above fetches all the bookings that matches the system date and the relevant table number with the customer's first name, last name, number of people and booking time. \\ \\
 
-\subsubsection{Used to get booking details of a customer}
+
 
 \begin{sql}
 select * from Bookings where CustomerID = {0} and TableNumber = {1} and NumberOfPeople = {2} and Date = '{3}' and Time = '{4}' .format(CustomerID,TableNumber,NumberOfPeople,Date,Time))
 \end{sql}
+The query above gets the booking record given the booking details \\ \\
 
-\subsection{Used to get booking details for the selected table and the date that matches the computer system}
+
 \begin{sql}
 select * from Bookings where CustomerID = {0} and TableNumber = {1} and Date = '{2}'.format(CustomerID,self.tableNumber,TodaysDate)
 \end{sql}
+The query above gets the booking details for the selected table and the date that matches the computer system \\ \\
 
 
-\subsubsection{Used to get the customer ID of a booking on the selected table and the date that matches the computer system}
 \begin{sql}
 select CustomerID from Bookings where TableNumber = {0} and Date = '{1}'.format(TableNumber,TodaysDate)
 \end{sql}
-
-\subsubsection{Used to get the last name of a customer}
+The query above gets the customer ID of a booking on the selected table and the date that matches the computer system \\ \\
 
 \begin{sql}
 select LastName from Customers where CustomerID = {0}.format(customer))
 \end{sql}
+The query above gets the last name of a customer \\ \\
 
-\subsubsection{Used to delete a booking}
+
+
 \begin{sql}
 delete from Bookings where BookingID = {0}.format(booking)
 \end{sql}
+The query above deletes a booking \\ \\
 
-\subsubsection{Used to delete an item off the item menu given the name of the item}
+
+
 \begin{sql}
 delete from Items where ItemName = ?
 \end{sql}
+The query above deletes an item off the item menu given the name of the item \\ \\
 
-\subsubsection{Used to delete an item off the item menu given the ID of the item}
+
 \begin{sql}
 delete from Items where ItemID = {0}.format(itemID)
 \end{sql}
+The query above deletes an item off the item menu given the ID of the item \\ \\
 
-\subsubsection{Used to delete ordered items off the selected booking}
+
 \begin{sql}
 delete from Booking_Items where BookingID = ? and ItemID = ? 
 \end{sql}
+The query above deletes an ordered item off the selected booking \\ \\
 
 \begin{sql}
 SELECT
@@ -546,7 +583,7 @@ FROM Customers
  ORDER BY Bookings.Time
 .format(TodaysDate)
 \end{sql}
-This query fetches all the bookings that matches the booking date with the system'sdate with its details including customer details. \\ \\
+The query above fetches all the bookings that matches the booking date with the system's date with its details including customer details. \\ \\
 
 \begin{sql}
 SELECT
@@ -564,7 +601,7 @@ Customers.TelephoneNo
  ON Customers.CustomerID = Bookings.CustomerID
  ORDER BY Bookings.Date,Bookings.Time
 \end{sql}
-This query gets all the records from the bookings entity as well as the customer records that matches with the bookings. \\ \\
+The query above gets all the records from the bookings entity as well as the customer records that matches with the bookings. \\ \\
 
 \begin{sql}
 SELECT
@@ -577,7 +614,7 @@ ON Booking_Items.ItemID = Items.ItemID
  WHERE Booking_Items.BookingID = {0}
 AND Items.ItemTypeID = 2
 \end{sql}
-This query fetches all the ordered drinks , given the booking id. \\ \\
+The query above fetches all the ordered drinks , given the booking id. \\ \\
 
 \begin{sql}
 SELECT
@@ -590,7 +627,7 @@ ON Booking_Items.ItemID = Items.ItemID
  WHERE Booking_Items.BookingID = {0}
  AND Items.ItemTypeID = 1
 \end{sql}
-This query fetches all the ordered dishes, given the booking id. \\ \\
+The query above fetches all the ordered dishes, given the booking id. \\ \\
 
 \begin{sql}
 SELECT
@@ -600,7 +637,7 @@ Items.ItemPrice
  ON Booking_Items.ItemID = Items.ItemID
 WHERE Booking_Items.BookingID = ?
 \end{sql}
-This query fetches the prices of each ordered item \\ \\
+The query above fetches the prices of each ordered item \\ \\
 
 
 \begin{sql}
@@ -611,7 +648,7 @@ SELECT
  ON Booking_Items.ItemID = Items.ItemID
  WHERE Booking_Items.BookingID = ? 
 \end{sql}
-This query fetches the quantiity of each ordered item \\ \\
+The query above fetches the quantiity of each ordered item \\ \\
 
 \begin{sql}
 SELECT
@@ -623,32 +660,38 @@ SELECT
  ON Booking_Items.ItemID = Items.ItemID
  WHERE Booking_Items.BookingID = {0}
 \end{sql}
-This query fetches all the ordered items with its information such as quantity, name and price \\ \\
+The query above fetches all the ordered items with its information such as quantity, name and price \\ \\
 
-\subsubsection{Used to update the booking date, given the ID}
+
 \begin{sql}
 update Bookings set Date=? where BookingID=?
 \end{sql}
+The query above updates the date of a booking \\ \\
 
-\subsubsection{Used to update the booking time, given the ID}
+
 \begin{sql}
 update Bookings set Time=? where BookingID=?
 \end{sql}
+The query above updates the time of a booking \\ \\
 
-\subsubsection{Used to update the number of people expected for the selected booking, given the ID}
+
 \begin{sql}
 update Bookings set NumberOfPeople=? where BookingID=?
 \end{sql}
+The query above updates the number of people expected for the selected booking \\ \\
 
-\subsubsection{Used to update the table number of the booking, given the ID}
+
 \begin{sql}
 update Bookings set TableNumber=? where BookingID=?
 \end{sql}
+The query above updates the table number of the selected booking \\ \\
 
-\subsubsection{Used to update the price of an item}
+
 \begin{sql}
 update Items set ItemPrice=? where ItemID=?
 \end{sql}
+The query above updates the price of an item \\ \\
+
 
 \section{Testing}
 
@@ -663,7 +706,7 @@ There was a problem with the manage order box where the Total Price was suppose 
 
 \subsubsection{Test 4.09 - Add Booking (Telephone problem)}
 
-All the details of the booking correctly stored in the database apart from the telephone number. Telephone numbers usually start of with a '0' i.e '01368 902412', the '0' was not stored in the database so the actual data that would be stored would come out as '1368902412'.
+All the details of the booking correctly stored in the database apart from the telephone number. Telephone numbers usually start of with a '0' i.e '01368 902412', the '0' was not stored in the database so the actual data that would be stored would come out as '1368902412'. I am unsure as to how I would fix this problem.
 
 
 \section{Code Explanations}
@@ -707,12 +750,18 @@ Above is a function that creates the combo box and populates it with customer la
 20 & Appends the CustomerLastName list with the last names from lines 15-18 \\ \hline
 23-25 & Creates the combo box and uses a FOR loop to populate the combobox with the last names \\ \hline
 
-
 \end{tabular}
 \end{center}
 
+\subsection{Part of invoice}
+
+\pythonfile[firstline=100, lastline = 111]{./Implementation/GUI/print_invoice.py}
+The code snippet above is part of the invoice script. I have made the invoice using html therefore, the syntax is in html. As you can see, this part of the code is used for the booking details such as the date, time, table number and booking number(booking ID). I have put a place holder beside each detail as you can see on lines 2-5 and you can see on line 12 that the values passed in the place holders are the respective variables.
+
 \newpage
 \subsection{Self-created Algorithms}
+
+\subsection{Table algorithm}
 \pythonfile[firstline=226, lastline=238]{./Implementation/GUI/main_window.py}
 The above algorithm is used to tell the program if the table is occupied or not. Below is a table explaining the algorithm in more depth.
 
@@ -735,14 +784,26 @@ The above algorithm is used to tell the program if the table is occupied or not.
 \end{tabular}
 \end{center}
 
+\subsection{Item already exists in order algorithm}
 \newpage
 \pythonfile[firstline=96, lastline=130]{./Implementation/GUI/add_item_to_order.py}
 The algorithm above is used to check if an item that is about to be added has already been ordered, if it has then the quantity will increase(quantity increase is not part of this algorithm). I created a list (line 3) which was used to populate it (line 14-16)with all ordered items from the relevent booking. I then got the item name that was going to be added to the order (lines 21-28) and checked if the item was in the list that was populated with the ordered items (lines 32-33).
 
 \newpage
 
+\subsection{Delete item off order algorithm}
 \pythonfile[firstline=123, lastline=141]{./Implementation/GUI/delete_item_off_order.py}
 The algorithm above will be used when the user wants to delete an item off an order. It is used to find out if the quantity of the item that wants to be deleted has a quantity of one or not. Lines 4-11 gets the quantity of the ordered item that the user wants to delete and if the quantity is equal to 1 then OneQuantity will be set to True if not then the returned OneQuantity will be False. 
+
+\subsection{Calculate total price for invoice algorithm}
+
+\pythonfile[firstline=59, lastline = 61]{./Implementation/GUI/print_invoice.py}
+This part of the algorithm is used to calculate the total price of an ordered item. As one item can be ordered many times, the algorithm multiplies the price of the item by the quantity ordered and assigns that value to index of the ordered item.
+
+\pythonfile[firstline=66, lastline = 68]{./Implementation/GUI/print_invoice.py}
+The final part of the algorithm calulates the total price of the whole order. As you can see, I have gave the variable 'TotalPrice' an initial value of 0 and then used a FOR loop to increase the value by using the self.price array (first part of the algorithm).
+
+
 \section{Settings}
 
 My client's computer system settings will not need any changes to run the application as I have made the application an executable however, if anyone wanted to alter the application then Python and PyQt4 would be needed.
@@ -771,7 +832,7 @@ Example:
 \begin{landscape}
 %include as many subsections as you have modules
 \subsection{add\_booking.py}
-%the code below can be uncommented and used to get a code section from a particular file
+
 \pythonfile[firstline=1]{./Implementation/GUI/add_booking.py}
 
 

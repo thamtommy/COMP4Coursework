@@ -120,116 +120,125 @@
 \contentsline {section}{\numberline {4.3}Code Structure}{145}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Displaying a table}{145}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Switching central widgets}{146}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Variable Listing}{146}{section.4.4}
-\contentsline {section}{\numberline {4.5}System Evidence}{149}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}User Interface}{149}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}ER Diagram}{172}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Database Table Views}{173}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Database SQL}{179}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}SQL Queries}{180}{subsection.4.5.5}
-\contentsline {subsubsection}{Used to create customer records}{180}{section*.33}
-\contentsline {subsubsection}{Used to create the item types}{180}{section*.34}
-\contentsline {subsubsection}{Used to insert the table numbers}{180}{section*.35}
-\contentsline {subsubsection}{Used to get a customer id}{180}{section*.36}
-\contentsline {subsubsection}{Used to create a booking}{180}{section*.37}
-\contentsline {subsubsection}{Used to insert an item to the menu}{180}{section*.38}
-\contentsline {subsubsection}{Used to get quantity of an ordered item}{181}{section*.39}
-\contentsline {subsubsection}{Used to update the quantity of an ordered item}{181}{section*.40}
-\contentsline {subsubsection}{Used to add an item to an order}{181}{section*.41}
-\contentsline {subsubsection}{Used to get booking details of a customer}{182}{section*.42}
-\contentsline {subsection}{\numberline {4.5.6}Used to get booking details for the selected table and the date that matches the computer system}{182}{subsection.4.5.6}
-\contentsline {subsubsection}{Used to get the customer ID of a booking on the selected table and the date that matches the computer system}{182}{section*.43}
-\contentsline {subsubsection}{Used to get the last name of a customer}{182}{section*.44}
-\contentsline {subsubsection}{Used to delete a booking}{183}{section*.45}
-\contentsline {subsubsection}{Used to delete an item off the item menu given the name of the item}{183}{section*.46}
-\contentsline {subsubsection}{Used to delete an item off the item menu given the ID of the item}{183}{section*.47}
-\contentsline {subsubsection}{Used to delete ordered items off the selected booking}{183}{section*.48}
-\contentsline {subsubsection}{Used to update the booking date, given the ID}{185}{section*.49}
-\contentsline {subsubsection}{Used to update the booking time, given the ID}{185}{section*.50}
-\contentsline {subsubsection}{Used to update the number of people expected for the selected booking, given the ID}{186}{section*.51}
-\contentsline {subsubsection}{Used to update the table number of the booking, given the ID}{186}{section*.52}
-\contentsline {subsubsection}{Used to update the price of an item}{186}{section*.53}
-\contentsline {section}{\numberline {4.6}Testing}{186}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Summary of Results}{186}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Known Issues}{186}{subsection.4.6.2}
-\contentsline {subsubsection}{Test 4.03 - Manage order total price}{186}{section*.54}
-\contentsline {section}{\numberline {4.7}Code Explanations}{187}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Difficult Sections}{187}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Select function (section 4.10.4)}{188}{subsection.4.7.2}
-\contentsline {subsection}{\numberline {4.7.3}Creating the combo box (section 4.10.4)}{189}{subsection.4.7.3}
-\contentsline {subsection}{\numberline {4.7.4}Self-created Algorithms}{191}{subsection.4.7.4}
-\contentsline {section}{\numberline {4.8}Settings}{195}{section.4.8}
-\contentsline {section}{\numberline {4.9}Acknowledgements}{195}{section.4.9}
-\contentsline {section}{\numberline {4.10}Code Listing}{196}{section.4.10}
-\contentsline {subsection}{\numberline {4.10.1}add\_booking.py}{197}{subsection.4.10.1}
-\contentsline {subsection}{\numberline {4.10.2}add\_item\_to\_menu.py}{203}{subsection.4.10.2}
-\contentsline {subsection}{\numberline {4.10.3}add\_item\_to\_order.py}{207}{subsection.4.10.3}
-\contentsline {subsection}{\numberline {4.10.4}assign\_table\_customer.py}{212}{subsection.4.10.4}
-\contentsline {subsection}{\numberline {4.10.5}cascade\_style\_sheet.py}{220}{subsection.4.10.5}
-\contentsline {subsection}{\numberline {4.10.6}delete\_booking.py}{224}{subsection.4.10.6}
-\contentsline {subsection}{\numberline {4.10.7}delete\_item\_off\_menu.py}{227}{subsection.4.10.7}
-\contentsline {subsection}{\numberline {4.10.8}delete\_item\_off\_order.py}{231}{subsection.4.10.8}
-\contentsline {subsection}{\numberline {4.10.9}main\_window.py}{237}{subsection.4.10.9}
-\contentsline {subsection}{\numberline {4.10.10}manage\_booking.py}{257}{subsection.4.10.10}
-\contentsline {subsection}{\numberline {4.10.11}manage\_order.py}{259}{subsection.4.10.11}
-\contentsline {subsection}{\numberline {4.10.12}new\_create\_tables\_cli.py}{267}{subsection.4.10.12}
-\contentsline {subsection}{\numberline {4.10.13}print\_invoice.py}{272}{subsection.4.10.13}
-\contentsline {subsection}{\numberline {4.10.14}radio\_button\_widget\_class.py}{278}{subsection.4.10.14}
-\contentsline {subsection}{\numberline {4.10.15}search\_order.py}{280}{subsection.4.10.15}
-\contentsline {subsection}{\numberline {4.10.16}table\_display.py}{284}{subsection.4.10.16}
-\contentsline {subsection}{\numberline {4.10.17}update\_booking.py}{287}{subsection.4.10.17}
-\contentsline {subsection}{\numberline {4.10.18}update\_item\_price.py}{294}{subsection.4.10.18}
-\contentsline {chapter}{\numberline {5}User Manual}{297}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{297}{section.5.1}
-\contentsline {section}{\numberline {5.2}Installation}{297}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Software}{297}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Hardware}{297}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Operating System}{298}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Prerequisite Installation}{298}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}System Installation}{298}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Running the System}{313}{subsection.5.2.6}
-\contentsline {section}{\numberline {5.3}Tutorial}{315}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Introduction}{315}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Assumptions}{315}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Tutorial Questions}{315}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}How do I add an item to the menu?}{315}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}How do I delete an item off the menu?}{318}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}How do I update an item's price?}{320}{subsection.5.3.6}
-\contentsline {subsection}{\numberline {5.3.7}How do I add a booking?}{322}{subsection.5.3.7}
-\contentsline {subsection}{\numberline {5.3.8}How do I delete a booking?}{326}{subsection.5.3.8}
-\contentsline {subsection}{\numberline {5.3.9}How do I update a booking?}{328}{subsection.5.3.9}
-\contentsline {subsection}{\numberline {5.3.10}How do I manage an order for a table?}{329}{subsection.5.3.10}
-\contentsline {subsection}{\numberline {5.3.11}A customer has come in without booking in advance how do I assign him to a table?}{331}{subsection.5.3.11}
-\contentsline {subsection}{\numberline {5.3.12}How do I add an item to an order}{334}{subsection.5.3.12}
-\contentsline {subsection}{\numberline {5.3.13}How do I delete an item off an order}{338}{subsection.5.3.13}
-\contentsline {subsection}{\numberline {5.3.14}How do I print an invoice?}{340}{subsection.5.3.14}
-\contentsline {subsubsection}{Manage Order method}{340}{section*.55}
-\contentsline {subsubsection}{Search Order method}{342}{section*.56}
-\contentsline {subsection}{\numberline {5.3.15}Saving}{344}{subsection.5.3.15}
-\contentsline {subsection}{\numberline {5.3.16}Limitations}{344}{subsection.5.3.16}
-\contentsline {section}{\numberline {5.4}Error Recovery}{344}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Empty field error when trying to add an item}{344}{subsection.5.4.1}
-\contentsline {section}{\numberline {5.5}System Recovery}{347}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Backing-up Data}{347}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Restoring Data}{350}{subsection.5.5.2}
-\contentsline {chapter}{\numberline {6}Evaluation}{354}{chapter.6}
-\contentsline {section}{\numberline {6.1}Customer Requirements}{354}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Objective Evaluation}{354}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Simple and clear GUI}{354}{subsection.6.1.2}
-\contentsline {subsubsection}{Having a very simple birds eye view image of the restaurant which is made out of shapes to ease the understanding of where each table is}{354}{section*.57}
-\contentsline {subsubsection}{Label table with their corresponding number}{354}{section*.58}
-\contentsline {subsubsection}{Table shapes will be big so it won't be hard to click on them but not so big that 16 tables can fit on the GUI}{355}{section*.59}
-\contentsline {subsubsection}{Clicking on table will bring up a window which shows the status such as the date and food items ordered with noticeable order modification options}{355}{section*.60}
-\contentsline {section}{\numberline {6.2}Effectiveness}{356}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Order alterations}{356}{subsection.6.2.1}
-\contentsline {subsubsection}{Have clear Add, Delete and Create invoice buttons}{356}{section*.61}
-\contentsline {subsection}{\numberline {6.2.2}Objective Evaluation}{356}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Learnability}{356}{section.6.3}
-\contentsline {section}{\numberline {6.4}Usability}{356}{section.6.4}
-\contentsline {section}{\numberline {6.5}Maintainability}{356}{section.6.5}
-\contentsline {section}{\numberline {6.6}Suggestions for Improvement}{356}{section.6.6}
-\contentsline {section}{\numberline {6.7}End User Evidence}{356}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Questionnaires}{356}{subsection.6.7.1}
-\contentsline {subsection}{\numberline {6.7.2}Graphs}{356}{subsection.6.7.2}
-\contentsline {subsection}{\numberline {6.7.3}Written Statements}{356}{subsection.6.7.3}
+\contentsline {subsection}{\numberline {4.3.3}Creating a module for each feature}{147}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Regular expression}{147}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Refreshing drinks/dishes ordered tables}{148}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}Details on manage order}{148}{subsection.4.3.6}
+\contentsline {section}{\numberline {4.4}Variable Listing}{149}{section.4.4}
+\contentsline {section}{\numberline {4.5}System Evidence}{154}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}User Interface}{154}{subsection.4.5.1}
+\contentsline {subsubsection}{Main Screen}{155}{section*.33}
+\contentsline {subsubsection}{Manage Bookings}{156}{section*.34}
+\contentsline {subsubsection}{Add Bookings}{157}{section*.35}
+\contentsline {subsubsection}{Delete Bookings}{158}{section*.36}
+\contentsline {subsubsection}{Add Item To Menu}{159}{section*.37}
+\contentsline {subsubsection}{Delete Item Off Menu}{160}{section*.38}
+\contentsline {subsubsection}{Update Item Price}{161}{section*.39}
+\contentsline {subsubsection}{Update Booking}{162}{section*.40}
+\contentsline {subsubsection}{Assign Customer To Table}{163}{section*.41}
+\contentsline {subsubsection}{Manage Order}{164}{section*.42}
+\contentsline {subsubsection}{Add Item To Order}{165}{section*.43}
+\contentsline {subsubsection}{Delete Item Off Order}{166}{section*.44}
+\contentsline {subsubsection}{Invoice Preview}{167}{section*.45}
+\contentsline {subsubsection}{Print Options/Confirmation}{168}{section*.46}
+\contentsline {subsubsection}{Assign box (Before clicking on "Select")}{169}{section*.47}
+\contentsline {subsubsection}{After clicking on "Select"}{170}{section*.48}
+\contentsline {subsubsection}{Search Order}{171}{section*.49}
+\contentsline {subsubsection}{View Bookings on Tool Bar}{172}{section*.50}
+\contentsline {subsubsection}{View Customers on Tool Bar}{173}{section*.51}
+\contentsline {subsubsection}{View Dishes on Tool Bar}{174}{section*.52}
+\contentsline {subsubsection}{View Drinks on Tool Bar}{175}{section*.53}
+\contentsline {subsection}{\numberline {4.5.2}ER Diagram}{176}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Database Table Views}{177}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Database SQL}{183}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}SQL Queries}{184}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}Testing}{190}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Summary of Results}{190}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Known Issues}{190}{subsection.4.6.2}
+\contentsline {subsubsection}{Test 4.03 - Manage order total price}{190}{section*.54}
+\contentsline {subsubsection}{Test 4.09 - Add Booking (Telephone problem)}{191}{section*.55}
+\contentsline {section}{\numberline {4.7}Code Explanations}{191}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Difficult Sections}{191}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Select function (section 4.10.4)}{192}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Creating the combo box (section 4.10.4)}{193}{subsection.4.7.3}
+\contentsline {subsection}{\numberline {4.7.4}Part of invoice}{194}{subsection.4.7.4}
+\contentsline {subsection}{\numberline {4.7.5}Self-created Algorithms}{195}{subsection.4.7.5}
+\contentsline {subsection}{\numberline {4.7.6}Table algorithm}{195}{subsection.4.7.6}
+\contentsline {subsection}{\numberline {4.7.7}Item already exists in order algorithm}{196}{subsection.4.7.7}
+\contentsline {subsection}{\numberline {4.7.8}Delete item off order algorithm}{199}{subsection.4.7.8}
+\contentsline {subsection}{\numberline {4.7.9}Calculate total price for invoice algorithm}{199}{subsection.4.7.9}
+\contentsline {section}{\numberline {4.8}Settings}{200}{section.4.8}
+\contentsline {section}{\numberline {4.9}Acknowledgements}{200}{section.4.9}
+\contentsline {section}{\numberline {4.10}Code Listing}{200}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}add\_booking.py}{201}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}add\_item\_to\_menu.py}{207}{subsection.4.10.2}
+\contentsline {subsection}{\numberline {4.10.3}add\_item\_to\_order.py}{211}{subsection.4.10.3}
+\contentsline {subsection}{\numberline {4.10.4}assign\_table\_customer.py}{216}{subsection.4.10.4}
+\contentsline {subsection}{\numberline {4.10.5}cascade\_style\_sheet.py}{224}{subsection.4.10.5}
+\contentsline {subsection}{\numberline {4.10.6}delete\_booking.py}{228}{subsection.4.10.6}
+\contentsline {subsection}{\numberline {4.10.7}delete\_item\_off\_menu.py}{231}{subsection.4.10.7}
+\contentsline {subsection}{\numberline {4.10.8}delete\_item\_off\_order.py}{235}{subsection.4.10.8}
+\contentsline {subsection}{\numberline {4.10.9}main\_window.py}{241}{subsection.4.10.9}
+\contentsline {subsection}{\numberline {4.10.10}manage\_booking.py}{261}{subsection.4.10.10}
+\contentsline {subsection}{\numberline {4.10.11}manage\_order.py}{263}{subsection.4.10.11}
+\contentsline {subsection}{\numberline {4.10.12}new\_create\_tables\_cli.py}{271}{subsection.4.10.12}
+\contentsline {subsection}{\numberline {4.10.13}print\_invoice.py}{276}{subsection.4.10.13}
+\contentsline {subsection}{\numberline {4.10.14}radio\_button\_widget\_class.py}{282}{subsection.4.10.14}
+\contentsline {subsection}{\numberline {4.10.15}search\_order.py}{284}{subsection.4.10.15}
+\contentsline {subsection}{\numberline {4.10.16}table\_display.py}{288}{subsection.4.10.16}
+\contentsline {subsection}{\numberline {4.10.17}update\_booking.py}{291}{subsection.4.10.17}
+\contentsline {subsection}{\numberline {4.10.18}update\_item\_price.py}{298}{subsection.4.10.18}
+\contentsline {chapter}{\numberline {5}User Manual}{301}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{301}{section.5.1}
+\contentsline {section}{\numberline {5.2}Installation}{301}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Software}{301}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Hardware}{301}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Operating System}{302}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Prerequisite Installation}{302}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}System Installation}{302}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Running the System}{317}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Tutorial}{319}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Introduction}{319}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Assumptions}{319}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Tutorial Questions}{319}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}How do I add an item to the menu?}{319}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}How do I delete an item off the menu?}{323}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}How do I update an item's price?}{325}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}How do I add a booking?}{327}{subsection.5.3.7}
+\contentsline {subsection}{\numberline {5.3.8}How do I delete a booking?}{330}{subsection.5.3.8}
+\contentsline {subsection}{\numberline {5.3.9}How do I update a booking?}{332}{subsection.5.3.9}
+\contentsline {subsection}{\numberline {5.3.10}How do I manage an order for a table?}{334}{subsection.5.3.10}
+\contentsline {subsection}{\numberline {5.3.11}A customer has come in without booking in advance how do I assign him to a table?}{336}{subsection.5.3.11}
+\contentsline {subsection}{\numberline {5.3.12}How do I add an item to an order}{339}{subsection.5.3.12}
+\contentsline {subsection}{\numberline {5.3.13}How do I delete an item off an order}{342}{subsection.5.3.13}
+\contentsline {subsection}{\numberline {5.3.14}How do I print an invoice?}{345}{subsection.5.3.14}
+\contentsline {subsubsection}{Manage Order method}{345}{section*.56}
+\contentsline {subsubsection}{Search Order method}{346}{section*.57}
+\contentsline {subsection}{\numberline {5.3.15}Saving}{347}{subsection.5.3.15}
+\contentsline {subsection}{\numberline {5.3.16}Limitations}{347}{subsection.5.3.16}
+\contentsline {section}{\numberline {5.4}Error Recovery}{347}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Empty field error when trying to add an item}{347}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}System Recovery}{350}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Backing-up Data}{350}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Restoring Data}{353}{subsection.5.5.2}
+\contentsline {chapter}{\numberline {6}Evaluation}{357}{chapter.6}
+\contentsline {section}{\numberline {6.1}Customer Requirements}{357}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Objective Evaluation}{357}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Simple and clear GUI}{357}{subsection.6.1.2}
+\contentsline {subsubsection}{Having a very simple birds eye view image of the restaurant which is made out of shapes to ease the understanding of where each table is}{357}{section*.58}
+\contentsline {subsubsection}{Label table with their corresponding number}{357}{section*.59}
+\contentsline {subsubsection}{Table shapes will be big so it won't be hard to click on them but not so big that 16 tables can fit on the GUI}{358}{section*.60}
+\contentsline {subsubsection}{Clicking on table will bring up a window which shows the status such as the date and food items ordered with noticeable order modification options}{358}{section*.61}
+\contentsline {section}{\numberline {6.2}Effectiveness}{359}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Order alterations}{359}{subsection.6.2.1}
+\contentsline {subsubsection}{Have clear Add, Delete and Create invoice buttons}{359}{section*.62}
+\contentsline {subsection}{\numberline {6.2.2}Objective Evaluation}{359}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Learnability}{359}{section.6.3}
+\contentsline {section}{\numberline {6.4}Usability}{359}{section.6.4}
+\contentsline {section}{\numberline {6.5}Maintainability}{359}{section.6.5}
+\contentsline {section}{\numberline {6.6}Suggestions for Improvement}{359}{section.6.6}
+\contentsline {section}{\numberline {6.7}End User Evidence}{359}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Questionnaires}{359}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Graphs}{359}{subsection.6.7.2}
+\contentsline {subsection}{\numberline {6.7.3}Written Statements}{359}{subsection.6.7.3}
 \contentsfinish 

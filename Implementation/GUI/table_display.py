@@ -10,8 +10,8 @@ class DisplayTable(QWidget):
     
     def __init__(self):
         super().__init__()
-        self.displaySQLtable = QVBoxLayout()
-        self.setLayout(self.displaySQLtable)
+        self.stacked_layout = QStackedLayout()
+        self.setLayout(self.stacked_layout)
         self.db = None
         self.model = None
         self.open_database()
@@ -23,7 +23,7 @@ class DisplayTable(QWidget):
         self.results_layout.addWidget(self.results_table)
         self.results_widget = QWidget()
         self.results_widget.setLayout(self.results_layout)
-        self.displaySQLtable.addWidget(self.results_widget)
+        self.stacked_layout.addWidget(self.results_widget)
 
     def open_database(self):
         if self.db:

@@ -137,46 +137,47 @@
 \BOOKMARK [0][-]{chapter.5}{User Manual}{}% 137
 \BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 138
 \BOOKMARK [1][-]{section.5.2}{Installation}{chapter.5}% 139
-\BOOKMARK [2][-]{subsection.5.2.1}{Software}{section.5.2}% 140
-\BOOKMARK [2][-]{subsection.5.2.2}{Hardware}{section.5.2}% 141
-\BOOKMARK [2][-]{subsection.5.2.3}{Operating System}{section.5.2}% 142
-\BOOKMARK [2][-]{subsection.5.2.4}{Prerequisite Installation}{section.5.2}% 143
-\BOOKMARK [2][-]{subsection.5.2.5}{System Installation}{section.5.2}% 144
-\BOOKMARK [2][-]{subsection.5.2.6}{Running the System}{section.5.2}% 145
-\BOOKMARK [1][-]{section.5.3}{Tutorial}{chapter.5}% 146
-\BOOKMARK [2][-]{subsection.5.3.1}{Introduction}{section.5.3}% 147
-\BOOKMARK [2][-]{subsection.5.3.2}{Assumptions}{section.5.3}% 148
-\BOOKMARK [2][-]{subsection.5.3.3}{Tutorial Questions}{section.5.3}% 149
-\BOOKMARK [2][-]{subsection.5.3.4}{How do I add an item to the menu?}{section.5.3}% 150
-\BOOKMARK [2][-]{subsection.5.3.5}{How do I delete an item off the menu?}{section.5.3}% 151
-\BOOKMARK [2][-]{subsection.5.3.6}{How do I update an item's price?}{section.5.3}% 152
-\BOOKMARK [2][-]{subsection.5.3.7}{How do I add a booking?}{section.5.3}% 153
-\BOOKMARK [2][-]{subsection.5.3.8}{How do I delete a booking?}{section.5.3}% 154
-\BOOKMARK [2][-]{subsection.5.3.9}{How do I update a booking?}{section.5.3}% 155
-\BOOKMARK [2][-]{subsection.5.3.10}{How do I manage an order for a table?}{section.5.3}% 156
-\BOOKMARK [2][-]{subsection.5.3.11}{A customer has come in without booking in advance how do I assign him to a table?}{section.5.3}% 157
-\BOOKMARK [2][-]{subsection.5.3.12}{How do I add an item to an order}{section.5.3}% 158
-\BOOKMARK [2][-]{subsection.5.3.13}{How do I delete an item off an order}{section.5.3}% 159
-\BOOKMARK [2][-]{subsection.5.3.14}{How do I print an invoice?}{section.5.3}% 160
-\BOOKMARK [2][-]{subsection.5.3.15}{Saving}{section.5.3}% 161
-\BOOKMARK [2][-]{subsection.5.3.16}{Limitations}{section.5.3}% 162
-\BOOKMARK [1][-]{section.5.4}{Error Recovery}{chapter.5}% 163
-\BOOKMARK [2][-]{subsection.5.4.1}{Empty field error when trying to add an item}{section.5.4}% 164
-\BOOKMARK [1][-]{section.5.5}{System Recovery}{chapter.5}% 165
-\BOOKMARK [2][-]{subsection.5.5.1}{Backing-up Data}{section.5.5}% 166
-\BOOKMARK [2][-]{subsection.5.5.2}{Restoring Data}{section.5.5}% 167
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 168
-\BOOKMARK [1][-]{section.6.1}{Customer Requirements}{chapter.6}% 169
-\BOOKMARK [2][-]{subsection.6.1.1}{Objective Evaluation}{section.6.1}% 170
-\BOOKMARK [2][-]{subsection.6.1.2}{Simple and clear GUI}{section.6.1}% 171
-\BOOKMARK [1][-]{section.6.2}{Effectiveness}{chapter.6}% 172
-\BOOKMARK [2][-]{subsection.6.2.1}{Order alterations}{section.6.2}% 173
-\BOOKMARK [2][-]{subsection.6.2.2}{Objective Evaluation}{section.6.2}% 174
-\BOOKMARK [1][-]{section.6.3}{Learnability}{chapter.6}% 175
-\BOOKMARK [1][-]{section.6.4}{Usability}{chapter.6}% 176
-\BOOKMARK [1][-]{section.6.5}{Maintainability}{chapter.6}% 177
-\BOOKMARK [1][-]{section.6.6}{Suggestions for Improvement}{chapter.6}% 178
-\BOOKMARK [1][-]{section.6.7}{End User Evidence}{chapter.6}% 179
-\BOOKMARK [2][-]{subsection.6.7.1}{Questionnaires}{section.6.7}% 180
-\BOOKMARK [2][-]{subsection.6.7.2}{Graphs}{section.6.7}% 181
-\BOOKMARK [2][-]{subsection.6.7.3}{Written Statements}{section.6.7}% 182
+\BOOKMARK [2][-]{subsection.5.2.1}{Prerequisite Installation}{section.5.2}% 140
+\BOOKMARK [2][-]{subsection.5.2.2}{Operating System}{section.5.2}% 141
+\BOOKMARK [2][-]{subsection.5.2.3}{System Installation}{section.5.2}% 142
+\BOOKMARK [2][-]{subsection.5.2.4}{Running the System}{section.5.2}% 143
+\BOOKMARK [1][-]{section.5.3}{Tutorial}{chapter.5}% 144
+\BOOKMARK [2][-]{subsection.5.3.1}{Introduction}{section.5.3}% 145
+\BOOKMARK [2][-]{subsection.5.3.2}{Assumptions}{section.5.3}% 146
+\BOOKMARK [2][-]{subsection.5.3.3}{Tutorial Questions}{section.5.3}% 147
+\BOOKMARK [2][-]{subsection.5.3.4}{How do I add an item to the menu?}{section.5.3}% 148
+\BOOKMARK [2][-]{subsection.5.3.5}{How do I delete an item off the menu?}{section.5.3}% 149
+\BOOKMARK [2][-]{subsection.5.3.6}{How do I update an item's price?}{section.5.3}% 150
+\BOOKMARK [2][-]{subsection.5.3.7}{How do I add a booking?}{section.5.3}% 151
+\BOOKMARK [2][-]{subsection.5.3.8}{How do I delete a booking?}{section.5.3}% 152
+\BOOKMARK [2][-]{subsection.5.3.9}{How do I update a booking?}{section.5.3}% 153
+\BOOKMARK [2][-]{subsection.5.3.10}{How do I manage an order for a table?}{section.5.3}% 154
+\BOOKMARK [2][-]{subsection.5.3.11}{A customer has come in without booking in advance how do I assign him/her to a table?}{section.5.3}% 155
+\BOOKMARK [2][-]{subsection.5.3.12}{How do I add an item to an order}{section.5.3}% 156
+\BOOKMARK [2][-]{subsection.5.3.13}{How do I delete an item off an order}{section.5.3}% 157
+\BOOKMARK [2][-]{subsection.5.3.14}{How do I print an invoice?}{section.5.3}% 158
+\BOOKMARK [2][-]{subsection.5.3.15}{Saving}{section.5.3}% 159
+\BOOKMARK [2][-]{subsection.5.3.16}{Limitations}{section.5.3}% 160
+\BOOKMARK [1][-]{section.5.4}{Error Recovery}{chapter.5}% 161
+\BOOKMARK [2][-]{subsection.5.4.1}{Empty field error when trying to add an item}{section.5.4}% 162
+\BOOKMARK [1][-]{section.5.5}{System Recovery}{chapter.5}% 163
+\BOOKMARK [2][-]{subsection.5.5.1}{Backing-up Data}{section.5.5}% 164
+\BOOKMARK [2][-]{subsection.5.5.2}{Restoring Data}{section.5.5}% 165
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 166
+\BOOKMARK [1][-]{section.6.1}{Customer Requirements}{chapter.6}% 167
+\BOOKMARK [2][-]{subsection.6.1.1}{Objective Evaluation}{section.6.1}% 168
+\BOOKMARK [2][-]{subsection.6.1.2}{Simple and clear GUI}{section.6.1}% 169
+\BOOKMARK [1][-]{section.6.2}{Effectiveness}{chapter.6}% 170
+\BOOKMARK [2][-]{subsection.6.2.1}{Order alterations}{section.6.2}% 171
+\BOOKMARK [2][-]{subsection.6.2.2}{Track Orders}{section.6.2}% 172
+\BOOKMARK [2][-]{subsection.6.2.3}{Invoice Creation}{section.6.2}% 173
+\BOOKMARK [2][-]{subsection.6.2.4}{Storing orders}{section.6.2}% 174
+\BOOKMARK [2][-]{subsection.6.2.5}{Objective Evaluation}{section.6.2}% 175
+\BOOKMARK [1][-]{section.6.3}{Learnability}{chapter.6}% 176
+\BOOKMARK [1][-]{section.6.4}{Usability}{chapter.6}% 177
+\BOOKMARK [1][-]{section.6.5}{Maintainability}{chapter.6}% 178
+\BOOKMARK [1][-]{section.6.6}{Suggestions for Improvement}{chapter.6}% 179
+\BOOKMARK [1][-]{section.6.7}{End User Evidence}{chapter.6}% 180
+\BOOKMARK [2][-]{subsection.6.7.1}{Questionnaires}{section.6.7}% 181
+\BOOKMARK [2][-]{subsection.6.7.2}{Graphs}{section.6.7}% 182
+\BOOKMARK [2][-]{subsection.6.7.3}{Written Statements}{section.6.7}% 183

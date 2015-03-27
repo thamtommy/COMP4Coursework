@@ -1,5 +1,7 @@
 
 \chapter{User Manual}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}{}
 
 
 \section{Introduction}
@@ -9,10 +11,12 @@ The intended audience for the system was for my client's restaurant. As the syst
 
 \section{Installation}
 
-\subsection{Software}
+\subsection{Prerequisite Installation}
+
+\subsubsection{Software}
 Since the application has been compiled into a windows executable (.exe), the user will not need to make any changes to their computer system or need any additional software to run the application.
 
-\subsection{Hardware}
+\subsubsection{Hardware}
 
 The following hardware will be required to run the system:
 
@@ -31,67 +35,20 @@ The following hardware will be required to run the system:
 
 I created and tested the application on my Windows 8.1 64Bit computer and so the compiled executable I created should work on my client's computer as it also runs on Windows 8.1 6Bit (see page 27). I have not tested the application on a 32Bit computer therefore, I do not know if it will run without any problems. I can make a 32 Bit version of the application if needed.
 
-\subsection{Prerequisite Installation}
-
-The user will only need to download the install package and run the install package in order for the application to work.
+\begin{landscape}
 
 \subsection{System Installation}
-\begin{landscape}
+
 The new system has been packaged into a windows installer and so to install the new system, follow these steps: \\
 
 1. The install package is called "RestaurantSetup", locate to the directory of the install package of where it has been placed. 
 
-
 \begin{figure}[H]
-    \includegraphics[height = 10cm]{./Manual/images/install1} 
+    \includegraphics[width = 15cm]{./Manual/images/install1} 
     \caption{Example of what the installer should look like} \label{fig:install1}
 \end{figure}
 
-
-
-2. Double click on the installer to run it, the installer will now start to run.
-
-\begin{figure}[H]
-    \includegraphics[height = 10cm]{./Manual/images/install2} 
-    \caption{Start of the installer} \label{fig:install2}
-\end{figure}
-
-3. After waiting for the installer to prepare, the next step of the installer will appear and the step is to choose the directory(location) of where to install the new system.
-
-\begin{figure}[H]
-    \includegraphics[height = 10cm]{./Manual/images/install3} 
-    \caption{Choosing where to install the system} \label{fig:install3}
-\end{figure}
-
-4.  Click on 'Install' to start the installation
-
-\begin{figure}[H]
-    \includegraphics[height = 10cm]{./Manual/images/install4} 
-    \caption{} \label{fig:install4}
-\end{figure}
-
-5. The installation will now begin, the installation will be complete once the status bar is filled.
-
-\begin{figure}[H]
-    \includegraphics[height = 10cm]{./Manual/images/install5} 
-    \caption{Install process} \label{fig:install5}
-\end{figure}
-
-6. The system has now been installed! Click on 'Finish' to close the installation.
-
-\begin{figure}[H]
-    \includegraphics[height = 10cm]{./Manual/images/install6} 
-    \caption{Successful installation} \label{fig:install6}
-\end{figure}
-
-7. As you can see, the system has been installed with all its necessary files. The application is called main\_window.
-
-\begin{figure}[H]
-    \includegraphics[height = 10cm]{./Manual/images/install7} 
-    \caption{Installed system directory} \label{fig:install7}
-\end{figure}
-
-
+\newpage
 
 2. Double click on the installer to run it, the installer will now start to run.
 
@@ -134,7 +91,6 @@ The new system has been packaged into a windows installer and so to install the 
     \includegraphics[height = 10cm]{./Manual/images/install7} 
     \caption{Installed system directory} \label{fig:install7}
 \end{figure}
-
 
 
 \subsection{Running the System}
@@ -145,6 +101,7 @@ The new system has been packaged into a windows installer and so to install the 
     \includegraphics[height = 9cm]{./Manual/images/runsystem} 
     \caption{Locating the system program} \label{fig:locateSystem}
 \end{figure}
+
 
 2. Double click with the left mouse button on "main\_window" and the system should now run.
 
@@ -173,22 +130,23 @@ I have made assumptions that the user has little to no computer knowledge but do
 \begin{tabular}{|p{8cm}|p{2cm}|p{2cm}|}
     \hline
     \textbf{Question} & \textbf{Section} & \textbf{Page Number} \\ \hline
- How do I add an item to the menu? & 5.3.4 & \\ \hline
-How do I delete an item off the menu? & 5.3.5 & \\ \hline
- How do I update an item's price?& 5.3.6 & \\ \hline
- How do I add a booking? & 5.3.7 & \\ \hline
- How do I delete a booking? & 5.3.8 & \\ \hline
- How do I update a booking? & 5.3.9 & \\ \hline
-How do I manage an order for a table & 5.3.10 & \\ \hline
- A customer has come in without booking advance, how do I assign him to a table? & 5.3.11 & \\ \hline
-How do I add an item to the order? & 5.3.12& \\ \hline
- How do I delete an item off the order? & 5.3.13 & \\ \hline
- How do I print an invoice? & 5.3.14& \\ 
+ How do I add an item to the menu? & 5.3.4 & \pageref{fig:additem1}\\ \hline
+How do I delete an item off the menu? & 5.3.5 & \pageref{fig:deleteitem1} \\ \hline
+ How do I update an item's price?& 5.3.6 & \pageref{fig:updateitem1} \\ \hline
+ How do I add a booking? & 5.3.7 & \pageref{fig:addbooking1} \\ \hline
+ How do I delete a booking? & 5.3.8 &  \pageref{fig:deletebooking1}\\ \hline
+ How do I update a booking? & 5.3.9 & \pageref{fig:updatebooking1} \\ \hline
+How do I manage an order for a table & 5.3.10 & \pageref{fig:assignex1} \\ \hline
+ A customer has come in without booking advance, how do I assign him to a table? & 5.3.11 & \pageref{fig:assigncust1} \\ \hline
+How do I add an item to the order? & 5.3.12& \pageref{fig:additemorder1} \\ \hline
+ How do I delete an item off the order? & 5.3.13 & \pageref{fig:deleteitemorder1} \\ \hline
+ How do I print an invoice? & 5.3.14& \pageref{fig:printinvoice1} \\ 
 
     \hline
 \end{tabular}
 \end{center}
 
+\newpage
 \subsection{How do I add an item to the menu?}
 
 1. Click on "Item Menu" at the top on the menu bar.
@@ -428,7 +386,7 @@ First of all, you have to assign the customer to the table. Assuming the custome
 
 \begin{figure}[H]
     \includegraphics[height = 9cm]{./Manual/images/base/ManageOrder} 
-    \caption{} \label{fig:additemorder1}
+    \caption{} \label{fig:deleteitemorder1}
 \end{figure}
 
 2. Click on 'Delete'
@@ -595,3 +553,4 @@ To restore the data follow these steps:
 
 6. You have now backed-up the data
 
+\stopcontents[chapters]
